@@ -1,0 +1,96 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "To geslo velja samo za uporabo telefona kot modema prek omrežja Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Uporaba telefona kot modema prek omrežja Wi-Fi je skrita"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Nastavitve uporabe telefona kot modema prek omrežja Wi-Fi so na voljo samo, ko je takšna uporaba onemogočena"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Up.tel. kot mod. po Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Nas.tel. kot mod.po Wi-Fi"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Če onemogočite uporabo telefona kot modema, boste povezanim napravam preprečili dostop do interneta. Želite nadaljevati?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Vstavite kartico SIM in znova zaženite napravo, če želite uporabljati telefon kot modem"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Uporaba telefona kot modema ni mogoča"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Uporaba telefona kot modema ni mogoča v načinu letenja. Če želite uporabiti to možnost, onemogočite način letenja"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Povezava z omrežjem Wi-Fi bo prekinjena. Uporaba telefona kot modema prek omrežja Wi-Fi porabi več baterije in poveča uporabo podatkov. Želite nadaljevati?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Uporaba telefona kot modema prek omrežja Wi-Fi porabi več baterije in poveča uporabo podatkov. Želite nadaljevati?"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Prejeto:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Poslano:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Ime naprave"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Geslo"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Vnesite vsaj 8 znakov dolgo geslo"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Ime naprave lahko spremenite v %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Skrij mojo napravo"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Poraba podatkov"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB modem"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Če omogočite uporabo telefona kot modema po vmesniku USB, bodo vse prejšnje povezave USB prekinjene"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Vizitka telefona"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d B"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Povezana naprava"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Internet prek vmesnika Bluetooth"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Varnost"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Ni mogoče uporabiti paketnega prenosa podatkov. Ni pokritosti s signalom"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Priključite kabel USB"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Geslo mora vsebovati vsaj %d znakov in ne sme presegati %d znakov"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Tethering"
+

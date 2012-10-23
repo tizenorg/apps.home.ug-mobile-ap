@@ -1,0 +1,96 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Цей пароль може використовуватися лише для прив’язки Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Прив'язку Wi-Fi приховано"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Установки прив'язки Wi-Fi доступні, лише якщо її вимкнено"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Прив’язка Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Установки прив'язки Wi-Fi"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "У разі вимкнення прив'язки зв’язані пристрої не зможуть отримувати доступ до Інтернету. Продовжити?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Вставте SIM-картку та перезавантажте пристрій, щоб скористатися прив'язкою"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Неможливо використати прив’язку"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Неможливо використовувати прив’язку в режимі без зв’язку. Для використання прив'язки вимкніть режим без зв’язку"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Мережу Wi-Fi буде відключено. Прив'язка Wi-Fi використовує більше заряду акумулятора та збільшує використання даних. Продовжити?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Прив'язка Wi-Fi використовує більше заряду акумулятора та збільшує використання даних. Продовжити?"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Отримано:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Надіслано:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Ім'я пристрою"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Пароль"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Введіть пароль принаймні 8 символів завдовжки"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Ім’я пристрою можна змінити у %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Приховати мій пристрій"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Використання даних"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Прив’язка USB"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Увімкнення прив’язки USB призведе до відключення попереднього USB-з’єднання"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Відомості про телефон"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d байт"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d Kb"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d Мб"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Підключений пристрій"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Прив’язка Bluetooth"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Безпека"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Неможливо скористатися пакетною послугою. Поза зоною покриття"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Підключити кабель USB"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Пароль має містити щонайменше %d символів і не перевищувати %d символів"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Прив’язка"
+

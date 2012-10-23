@@ -1,0 +1,96 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "このパスワードはWi-Fiテザリングのみに使用します。"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fiテザリング非表示"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Wi-Fiテザリング設定は、Wi-Fiテザリングが無効のときのみ可能です。"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fiテザリング"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fiテザリング設定"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "テザリングを無効にすると、インターネットにアクセスしている端末の接続を停止します。続行しますか？"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "テザリングを使用するには、SIMカードを挿入し、端末を再起動してください。"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "テザリングを使用できません。"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "機内モードではテザリングを使用できません。テザリングを使用するには、機内モードを無効にしてください。"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fiネットワークが切断されました。Wi-Fiテザリングはバッテリーをより多く消費し、データ使用量が増加します。続行しますか？"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fiテザリングはバッテリーをより多く消費し、データ使用量が増加します。続行しますか？"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "受信済み："
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "送信："
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "デバイス名称"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "パスワード"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "8文字以上でパスワードを入力してください。"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "端末名は%sで変更できます。"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "マイデバイスを非表示"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "データ使用量"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USBテザリング"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "USBテザリングを有効にすると、USB接続が切断されます。"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "端末情報"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Bytes"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%dKB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%dMB"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "接続中のデバイス"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Bluetoothテザリング"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "セキュリティ"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "圏外です。パケットサービスを使用できません"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "USBケーブルを接続してください"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "パスワードの長さは最低%d文字で、%d文字を超えてはいけません"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "テザリング"
+

@@ -1,0 +1,96 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Tämä salasana on tarkoitettu vain Wi-Fi-yhteyden muodostamista varten"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fi-yhteys piilotettu"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Wi-Fi-yhteysasetukset ovat käytettävissä vain silloin, kun Wi-Fi-yhteys on poistettu käytöstä"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fi-yhteys"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fi-yhteysasetukset"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Yhteyden poistaminen käytöstä estää yhdistettyjä laitteita muodostamasta Internet-yhteyttä. Jatketaanko?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Aseta SIM-kortti ja käynnistä laite uudelleen yhteyden käyttöä varten"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Yhteyttä ei voi käyttää"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Yhdistämistä ei voi käyttää lentotilassa. Jos haluat käyttää lentotilaa, poista lentotila käytöstä"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi-verkkoyhteys katkaistaan. Wi-Fi-yhteys kuluttaa enemmän virtaa ja lisää tietojen käyttöä. Jatketaanko?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi-yhteys kuluttaa enemmän virtaa ja lisää tietojen käyttöä. Jatketaanko?"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Vastaanotettu:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Lähetetty:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Laitteen nimi"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Salasana"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Anna vähintään 8 merkkiä pitkä salasana"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Laitteen nimi voidaan muuttaa kohdassa %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Piilota oma laite"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Datan käyttö"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB-yhteys"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "USB-yhteyden ottaminen käyttöön poistaa edellisen USB-yhteyden käytöstä"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Tietoja puhelimesta"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d tavua"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d kt"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d Mt"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Yhdistetty laite"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Bluetooth-liitos"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Turvallisuus"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Pakettipalvelua ei voi käyttää. Peittoalueen ulkopuolella"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Liitä USB-kaapeli"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Salasanassa on oltava ainakin %d merkkiä eikä se saa olla yli %d merkkiä pitkä"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Yhteyden jako"
+
