@@ -4,7 +4,7 @@
 Name:       ug-setting-mobileap-efl
 Summary:    Tethering UI Gadget Library
 Version:    0.1.156
-Release:    1
+Release:    2
 Group:      TO_BE/FILLED_IN
 License:    Flora License Version 1.0
 Source0:    %{name}-%{version}.tar.gz
@@ -45,6 +45,9 @@ rm -rf %{buildroot}
 %{_ugdir}/lib/libug-setting-mobile-ap-ug.so
 
 %changelog
+* Wed Oct 31 2012 Seungyoun Ju <sy39.ju@samsung.com> 0.1.156-2
+- Initial package upload
+
 * Mon Oct 29 2012 Seungyoun Ju <sy39.ju@samsung.com> 0.1.156-1
 - Install path is changed from /opt to /usr
 
