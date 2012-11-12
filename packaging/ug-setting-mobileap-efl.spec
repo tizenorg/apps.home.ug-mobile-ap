@@ -3,8 +3,8 @@
 
 Name:       ug-setting-mobileap-efl
 Summary:    Tethering UI Gadget Library
-Version:    0.1.156
-Release:    2
+Version:    0.1.157
+Release:    1
 Group:      TO_BE/FILLED_IN
 License:    Flora License Version 1.0
 Source0:    %{name}-%{version}.tar.gz
@@ -45,6 +45,9 @@ rm -rf %{buildroot}
 %{_ugdir}/lib/libug-setting-mobile-ap-ug.so
 
 %changelog
+* Mon Nov 12 2012 Seungyoun Ju <sy39.ju@samsung.com> 0.1.157-1
+- Cellular network state is separated to CONNECTION_CELLULAR_STATE_AVAILABLE and CONNECTION_CELLULAR_STATE_CONNECTED
+
 * Wed Oct 31 2012 Seungyoun Ju <sy39.ju@samsung.com> 0.1.156-2
 - Initial package upload
 

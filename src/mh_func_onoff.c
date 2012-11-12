@@ -49,7 +49,7 @@ static int __get_vconf_usb_state()
 	return value;
 }
 
-static bool __is_available_wifi_net(mh_appdata_t *ad)
+static bool __is_connected_wifi_net(mh_appdata_t *ad)
 {
 	connection_wifi_state_e wifi_state;
 	int ret;
@@ -61,15 +61,15 @@ static bool __is_available_wifi_net(mh_appdata_t *ad)
 	}
 
 	if (wifi_state != CONNECTION_WIFI_STATE_CONNECTED) {
-		ERR("Wi-Fi network is not available\n");
+		ERR("Wi-Fi network is not connected\n");
 		return false;
 	}
 
-	DBG("Wi-Fi network is available\n");
+	DBG("Wi-Fi network is connected\n");
 	return true;
 }
 
-static bool __is_available_ethernet_net(mh_appdata_t *ad)
+static bool __is_connected_ethernet_net(mh_appdata_t *ad)
 {
 	connection_ethernet_state_e ethernet_state;
 	int ret;
@@ -81,15 +81,15 @@ static bool __is_available_ethernet_net(mh_appdata_t *ad)
 	}
 
 	if (ethernet_state != CONNECTION_ETHERNET_STATE_CONNECTED) {
-		ERR("Ethernet network is not available\n");
+		ERR("Ethernet network is not connected\n");
 		return false;
 	}
 
-	DBG("Ethernet network is available\n");
+	DBG("Ethernet network is connected\n");
 	return true;
 }
 
-static bool __is_available_cellular_net(mh_appdata_t *ad)
+static bool __is_connected_cellular_net(mh_appdata_t *ad)
 {
 	connection_cellular_state_e cellular_state;
 	sim_state_e sim_state;
@@ -119,17 +119,17 @@ static bool __is_available_cellular_net(mh_appdata_t *ad)
 		_prepare_popup(ad, MH_POP_INFORMATION_WO_BUTTON,
 				_("IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"));
 		_create_popup(ad);
-		ERR("Cellular network is not available\n");
+		ERR("Cellular network is not connected\n");
 		return false;
-	} else if (cellular_state != CONNECTION_CELLULAR_STATE_AVAILABLE) {
+	} else if (cellular_state != CONNECTION_CELLULAR_STATE_CONNECTED) {
 		_prepare_popup(ad, MH_POP_INFORMATION,
 				_("IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"));
 		_create_popup(ad);
-		ERR("Cellular network is not available\n");
+		ERR("Cellular network is not connected\n");
 		return false;
 	}
 
-	DBG("Cellular network is available\n");
+	DBG("Cellular network is connected\n");
 	return true;
 }
 
@@ -435,8 +435,8 @@ int _handle_wifi_onoff_change(mh_appdata_t *ad)
 	}
 
 	/* Turn on WiFi hotspot */
-	if (!__is_available_ethernet_net(ad) && !__is_available_cellular_net(ad)) {
-		ERR("There is no available network\n");
+	if (!__is_connected_ethernet_net(ad) && !__is_connected_cellular_net(ad)) {
+		ERR("There is no connected network\n");
 		return -1;
 	}
 
@@ -467,9 +467,9 @@ int _handle_bt_onoff_change(mh_appdata_t *ad)
 	}
 
 	/* Turn on Bluetooth tethering */
-	if (!__is_available_ethernet_net(ad) && !__is_available_wifi_net(ad) &&
-			!__is_available_cellular_net(ad)) {
-		ERR("There is no available network\n");
+	if (!__is_connected_ethernet_net(ad) && !__is_connected_wifi_net(ad) &&
+			!__is_connected_cellular_net(ad)) {
+		ERR("There is no connected network\n");
 		return -1;
 	}
 
@@ -501,9 +501,9 @@ int _handle_usb_onoff_change(mh_appdata_t *ad)
 	}
 
 	/* Turn on USB tethering */
-	if (!__is_available_ethernet_net(ad) && !__is_available_wifi_net(ad) &&
-			!__is_available_cellular_net(ad)) {
-		ERR("There is no available network\n");
+	if (!__is_connected_ethernet_net(ad) && !__is_connected_wifi_net(ad) &&
+			!__is_connected_cellular_net(ad)) {
+		ERR("There is no connected network\n");
 		return -1;
 	}
 
