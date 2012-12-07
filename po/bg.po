@@ -13,6 +13,30 @@ msgstr "Wi-Fi привързване"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Наст. за Wi-Fi привързв."
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Получено:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Изпратен:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Име устройство"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Парола"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Името на устройството може да бъде променено в %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Скрий моето устройство"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Ползване на данни"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Сдвояване през USB"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Деактивирането на привързването ще предотврати достъпа на свързаните устройства до интернет. Продължаване?"
 
@@ -31,47 +55,8 @@ msgstr "Wi-Fi мрежата ще бъде изключена. Wi-Fi привъ�
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Wi-Fi привързване изразходва повече енергия от батерията и увеличава потреблението на данни. Продължаване?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Получено:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Изпратен:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Име устройство"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Парола"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Въведете парола с поне 8 знака"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Името на устройството може да бъде променено в %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Скрий моето устройство"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Ползване на данни"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "Сдвояване през USB"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Разрешаването на сдвояването през USB ще изключи предишната USB връзка"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Относно телефона"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d байта"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Свързано устройство"
@@ -82,6 +67,24 @@ msgstr "Bluetooth привързване"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Защита"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Привързване"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Въведете парола с поне 8 знака"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Разрешаването на сдвояването през USB ще изключи предишната USB връзка"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d байта"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Не може да се използва пакетна услуга. Извън покритие"
 
@@ -91,6 +94,6 @@ msgstr "Свързване с USB кабел"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Паролата трябва да съдържа поне %d знака и да не е по-дълга от %d знака"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Привързване"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Свързаното устройство ще бъде прекъснато"
 

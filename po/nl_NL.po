@@ -13,6 +13,30 @@ msgstr "Wi-Fi-tethering"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Instell. Wi-Fi-tethering"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Ontvangen:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Verzonden:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Naam apparaat"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Wachtwoord"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Apparaatnaam kan worden gewijzigd in %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Mijn apparaat verbergen"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Gegevensgebruik"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB-tethering"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Als u tethering uitschakelt, hebben gekoppelde apparaten geen toegang tot internet. Doorgaan?"
 
@@ -31,47 +55,8 @@ msgstr "Verbinding met Wi-Fi-netwerk wordt verbroken. Wi-Fi-tethering verbruikt 
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Wi-Fi-tethering verbruikt meer voeding en verhoogt uw gegevensgebruik. Doorgaan?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Ontvangen:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Verzonden:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Naam apparaat"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Wachtwoord"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Typ wachtwoord van ten minste 8 tekens"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Apparaatnaam kan worden gewijzigd in %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Mijn apparaat verbergen"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Gegevensgebruik"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB-tethering"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Als u USB-tethering inschakelt, wordt eerdere USB-verbinding verbroken"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Over het toestel"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d bytes"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Aangesloten apparaat"
@@ -82,6 +67,24 @@ msgstr "Bluetooth-tethering"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Beveiliging"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Tethering"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Typ wachtwoord van ten minste 8 tekens"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Als u USB-tethering inschakelt, wordt eerdere USB-verbinding verbroken"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d bytes"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Kan pakketservice niet gebruiken. Geen dekking"
 
@@ -91,6 +94,6 @@ msgstr "USB-kabel aansluiten"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Wachtwoord moet ten minste %d tekens bevatten en mag niet langer zijn dan %d tekens"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Tethering"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Aangesloten apparaat wordt losgekoppeld"
 

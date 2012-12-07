@@ -2,7 +2,7 @@ msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
 msgstr "Aquesta contrasenya només és pel tethering Wi-Fi"
 
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
-msgstr "Tethering Wi-Fi ocult"
+msgstr "Tethering Wi-Fi amagat"
 
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
 msgstr "Els ajustaments de tethering Wi-Fi només estan disponibles quan està deshabilitat"
@@ -12,6 +12,30 @@ msgstr "Tethering Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Ajustam tethering Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Rebut:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Enviat:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Nom dispositiu"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Contrasenya"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "El nom del dispositiu es pot canviar a %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Ocultar el meu dispositiu"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Ús de dades"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Tethering USB"
 
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Si deshabilita el tethering, impedirà que els dispositius vinculats accedeixin a Internet. Continuar?"
@@ -31,47 +55,8 @@ msgstr "Es desconnectarà la xarxa Wi-Fi. El tethering Wi-Fi consumeix més bate
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "El tethering Wi-Fi consumeix més bateria i augmenta el consum de dades. Continuar?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Rebut:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Enviat:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Nom dispositiu"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Contrasenya"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Introdueixi una contrasenya d'almenys 8 caràcters"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "El nom del dispositiu es pot canviar a %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Ocultar el meu dispositiu"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Ús de dades"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "Tethering USB"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Si habilita el tethering USB, es desconnectaran les connexions USB prèvies"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Sobre el telèfon"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d Bytes"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Dispositiu connectat"
@@ -82,6 +67,24 @@ msgstr "Tethering Bluetooth"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Seguretat"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Tethering"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Introdueixi una contrasenya d'almenys 8 caràcters"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Si habilita el tethering USB, es desconnectaran les connexions USB prèvies"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Bytes"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "No es pot utilitzar el servei de paquets. Fora de cobertura"
 
@@ -91,6 +94,6 @@ msgstr "Connectar cable USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "La contrasenya ha de contenir al menys %d caràcters i no excedir els %d"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Tethering"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Es desconnectarà el dispositiu connectat"
 

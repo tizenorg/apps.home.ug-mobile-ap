@@ -1,99 +1,99 @@
 msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
-msgstr "Šī parole ir paredzēta tikai Wi-Fi piesaistei"
+msgstr "Dette passordet gjelder bare for Wi-Fi-Internettdeling"
 
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
-msgstr "Wi-Fi piesaiste ir paslēpta"
+msgstr "Wi-Fi-Internettdeling skjult"
 
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi piesaistes iestatījumi ir pieejami tikai tad, ja Wi-Fi piesaiste ir izslēgta"
+msgstr "Innstillinger for Wi-Fi-Internettdeling er bare tilgjengelige når Wi-Fi-Internettdeling er deaktivert"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
-msgstr "Wi-Fi piesaiste"
+msgstr "Wi-Fi-Internettdeling"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
-msgstr "Wi-Fi piesaistes iestat."
+msgstr "Wi-Fi-Internettdel.innst."
 
 msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Saņemts:"
+msgstr "Mottatt:"
 
 msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Nosūtīta:"
+msgstr "Sendt:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Ierīces nosaukums"
+msgstr "Enhetsnavn"
 
 msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Parole"
+msgstr "Passord"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Ierīces nosaukumu var mainīt izvēlnē %s"
+msgstr "Enhetsnavnet kan endres i %s"
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Slēpt manu ierīci"
+msgstr "Skjul min enhet"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Datu lietošana"
+msgstr "Databruk"
 
 msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB piesaiste"
+msgstr "USB-internettdeling"
 
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
-msgstr "Izslēdzot piesaisti, tālrunim pievienotās ierīces nevarēs piekļūt internetam. Vai turpināt?"
+msgstr "Deaktivering av Internettdeling hindrer tilkoblede enheter i å få tilgang til Internett. Fortsette?"
 
 msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
-msgstr "Lai lietotu piesaisti, Ievietojiet SIM karti un restartējiet tālruni"
+msgstr "Sett inn SIM-kort og start enheten på nytt for å bruke Internettdeling"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
-msgstr "Nevar izmantot piesaisti"
+msgstr "Kan ikke bruke Internettdeling"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
-msgstr "Lidojuma režīmā piesaisti nevar lietot. Lai lietotu piesaisti, deaktivizējiet lidojuma režīmu"
+msgstr "Kan ikke bruke Internettdeling i Offlinemodus. For å bruke Internettdeling må Offlinemodus deaktiveres"
 
 msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi tīkls tiks atvienots. Wi-Fi piesaiste patērē daudz akumulatora enerģijas un palielina datu lietošanas apjomu. Vai turpināt?"
+msgstr "Wi-Fi-nettverk blir frakoblet. Wi-Fi-Internettdeling forbruker mer batteristrøm og øker databruken. Fortsette?"
 
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi piesaiste patērē daudz akumulatora enerģijas un palielina datu lietošanas apjomu. Vai turpināt?"
+msgstr "Wi-Fi-Internettdeling forbruker mer batteristrøm og øker databruken. Fortsette?"
 
 msgid "IDS_ST_BODY_ABOUT_PHONE"
-msgstr "Par tālruni"
+msgstr "Om telefonen"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
-msgstr "Pievienotā ierīce"
+msgstr "Tilkoblet enhet"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
-msgstr "Bluetooth piesaiste"
+msgstr "Bluetooth-internettdeling"
 
 msgid "IDS_MOBILEAP_BODY_SECURITY"
-msgstr "Drošība"
+msgstr "Sikkerhet"
 
 msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Ierīces piesaiste tālrunim"
+msgstr "Internettdeling"
 
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Ievadiet paroli, kurā ir vismaz 8 rakstzīmes"
+msgstr "Angi passord for minst 8 tegn"
 
 msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Aktivizējot USB piesaisti, tiks pārtraukts iepriekšējais USB savienojums"
+msgstr "Aktivering av USB-internettdeling vil koble fra tidligere USB-tilkobling"
 
 msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d baiti"
+msgstr "%d Byte"
 
 msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
+msgstr "%d kB"
 
 msgid "IDS_MOBILEAP_BODY_PD_MB"
 msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
-msgstr "Nevar lietot pakešu pakalpojumu. Nav pārklājuma"
+msgstr "Kan ikke bruke pakketjeneste. Utenfor dekningsområdet"
 
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
-msgstr "Pievienot USB kabeli"
+msgstr "Koble til USB-kabel"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
-msgstr "Parolē ir jābūt vismaz %d rakstzīmēm, bet ne vairāk par %d"
+msgstr "Passordet må inneholde minst %d tegn og ikke overstige %d tegn"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Pievienotā ierīce tiks atvienota"
+msgstr "Tilkoblet enhet blir koblet fra"
 

@@ -13,6 +13,30 @@ msgstr "Wi-Fi 网络共享"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi 网络共享设置"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "已接收："
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "已发送："
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "设备名称"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "密码"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "可在 %s 中更改设备名称"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "隐藏我的设备"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "数据使用"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB 网络共享"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "禁用网络共享将阻止链接的设备访问互联网。是否继续？"
 
@@ -31,47 +55,8 @@ msgstr "Wi-Fi 网络将断开。Wi-Fi 网络共享消耗更多电池电力并增
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Wi-Fi 网络共享消耗更多电池电力并增加您的数据使用量。是否继续？"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "已接收："
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "已发送："
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "设备名称"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "密码"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "密码需要至少8个字符"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "可在 %s 中更改设备名称"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "隐藏我的设备"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "数据使用"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB 网络共享"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "启用USB 网络共享将断开原有 USB 连接"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "关于手机"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d 字节"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "连接的设备"
@@ -82,6 +67,24 @@ msgstr "蓝牙网络分享"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "安全"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "网络分享"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "密码需要至少8个字符"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "启用USB 网络共享将断开原有 USB 连接"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d 字节"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "无法使用信息包服务。在覆盖范围之外"
 
@@ -91,6 +94,6 @@ msgstr "连接 USB 线"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "密码必须至少包含%d个字符，并且不超过%d个字符"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "网络分享"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "已连接的设备将断开"
 

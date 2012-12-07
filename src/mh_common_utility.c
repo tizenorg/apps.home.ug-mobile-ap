@@ -112,24 +112,17 @@ static void __popup_resp_yes(void *data, Evas_Object *obj, void *event_info)
 			if (_turn_off_wifi(ad) != 0) {
 				ERR("_turn_off_wifi is failed\n");
 				_update_wifi_item(ad, MH_STATE_NONE);
-				elm_object_item_disabled_set(ad->main.setup_item,
-						EINA_FALSE);
 			}
 		} else if (_is_wifi_direct_on() == true) {
 			if (_turn_off_wifi_direct(ad) != 0) {
 				ERR("_turn_off_wifi_direct is failed\n");
 				_update_wifi_item(ad, MH_STATE_NONE);
-				elm_object_item_disabled_set(ad->main.setup_item,
-						EINA_FALSE);
-
 			}
 		} else {
 			ret = tethering_enable(ad->handle, TETHERING_TYPE_WIFI);
 			if (ret != TETHERING_ERROR_NONE) {
 				ERR("wifi tethering on is failed : %d\n", ret);
 				_update_wifi_item(ad, MH_STATE_NONE);
-				elm_object_item_disabled_set(ad->main.setup_item,
-						EINA_FALSE);
 			}
 		}
 		break;
@@ -139,18 +132,44 @@ static void __popup_resp_yes(void *data, Evas_Object *obj, void *event_info)
 		if (ret != TETHERING_ERROR_NONE) {
 			ERR("wifi tethering off is failed : %d\n", ret);
 			_update_wifi_item(ad, MH_STATE_NONE);
-			elm_object_item_disabled_set(ad->main.setup_item,
-					EINA_TRUE);
+		}
+		break;
+
+	case MH_POP_BT_ON_CONF:
+		ret = tethering_enable(ad->handle, TETHERING_TYPE_BT);
+		if (ret != TETHERING_ERROR_NONE) {
+			ERR("Error enable bt tethering : %d\n", ret);
+			_update_bt_item(ad, MH_STATE_NONE);
 		}
 		break;
 
 	case MH_POP_USB_ON_CONF:
+		if (_get_vconf_usb_state() != VCONFKEY_SYSMAN_USB_AVAILABLE) {
+			_prepare_popup(ad, MH_POP_USB_CONNECT,
+					_("IDS_MOBILEAP_POP_CONNECT_USB_CABLE"));
+			_create_popup(ad);
+			vconf_notify_key_changed(VCONFKEY_SETAPPL_USB_MODE_INT,
+					_handle_usb_mode_change, (void *)ad);
+			break;
+		}
+
 		ret = tethering_enable(ad->handle, TETHERING_TYPE_USB);
 		if (ret != TETHERING_ERROR_NONE) {
 			ERR("Error enable usb tethering : %d\n", ret);
-			elm_check_state_set(ad->main.usb_btn, EINA_FALSE);
 			_update_usb_item(ad, MH_STATE_NONE);
 		}
+		break;
+
+	case MH_POP_ENTER_TO_WIFI_SETUP_CONF:
+		_update_wifi_item(ad, MH_STATE_PROCESS);
+		ret = tethering_disable(ad->handle, TETHERING_TYPE_WIFI);
+		if (ret != TETHERING_ERROR_NONE) {
+			ERR("wifi tethering off is failed : %d\n", ret);
+			_update_wifi_item(ad, MH_STATE_NONE);
+		} else
+			ad->main.old_wifi_state = true;
+
+		mh_draw_wifi_setup_view(ad);
 		break;
 
 	default:
@@ -179,17 +198,21 @@ static void __popup_resp_no(void *data, Evas_Object *obj, void *event_info)
 	switch (ad->popup_type) {
 	case MH_POP_WIFI_ON_CONF:
 		_update_wifi_item(ad, MH_STATE_NONE);
-		elm_object_item_disabled_set(ad->main.setup_item, EINA_FALSE);
 		break;
 
 	case MH_POP_WIFI_OFF_CONF:
 		_update_wifi_item(ad, MH_STATE_NONE);
-		elm_object_item_disabled_set(ad->main.setup_item, EINA_TRUE);
+		break;
+
+	case MH_POP_BT_ON_CONF:
+		_update_bt_item(ad, MH_STATE_NONE);
 		break;
 
 	case MH_POP_USB_ON_CONF:
-		elm_check_state_set(ad->main.usb_btn, EINA_FALSE);
 		_update_usb_item(ad, MH_STATE_NONE);
+		break;
+
+	case MH_POP_ENTER_TO_WIFI_SETUP_CONF:
 		break;
 
 	default:
@@ -198,6 +221,20 @@ static void __popup_resp_no(void *data, Evas_Object *obj, void *event_info)
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
+}
+
+static bool _count_connected_clients_cb(tethering_client_h client, void *user_data)
+{
+	if (user_data == NULL) {
+		ERR("user_data is NULL\n");
+		return true;
+	}
+
+	int *count = (int *)user_data;
+
+	*count += 1;
+
+	return true;
 }
 
 void _prepare_popup(mh_appdata_t *ad, int type, const char *str)
@@ -306,6 +343,30 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_show(ad->popup);
 		break;
 
+	case MH_POP_BT_ON_CONF:
+		ad->popup = elm_popup_add(ad->win);
+		evas_object_size_hint_weight_set(ad->popup,
+				EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+
+		elm_object_text_set(ad->popup, ad->popup_string);
+
+		btn = elm_button_add(ad->popup);
+		elm_object_style_set(btn, "popup_button/default");
+		elm_object_text_set(btn, S_("IDS_COM_SK_YES"));
+		elm_object_part_content_set(ad->popup, "button1", btn);
+		evas_object_smart_callback_add(btn, "clicked",
+				__popup_resp_yes, (void *)ad);
+
+		btn = elm_button_add(ad->popup);
+		elm_object_style_set(btn, "popup_button/default");
+		elm_object_text_set(btn, S_("IDS_COM_SK_NO"));
+		elm_object_part_content_set(ad->popup, "button2", btn);
+		evas_object_smart_callback_add(btn, "clicked",
+				__popup_resp_no, (void *)ad);
+
+		evas_object_show(ad->popup);
+		break;
+
 	case MH_POP_USB_ON_CONF:
 		ad->popup = elm_popup_add(ad->win);
 		evas_object_size_hint_weight_set(ad->popup,
@@ -379,6 +440,30 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 
 		evas_object_show(ad->popup);
 		break;
+
+	case MH_POP_ENTER_TO_WIFI_SETUP_CONF:
+		ad->popup = elm_popup_add(ad->win);
+		evas_object_size_hint_weight_set(ad->popup,
+				EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+
+		elm_object_text_set(ad->popup, ad->popup_string);
+
+		btn = elm_button_add(ad->popup);
+		elm_object_style_set(btn, "popup_button/default");
+		elm_object_text_set(btn, S_("IDS_COM_SK_OK"));
+		elm_object_part_content_set(ad->popup, "button1", btn);
+		evas_object_smart_callback_add(btn, "clicked",
+				__popup_resp_yes, (void *)ad);
+
+		btn = elm_button_add(ad->popup);
+		elm_object_style_set(btn, "popup_button/default");
+		elm_object_text_set(btn, S_("IDS_COM_SK_CANCEL"));
+		elm_object_part_content_set(ad->popup, "button2", btn);
+		evas_object_smart_callback_add(btn, "clicked",
+				__popup_resp_no, (void *)ad);
+
+		evas_object_show(ad->popup);
+		break;
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -426,22 +511,24 @@ Evas_Object *_create_bg(Evas_Object *parent, const char *style)
 
 	evas_object_size_hint_weight_set(bg, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	elm_object_style_set(bg, style);
+	evas_object_show(bg);
 
 	return bg;
 }
 
-Evas_Object *_create_layout(Evas_Object *parent)
+Evas_Object *_create_win_layout(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
-	if (parent == NULL) {
-		ERR("The param is NULL\n");
+	if (ad->win == NULL) {
+		ERR("There is no main window\n");
 		return NULL;
 	}
 
-	Evas_Object *layout = NULL;
+	Evas_Object *layout;
+	Evas_Object *bg;
 
-	layout = elm_layout_add(parent);
+	layout = elm_layout_add(ad->win);
 	if (layout == NULL) {
 		ERR("layout is NULL\n");
 		return NULL;
@@ -451,7 +538,18 @@ Evas_Object *_create_layout(Evas_Object *parent)
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND,
 			EVAS_HINT_EXPAND);
 
+	bg = _create_bg(layout, "group_list");
+	if (bg == NULL) {
+		ERR("bg is NULL\n");
+		evas_object_del(layout);
+		return NULL;
+	}
+	elm_object_part_content_set(layout, "elm.swallow.bg", bg);
+
 	evas_object_show(layout);
+
+	ad->layout = layout;
+	ad->bg = bg;
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -511,7 +609,6 @@ void _handle_usb_mode_change(keynode_t *key, void *data)
 
 	if (tethering_enable(ad->handle, TETHERING_TYPE_USB) != TETHERING_ERROR_NONE) {
 		DBG("Error enable usb tethering\n");
-		elm_check_state_set(ad->main.usb_btn, EINA_FALSE);
 		_update_usb_item(ad, MH_STATE_NONE);
 	}
 }
@@ -555,3 +652,13 @@ int _get_vconf_hotspot_mode(void)
 	return value;
 }
 
+Eina_Bool _get_no_of_connected_device(tethering_h handle, int *no, tethering_type_e type)
+{
+	if (handle == NULL || no == NULL)
+		return FALSE;
+
+	tethering_foreach_connected_clients(handle, type,
+			_count_connected_clients_cb, (void *)no);
+
+	return TRUE;
+}

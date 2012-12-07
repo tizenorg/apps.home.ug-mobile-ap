@@ -1,0 +1,99 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "ეს პაროლი არის მხოლოდ Wi-Fi მობილური ინტერნეტისთვის"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fi მობილური ინტერნეტი დამალულია"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Wi-Fi მობილური ინტერნეტის პარამეტრები მხოლოდ მაშინ მუშაობს, როდესაც ჩართულია Wi-Fi მობილური ინტერნეტი"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fi მობილური ინტერნეტი"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fi ინტერნეტის პარამეტ."
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "მიღებულია:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "გაგზავნილი:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "მოწყობილობის სახელი"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "პაროლი"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "თუ გსურთ შეცვალოთ აპარატის სახელი, გახსენით %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "დაიმალოს ჩემი მოწყობილობა"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "მონაცემთა გამოყენება"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "მობილური ქსელი USB-თი"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "კომპიუტერით მობილური ინტერნეტის გამორთვა არ მისცემს საშუალებას დაკავშირებულ მოწყობილობებს დაუკავშირდნენ ინტერნეტს. განაგრძობთ?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "ჩადეთ SIM და გადატვირთეთ აპარატი, რომ გამოიყენოთ მობილური ინტერნეტი კომპიუტერში"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "კომპიუტერით მობილური ინტერნეტის გამოყენება შეუძლებელია"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "ნოუთბუქით მობილურ ინტერნეტ–კავშირს ვერ გამოიყენებთ ფრენის რეჟიმში. მობილური ინტერნეტის გამოსაყენებლად, გამორთეთ ფრენის რეჟიმი"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi ქსელი გაითიშება. Wi-Fi მობილური ინტერნეტი ხარჯავს უფო მეტ ენერგიას და ზრდის მონაცემთა გამოყენებას. განაგრძობთ?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi მობილური ინტერნეტი ხარჯავს უფო მეტ ენერგიას და ზრდის მონაცემთა გამოყენებას. განაგრძობთ?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "ტელეფონის შესახებ"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "დაკავშირებული მოწყობილობა"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "მობილური ინტერნეტის გაზიარება Bluetooth-ით"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "უსაფრთხოება"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "მიბმა"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "ჩაწერეთ მინიმუმ 8 სიმბოლოსგან შედგენილი პაროლი"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "თუ ნოუთბუქში ჩართავთ მობილურ ინტერნეტს USB-თი, წინა USB კავშირი გაითიშება"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d ბაიტი"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d კბ."
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d მბ"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "პაკეტის სერვისს ვერ გამოიყენებთ. დაფარვის ზონის გარეთ"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "USB კაბელის მიერთება"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "პაროლი უნდა შეიცავდეს მინიმუმ %d და მაქსიმუმ %d სიმბოლოს"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "დაკავშირებულ მოწყობილობასთან კავშირი შეწყდა"
+

@@ -13,6 +13,30 @@ msgstr "Wi-Fiテザリング"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fiテザリング設定"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "受信済み："
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "送信："
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "デバイス名称"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "パスワード"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "端末名は%sで変更できます。"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "マイデバイスを非表示"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "データ使用量"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USBテザリング"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "テザリングを無効にすると、インターネットにアクセスしている端末の接続を停止します。続行しますか？"
 
@@ -31,47 +55,8 @@ msgstr "Wi-Fiネットワークが切断されました。Wi-Fiテザリング�
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Wi-Fiテザリングはバッテリーをより多く消費し、データ使用量が増加します。続行しますか？"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "受信済み："
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "送信："
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "デバイス名称"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "パスワード"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "8文字以上でパスワードを入力してください。"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "端末名は%sで変更できます。"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "マイデバイスを非表示"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "データ使用量"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USBテザリング"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "USBテザリングを有効にすると、USB接続が切断されます。"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "端末情報"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d Bytes"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%dKB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%dMB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "接続中のデバイス"
@@ -82,15 +67,33 @@ msgstr "Bluetoothテザリング"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "セキュリティ"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "テザリング"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "8文字以上でパスワードを入力してください。"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "USBテザリングを有効にすると、USB接続が切断されます。"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Bytes"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%dMB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
-msgstr "圏外です。パケットサービスを使用できません"
+msgstr "圏外です。パケットデータサービスを使用できません。"
 
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "USBケーブルを接続してください"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
-msgstr "パスワードの長さは最低%d文字で、%d文字を超えてはいけません"
+msgstr "パスワードの長さは%d文字以上、%d文字以下である必要があります。"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "テザリング"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "接続中のデバイスを切断します。"
 

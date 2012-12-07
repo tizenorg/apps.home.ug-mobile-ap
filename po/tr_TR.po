@@ -13,6 +13,30 @@ msgstr "Wi-Fi bağlantısı"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi bağlantısı ayarları"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Alındı:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Gönderildi:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Cihaz adı"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Şifre"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Cihaz adı %s konumunda değiştirilebilir"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Cihazımı gizle"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Veri kullanımı"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB bağlanıyor"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Bağlantının devre dışı bırakılması bağlı cihazların internete erişmesine engel olur. Devam edilsin mi?"
 
@@ -31,47 +55,8 @@ msgstr "Wi-Fi ağının bağlantısı kesilecek. Wi-Fi bağlantısı daha fazla 
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Wi-Fi bağlantısı daha fazla pil gücü tüketir ve veri kullanımınızı arttırır. Devam edilsin mi?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Alındı:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Gönderildi:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Cihaz adı"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Şifre"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "En az 8 karakter içeren bir şifre girin"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Cihaz adı %s konumunda değiştirilebilir"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Cihazımı gizle"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Veri kullanımı"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB bağlanıyor"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "USB bağlantısını etkinleştirmek önceki USB bağlantısını koparacak"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Telefon hakkında"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d Bayt"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Bağlı cihaz"
@@ -82,6 +67,24 @@ msgstr "Bluetooth bağlantısı"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Güvenlik"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Bağlantı"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "En az 8 karakter içeren bir şifre girin"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "USB bağlantısını etkinleştirmek önceki USB bağlantısını koparacak"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Bayt"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Paket servisi kullanılamıyor. Kapsama alanı dışında"
 
@@ -91,6 +94,6 @@ msgstr "USB kablosunu bağlayın"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Şifre en az %d karakter içermeli ve %d karakteri geçmemelidir"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Bağlantı"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Bağlı cihazın bağlantısı kesilecek"
 

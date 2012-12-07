@@ -32,11 +32,12 @@ extern "C" {
 void _prepare_popup(mh_appdata_t *ad, int type, const char *str);
 Eina_Bool _create_popup(mh_appdata_t *ad);
 Evas_Object *_create_bg(Evas_Object *parent, const char *style);
-Evas_Object *_create_layout(Evas_Object *parent);
+Evas_Object *_create_win_layout(mh_appdata_t *ad);
 Evas_Object *_create_naviframe(Evas_Object *parent);
 void _handle_usb_mode_change(keynode_t *key, void *data);
 Eina_Bool _hide_imf(Evas_Object *entry);
 int _get_vconf_hotspot_mode(void);
+Eina_Bool _get_no_of_connected_device(tethering_h handle, int *no, tethering_type_e type);
 
 #ifdef __cplusplus
 }

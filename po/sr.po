@@ -13,6 +13,30 @@ msgstr "Wi-Fi vezivanje"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Podeš. Wi-Fi povezivanja"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Primljeno:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Poslato:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Ime uređaja"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Šifra"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Ime uređaja može da se promeni u %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Sakrij moj uređaj"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Upotreba podataka"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB vezivanje"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Onemogućavanje vezivanja će sprečiti da povezani uređaji pristupe Internetu. Nastaviti?"
 
@@ -31,47 +55,8 @@ msgstr "Wi-Fi mreža će biti isključena. Wi-Fi vezivanje troši više energije
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Wi-Fi vezivanje troši više energije i povećava upotrebu podataka. Nastaviti?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Primljeno:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Poslato:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Ime uređaja"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Šifra"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Unesi šifru dužine bar 8 karaktera"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Ime uređaja može da se promeni u %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Sakrij moj uređaj"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Upotreba podataka"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB vezivanje"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Omogućavanje USB vezivanja prekinuće sve prethodne USB veze"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "O telefonu"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d bajtova"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Povezani uređaj"
@@ -82,6 +67,24 @@ msgstr "Deljenje preko vezivanja"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Bezbednost"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Vezivanje"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Unesi šifru dužine bar 8 karaktera"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Omogućavanje USB vezivanja prekinuće sve prethodne USB veze"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d bajtova"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Nemoguće koristiti uslugu prenosa podataka. Van dometa"
 
@@ -91,6 +94,6 @@ msgstr "Priključi USB kabl"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Šifra mora da sadrži najmanje %d i najviše %d znakova"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Vezivanje"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Povezani uređaj će biti isključen"
 

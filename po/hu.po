@@ -13,6 +13,30 @@ msgstr "Wi-Fi internetmegosztás"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi int.megosztás beá."
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Fogadva:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Elküldve:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Eszköz név"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Jelszó"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Az eszköz neve itt módosítható: %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Saját eszköz elrejtése"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Adathasználat"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB-internetmegosztás"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Az internetmegosztás letiltása esetén megszűnik a csatolt eszközök internetkapcsolata. Folytatja?"
 
@@ -31,47 +55,8 @@ msgstr "Megszűnik a Wi-Fi hálózati kapcsolat. A Wi-Fi internetmegosztás hasz
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "A Wi-Fi internetmegosztás használata gyorsan meríti az akkumulátort, és nagyobb adatforgalmat eredményez. Folytatja?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Fogadva:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Elküldve:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Eszköz név"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Jelszó"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Legalább 8 karakterből álló jelszót írjon be"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Az eszköz neve itt módosítható: %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Saját eszköz elrejtése"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Adathasználat"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB-internetmegosztás"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Az USB-internetmegosztás engedélyezése esetén az előző USB-kapcsolat megszakad"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "A telefon névjegye"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d bájt"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d kB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Csatlakoztatott eszköz"
@@ -82,6 +67,24 @@ msgstr "Bluetooth internetmegosztás"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Biztonság"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Internetmegosztás"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Legalább 8 karakterből álló jelszót írjon be"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Az USB-internetmegosztás engedélyezése esetén az előző USB-kapcsolat megszakad"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d bájt"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d kB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Nem használható csomagalapú szolgáltatás. Nincs lefedettség"
 
@@ -91,6 +94,6 @@ msgstr "Csatlakoztassa az USB-kábelt"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "A jelszónak legalább %d, legfeljebb %d karakterből kell állnia"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Internetmegosztás"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "A csatlakoztatott eszköz le lesz választva"
 

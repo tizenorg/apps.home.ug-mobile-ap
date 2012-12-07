@@ -13,6 +13,30 @@ msgstr "WLAN-Tethering"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "WLAN-Tethering-Einstell."
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Empfangen:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Gesendet:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Gerätename"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Passwort"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Gerätename kann in %s geändert werden."
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Mein Gerät ausblenden"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Datennutzung"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB-Tethering"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Das Deaktivieren von Tethering verhindert den Zugriff verbundener Geräte auf das Internet. Fortfahren?"
 
@@ -31,47 +55,8 @@ msgstr "WLAN-Netz wird getrennt. WLAN-Tethering verbraucht mehr Akkuleistung und
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "WLAN-Tethering verbraucht mehr Akkuleistung und erhöht Ihre Datenverarbeitung. Fortfahren?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Empfangen:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Gesendet:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Gerätename"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Passwort"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Geben Sie ein Passwort mit mindestens 8 Zeichen ein"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Gerätename kann in %s geändert werden."
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Mein Gerät ausblenden"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Datennutzung"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB-Tethering"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Das Aktivieren des USB-Tethering beendet die vorherige USB-Verbindung."
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Telefoninfo"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d Byte"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Verbundenes Gerät"
@@ -82,6 +67,24 @@ msgstr "Bluetooth-Tethering"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Sicherheit"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Tethering"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Geben Sie ein Passwort mit mindestens 8 Zeichen ein"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Das Aktivieren des USB-Tethering beendet die vorherige USB-Verbindung."
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Byte"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Paketdienst kann nicht verwendet werden. Außerhalb des Abdeckungsbereichs"
 
@@ -91,6 +94,6 @@ msgstr "USB-Kabel anschließen"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Passwort muss mindestens %d, jedoch nicht mehr als %d Zeichen enthalten"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Tethering"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Das angeschlossene Gerät wird getrennt."
 

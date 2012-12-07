@@ -13,6 +13,30 @@ msgstr "Furn. acc. Internet Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Set. furn. ac. Int. Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Primit:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Trimis:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Nume dispozitiv"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Parolă"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Numele dispozitivului poate fi modificat în %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Ascundere dispozitiv"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Utilizare date"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Partajare conex. Internet"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Prin dezactivarea furnizării accesului la Internet, nu se va permite accesul la Internet al dispozitivelor conectate. Continuaţi?"
 
@@ -31,47 +55,8 @@ msgstr "Reţeaua Wi-Fi va fi întreruptă. Furnizarea accesului la Internet prin
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Furnizarea accesului la Internet prin Wi-Fi consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Continuaţi?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Primit:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Trimis:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Nume dispozitiv"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Parolă"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Introduceţi o parolă de minimum 8 caractere"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Numele dispozitivului poate fi modificat în %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Ascundere dispozitiv"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Utilizare date"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "Partajare conex. Internet"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Activarea furnizării accesului la Internet prin USB va determina deconectarea conexiunii USB anterioare"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Despre telefon"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d bytes"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Dispozitiv conectat"
@@ -82,6 +67,24 @@ msgstr "Furnizare acces la Internet prin Bluetooth"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Securitate"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Tethering"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Introduceţi o parolă de minimum 8 caractere"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Activarea furnizării accesului la Internet prin USB va determina deconectarea conexiunii USB anterioare"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d octeţi"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Imposibil de utilizat serviciul de transfer de pachete. În afara ariei de acoperire"
 
@@ -91,6 +94,6 @@ msgstr "Conectaţi cablul USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parola trebuie să conţină minimum %d caractere şi nu poate depăşi %d caractere"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Tethering"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Dispozitivul conectat va fi deconectat"
 

@@ -13,6 +13,30 @@ msgstr "„Wi-Fi“ siejimas"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "„Wi-Fi“ siej. nustatymai"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Gauta:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Išsiųsta:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Įrenginio vardas"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Slaptažodis"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Įrenginio pavadinimas gali būti pakeistas į %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Slėpti mano įrenginį"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Duomenų naudojimas"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB siejimas"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Išjungus siejimą, susietiems įrenginiams nebus leidžiama pasiekti interneto. Tęsti?"
 
@@ -31,47 +55,8 @@ msgstr "„Wi-Fi“ tinklas bus atjungtas. Esant įjungtam „Wi-Fi“ siejimui,
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Esant įjungtam „Wi-Fi“ siejimui, suvartojama daugiau akumuliatoriaus energijos ir padidėja duomenų naudojimas. Tęsti?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Gauta:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Išsiųsta:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Įrenginio vardas"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Slaptažodis"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Įveskite slaptažodį bent iš 8 simbolių"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Įrenginio pavadinimas gali būti pakeistas į %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Slėpti mano įrenginį"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Duomenų naudojimas"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB siejimas"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Įjungus USB siejimą, bus atjungtas ankstesnis USB ryšys"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Apie telefoną"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d baitai (-ų)"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d KB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Prijungtas įrenginys"
@@ -82,6 +67,24 @@ msgstr "„Bluetooth“ siejimas"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Sauga"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Siejama"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Įveskite slaptažodį bent iš 8 simbolių"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Įjungus USB siejimą, bus atjungtas ankstesnis USB ryšys"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d baitai (-ų)"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Neįmanoma naudoti paketinių duomenų paslaugos. Ne ryšio zonoje"
 
@@ -91,6 +94,6 @@ msgstr "Prijungti USB kabelį"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Slaptažodį turi sudaryti ne mažiau kaip %d simboliai (-ių), bet ne daugiau kaip %d simboliai (-ių)"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Siejama"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Prijungtas įrenginys bus atjungtas"
 

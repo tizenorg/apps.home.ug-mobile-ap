@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 #if !defined(EDJDIR)
-#define EDJDIR "/usr/ug/res/edje/ug-mobile-ap"
+#define EDJDIR "/usr/ug/res/edje/ug-setting-mobile-ap-ug"
 #endif
 
 #if !defined(PREFIX)
@@ -80,7 +80,10 @@ extern "C" {
 #define __MOBILE_AP_FUNC_ENTER__	DBG("Entering: +\n")
 #define __MOBILE_AP_FUNC_EXIT__ 	DBG("Exit: -\n")
 
-#define MOBILE_AP_IMG_DIR		PREFIX"/res/images/ug-mobile-ap"
+#define TETHERING_IMAGES_EDJ		"tethering_images.edj"
+#define WIFI_ICON			"Wifi.png"
+#define BT_ICON				"Bluetooth.png"
+#define USB_ICON			"USB.png"
 
 #define MH_DEFAULT_PASSWORD		"qwertyuiop"
 
@@ -105,7 +108,9 @@ typedef enum {
 	/* Two buttons pop-up */
 	MH_POP_WIFI_OFF_CONF,
 	MH_POP_WIFI_ON_CONF,
+	MH_POP_BT_ON_CONF,
 	MH_POP_USB_ON_CONF,
+	MH_POP_ENTER_TO_WIFI_SETUP_CONF,
 
 	/* One button pop-up */
 	MH_POP_INFORMATION,
@@ -125,7 +130,6 @@ typedef enum {
 } mh_state_e;
 
 typedef struct ap_app_main {
-	Evas_Object 			*conform;
 	Evas_Object			*genlist;
 
 	Evas_Object			*back_btn;
@@ -137,7 +141,6 @@ typedef struct ap_app_main {
 	Elm_Genlist_Item_Class		*end_sp_itc;
 	Elm_Genlist_Item_Class		*wifi_itc;
 	Elm_Genlist_Item_Class		*setup_itc;
-	Elm_Genlist_Item_Class		*setup_help_itc;
 	Elm_Genlist_Item_Class		*bt_itc;
 	Elm_Genlist_Item_Class		*usb_itc;
 	Elm_Genlist_Item_Class		*help_itc;
@@ -149,7 +152,6 @@ typedef struct ap_app_main {
 
 	Elm_Object_Item			*wifi_item;
 	Elm_Object_Item			*setup_item;
-	Elm_Object_Item			*setup_help_item;
 	Elm_Object_Item			*bt_item;
 	Elm_Object_Item			*usb_item;
 	Elm_Object_Item			*device_item;
@@ -158,14 +160,17 @@ typedef struct ap_app_main {
 
 	int 				hotspot_mode;
 	int				wifi_state;
+	int				bt_state;
 	int				usb_state;
+	bool				old_wifi_state;
 } mh_main_view_t;
 
 typedef struct {
-	Evas_Object 			*conform;
+	Elm_Object_Item			*navi_it;
 	Evas_Object			*genlist;
 
 	Evas_Object			*back_btn;
+	Evas_Object			*title_back_btn;
 	Evas_Object 			*hide_btn;
 	Evas_Object 			*security_btn;
 	Evas_Object 	 		*pw_layout;
@@ -188,6 +193,7 @@ typedef struct {
 
 	char 				device_name[DEVICE_NAME_LENGTH_MAX + 1];
 	char 				wifi_passphrase[WIFI_PASSPHRASE_LENGTH_MAX + 1];
+	char 				wifi_passphrase_new[WIFI_PASSPHRASE_LENGTH_MAX + 1];
 } mh_wifi_setting_view_t;
 
 typedef struct {
@@ -207,6 +213,9 @@ typedef struct {
 	connection_h			conn_handle;
 
 	Evas_Object 			*win;
+	Evas_Object			*layout;
+	Evas_Object			*bg;
+
 	Evas_Object 			*naviframe;
 	Evas_Object 			*popup;
 
@@ -223,7 +232,6 @@ typedef struct {
 } mh_appdata_t;
 
 typedef struct {
-	Evas_Object		*base;
 	mh_appdata_t		*ad;
 	ui_gadget_h		ug;
 } mh_ugdata_t;

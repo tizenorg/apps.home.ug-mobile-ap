@@ -28,6 +28,7 @@ extern "C" {
 #include "mh_view_main.h"
 #include "mh_common_utility.h"
 
+int _get_vconf_usb_state(void);
 void _enabled_cb(tethering_error_e result, tethering_type_e type, bool is_requested, void *user_data);
 void _disabled_cb(tethering_error_e result, tethering_type_e type, tethering_disabled_cause_e cause, void *user_data);
 void _connection_changed_cb(tethering_client_h client, bool opened, void *user_data);

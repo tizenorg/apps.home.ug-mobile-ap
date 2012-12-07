@@ -13,6 +13,30 @@ msgstr "Wi-Fi-internetdelning"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Inst. f. Wi-Fi-internetd."
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Mottaget:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Skickat:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Enhetsnamn"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Lösenord"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Enhetsnamnet kan ändras i %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Dölj min enhet"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Dataanvändning"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB-internetdelning"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "Genom att inaktivera Internetdelning förhindras länkade enheter att nå Internet. Fortsätta?"
 
@@ -31,47 +55,8 @@ msgstr "Wi-Fi-nätverket kopplas från. Vid användning av Wi-Fi-internetdelning
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "Vid användning av Wi-Fi-internetdelning förbrukas mer batteri och dataanvändningen ökar. Fortsätta?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Mottaget:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Skickat:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Enhetsnamn"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Lösenord"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Ange ett lösenord med minst 8 tecken"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Enhetsnamnet kan ändras i %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Dölj min enhet"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Dataanvändning"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB-internetdelning"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Om du aktiverar USB-internetdelning inaktiveras den tidigare USB-anslutningen"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Om telefonen"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d byte"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d kB"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Ansluten enhet"
@@ -82,6 +67,24 @@ msgstr "Bluetooth-internetdelning"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Säkerhet"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Internetdelning"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Ange ett lösenord med minst 8 tecken"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Om du aktiverar USB-internetdelning inaktiveras den tidigare USB-anslutningen"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d byte"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d kB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Det går inte att använda pakettjänsten. Ingen täckning"
 
@@ -91,6 +94,6 @@ msgstr "Anslut USB-kabeln"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Lösenord måste innehålla minst %d tecken och inte överstiga %d tecken"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Internetdelning"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Den anslutna enheten kommer att kopplas bort"
 

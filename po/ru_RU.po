@@ -13,6 +13,30 @@ msgstr "Модем Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Параметры модема Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Получено:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Отправлено:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Имя устройства"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Пароль"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Имя устройства можно изменить в %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Скрыть устройство"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Использование данных"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB-модем"
+
 msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
 msgstr "При отключении модема связанные устройства не смогут получать доступ к Интернету. Продолжить?"
 
@@ -31,47 +55,8 @@ msgstr "Сеть Wi-Fi будет отключена. При использов�
 msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
 msgstr "При использовании модема Wi-Fi быстро расходуется заряд батареи и увеличивается объем передаваемых данных. Продолжить?"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Получено:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Отправлено:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Имя устройства"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Пароль"
-
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Введите пароль длиной не менее 8 символов"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Имя устройства можно изменить в %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Скрыть устройство"
-
-msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Использование данных"
-
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB-модем"
-
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "При включении USB-модема предыдущее USB-подключение будет отключено"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Сведения о телефоне"
-
-msgid "IDS_MOBILEAP_BODY_PD_BYTES"
-msgstr "%d байт(а)"
-
-msgid "IDS_MOBILEAP_BODY_PD_KB"
-msgstr "%d Кб"
-
-msgid "IDS_MOBILEAP_BODY_PD_MB"
-msgstr "%d Мб"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Подключенное устройство"
@@ -82,6 +67,24 @@ msgstr "Bluetooth-модем"
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "Безопасность"
 
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Модем"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Введите пароль длиной не менее 8 символов"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "При включении USB-модема предыдущее USB-подключение будет отключено"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d байт(а)"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d Кб"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d Мб"
+
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Невозможно использовать услугу передачи пакетов. Вне зоны покрытия"
 
@@ -91,6 +94,6 @@ msgstr "Подключите USB-кабель"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Допустимое число символов в пароле: от %d до %d"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Модем"
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Подключенное устройство будет отключено"
 

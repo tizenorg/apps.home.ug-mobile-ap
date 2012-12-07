@@ -35,7 +35,7 @@ static bool __get_vconf_prev_wifi_state()
 	return value ? true : false;
 }
 
-static int __get_vconf_usb_state()
+int _get_vconf_usb_state()
 {
 	int value = VCONFKEY_SYSMAN_USB_DISCONNECTED;
 
@@ -61,7 +61,7 @@ static bool __is_connected_wifi_net(mh_appdata_t *ad)
 	}
 
 	if (wifi_state != CONNECTION_WIFI_STATE_CONNECTED) {
-		ERR("Wi-Fi network is not connected\n");
+		ERR("Wi-Fi network is not connected : %d\n", wifi_state);
 		return false;
 	}
 
@@ -81,7 +81,7 @@ static bool __is_connected_ethernet_net(mh_appdata_t *ad)
 	}
 
 	if (ethernet_state != CONNECTION_ETHERNET_STATE_CONNECTED) {
-		ERR("Ethernet network is not connected\n");
+		ERR("Ethernet network is not connected : %d\n", ethernet_state);
 		return false;
 	}
 
@@ -121,11 +121,12 @@ static bool __is_connected_cellular_net(mh_appdata_t *ad)
 		_create_popup(ad);
 		ERR("Cellular network is not connected\n");
 		return false;
-	} else if (cellular_state != CONNECTION_CELLULAR_STATE_CONNECTED) {
+	} else if (cellular_state != CONNECTION_CELLULAR_STATE_CONNECTED &&
+			cellular_state != CONNECTION_CELLULAR_STATE_AVAILABLE) {
 		_prepare_popup(ad, MH_POP_INFORMATION,
 				_("IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"));
 		_create_popup(ad);
-		ERR("Cellular network is not connected\n");
+		ERR("Cellular network is not connected : %d\n", cellular_state);
 		return false;
 	}
 
@@ -145,6 +146,37 @@ static int __create_wifi_hotspot_on_popup(mh_appdata_t *ad)
 		str = _("IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q");
 
 	_prepare_popup(ad, MH_POP_WIFI_ON_CONF, str);
+	_create_popup(ad);
+
+	return 0;
+}
+
+static int __create_bt_tethering_on_popup(mh_appdata_t *ad)
+{
+	_prepare_popup(ad, MH_POP_BT_ON_CONF,
+			_(MH_CONSUMES_MORE_BATTERY_POWER));
+	_create_popup(ad);
+
+	return 0;
+}
+
+static int __create_usb_tethering_on_popup(mh_appdata_t *ad)
+{
+	char buf[MH_LABEL_LENGTH_MAX] = {0, };
+
+	if (_get_vconf_usb_state() != VCONFKEY_SYSMAN_USB_AVAILABLE) {
+		DBG("USB is not connected\n");
+		_prepare_popup(ad, MH_POP_USB_ON_CONF,
+				_(MH_CONSUMES_MORE_BATTERY_POWER));
+		_create_popup(ad);
+
+		return 0;
+	}
+
+	snprintf(buf, sizeof(buf), "%s.<br>%s",
+			_("IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"),
+			_(MH_CONSUMES_MORE_BATTERY_POWER));
+	_prepare_popup(ad, MH_POP_USB_ON_CONF, buf);
 	_create_popup(ad);
 
 	return 0;
@@ -417,10 +449,15 @@ int _handle_wifi_onoff_change(mh_appdata_t *ad)
 	__MOBILE_AP_FUNC_ENTER__;
 
 	int ret = 0;
+	int connected_wifi_clients = 0;
 
 	/* Turn off WiFi hotspot */
 	if (ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI) {
-		if (ad->clients.number > 0) {
+		if (_get_no_of_connected_device(ad->handle, &connected_wifi_clients,
+					TETHERING_TYPE_WIFI) == FALSE) {
+			ERR("Getting the number of connected device is failed\n");
+		}
+		if (connected_wifi_clients > 0) {
 			_prepare_popup(ad, MH_POP_WIFI_OFF_CONF,
 					_("IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"));
 			_create_popup(ad);
@@ -473,9 +510,8 @@ int _handle_bt_onoff_change(mh_appdata_t *ad)
 		return -1;
 	}
 
-	ret = tethering_enable(ad->handle, TETHERING_TYPE_BT);
-	if (ret != TETHERING_ERROR_NONE) {
-		ERR("Error enable bt tethering [%d]\n", ret);
+	if (__create_bt_tethering_on_popup(ad) < 0) {
+		ERR("__create_wifi_hotspot_on_popup fail\n");
 		return -1;
 	}
 
@@ -507,20 +543,12 @@ int _handle_usb_onoff_change(mh_appdata_t *ad)
 		return -1;
 	}
 
-	if (__get_vconf_usb_state() != VCONFKEY_SYSMAN_USB_AVAILABLE) {
-		DBG("USB is not connected\n");
-		_prepare_popup(ad, MH_POP_USB_CONNECT,
-				_("IDS_MOBILEAP_POP_CONNECT_USB_CABLE"));
-		_create_popup(ad);
-
-		vconf_notify_key_changed(VCONFKEY_SETAPPL_USB_MODE_INT,
-				_handle_usb_mode_change, (void *)ad);
-		return 0;
+	if (__create_usb_tethering_on_popup(ad) < 0) {
+		ERR("__create_wifi_hotspot_on_popup fail\n");
+		return -1;
 	}
 
-	_prepare_popup(ad, MH_POP_USB_ON_CONF,
-			_("IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"));
-	_create_popup(ad);
+
 
 	__MOBILE_AP_FUNC_EXIT__;
 

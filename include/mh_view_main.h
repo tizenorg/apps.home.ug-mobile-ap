@@ -36,15 +36,19 @@ extern "C" {
 #define MH_DEVICE_LIST_NO_NAME	"No name"
 #define MH_DEFAULT_DEVICE_NAME	"No name"
 
+#define MH_CONNECTED_DEVICE_WILL_BE_DISCONNECTED	"Connected device will be disconnected"
+#define MH_CONSUMES_MORE_BATTERY_POWER			"Tethering consumes more battery power and increases your data usage. Continue?"
+
 void ap_update_data_onoff(void *data);
 void ap_update_data_device(mh_appdata_t *ad);
 Eina_Bool ap_update_data_packet_usage(mh_appdata_t *ad);
 void _start_update_data_packet_usage(mh_appdata_t *ad);
 void _stop_update_data_packet_usage(mh_appdata_t *ad);
 void ap_draw_contents(mh_appdata_t *ad);
-void ap_callback_del(void *data);
-void _update_usb_item(mh_appdata_t *ad, int usb_state);
+void ap_callback_del(mh_appdata_t *ad);
 void _update_wifi_item(mh_appdata_t *ad, int wifi_state);
+void _update_bt_item(mh_appdata_t *ad, int bt_state);
+void _update_usb_item(mh_appdata_t *ad, int usb_state);
 void _update_main_view(mh_appdata_t *ad);
 
 #ifdef __cplusplus

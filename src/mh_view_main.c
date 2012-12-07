@@ -299,6 +299,8 @@ static void __read_setting(mh_appdata_t *ad)
 	}
 	g_strlcpy(ad->setup.wifi_passphrase, passphrase,
 			sizeof(ad->setup.wifi_passphrase));
+	g_strlcpy(ad->setup.wifi_passphrase_new, passphrase,
+			sizeof(ad->setup.wifi_passphrase_new));
 	free(passphrase);
 
 	ret = tethering_wifi_get_ssid_visibility(ad->handle, &ad->setup.visibility);
@@ -334,16 +336,39 @@ void _update_wifi_item(mh_appdata_t *ad, int wifi_state)
 	if (ad->main.wifi_state == MH_STATE_PROCESS) {
 		ad->main.wifi_state = MH_STATE_NONE;
 		elm_genlist_item_select_mode_set(ad->main.wifi_item, ELM_OBJECT_SELECT_MODE_DEFAULT);
-		elm_object_item_disabled_set(ad->main.bt_item, EINA_FALSE);
-		elm_object_item_disabled_set(ad->main.usb_item, EINA_FALSE);
+		elm_object_item_disabled_set(ad->main.setup_item, EINA_FALSE);
 	} else if (ad->main.wifi_state == MH_STATE_NONE) {
 		ad->main.wifi_state = MH_STATE_PROCESS;
 		elm_genlist_item_select_mode_set(ad->main.wifi_item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-		elm_object_item_disabled_set(ad->main.bt_item, EINA_TRUE);
-		elm_object_item_disabled_set(ad->main.usb_item, EINA_TRUE);
+		elm_object_item_disabled_set(ad->main.setup_item, EINA_TRUE);
 	}
 
 	elm_genlist_item_update(ad->main.wifi_item);
+	elm_object_item_signal_emit(ad->main.setup_item, "elm,state,bottom", "");
+
+	__MOBILE_AP_FUNC_EXIT__;
+
+	return;
+}
+
+void _update_bt_item(mh_appdata_t *ad, int bt_state)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (ad->main.bt_state == bt_state) {
+		DBG("aready updated\n");
+		return;
+	}
+
+	if (ad->main.bt_state == MH_STATE_PROCESS) {
+		ad->main.bt_state = MH_STATE_NONE;
+		elm_genlist_item_select_mode_set(ad->main.bt_item, ELM_OBJECT_SELECT_MODE_DEFAULT);
+	} else if (ad->main.bt_state == MH_STATE_NONE) {
+		ad->main.bt_state = MH_STATE_PROCESS;
+		elm_genlist_item_select_mode_set(ad->main.bt_item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	}
+
+	elm_genlist_item_update(ad->main.bt_item);
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -406,10 +431,13 @@ void _update_main_view(mh_appdata_t *ad)
 	} else {
 		elm_check_state_set(ad->main.wifi_btn, wifi_state);
 	}
-	elm_object_item_disabled_set(ad->main.setup_item, wifi_state);
 
 	/* Update BT tethering on / off button */
-	elm_check_state_set(ad->main.bt_btn, bt_state);
+	if (ad->main.bt_state != MH_STATE_NONE) {
+		_update_bt_item(ad, MH_STATE_NONE);
+	} else {
+		elm_check_state_set(ad->main.bt_btn, bt_state);
+	}
 
 	/* Update USB tethering on / off button */
 	if (ad->main.usb_state != MH_STATE_NONE) {
@@ -438,6 +466,8 @@ void _update_main_view(mh_appdata_t *ad)
 				ERR("elm_genlist_item_insert_after NULL\n");
 				return;
 			}
+			elm_genlist_item_select_mode_set(item,
+					ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 			ad->main.help_item = item;
 		}
 	} else {
@@ -465,20 +495,13 @@ static void __wifi_onoff_changed_cb(void *data, Evas_Object *obj,
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
-	Eina_Bool wifi_state = EINA_FALSE;
-
-	wifi_state = ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI ?
-		EINA_TRUE : EINA_FALSE;
 
 	_update_wifi_item(ad, MH_STATE_PROCESS);
-	elm_object_item_disabled_set(ad->main.setup_item, EINA_TRUE);
 
 	if (_handle_wifi_onoff_change(ad) != 0) {
 		ERR("_handle_wifi_onoff_change is failed\n");
 		_update_wifi_item(ad, MH_STATE_NONE);
-		elm_object_item_disabled_set(ad->main.setup_item, EINA_FALSE);
-	} else
-		wifi_state = !wifi_state;
+	}
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -511,6 +534,8 @@ static void __select_setup_item(void *data, Evas_Object *obj, void *event_info)
 
 	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
 	mh_appdata_t *ad = (mh_appdata_t *)data;
+	int connected_wifi_clients = 0;
+	int ret = 0;
 
 	if (data == NULL) {
 		ERR("The param is NULL\n");
@@ -518,7 +543,33 @@ static void __select_setup_item(void *data, Evas_Object *obj, void *event_info)
 	}
 
 	elm_genlist_item_selected_set(item, EINA_FALSE);
-	mh_draw_wifi_setup_view(ad);
+
+	if (tethering_is_enabled(ad->handle, TETHERING_TYPE_WIFI) == false) {
+		mh_draw_wifi_setup_view(ad);
+		return;
+	}
+
+	DBG("Wi-Fi tethering is on\n");
+	if (_get_no_of_connected_device(ad->handle, &connected_wifi_clients,
+				TETHERING_TYPE_WIFI) == FALSE) {
+		ERR("Getting the number of connected device is failed\n");
+	}
+
+	if (connected_wifi_clients > 0) {
+		_prepare_popup(ad, MH_POP_ENTER_TO_WIFI_SETUP_CONF,
+				_("IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"));
+		_create_popup(ad);
+	} else {
+		_update_wifi_item(ad, MH_STATE_PROCESS);
+		ret = tethering_disable(ad->handle, TETHERING_TYPE_WIFI);
+		if (ret != TETHERING_ERROR_NONE) {
+			ERR("wifi tethering off is failed : %d\n", ret);
+			_update_wifi_item(ad, MH_STATE_NONE);
+		} else
+			ad->main.old_wifi_state = true;
+
+		mh_draw_wifi_setup_view(ad);
+	}
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -535,15 +586,13 @@ static void __bt_onoff_changed_cb(void *data, Evas_Object *obj, void *event_info
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
-	Eina_Bool bt_state;
 
-	bt_state = ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_BT ?
-		EINA_TRUE : EINA_FALSE;
+	_update_bt_item(ad, MH_STATE_PROCESS);
 
-	if (_handle_bt_onoff_change(ad) == 0)
-		bt_state = !bt_state;
-
-	elm_check_state_set(ad->main.bt_btn, bt_state);
+	if (_handle_bt_onoff_change(ad) != 0) {
+		ERR("_handle_bt_onoff_change is failed\n");
+		_update_bt_item(ad, MH_STATE_NONE);
+	}
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -614,7 +663,7 @@ static void __select_usb_item(void *data, Evas_Object *obj, void *event_info)
 	return;
 }
 
-static void __quit_btn_cb(void *data, Evas_Object *obj, void *event_info)
+static void __back_btn_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
@@ -697,15 +746,10 @@ static char *__get_setup_label(void *data, Evas_Object *obj, const char *part)
 		return NULL;
 	}
 
-	mh_appdata_t *ad = (mh_appdata_t *)data;
-
 	if (strcmp(part, "elm.text") != 0) {
 		ERR("Invalid param\n");
 		return NULL;
 	}
-
-	elm_object_item_disabled_set(ad->main.setup_item,
-			ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI);
 
 	return strdup(_("IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"));
 }
@@ -726,6 +770,7 @@ static Evas_Object *__get_bt_icon(void *data, Evas_Object *obj, const char *part
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	Evas_Object *btn = NULL;
+	Evas_Object *progressbar = NULL;
 
 	if (strcmp(part, "elm.icon") != 0) {
 		ERR("Invalid param\n");
@@ -737,22 +782,38 @@ static Evas_Object *__get_bt_icon(void *data, Evas_Object *obj, const char *part
 		return NULL;
 	}
 
-	btn = elm_check_add(obj);
-	elm_object_style_set(btn, "on&off");
-	evas_object_show(btn);
-
-	evas_object_pass_events_set(btn, EINA_TRUE);
-	evas_object_propagate_events_set(btn, EINA_FALSE);
-	elm_check_state_set(btn, ad->main.hotspot_mode &
-			VCONFKEY_MOBILE_HOTSPOT_MODE_BT ? EINA_TRUE : EINA_FALSE);
-
-	evas_object_smart_callback_add(btn, "changed", __bt_onoff_changed_cb,
-			ad);
-	ad->main.bt_btn = btn;
+	ad->main.bt_btn = NULL;
+	if (ad->main.bt_state == MH_STATE_PROCESS) {
+		progressbar = elm_progressbar_add(obj);
+		if (progressbar == NULL) {
+			ERR("progressbar is NULL\n");
+			return NULL;
+		}
+		elm_object_style_set(progressbar, "list_process");
+		elm_progressbar_horizontal_set(progressbar, EINA_TRUE);
+		elm_progressbar_pulse(progressbar, EINA_TRUE);
+		evas_object_show(progressbar);
+		ad->main.bt_btn = progressbar;
+	} else {
+		btn = elm_check_add(obj);
+		if (btn == NULL) {
+			ERR("btn is NULL\n");
+			return NULL;
+		}
+		elm_object_style_set(btn, "on&off");
+		evas_object_pass_events_set(btn, EINA_TRUE);
+		evas_object_propagate_events_set(btn, EINA_FALSE);
+		elm_check_state_set(btn, ad->main.hotspot_mode &
+				VCONFKEY_MOBILE_HOTSPOT_MODE_BT ? EINA_TRUE : EINA_FALSE);
+		evas_object_show(btn);
+		evas_object_smart_callback_add(btn, "changed", __bt_onoff_changed_cb,
+				ad);
+		ad->main.bt_btn = btn;
+	}
 
 	__MOBILE_AP_FUNC_EXIT__;
 
-	return btn;
+	return ad->main.bt_btn;
 }
 
 static char *__get_usb_label(void *data, Evas_Object *obj, const char *part)
@@ -818,21 +879,6 @@ static Evas_Object *__get_usb_icon(void *data, Evas_Object *obj,
 	return ad->main.usb_btn;
 }
 
-static char *__get_setup_help_label(void *data, Evas_Object *obj,
-							const char *part)
-{
-	__MOBILE_AP_FUNC_ENTER__;
-
-	if (strcmp(part, "elm.text.1") != 0) {
-		ERR("Invalid param\n");
-		return NULL;
-	}
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return strdup(_("IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"));
-}
-
 static char *__get_help_label(void *data, Evas_Object *obj, const char *part)
 {
 	__MOBILE_AP_FUNC_ENTER__;
@@ -845,8 +891,8 @@ static char *__get_help_label(void *data, Evas_Object *obj, const char *part)
 	char *ptr = NULL;
 	int wifi_state = VCONFKEY_MOBILE_HOTSPOT_MODE_NONE;
 
-	if (strcmp(part, "elm.text.1") != 0) {
-		ERR("Invalid param\n");
+	if (strcmp(part, "elm.text") != 0) {
+		ERR("Invalid param : %s\n", part);
 		return NULL;
 	}
 
@@ -1021,7 +1067,7 @@ static Evas_Object *__gl_get_dev_wifi_icon(void *data, Evas_Object *obj,
 
 	if (!strncmp(part, "elm.icon", 8)) {
 		icon = elm_icon_add(obj);
-		elm_icon_file_set(icon, MOBILE_AP_IMG_DIR"/Wifi.png", NULL);
+		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, WIFI_ICON);
 		evas_object_size_hint_aspect_set(icon,
 				EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
 		return icon;
@@ -1036,7 +1082,7 @@ static Evas_Object *__gl_get_dev_usb_icon(void *data, Evas_Object *obj,
 
 	if (!strncmp(part, "elm.icon", 8)) {
 		icon = elm_icon_add(obj);
-		elm_icon_file_set(icon, MOBILE_AP_IMG_DIR"/USB.png", NULL);
+		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, USB_ICON);
 		evas_object_size_hint_aspect_set(icon,
 				EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
 		return icon;
@@ -1051,7 +1097,7 @@ static Evas_Object *__gl_get_dev_bt_icon(void *data, Evas_Object *obj,
 
 	if (!strncmp(part, "elm.icon", 8)) {
 		icon = elm_icon_add(obj);
-		elm_icon_file_set(icon, MOBILE_AP_IMG_DIR"/Bluetooth.png", NULL);
+		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, BT_ICON);
 		evas_object_size_hint_aspect_set(icon,
 					EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
 		return icon;
@@ -1116,7 +1162,6 @@ static void __free_genlist_itc(mh_appdata_t *ad)
 	elm_genlist_item_class_free(ad->main.setup_itc);
 	elm_genlist_item_class_free(ad->main.bt_itc);
 	elm_genlist_item_class_free(ad->main.usb_itc);
-	elm_genlist_item_class_free(ad->main.setup_help_itc);
 	elm_genlist_item_class_free(ad->main.help_itc);
 	elm_genlist_item_class_free(ad->main.device_itc);
 	elm_genlist_item_class_free(ad->main.device0_itc);
@@ -1131,7 +1176,7 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 {
 	/* On, Off view's item class for genlist */
 	ad->main.sp_itc = elm_genlist_item_class_new();
-	ad->main.sp_itc->item_style = "dialogue/separator/21/with_line";
+	ad->main.sp_itc->item_style = "dialogue/separator";
 	ad->main.sp_itc->func.text_get = NULL;
 	ad->main.sp_itc->func.content_get = NULL;
 	ad->main.sp_itc->func.state_get = NULL;
@@ -1145,7 +1190,7 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	ad->main.wifi_itc->func.del = NULL;
 
 	ad->main.end_sp_itc = elm_genlist_item_class_new();
-	ad->main.end_sp_itc->item_style = "dialogue/separator/end";
+	ad->main.end_sp_itc->item_style = "dialogue/separator";
 	ad->main.end_sp_itc->func.text_get = NULL;
 	ad->main.end_sp_itc->func.content_get = NULL;
 	ad->main.end_sp_itc->func.state_get = NULL;
@@ -1173,13 +1218,6 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	ad->main.usb_itc->func.content_get = __get_usb_icon;
 	ad->main.usb_itc->func.state_get = NULL;
 	ad->main.usb_itc->func.del = NULL;
-
-	ad->main.setup_help_itc = elm_genlist_item_class_new();
-	ad->main.setup_help_itc->item_style = "multiline/1text";
-	ad->main.setup_help_itc->func.text_get = __get_setup_help_label;
-	ad->main.setup_help_itc->func.content_get = NULL;
-	ad->main.setup_help_itc->func.state_get = NULL;
-	ad->main.setup_help_itc->func.del = NULL;
 
 	ad->main.help_itc = elm_genlist_item_class_new();
 	ad->main.help_itc->item_style = "multiline/1text";
@@ -1240,7 +1278,20 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	return;
 }
 
-static void _ap_inner_contents(mh_appdata_t *ad)
+static void __gl_realized(void *data, Evas_Object *obj, void *event_info)
+{
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
+
+	if (item == ad->main.wifi_item || item == ad->main.bt_item || item == ad->main.device_item)
+		elm_object_item_signal_emit(item, "elm,state,top", "");
+	else if (item == ad->main.setup_item || item == ad->main.usage_item || item == ad->main.usb_item)
+		elm_object_item_signal_emit(item, "elm,state,bottom", "");
+
+	return;
+}
+
+static void __create_inner_contents(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
@@ -1251,13 +1302,13 @@ static void _ap_inner_contents(mh_appdata_t *ad)
 		_start_update_data_packet_usage(ad);
 
 	ad->main.genlist = elm_genlist_add(ad->naviframe);
-	elm_object_style_set(ad->main.genlist, "dialogue");
 	elm_genlist_mode_set(ad->main.genlist, ELM_LIST_COMPRESS);
-	elm_object_content_set(ad->main.conform, ad->main.genlist);
+	evas_object_smart_callback_add(ad->main.genlist, "realized", __gl_realized, ad);
+
 	__set_genlist_itc(ad);
 
 	/* separator */
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, ad,
+	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, NULL,
 			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 
@@ -1271,13 +1322,8 @@ static void _ap_inner_contents(mh_appdata_t *ad)
 			__select_setup_item, ad);
 	ad->main.setup_item = item;
 
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.setup_help_itc,
-			ad, NULL, ELM_GENLIST_ITEM_NONE,
-			NULL, NULL);
-	ad->main.setup_help_item = item;
-
 	/* separator */
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, ad,
+	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, NULL,
 			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 
@@ -1296,6 +1342,7 @@ static void _ap_inner_contents(mh_appdata_t *ad)
 		item = elm_genlist_item_append(ad->main.genlist, ad->main.help_itc,
 				ad, NULL, ELM_GENLIST_ITEM_NONE,
 				NULL, NULL);
+		elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 		DBG("elm_genlist_item_append for help_itc : %x\n", item);
 		ad->main.help_item = item;
 	}
@@ -1313,25 +1360,25 @@ static void _ap_inner_contents(mh_appdata_t *ad)
 	/* Insert "Connected devices" item */
 	ap_update_data_device(ad);
 
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.end_sp_itc, ad,
+	item = elm_genlist_item_append(ad->main.genlist, ad->main.end_sp_itc, NULL,
 			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 
 	__MOBILE_AP_FUNC_EXIT__;
+	return;
 }
 
-void ap_callback_del(void *data)
+void ap_callback_del(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
-	if (data == NULL) {
-		ERR("The param is NULL\n");
+	if (ad == NULL) {
+		ERR("ad is NULL\n");
 		return;
 	}
-	mh_appdata_t *ad = (mh_appdata_t*)data;
 
 	evas_object_smart_callback_del(ad->main.back_btn, "clicked",
-			__quit_btn_cb);
+			__back_btn_cb);
 	evas_object_smart_callback_del(ad->main.wifi_btn, "changed",
 			__wifi_onoff_changed_cb);
 	evas_object_smart_callback_del(ad->main.bt_btn, "changed",
@@ -1341,6 +1388,7 @@ void ap_callback_del(void *data)
 
 	evas_object_smart_callback_del(ad->main.genlist, "expanded", _gl_exp);
 	evas_object_smart_callback_del(ad->main.genlist, "contracted", _gl_con);
+	evas_object_smart_callback_del(ad->main.genlist, "realized", __gl_realized);
 
 	__MOBILE_AP_FUNC_EXIT__;
 }
@@ -1356,24 +1404,26 @@ void ap_draw_contents(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
-	elm_win_conformant_set(ad->win, 1);
-	ad->main.conform = elm_conformant_add(ad->naviframe);
-	elm_object_style_set(ad->main.conform, "internal_layout");
-	evas_object_show(ad->main.conform);
-
-	_ap_inner_contents(ad);
+	__create_inner_contents(ad);
 
 	ad->main.back_btn = elm_button_add(ad->naviframe);
+	if (ad->main.back_btn == NULL) {
+		ERR("elm_button_add is failed\n");
+		if (ad->main.genlist) {
+			evas_object_del(ad->main.genlist);
+			ad->main.genlist = NULL;
+		}
+		return;
+	}
+
+	elm_object_style_set(ad->main.back_btn, "naviframe/back_btn/default");
+	evas_object_smart_callback_add(ad->main.back_btn, "clicked",
+			__back_btn_cb, ad);
 
 	elm_naviframe_item_push(ad->naviframe,
 			_("IDS_MOBILEAP_BODY_TETHERING"),
-			ad->main.back_btn, NULL, ad->main.conform, NULL);
-
-	/* Style set should be called after elm_naviframe_item_push(). */
-	elm_object_style_set(ad->main.back_btn, "naviframe/back_btn/default");
-	evas_object_smart_callback_add(ad->main.back_btn, "clicked",
-			__quit_btn_cb, ad);
-	elm_object_focus_allow_set(ad->main.back_btn, EINA_FALSE);
+			ad->main.back_btn, NULL, ad->main.genlist, NULL);
 
 	__MOBILE_AP_FUNC_EXIT__;
+	return;
 }
