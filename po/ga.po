@@ -94,6 +94,9 @@ msgstr "Ceangail cábla USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Ní mór %d carachtar ar a laghad a bheith sa phasfhocal agus gan %d carachtar a shárú"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Úsáideann nascaireacht níos mó cumhacht ceallra agus méadaíonn sé úsáid sonraí agat"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Dínascfar an gléas nasctha"
 

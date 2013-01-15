@@ -153,6 +153,12 @@ static void __popup_resp_yes(void *data, Evas_Object *obj, void *event_info)
 			break;
 		}
 
+		_prepare_popup(ad, MH_POP_USB_ON_PREVCONN_CONF,
+				_("IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"));
+		_create_popup(ad);
+		break;
+
+	case MH_POP_USB_ON_PREVCONN_CONF:
 		ret = tethering_enable(ad->handle, TETHERING_TYPE_USB);
 		if (ret != TETHERING_ERROR_NONE) {
 			ERR("Error enable usb tethering : %d\n", ret);
@@ -164,10 +170,10 @@ static void __popup_resp_yes(void *data, Evas_Object *obj, void *event_info)
 		_update_wifi_item(ad, MH_STATE_PROCESS);
 		ret = tethering_disable(ad->handle, TETHERING_TYPE_WIFI);
 		if (ret != TETHERING_ERROR_NONE) {
-			ERR("wifi tethering off is failed : %d\n", ret);
+			ERR("Wi-Fi tethering off is failed : %d\n", ret);
 			_update_wifi_item(ad, MH_STATE_NONE);
 		} else
-			ad->main.old_wifi_state = true;
+			ad->main.need_recover_wifi_tethering = true;
 
 		mh_draw_wifi_setup_view(ad);
 		break;
@@ -209,6 +215,10 @@ static void __popup_resp_no(void *data, Evas_Object *obj, void *event_info)
 		break;
 
 	case MH_POP_USB_ON_CONF:
+		_update_usb_item(ad, MH_STATE_NONE);
+		break;
+
+	case MH_POP_USB_ON_PREVCONN_CONF:
 		_update_usb_item(ad, MH_STATE_NONE);
 		break;
 
@@ -352,14 +362,14 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
-		elm_object_text_set(btn, S_("IDS_COM_SK_YES"));
+		elm_object_text_set(btn, S_("IDS_COM_SK_OK"));
 		elm_object_part_content_set(ad->popup, "button1", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_yes, (void *)ad);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
-		elm_object_text_set(btn, S_("IDS_COM_SK_NO"));
+		elm_object_text_set(btn, S_("IDS_COM_SK_CANCEL"));
 		elm_object_part_content_set(ad->popup, "button2", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_no, (void *)ad);
@@ -368,6 +378,7 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		break;
 
 	case MH_POP_USB_ON_CONF:
+	case MH_POP_USB_ON_PREVCONN_CONF:
 		ad->popup = elm_popup_add(ad->win);
 		evas_object_size_hint_weight_set(ad->popup,
 				EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
@@ -376,14 +387,14 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
-		elm_object_text_set(btn, S_("IDS_COM_SK_YES"));
+		elm_object_text_set(btn, S_("IDS_COM_SK_OK"));
 		elm_object_part_content_set(ad->popup, "button1", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_yes, (void *)ad);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
-		elm_object_text_set(btn, S_("IDS_COM_SK_NO"));
+		elm_object_text_set(btn, S_("IDS_COM_SK_CANCEL"));
 		elm_object_part_content_set(ad->popup, "button2", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_no, (void *)ad);
@@ -611,31 +622,6 @@ void _handle_usb_mode_change(keynode_t *key, void *data)
 		DBG("Error enable usb tethering\n");
 		_update_usb_item(ad, MH_STATE_NONE);
 	}
-}
-
-Eina_Bool _hide_imf(Evas_Object *entry)
-{
-	__MOBILE_AP_FUNC_ENTER__;
-
-	if (entry == NULL) {
-		ERR("Invalid param\n");
-		return EINA_FALSE;
-	}
-
-	Ecore_IMF_Context *context = NULL;
-
-	context = elm_entry_imf_context_get(entry);
-	if (context == NULL) {
-		ERR("context is NULL\n");
-		return EINA_FALSE;
-	}
-	ecore_imf_context_input_panel_hide(context);
-
-	elm_object_focus_set(entry, EINA_FALSE);
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return EINA_TRUE;
 }
 
 int _get_vconf_hotspot_mode(void)

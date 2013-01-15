@@ -94,6 +94,9 @@ msgstr "Pievienot USB kabeli"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parolē ir jābūt vismaz %d rakstzīmēm, bet ne vairāk par %d"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Piesaiste patērē vairāk akumulatora enerģijas un palielina datu lietojumu"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Pievienotā ierīce tiks atvienota"
 

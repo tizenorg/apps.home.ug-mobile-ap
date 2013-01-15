@@ -286,7 +286,7 @@ static void __read_setting(mh_appdata_t *ad)
 
 	ret = tethering_wifi_get_ssid(ad->handle, &ssid);
 	if (ret != TETHERING_ERROR_NONE || ssid == NULL) {
-		ERR("tethering_wifi_get_ssid is failed : %d %s\n", ret, ssid);
+		ERR("tethering_wifi_get_ssid is failed : %d\n", ret);
 		return;
 	}
 	g_strlcpy(ad->setup.device_name, ssid, sizeof(ad->setup.device_name));
@@ -294,7 +294,7 @@ static void __read_setting(mh_appdata_t *ad)
 
 	ret = tethering_wifi_get_passphrase(ad->handle, &passphrase);
 	if (ret != TETHERING_ERROR_NONE || passphrase == NULL) {
-		ERR("tethering_wifi_get_ssid is failed : %d %s\n", ret, ssid);
+		ERR("tethering_wifi_get_passphrase is failed : %d\n", ret);
 		return;
 	}
 	g_strlcpy(ad->setup.wifi_passphrase, passphrase,
@@ -452,7 +452,7 @@ void _update_main_view(mh_appdata_t *ad)
 
 	if (wifi_state || bt_state) {
 		if (ad->main.help_item) {
-			DBG("Just update genlist\n");
+			DBG("Just update help label item\n");
 			elm_genlist_item_update(ad->main.help_item);
 			return;
 		} else {
@@ -471,10 +471,7 @@ void _update_main_view(mh_appdata_t *ad)
 			ad->main.help_item = item;
 		}
 	} else {
-		if (!ad->main.help_item) {
-			DBG("No need to update\n");
-			return;
-		} else {
+		if (ad->main.help_item) {
 			DBG("Remove help item\n");
 			elm_object_item_del(ad->main.help_item);
 			ad->main.help_item = NULL;
@@ -563,10 +560,10 @@ static void __select_setup_item(void *data, Evas_Object *obj, void *event_info)
 		_update_wifi_item(ad, MH_STATE_PROCESS);
 		ret = tethering_disable(ad->handle, TETHERING_TYPE_WIFI);
 		if (ret != TETHERING_ERROR_NONE) {
-			ERR("wifi tethering off is failed : %d\n", ret);
+			ERR("Wi-Fi tethering off is failed : %d\n", ret);
 			_update_wifi_item(ad, MH_STATE_NONE);
 		} else
-			ad->main.old_wifi_state = true;
+			ad->main.need_recover_wifi_tethering = true;
 
 		mh_draw_wifi_setup_view(ad);
 	}
@@ -1051,7 +1048,7 @@ static char *__gl_get_dev_label(void *data, Evas_Object *obj, const char *part)
 		DBG("Device name : %s\n", name);
 
 		if (!strcmp(name, "UNKNOWN")) {
-			return strdup(_(MH_DEVICE_LIST_NO_NAME));
+			return strdup(S_("IDS_COM_BODY_NO_NAME"));
 		}
 
 		return name;

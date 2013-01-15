@@ -94,6 +94,9 @@ msgstr "USB 케이블을 연결하세요"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "비밀번호는 %d자 이상 %d자 이하여야 합니다"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "테더링을 사용하면 배터리가 더 많이 소모되며 데이터 사용량이 증가합니다"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "연결된 기기가 분리됩니다"
 

@@ -94,6 +94,9 @@ msgstr "Liitä USB-kaapeli"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Salasanassa on oltava ainakin %d merkkiä eikä se saa olla yli %d merkkiä pitkä"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Yhteyden jakaminen kuluttaa enemmän virtaa ja lisää tietojen käyttöä"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Yhdistetyn laitteen yhteys katkaistaan"
 

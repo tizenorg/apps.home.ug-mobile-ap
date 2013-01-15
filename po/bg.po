@@ -94,6 +94,9 @@ msgstr "Свързване с USB кабел"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Паролата трябва да съдържа поне %d знака и да не е по-дълга от %d знака"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Привързването изразходва повече енергия от батерията и увеличава потреблението на данни"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Свързаното устройство ще бъде прекъснато"
 

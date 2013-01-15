@@ -102,7 +102,7 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 	ugd = (mh_ugdata_t *)priv;
 	ugd->ad = ad;
 	ugd->ug = ug;
-	ad->gadget= ugd;
+	ad->gadget = ugd;
 
 	ecore_imf_init();
 
