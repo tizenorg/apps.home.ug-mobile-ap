@@ -3,7 +3,7 @@
 
 Name:       ug-setting-mobileap-efl
 Summary:    Tethering UI Gadget Library
-Version:    0.1.159
+Version:    0.1.160
 Release:    1
 Group:      TO_BE/FILLED_IN
 License:    Flora License Version 1.0
@@ -46,6 +46,9 @@ rm -rf %{buildroot}
 %{_ugdir}/lib/libug-setting-mobile-ap-ug.so
 
 %changelog
+* Mon Jan 28 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.160-1
+- Remove unrequired log
+
 * Tue Jan 15 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.159-1
 - Fix : When device is rotated, guide text is displayed short time
 - Fix : Security / Hide items are disabled sometimes
