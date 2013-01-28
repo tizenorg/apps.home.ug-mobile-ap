@@ -313,10 +313,9 @@ static void __read_setting(mh_appdata_t *ad)
 		ERR("tethering_wifi_get_security_type is failed\n");
 	}
 
-	DBG("VCONFKEY_MOBILE_HOTSPOT_MODE : %d\n", ad->main.hotspot_mode);
-	DBG("Device name - %s\n", ad->setup.device_name);
-	DBG("Wifi passphrase- %s\n", ad->setup.wifi_passphrase);
-	DBG("Connected device : %d\n", ad->clients.number);
+	DBG("VCONFKEY_MOBILE_HOTSPOT_MODE: %d\n", ad->main.hotspot_mode);
+	DBG("Device name: %s\n", ad->setup.device_name);
+	DBG("Connected device: %d\n", ad->clients.number);
 	DBG("Visibility: %d\n", ad->setup.visibility);
 	DBG("Security: %d\n", ad->setup.security_type);
 	DBG("End of Load setting value \n");
