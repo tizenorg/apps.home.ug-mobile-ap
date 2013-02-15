@@ -1,0 +1,102 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "यह पासवर्ड केवल Wi-Fi टेथरिंग के लिए है"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fi टेथरिंग छुपाएँ"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "केवल Wi-Fi टेथरिंग अक्षम होने पर ही Wi-Fi टेथरिंग सेटिंग्स उपलब्ध है"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fi टेथरिंग"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fi टेथरिंग सेटिंग्स"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "प्राप्‍त:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "भेजा गया:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "डिवाइस नाम"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "पासवर्ड"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "डिवाइस नाम %s में बदला जा सकता है"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "मेरा डिवाइस छुपाएँ"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "डेटा उपयोग"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB तेथरिंग"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "टेथरिंग अक्षम करने पर लिंक किए गए डिवाइसों का इंटरनेट ऍक्सेस प्रतिबंधित हो जाएगा। जारी रखें?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "टेथरिंग का उपयोग करने के लिए SIM कार्ड सम्मिलित करें और डिवाइस रीस्टार्ट करें"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "टेथरिंग का उपयोग करने में अक्षम"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "फ़्लाइट मोड में टेथरिंग उपयोग करने में अक्षम। टेथरिंग का उपयोग करने के लिए फ़्लाइट मोड अक्षम करें"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi नेटवर्क डिस्कनेक्ट किया जाएगा। Wi-Fi टेथरिंग बैटरी पॉवर की ज्यादा खपत करता है और आपके डाटा उपयोग को बढ़ाता है। जारी रखें?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi टेथरिंग बैटरी पॉवर की ज्यादा खपत करता है और आपके डाटा उपयोग को बढ़ाता है। जारी रखें?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "फ़ोन के बारे में"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "जोड़ा गया उपकरण"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "ब्लूटूथ तेथरिंग"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "सुरक्षा"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "टेथरिंग"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "कम से कम 8 वर्णों का पासवर्ड दर्ज करें"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "USB तेथरिंग सक्षम करने से पिछला USB कनेक्‍शन डिस्कनेक्ट किया जाएगा"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d बाइट्स"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "पैकेट सेवा का उपयोग करने में अक्षम। कवरेज़ से बाहर"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "USB केबल कनेक्‍ट करें"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "पासवर्ड में कम से कम %d वर्ण होने जरूरी है और %d वर्ण से अधिक नहीं होना चाहिए"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "तेथरिंग बैटरी पॉवर की ज्यादा खपत करता है और आपके डेटा उपयोग को बढ़ाता है"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "कनेक्ट किया गया डिवाइस डिस्कनेक्ट हो जाएगा"
+
