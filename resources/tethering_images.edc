@@ -1,0 +1,8 @@
+#include "tethering_image_macro.edc"
+
+collections {
+   RESOURCE_IMAGE("Bluetooth.png");
+   RESOURCE_IMAGE("USB.png");
+   RESOURCE_IMAGE("Wifi.png");
+}
+

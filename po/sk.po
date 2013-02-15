@@ -1,0 +1,102 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Toto heslo slúži iba na zdieľanie pripojenia Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Zdieľanie pripojenia Wi-Fi je skryté"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Nastavenia zdieľania pripojenia Wi-Fi sú k dispozícii iba pri vypnutom zdieľaní pripojenia Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Zdieľanie pripoj. Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Nast. zdieľ. prip. Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Prijaté:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Odoslané:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Meno zariadenia"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Heslo"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Názov zariadenia možno zmeniť v %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Skryť moje zariadenie"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Využitie dát"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Zdieľ. pripojenia cez USB"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Vypnutím zdieľania pripojenia zabránite pripojeným zariadeniam v prístupe na internet. Pokračovať?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Pred použitím zdieľania pripojenia vložte kartu SIM a reštartujte zariadenie"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Nedá sa použiť zdieľanie pripojenia"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Zdieľanie pripojenia sa nedá použiť v letovom režime. Ak chcete použiť zdieľanie pripojenia, vypnite letový režim"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Sieť Wi-Fi sa odpojí. Zdieľanie pripojenia Wi-Fi spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov. Pokračovať?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Zdieľanie pripojenia Wi-Fi spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov. Pokračovať?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "O telefóne"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Pripojené zariadenie"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Zdieľanie pripojenia Bluetooth"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Zabezpečenie"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Zdieľanie pripojenia"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Zadajte heslo obsahujúce aspoň 8 znakov"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Zapnutie zdieľania pripojenia cez USB odpojí predchádzajúce pripojenie cez USB"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d B"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d kB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Nedá sa použiť paketová služba. Mimo pokrytia"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Pripojiť kábel USB"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Heslo musí obsahovať aspoň %d znakov a nesmie prekročiť %d znakov"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Zdieľanie pripojenia spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Pripojené zariadenie sa odpojí"
+

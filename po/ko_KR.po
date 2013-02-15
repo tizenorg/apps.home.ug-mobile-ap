@@ -1,0 +1,102 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "이 비밀번호는 Wi-Fi 테더링 전용입니다"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fi 테더링이 표시되지 않습니다"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Wi-Fi 테더링이 해제된 경우에만 Wi-Fi 테더링 설정을 사용할 수 있습니다"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fi 테더링"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fi 테더링 설정"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "수신 시간:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "발신 시간:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "디바이스 이름"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "비밀번호"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "%s에서 디바이스 이름을 변경할 수 있습니다"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "내 디바이스 숨기기"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "데이터 사용"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB 테더링"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "테더링을 해제하면 연결된 기기가 인터넷에 접속할 수 없게 됩니다. 계속할까요?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "테더링을 이용하려면 SIM 카드를 삽입하고 디바이스를 다시 시작하세요"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "테더링을 사용할 수 없습니다"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "비행기 탑승 모드에서 테더링을 사용할 수 없습니다. 테더링을 사용하려면 비행기 탑승 모드를 해제하세요"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi 네트워크 연결이 끊어집니다. Wi-Fi 테더링을 사용하면 배터리가 많이 소모되며 데이터 사용량이 증가합니다. 계속할까요?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi 테더링을 사용하면 배터리가 많이 소모되며 데이터 사용량이 증가합니다. 계속할까요?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "휴대폰 정보"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "연결된 기기"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "블루투스 테더링"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "보안"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "테더링"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "8자 이상으로 된 비밀번호를 입력하세요"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "USB 테더링을 실행하면 이전 USB 연결이 해제됩니다"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d바이트"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%dKB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%dMB"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "서비스 지역을 벗어나 패킷 데이터 서비스를 사용할 수 없습니다"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "USB 케이블을 연결하세요"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "비밀번호는 %d자 이상 %d자 이하여야 합니다"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "테더링을 사용하면 배터리가 더 많이 소모되며 데이터 사용량이 증가합니다"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "연결된 기기가 분리됩니다"
+

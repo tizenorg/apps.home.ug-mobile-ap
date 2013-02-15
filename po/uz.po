@@ -1,0 +1,102 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Ushbu parol faqat Wi-Fi bog‘lanish uchun"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fi bog‘lanish yashirilgan"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Wi-Fi bog‘lanish parametrlaridan faqatgina Wi-Fi bog‘lanish o‘chirilganda foydalanish mumkin"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fi bog‘lanish"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fi bog‘lan. parametri"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Qabul qilindi:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Yuborilgan:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Qurilma nomi"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Parol"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Qurilma nomi %sda o‘zgartirilishi mumkin"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Mening qurilmamni yashirish"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Ma’lumotdan foydalanish"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB bog‘lanish"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Bog‘lanishni o‘chirish bog‘langan qurilmalarga Internet orqali ulanishni oldini oladi. Davom ettirilsinmi?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Bog‘lanishdan foydalanish uchun, SIM-kartani kiriting va qurilmani qayta ishga tushiring"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Bog‘lanishdan foydalanib bo‘lmaydi"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Uchish rejimida bog‘lanishdan foydalanib bo‘lmaydi. Bog‘lanishdan foydalanish uchun, Uchish rejimini o‘chiring"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi tarmoq uziladi. Wi-Fi bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Davom ettirilsinmi?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Davom ettirilsinmi?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Telefon haqida"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Ulangan qurilma"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Bluetooth bog‘lanishi"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Xavfsizlik"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Bog‘lash"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Kamida 8 belgidan iborat parol kiriting"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "USB bog‘lanishni yoqish avvalgi USB ulanishini o‘chiradi"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d bayt"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d Kb"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d Mb"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Paketli ma’l. xizmatidan foydal. bo‘lmaydi. Xizmat ko‘rsatish doirasidan tashqarida"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "USB-kabelni ulash"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Parol eng kamida %d belgidan iborat bo‘lishi hamda %d belgidan oshmasligi lozim"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Bog‘lanish batareya quvvatini ko‘proq sarflaydi va ma’lumot ishlatilishini oshiradi"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Ulangan qurilma uziladi"
+
