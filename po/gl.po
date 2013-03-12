@@ -1,0 +1,102 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Este contrasinal só é para a ancoraxe á rede Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Ancoraxe á rede Wi-Fi oculta"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Os axustes da ancoraxe á rede Wi-Fi só se atopan dispoñibles cando a ancoraxe á rede Wi-Fi está desactivada"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Ancoraxe á rede Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Axus. ancoraxe rede Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Recibida:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Enviada:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Nome do dispositivo"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Contrasinal"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "O nome do dispositivo pode cambiarse en %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Ocultar o meu dispositivo"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Uso dos datos"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Ancoraxe á rede USB"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "A desactivación da ancoraxe á rede impedirá que os dispositivos ligados accedan á Internet. Desexas continuar?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Insire a tarxeta SIM e reinicia o dispositivo para usar a ancoraxe á rede"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Non se pode empregar a ancoraxe á rede"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Non se pode usar a ancoraxe á rede no modo de Avión. Para usar a ancoraxe á rede, desactiva o modo de Avión"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "A rede Wi-Fi desconectarase. A ancoraxe á rede Wi-Fi consume máis batería e incrementa o uso de información. Continuar?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "A ancoraxe á rede Wi-Fi consume máis batería e incrementa o uso de información. Continuar?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Acerca do teléfono"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Dispositivo conectado"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Ancoraxe á rede do Bluetooth"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Seguridade"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Ancoraxe á rede"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Introduce un contrasinal que conteña polo menos 8 carácteres"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "A activación da ancoraxe á rede USB desconectará a conexión USB anterior"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Bytes"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Non se pode usar o paquete de servizos. Fóra de cobertura"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Conectar cable USB"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "O contrasinal ten que ter polo menos %d carácteres e non superar %d carácteres"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "A ancoraxe á rede consume máis batería e incrementa o uso de información"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "O dispositivo conectado desconectarase"
+

@@ -1,0 +1,102 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Esta senha é apenas para a ancoragem Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Ancoragem Wi-Fi oculta"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "As configurações de ancoragem Wi-Fi estão disponíveis apenas quando a ancoragem Wi-Fi está desativada"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Ancoragem Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Config. ancoragem Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Recebido:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Enviado:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Nome do dispositivo"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Senha"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "O nome do dispositivo pode ser alterado em %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Ocultar o meu dispositivo"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Uso de dados"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Ancoragem via USB"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "A desativação da ancoragem evitará que dispositivos vinculados acessem a Internet. Continuar?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Insira o cartão SIM e reinicie o dispositivo para usar a ancoragem"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Não é possível usar a ancoragem"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Não é possível usar a ancoragem em modo Avião. Para usar a ancoragem, desative o modo Avião"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "A rede Wi-Fi será desconectada. A ancoragem Wi-Fi consome mais bateria e aumenta o seu uso de dados. Continuar?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "A ancoragem Wi-Fi consome mais bateria e aumenta o seu uso de dados. Continuar?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Sobre o telefone"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Dispositivo conectado"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Ancoragem Bluetooth"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Segurança"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Ancoragem"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Inserir senha com pelo menos 8 caracteres"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Ativar a ancoragem via USB irá desconectar a conexão USB anterior"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d bytes"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Impossível utilizar serviço por pacotes. Fora da cobertura"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Conecte o cabo USB"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "A senha deve conter pelo menos %d caracteres e não exceder %d caracteres"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "O tethering consome mais bateria e aumenta sua utilização de dados"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "O dispositivo conectado será desconectado"
+

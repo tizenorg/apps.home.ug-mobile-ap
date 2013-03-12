@@ -1,0 +1,102 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Þetta lykilorð er aðeins fyrir Wi-Fi tjóðrun"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fi tjóðrun falin"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Stillingar fyrir Wi-Fi tjóðrun eru aðeins í boði þegar slökkt er á Wi-Fi tjóðrun"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fi tjóðrun"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fi tjóðrunarstillingar"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Móttekið:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Sent:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Heiti tækis"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Aðgangsorð"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Heiti tækis má breyta í %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Fela tækið mitt"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Gagnanotkun"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB-tjóðrun"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Ef slökkt er á tjóðrun missa tengd tæki netsamband. Halda áfram?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Settu inn SIM-kort og endurræstu tækið til að nota tjóðrun"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Ekki hægt að nota tjóðrun"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Ekki er hægt að nota tjóðrun í flugstillingu. Slökktu á flugstillingu til að nota tjóðrun"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Tengingu við Wi-Fi netkerfi verður slitið. Wi-Fi tjóðrun notar meiri orku og eykur gagnaflutning. Halda áfram?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Wi-Fi tjóðrun notar meiri orku og eykur gagnaflutning. Halda áfram?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Um símann"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Tengt tæki"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Bluetooth-tjóðrun"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Öryggi"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Sími sem netaðgangsstaður"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Sláðu inn minnst 8 stafa lykilorð"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Með því að kveikja á USB-tjóðrun slokknar á fyrri USB-tengingu"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Bæti"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Það er ekki hægt að nota pakkagagnaþjónustu. Síminn er utan þjónustusvæðis"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Tengjast USB-snúru"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Lykilorðið verður að vera a.m.k. %d stafir og má ekki vera lengra en %d stafir"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Tjóðrun notar meiri orku og eykur gagnanotkun"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Tengt tæki verður aftengt"
+

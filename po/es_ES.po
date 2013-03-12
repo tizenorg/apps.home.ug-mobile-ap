@@ -1,0 +1,102 @@
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Esta contraseña es solo para el anclaje a red Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Anclaje a red Wi-Fi oculto"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
+msgstr "Los ajustes de anclaje a red Wi-Fi solo están disponibles cuando está habilitado"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Anclaje a red Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Ajustes anclaje red Wi-Fi"
+
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Recibido:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Enviado:"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Nombre de dispositivo"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Contraseña"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "El nombre del dispositivo se puede cambiar en %s"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "No mostrar mi dispositivo"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "Uso de datos"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Módem USB"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Si desactiva el anclaje a red, impedirá que los dispositivos vinculados accedan a Internet. ¿Continuar?"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Introduzca la tarjeta SIM y reinicie el dispositivo para utilizar anclaje a red"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "No se puede usar anclaje a red"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "No se puede usar anclaje a red en modo Avión. Para usar anclaje a red, desactive el modo Avión"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "Se desconectará la red Wi-Fi. El anclaje a red Wi-Fi consume mucha batería y aumenta el uso de datos. ¿Continuar?"
+
+msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
+msgstr "El anclaje a red Wi-Fi consume mucha batería y aumenta el uso de datos. ¿Continuar?"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Acerca del teléfono"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Dispositivo conectado"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Modem por bluetooth"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Seguridad"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Módem USB"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Introduzca una contraseña de 8 caracteres como mínimo"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Si permite el módem USB, se desconectará la conexión USB previa"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Bytes"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d MB"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "No se puede usar servicio de paquetes. Fuera de cobertura"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Conectar el cable USB"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "La contraseña debe contener al menos %d caracteres y no superar los %d caracteres"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "El anclaje a red consume mucha batería y aumenta el uso de datos"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Se desconectará del dispositivo conectado"
+
