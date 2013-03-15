@@ -94,9 +94,6 @@ msgstr "Tengjast USB-snúru"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Lykilorðið verður að vera a.m.k. %d stafir og má ekki vera lengra en %d stafir"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Tjóðrun notar meiri orku og eykur gagnanotkun"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Tengt tæki verður aftengt"
 

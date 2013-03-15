@@ -94,9 +94,6 @@ msgstr "Priključi USB kabl"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Šifra mora da sadrži najmanje %d i najviše %d znakova"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Vezivanje troši više energije i povećava upotrebu podataka"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Povezani uređaj će biti isključen"
 

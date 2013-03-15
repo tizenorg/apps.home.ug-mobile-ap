@@ -94,9 +94,6 @@ msgstr "USBケーブルを接続してください"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "パスワードの長さは%d文字以上、%d文字以下である必要があります。"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "テザリングはより多くのバッテリーを消費し、データ使用量が増加します。"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "接続中のデバイスを切断します。"
 

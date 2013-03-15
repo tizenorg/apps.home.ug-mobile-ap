@@ -94,9 +94,6 @@ msgstr "USB केबल कनेक्‍ट करें"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "पासवर्ड में कम से कम %d वर्ण होने जरूरी है और %d वर्ण से अधिक नहीं होना चाहिए"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "तेथरिंग बैटरी पॉवर की ज्यादा खपत करता है और आपके डेटा उपयोग को बढ़ाता है"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "कनेक्ट किया गया डिवाइस डिस्कनेक्ट हो जाएगा"
 

@@ -94,9 +94,6 @@ msgstr "Conectar cable USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "O contrasinal ten que ter polo menos %d carácteres e non superar %d carácteres"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "A ancoraxe á rede consume máis batería e incrementa o uso de información"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "O dispositivo conectado desconectarase"
 

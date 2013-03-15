@@ -94,9 +94,6 @@ msgstr "USB kabelini qoş"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parol minimum %d simvol ehtiva etməlidir və uzunluğu %d simvoldan çox olmamalıdır"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Bağlanma daha çox batareyadan istifadə edir və verilənlərdən istifadənizi artırır"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Qoşulmuş cihazla əlaqə kəsiləcək"
 

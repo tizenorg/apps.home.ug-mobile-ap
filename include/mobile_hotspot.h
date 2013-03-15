@@ -7,7 +7,7 @@
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 
-* http://floralicense.org/license/
+* http://www.tizenopensource.org/license
 
 * Unless required by applicable law or agreed to in writing, software
 * distributed under the License is distributed on an "AS IS" BASIS,
@@ -85,10 +85,16 @@ extern "C" {
 #define BT_ICON				"Bluetooth.png"
 #define USB_ICON			"USB.png"
 
+#define MH_DEFAULT_PASSWORD		"qwertyuiop"
+
 #define DEVICE_NAME_LENGTH_MAX		31
 #define WIFI_PASSPHRASE_LENGTH_MIN	8
 #define WIFI_PASSPHRASE_LENGTH_MAX	63
 #define MH_LABEL_LENGTH_MAX		1024
+#define FONT_SIZE_20			20
+#define FONT_SIZE_25			25
+#define FONT_SIZE_30			30
+#define FONT_SIZE_32			32
 
 #define _EDJ(obj)			elm_layout_edje_get(obj)
 
@@ -104,7 +110,6 @@ typedef enum {
 	MH_POP_WIFI_ON_CONF,
 	MH_POP_BT_ON_CONF,
 	MH_POP_USB_ON_CONF,
-	MH_POP_USB_ON_PREVCONN_CONF,
 	MH_POP_ENTER_TO_WIFI_SETUP_CONF,
 
 	/* One button pop-up */
@@ -157,7 +162,7 @@ typedef struct ap_app_main {
 	int				wifi_state;
 	int				bt_state;
 	int				usb_state;
-	bool				need_recover_wifi_tethering;
+	bool				old_wifi_state;
 } mh_main_view_t;
 
 typedef struct {

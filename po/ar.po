@@ -94,9 +94,6 @@ msgstr "توصيل إلى كابل USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "يجب ألا تقل كلمة المرور عن %d أحرف وألا تزيد عن %d حرفا"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "يستهلك التقييد الكثير من طاقة البطارية ويزيد من استخدام البيانات"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "سيتم قطع اتصال الجهاز المتصل"
 

@@ -94,9 +94,6 @@ msgstr "USB кабелін қосу"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Құпиясөзде кемінде %d таңба болуы және %d таңбадан аспауы керек"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Байланыстыру батарея зарядын көп пайдаланып, деректеріңіздің пайдаланылуын арттырады"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Қосылған құрылғы ажыратылады"
 

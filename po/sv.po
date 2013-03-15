@@ -94,9 +94,6 @@ msgstr "Anslut USB-kabeln"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Lösenord måste innehålla minst %d tecken och inte överstiga %d tecken"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Internetdelning förbrukar mer batteri och ökar dataanvändningen"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Den anslutna enheten kommer att kopplas bort"
 

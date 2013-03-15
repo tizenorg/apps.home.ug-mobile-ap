@@ -7,7 +7,7 @@
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 
-* http://floralicense.org/license/
+* http://www.tizenopensource.org/license
 
 * Unless required by applicable law or agreed to in writing, software
 * distributed under the License is distributed on an "AS IS" BASIS,
@@ -102,7 +102,7 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 	ugd = (mh_ugdata_t *)priv;
 	ugd->ad = ad;
 	ugd->ug = ug;
-	ad->gadget = ugd;
+	ad->gadget= ugd;
 
 	ecore_imf_init();
 

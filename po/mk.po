@@ -94,9 +94,6 @@ msgstr "Приклучете го USB кабелот"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Лозинката мора да содржи најмалку %d, а најмногу %d знаци"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Споделувањето троши повеќе батерија и го зголемува користењето податоци"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Ќе се прекине врската со поврзаниот уред"
 

@@ -94,9 +94,6 @@ msgstr "Conectaţi cablul USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parola trebuie să conţină minimum %d caractere şi nu poate depăşi %d caractere"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Dispozitivul conectat va fi deconectat"
 

@@ -94,9 +94,6 @@ msgstr "Συνδέστε το καλώδιο USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Ο κωδικός πρόσβασης πρέπει να περιέχει %d χαρακτήρες τουλάχιστον και να μην ξεπερνά τους %d χαρακτήρες"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Το tethering καταναλώνει περισσότερη ισχύ μπαταρίας και αυξάνει τη χρήση δεδομένων"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Η συνδεδεμένη συσκευή θα αποσυνδεθεί"
 

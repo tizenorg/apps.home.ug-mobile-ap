@@ -94,9 +94,6 @@ msgstr "Tilslut USB-kabel"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Adgangskode skal indeholde mindst %d tegn og må ikke overstige %d tegn"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Internetdeling bruger mere batteri og forøger dit dataforbrug"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Tilsluttet enhed vil blive frakoblet"
 

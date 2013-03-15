@@ -7,7 +7,7 @@
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 
-* http://floralicense.org/license/
+* http://www.tizenopensource.org/license
 
 * Unless required by applicable law or agreed to in writing, software
 * distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,24 +24,12 @@ static void __gl_realized(void *data, Evas_Object *obj, void *event_info);
 
 static void __input_panel_event_cb(void *data, Ecore_IMF_Context *ctx, int value)
 {
-	if (data == NULL) {
-		ERR("data is NULL\n");
-		return;
-	}
-
-	mh_wifi_setting_view_t *st = (mh_wifi_setting_view_t *)data;
-
-	if (st->navi_it == NULL) {
-		DBG("naviframe item is not pushed yet\n");
-		return;
-	}
-
 	if (value == ECORE_IMF_INPUT_PANEL_STATE_SHOW) {
 		DBG("value == ECORE_IMF_INPUT_PANEL_STATE_SHOW\n");
-		elm_object_item_signal_emit(st->navi_it, "elm,state,sip,shown", "");
+		elm_object_item_signal_emit(data, "elm,state,sip,shown", "");
 	} else if(value == ECORE_IMF_INPUT_PANEL_STATE_HIDE) {
 		DBG("value == ECORE_IMF_INPUT_PANEL_STATE_HIDE\n");
-		elm_object_item_signal_emit(st->navi_it, "elm,state,sip,hidden", "");
+		elm_object_item_signal_emit(data, "elm,state,sip,hidden", "");
 	}
 
 	return;
@@ -265,6 +253,19 @@ static Eina_Bool __save_wifi_passphrase(mh_appdata_t *ad)
 	mh_wifi_setting_view_t *st = &ad->setup;
 	int ret = 0;
 
+	if (g_strcmp0(st->wifi_passphrase, st->wifi_passphrase_new) == 0) {
+		DBG("Password is not changed\n");
+		return EINA_TRUE;
+	}
+
+	if (strlen(st->wifi_passphrase_new) < WIFI_PASSPHRASE_LENGTH_MIN) {
+		DBG("Password is shorter than %d\n", WIFI_PASSPHRASE_LENGTH_MIN);
+		_prepare_popup(ad, MH_POP_WIFI_PASSWORD_SHORT,
+				_("IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"));
+		_create_popup(ad);
+		return EINA_FALSE;
+	}
+
 	ret = tethering_wifi_set_passphrase(ad->handle, st->wifi_passphrase_new);
 	if (ret != TETHERING_ERROR_NONE) {
 		ERR("tethering_wifi_set_passphrase is failed : %d\n", ret);
@@ -297,7 +298,9 @@ static void __passphrase_maxlength_reached_cb(void *data, Evas_Object *obj,
 		return;
 	}
 
-	elm_object_focus_set(ad->setup.pw_entry, EINA_FALSE);
+	if (_hide_imf(ad->setup.pw_entry) == EINA_FALSE) {
+		ERR("_hide_imf is failed\n");
+	}
 
 	if (__save_wifi_passphrase(ad) == EINA_FALSE) {
 		ERR("__save_wifi_passphrase is failed\n");
@@ -326,7 +329,9 @@ static void __passphrase_activated_cb(void *data, Evas_Object *obj,
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 
-	elm_object_focus_set(ad->setup.pw_entry, EINA_FALSE);
+	if (_hide_imf(ad->setup.pw_entry) == EINA_FALSE) {
+		ERR("_hide_imf is failed\n");
+	}
 
 	if (__save_wifi_passphrase(ad) == EINA_FALSE) {
 		ERR("__save_wifi_passphrase is failed\n");
@@ -368,9 +373,8 @@ static void __pw_entry_changed_cb(void *data, Evas_Object *obj,
 		free(utf8_string);
 	}
 
-	if (!elm_object_focus_get(st->pw_layout)) {
+	if (!elm_object_focus_get(st->pw_layout))
 		return;
-	}
 
 	if (elm_entry_is_empty(st->pw_entry)) {
 		elm_object_signal_emit(st->pw_layout,
@@ -398,8 +402,6 @@ static void __pw_entry_focused_cb(void *data, Evas_Object *obj,
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	mh_wifi_setting_view_t *st = &ad->setup;
-
-	elm_entry_cursor_end_set(st->pw_entry);
 
 	if (!elm_entry_is_empty(st->pw_entry))
 		elm_object_signal_emit(st->pw_layout,
@@ -517,6 +519,7 @@ static Evas_Object *__gl_pw_icon_get(void *data, Evas_Object *obj,
 		ptr = elm_entry_utf8_to_markup(st->wifi_passphrase);
 		if (ptr != NULL) {
 			elm_entry_entry_set(entry, ptr);
+			elm_entry_cursor_end_set(entry);
 			free(ptr);
 		} else {
 			ERR("elm_entry_utf8_to_markup is failed\n");
@@ -525,15 +528,17 @@ static Evas_Object *__gl_pw_icon_get(void *data, Evas_Object *obj,
 		/* Set editable mode */
 		elm_entry_input_panel_enabled_set(entry, EINA_FALSE);
 		elm_entry_context_menu_disabled_set(entry, EINA_TRUE);
-		elm_object_disabled_set(entry, EINA_TRUE);
+		elm_object_item_disabled_set(st->pw_item, EINA_TRUE);
 	} else {
 		ptr = elm_entry_utf8_to_markup(st->wifi_passphrase_new);
 		if (ptr != NULL) {
 			elm_entry_entry_set(entry, ptr);
+			elm_entry_cursor_end_set(entry);
 			free(ptr);
 		} else {
 			ERR("elm_entry_utf8_to_markup is failed\n");
 		}
+		elm_object_item_disabled_set(st->pw_item, EINA_FALSE);
 	}
 
 	evas_object_smart_callback_add(entry, "maxlength,reached",
@@ -551,24 +556,24 @@ static Evas_Object *__gl_pw_icon_get(void *data, Evas_Object *obj,
 	if (imf_context)
 		ecore_imf_context_input_panel_event_callback_add(imf_context,
 				ECORE_IMF_INPUT_PANEL_STATE_EVENT,
-				__input_panel_event_cb, (void *)st);
+				__input_panel_event_cb, (void *)st->navi_it);
 
-	if (!elm_entry_is_empty(entry)) {
-		elm_object_signal_emit(st->pw_layout,
-				"elm,state,guidetext,hide", "elm");
-	}
+	evas_object_show(entry);
 
+	elm_object_part_content_set(st->pw_layout, "elm.swallow.content", entry);
 	elm_object_part_text_set(st->pw_layout, "elm.text",
 			_("IDS_MOBILEAP_BODY_PASSWORD"));
-	elm_object_part_content_set(st->pw_layout, "elm.swallow.content", entry);
 	elm_object_part_text_set(st->pw_layout, "elm.guidetext",
 			_("IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"));
+
+	if (!elm_entry_is_empty(entry))
+		elm_object_signal_emit(st->pw_layout,
+				"elm,state,guidetext,hide", "elm");
 
 	elm_object_signal_callback_add(st->pw_layout, "elm,eraser,clicked", "elm",
 			__pw_layout_eraser_clicked_cb, data);
 
-	evas_object_show(entry);
-	evas_object_show(st->pw_layout);
+
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -733,35 +738,25 @@ static void __back_btn_cb(void *data, Evas_Object *obj, void *event_info)
 	mh_wifi_setting_view_t *st = &ad->setup;
 	int ret;
 
-	elm_object_focus_set(st->pw_entry, EINA_FALSE);
+	if (_hide_imf(st->pw_entry) == EINA_FALSE) {
+		ERR("_hide_imf is failed\n");
+	}
 
-	if (strlen(st->wifi_passphrase_new) < WIFI_PASSPHRASE_LENGTH_MIN) {
-		DBG("Password is shorter than %d\n", WIFI_PASSPHRASE_LENGTH_MIN);
-		_prepare_popup(ad, MH_POP_WIFI_PASSWORD_SHORT,
-				_("IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"));
-		_create_popup(ad);
+	if (__save_wifi_passphrase(ad) == EINA_FALSE) {
+		ERR("__save_wifi_passphrase is failed\n");
 		return;
 	}
 
-	if (g_strcmp0(st->wifi_passphrase, st->wifi_passphrase_new) != 0) {
-		if (__save_wifi_passphrase(ad) == EINA_FALSE) {
-			ERR("__save_wifi_passphrase is failed\n");
-		}
-	}
-
-	if (ad->main.need_recover_wifi_tethering == true) {
-		DBG("Turn on Wi-Fi tethering again\n");
+	if (tethering_is_enabled(ad->handle, TETHERING_TYPE_WIFI) == false &&
+			ad->main.old_wifi_state == true) {
 		_update_wifi_item(ad, MH_STATE_PROCESS);
-		if (ad->main.help_item)
-			elm_genlist_item_update(ad->main.help_item);
-
 		ret = tethering_enable(ad->handle, TETHERING_TYPE_WIFI);
 		if (ret != TETHERING_ERROR_NONE) {
-			ERR("Wi-Fi tethering on is failed : %d\n", ret);
+			ERR("wifi tethering on is failed : %d\n", ret);
 			_update_wifi_item(ad, MH_STATE_NONE);
-			ad->main.need_recover_wifi_tethering = false;
 		}
 	}
+	ad->main.old_wifi_state = false;
 
 	__deconstruct_wifi_setup_view(st);
 
@@ -784,7 +779,9 @@ static void __title_back_btn_cb(void *data, Evas_Object *obj, void *event_info)
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 
-	elm_object_focus_set(ad->setup.pw_entry, EINA_FALSE);
+	if (_hide_imf(ad->setup.pw_entry) == EINA_FALSE) {
+		ERR("_hide_imf is failed\n");
+	}
 
 	if (__save_wifi_passphrase(ad) == EINA_FALSE) {
 		ERR("__save_wifi_passphrase is failed\n");
@@ -798,26 +795,16 @@ static void __title_back_btn_cb(void *data, Evas_Object *obj, void *event_info)
 
 static void __gl_realized(void *data, Evas_Object *obj, void *event_info)
 {
-	__MOBILE_AP_FUNC_ENTER__;
-
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	mh_wifi_setting_view_t *st = &(ad->setup);
 	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
 
-	if (item == st->hide_item) {
-		DBG("Hide item is realized\n");
+	if (item == st->hide_item)
 		elm_object_item_signal_emit(item, "elm,state,top", "");
-	} else if (item == st->security_item) {
-		DBG("Security item is realized\n");
+	else if (item == st->security_item)
 		elm_object_item_signal_emit(item, "elm,state,center", "");
-	} else if (item == st->pw_item) {
-		DBG("Password item is realized\n");
+	else if (item == st->pw_item)
 		elm_object_item_signal_emit(item, "elm,state,bottom", "");
-	} else if (item == st->name_item) {
-		DBG("Name item is realized\n");
-	}
-
-	__MOBILE_AP_FUNC_EXIT__;
 
 	return;
 }
@@ -833,15 +820,14 @@ Evas_Object *__create_genlist(mh_appdata_t *ad)
 
 	void *data = (void *)ad;
 	mh_wifi_setting_view_t *st = &ad->setup;
-	Evas_Object *genlist;
-	Elm_Object_Item *item;
+	Evas_Object *genlist = NULL;
+	Elm_Object_Item *item = NULL;
 
 	genlist = elm_genlist_add(ad->naviframe);
 	if (genlist == NULL) {
 		ERR("genlist is NULL\n");
 		return NULL;
 	}
-
 	elm_object_style_set(genlist, "dialogue");
 	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
 	evas_object_smart_callback_add(genlist, "realized", __gl_realized, ad);
@@ -857,6 +843,7 @@ Evas_Object *__create_genlist(mh_appdata_t *ad)
 	st->security_item = elm_genlist_item_append(genlist, st->security_itc, data, NULL,
 			ELM_GENLIST_ITEM_NONE, __gl_security_item_sel, data);
 
+	DBG("security_type : %d\n", st->security_type);
 	st->pw_item = elm_genlist_item_append(genlist, st->pw_itc, data, NULL,
 			ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(st->pw_item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);

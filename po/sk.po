@@ -94,9 +94,6 @@ msgstr "Pripojiť kábel USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Heslo musí obsahovať aspoň %d znakov a nesmie prekročiť %d znakov"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Zdieľanie pripojenia spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Pripojené zariadenie sa odpojí"
 

@@ -94,9 +94,6 @@ msgstr "Подключите USB-кабель"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Допустимое число символов в пароле: от %d до %d"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "При использовании модема быстро расходуется заряд батареи и увеличивается объем передаваемых данных"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Подключенное устройство будет отключено"
 

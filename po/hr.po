@@ -94,9 +94,6 @@ msgstr "Spoji USB kabel"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Šifra mora sadržavati najmanje %d, a najviše %d znakova"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Dijeljenje povećava potrošnju baterije i količinu prijenosa podataka"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Spojeni uređaj će se odspojiti"
 

@@ -94,9 +94,6 @@ msgstr "Csatlakoztassa az USB-kábelt"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "A jelszónak legalább %d, legfeljebb %d karakterből kell állnia"
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Az internetmegosztás használata gyorsan meríti az akkumulátort, és nagyobb adatforgalmat eredményez"
-
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "A csatlakoztatott eszköz le lesz választva"
 

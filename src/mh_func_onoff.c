@@ -7,7 +7,7 @@
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 
-* http://floralicense.org/license/
+* http://www.tizenopensource.org/license
 
 * Unless required by applicable law or agreed to in writing, software
 * distributed under the License is distributed on an "AS IS" BASIS,
@@ -99,7 +99,7 @@ static bool __is_connected_cellular_net(mh_appdata_t *ad)
 	ret = sim_get_state(&sim_state);
 	if (ret != SIM_ERROR_NONE) {
 		ERR("sim_get_state() is failed : %d\n", ret);
-		return false;
+		return -1;
 	}
 	DBG("SIM State : %d\n", sim_state);
 	if (sim_state != SIM_STATE_AVAILABLE) {
@@ -154,7 +154,7 @@ static int __create_wifi_hotspot_on_popup(mh_appdata_t *ad)
 static int __create_bt_tethering_on_popup(mh_appdata_t *ad)
 {
 	_prepare_popup(ad, MH_POP_BT_ON_CONF,
-			_("IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"));
+			_(MH_CONSUMES_MORE_BATTERY_POWER));
 	_create_popup(ad);
 
 	return 0;
@@ -162,8 +162,21 @@ static int __create_bt_tethering_on_popup(mh_appdata_t *ad)
 
 static int __create_usb_tethering_on_popup(mh_appdata_t *ad)
 {
-	_prepare_popup(ad, MH_POP_USB_ON_CONF,
-			_("IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"));
+	char buf[MH_LABEL_LENGTH_MAX] = {0, };
+
+	if (_get_vconf_usb_state() != VCONFKEY_SYSMAN_USB_AVAILABLE) {
+		DBG("USB is not connected\n");
+		_prepare_popup(ad, MH_POP_USB_ON_CONF,
+				_(MH_CONSUMES_MORE_BATTERY_POWER));
+		_create_popup(ad);
+
+		return 0;
+	}
+
+	snprintf(buf, sizeof(buf), "%s.<br>%s",
+			_("IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"),
+			_(MH_CONSUMES_MORE_BATTERY_POWER));
+	_prepare_popup(ad, MH_POP_USB_ON_CONF, buf);
 	_create_popup(ad);
 
 	return 0;
@@ -330,8 +343,6 @@ void _enabled_cb(tethering_error_e result, tethering_type_e type, bool is_reques
 
 	mh_appdata_t *ad = (mh_appdata_t *)user_data;
 
-	ad->main.need_recover_wifi_tethering = false;
-
 	if (!is_requested) {
 		if (NULL != ad->popup) {
 			evas_object_del(ad->popup);
@@ -361,11 +372,6 @@ void _disabled_cb(tethering_error_e result, tethering_type_e type, tethering_dis
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t *)user_data;
-
-	if (ad->main.need_recover_wifi_tethering == true) {
-		DBG("Wi-Fi tethering will be turned on again\n");
-		return;
-	}
 
 	if (cause != TETHERING_DISABLED_BY_REQUEST) {
 		DBG("Tethering [%d] is disabled because of [%d]\n", type, cause);
@@ -541,6 +547,8 @@ int _handle_usb_onoff_change(mh_appdata_t *ad)
 		ERR("__create_wifi_hotspot_on_popup fail\n");
 		return -1;
 	}
+
+
 
 	__MOBILE_AP_FUNC_EXIT__;
 
