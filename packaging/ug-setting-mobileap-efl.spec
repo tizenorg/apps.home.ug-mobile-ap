@@ -3,8 +3,8 @@
 
 Name:       ug-setting-mobileap-efl
 Summary:    Tethering UI Gadget Library
-Version:    0.1.160
-Release:    1
+Version:    0.1.161
+Release:    2
 Group:      TO_BE/FILLED_IN
 License:    Flora License Version 1.0
 Source0:    %{name}-%{version}.tar.gz
@@ -47,6 +47,15 @@ rm -rf %{buildroot}
 %{_ugdir}/lib/libug-setting-mobile-ap-ug.so
 
 %changelog
+* Fri Mar 29 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.161-2
+- Fix : The grouping of genlist item is wrong
+- Back button position and Naviframe title visibility are changed
+- Make grouping for genlist expanded item
+- Editfield change is applied
+- Ticker notification is implemented for passphrase entry
+- Implement title slide
+- Pop-up parent and entry's context menu allowance are changed
+
 * Mon Jan 28 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.160-1
 - Remove unrequired log
 
