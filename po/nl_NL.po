@@ -94,6 +94,9 @@ msgstr "USB-kabel aansluiten"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Wachtwoord moet ten minste %d tekens bevatten en mag niet langer zijn dan %d tekens"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Tethering verbruikt meer voeding en verhoogt uw gegevensgebruik"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Aangesloten apparaat wordt losgekoppeld"
 

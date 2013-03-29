@@ -16,23 +16,16 @@ SET(SRCS
 	src/mh_common_utility.c
 )
 
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+SET(dependents "elementary evas ui-gadget-1 wifi-direct capi-network-tethering capi-network-connection capi-network-wifi capi-telephony-sim notification")
+
 IF("${CMAKE_BUILD_TYPE}" STREQUAL "")
 	SET(CMAKE_BUILD_TYPE "Release")
 ENDIF("${CMAKE_BUILD_TYPE}" STREQUAL "")
 
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
-
 INCLUDE(FindPkgConfig)
-pkg_check_modules(pkgs REQUIRED
-			elementary
-			evas
-			ui-gadget-1
-			wifi-direct
-			capi-network-tethering
-			capi-network-connection
-			capi-network-wifi
-			capi-telephony-sim
-		)
+pkg_check_modules(pkgs REQUIRED ${dependents})
 
 FOREACH(flag ${pkgs_CFLAGS})
 	SET(EXTRA_C_FLAGS "${EXTRA_C_FLAGS} ${flag}")

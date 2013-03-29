@@ -286,7 +286,7 @@ static void __read_setting(mh_appdata_t *ad)
 
 	ret = tethering_wifi_get_ssid(ad->handle, &ssid);
 	if (ret != TETHERING_ERROR_NONE || ssid == NULL) {
-		ERR("tethering_wifi_get_ssid is failed : %d %s\n", ret, ssid);
+		ERR("tethering_wifi_get_ssid is failed : %d\n", ret);
 		return;
 	}
 	g_strlcpy(ad->setup.device_name, ssid, sizeof(ad->setup.device_name));
@@ -294,7 +294,7 @@ static void __read_setting(mh_appdata_t *ad)
 
 	ret = tethering_wifi_get_passphrase(ad->handle, &passphrase);
 	if (ret != TETHERING_ERROR_NONE || passphrase == NULL) {
-		ERR("tethering_wifi_get_ssid is failed : %d %s\n", ret, ssid);
+		ERR("tethering_wifi_get_passphrase is failed : %d\n", ret);
 		return;
 	}
 	g_strlcpy(ad->setup.wifi_passphrase, passphrase,
@@ -312,13 +312,6 @@ static void __read_setting(mh_appdata_t *ad)
 	if (ret != TETHERING_ERROR_NONE) {
 		ERR("tethering_wifi_get_security_type is failed\n");
 	}
-
-	DBG("VCONFKEY_MOBILE_HOTSPOT_MODE : %d\n", ad->main.hotspot_mode);
-	DBG("Device name - %s\n", ad->setup.device_name);
-	DBG("Wifi passphrase- %s\n", ad->setup.wifi_passphrase);
-	DBG("Connected device : %d\n", ad->clients.number);
-	DBG("Visibility: %d\n", ad->setup.visibility);
-	DBG("Security: %d\n", ad->setup.security_type);
 	DBG("End of Load setting value \n");
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -452,7 +445,7 @@ void _update_main_view(mh_appdata_t *ad)
 
 	if (wifi_state || bt_state) {
 		if (ad->main.help_item) {
-			DBG("Just update genlist\n");
+			DBG("Just update help label item\n");
 			elm_genlist_item_update(ad->main.help_item);
 			return;
 		} else {
@@ -471,10 +464,7 @@ void _update_main_view(mh_appdata_t *ad)
 			ad->main.help_item = item;
 		}
 	} else {
-		if (!ad->main.help_item) {
-			DBG("No need to update\n");
-			return;
-		} else {
+		if (ad->main.help_item) {
 			DBG("Remove help item\n");
 			elm_object_item_del(ad->main.help_item);
 			ad->main.help_item = NULL;
@@ -556,17 +546,17 @@ static void __select_setup_item(void *data, Evas_Object *obj, void *event_info)
 	}
 
 	if (connected_wifi_clients > 0) {
-		_prepare_popup(ad, MH_POP_ENTER_TO_WIFI_SETUP_CONF,
+		_prepare_popup(MH_POP_ENTER_TO_WIFI_SETUP_CONF,
 				_("IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"));
 		_create_popup(ad);
 	} else {
 		_update_wifi_item(ad, MH_STATE_PROCESS);
 		ret = tethering_disable(ad->handle, TETHERING_TYPE_WIFI);
 		if (ret != TETHERING_ERROR_NONE) {
-			ERR("wifi tethering off is failed : %d\n", ret);
+			ERR("Wi-Fi tethering off is failed : %d\n", ret);
 			_update_wifi_item(ad, MH_STATE_NONE);
 		} else
-			ad->main.old_wifi_state = true;
+			ad->main.need_recover_wifi_tethering = true;
 
 		mh_draw_wifi_setup_view(ad);
 	}
@@ -1051,7 +1041,7 @@ static char *__gl_get_dev_label(void *data, Evas_Object *obj, const char *part)
 		DBG("Device name : %s\n", name);
 
 		if (!strcmp(name, "UNKNOWN")) {
-			return strdup(_(MH_DEVICE_LIST_NO_NAME));
+			return strdup(S_("IDS_COM_BODY_NO_NAME"));
 		}
 
 		return name;
@@ -1282,11 +1272,43 @@ static void __gl_realized(void *data, Evas_Object *obj, void *event_info)
 {
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
+	Evas_Object *ao;
+	Evas_Object *btn;
+	char str[MH_LABEL_LENGTH_MAX] = {0, };
+	int i = 0;
 
 	if (item == ad->main.wifi_item || item == ad->main.bt_item || item == ad->main.device_item)
 		elm_object_item_signal_emit(item, "elm,state,top", "");
 	else if (item == ad->main.setup_item || item == ad->main.usage_item || item == ad->main.usb_item)
 		elm_object_item_signal_emit(item, "elm,state,bottom", "");
+
+	for (i = 0; i < 4; i++) {
+		if (item == ad->main.sp_item[i])
+			elm_object_item_access_unregister(item);
+	}
+
+	if (item == ad->main.wifi_item || item == ad->main.bt_item || item == ad->main.usb_item) {
+		ao = elm_object_item_access_object_get(item);
+		btn = elm_object_item_part_content_get(item, "on&off");
+		snprintf(str, sizeof(str), "%s, %s", "On/off button",
+				(elm_check_state_get(btn) ? "On" : "Off"));
+		elm_access_info_set(ao, ELM_ACCESS_CONTEXT_INFO, str);
+	} else if (item == ad->main.setup_item) {
+		ao = elm_object_item_access_object_get(item);
+		elm_access_info_set(ao, ELM_ACCESS_CONTEXT_INFO, "Item");
+	} else if (item == ad->main.device_item) {
+		ao = elm_object_item_access_object_get(item);
+		snprintf(str, sizeof(str), "%s, %s", "Expandable list",
+				"Double tap to open list");
+		elm_access_info_set(ao, ELM_ACCESS_CONTEXT_INFO, str);
+	}
+
+	if (ad->main.device_item == elm_genlist_item_parent_get(item)) {
+		if (ad->clients.number == elm_genlist_item_index_get(item) - 9)
+			elm_object_item_signal_emit(item, "elm,state,bottom", "");
+		else
+			elm_object_item_signal_emit(item, "elm,state,center", "");
+	}
 
 	return;
 }
@@ -1296,6 +1318,7 @@ static void __create_inner_contents(mh_appdata_t *ad)
 	__MOBILE_AP_FUNC_ENTER__;
 
 	Elm_Object_Item *item = NULL;
+	int i = 0;
 
 	__read_setting(ad);
 	if (ad->main.hotspot_mode != VCONFKEY_MOBILE_HOTSPOT_MODE_NONE)
@@ -1311,6 +1334,7 @@ static void __create_inner_contents(mh_appdata_t *ad)
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, NULL,
 			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	ad->main.sp_item[i++] = item;
 
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.wifi_itc,
 			ad, NULL, ELM_GENLIST_ITEM_NONE,
@@ -1326,6 +1350,7 @@ static void __create_inner_contents(mh_appdata_t *ad)
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, NULL,
 			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	ad->main.sp_item[i++] = item;
 
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.bt_itc,
 			ad, NULL, ELM_GENLIST_ITEM_NONE,
@@ -1351,6 +1376,7 @@ static void __create_inner_contents(mh_appdata_t *ad)
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, ad,
 			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	ad->main.sp_item[i++] = item;
 
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.usage_itc,
 			ad, NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
@@ -1363,6 +1389,7 @@ static void __create_inner_contents(mh_appdata_t *ad)
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.end_sp_itc, NULL,
 			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	ad->main.sp_item[i++] = item;
 
 	__MOBILE_AP_FUNC_EXIT__;
 	return;
@@ -1419,6 +1446,7 @@ void ap_draw_contents(mh_appdata_t *ad)
 	elm_object_style_set(ad->main.back_btn, "naviframe/back_btn/default");
 	evas_object_smart_callback_add(ad->main.back_btn, "clicked",
 			__back_btn_cb, ad);
+	elm_object_focus_allow_set(ad->main.back_btn, EINA_FALSE);
 
 	elm_naviframe_item_push(ad->naviframe,
 			_("IDS_MOBILEAP_BODY_TETHERING"),

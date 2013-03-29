@@ -94,6 +94,9 @@ msgstr "Միացնել USB մալուխը"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Գաղտնաբառը պետք է պարունակի առնվազն %d նիշ և չգերազանցի %d նիշը"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Տեղակապումը մարտկոցի ավելի շատ էներգիա է սպառում և ավելացնում է տվյալների օգտագործումը"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Կապակցված սարքը կանջատվի"
 

@@ -94,6 +94,9 @@ msgstr "Ühenda USB-kaabel"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parool peab sisaldama vähemalt %d tähemärki, kuid ei tohi olla pikem kui %d tähemärki"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Modemi kasutamine tarbib rohkem akutoidet ja suurendab andmekasutust"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Ühendatud seadme ühendus katkestatakse"
 

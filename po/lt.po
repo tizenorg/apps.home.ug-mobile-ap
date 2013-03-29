@@ -94,6 +94,9 @@ msgstr "Prijungti USB kabelį"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Slaptažodį turi sudaryti ne mažiau kaip %d simboliai (-ių), bet ne daugiau kaip %d simboliai (-ių)"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Kai įjungtas siejimas, suvartojama daugiau akumuliatoriaus energijos ir padidėja duomenų naudojimas"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Prijungtas įrenginys bus atjungtas"
 

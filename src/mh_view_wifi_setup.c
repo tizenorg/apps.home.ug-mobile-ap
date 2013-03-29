@@ -16,7 +16,7 @@
 * limitations under the License.
 *
 */
-
+#include <notification.h>
 #include "mh_view_wifi_setup.h"
 
 static void __back_btn_cb(void *data, Evas_Object *obj, void *event_info);
@@ -24,12 +24,29 @@ static void __gl_realized(void *data, Evas_Object *obj, void *event_info);
 
 static void __input_panel_event_cb(void *data, Ecore_IMF_Context *ctx, int value)
 {
-	if (value == ECORE_IMF_INPUT_PANEL_STATE_SHOW) {
-		DBG("value == ECORE_IMF_INPUT_PANEL_STATE_SHOW\n");
-		elm_object_item_signal_emit(data, "elm,state,sip,shown", "");
-	} else if(value == ECORE_IMF_INPUT_PANEL_STATE_HIDE) {
-		DBG("value == ECORE_IMF_INPUT_PANEL_STATE_HIDE\n");
-		elm_object_item_signal_emit(data, "elm,state,sip,hidden", "");
+	if (data == NULL) {
+		ERR("data is NULL\n");
+		return;
+	}
+
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+	mh_wifi_setting_view_t *st = &ad->setup;
+
+	ad->imf_state = value;
+
+	if (st->navi_it == NULL) {
+		DBG("naviframe item is not pushed yet\n");
+		return;
+	}
+
+	if (value == ECORE_IMF_INPUT_PANEL_STATE_SHOW &&
+			(ad->rotate_state == UG_EVENT_ROTATE_LANDSCAPE ||
+			 ad->rotate_state == UG_EVENT_ROTATE_LANDSCAPE_UPSIDEDOWN)) {
+		DBG("ECORE_IMF_INPUT_PANEL_STATE_SHOW and Landscape mode\n");
+		elm_naviframe_item_title_visible_set(st->navi_it, EINA_FALSE);
+	} else if (value == ECORE_IMF_INPUT_PANEL_STATE_HIDE) {
+		DBG("ECORE_IMF_INPUT_PANEL_STATE_HIDE\n");
+		elm_naviframe_item_title_visible_set(st->navi_it, EINA_TRUE);
 	}
 
 	return;
@@ -253,26 +270,12 @@ static Eina_Bool __save_wifi_passphrase(mh_appdata_t *ad)
 	mh_wifi_setting_view_t *st = &ad->setup;
 	int ret = 0;
 
-	if (g_strcmp0(st->wifi_passphrase, st->wifi_passphrase_new) == 0) {
-		DBG("Password is not changed\n");
-		return EINA_TRUE;
-	}
-
-	if (strlen(st->wifi_passphrase_new) < WIFI_PASSPHRASE_LENGTH_MIN) {
-		DBG("Password is shorter than %d\n", WIFI_PASSPHRASE_LENGTH_MIN);
-		_prepare_popup(ad, MH_POP_WIFI_PASSWORD_SHORT,
-				_("IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"));
-		_create_popup(ad);
-		return EINA_FALSE;
-	}
-
 	ret = tethering_wifi_set_passphrase(ad->handle, st->wifi_passphrase_new);
 	if (ret != TETHERING_ERROR_NONE) {
 		ERR("tethering_wifi_set_passphrase is failed : %d\n", ret);
 		return EINA_FALSE;
 	}
 
-	DBG("SUCCESS : setting up VCONFKEY_MOBILE_HOTSPOT_WIFI_KEY\n");
 	g_strlcpy(st->wifi_passphrase, st->wifi_passphrase_new, sizeof(st->wifi_passphrase));
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -292,27 +295,22 @@ static void __passphrase_maxlength_reached_cb(void *data, Evas_Object *obj,
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	char buf[MH_LABEL_LENGTH_MAX] = {0, };
+	int ret;
 
-	if (ad->popup != NULL) {
-		ERR("Popup already exists\n");
-		return;
-	}
-
-	if (_hide_imf(ad->setup.pw_entry) == EINA_FALSE) {
-		ERR("_hide_imf is failed\n");
-	}
+	ecore_imf_input_panel_hide();
+	elm_object_focus_set(ad->setup.pw_entry, EINA_FALSE);
 
 	if (__save_wifi_passphrase(ad) == EINA_FALSE) {
 		ERR("__save_wifi_passphrase is failed\n");
-		return;
 	}
 
 	snprintf(buf, sizeof(buf),
 			_("IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"),
 			WIFI_PASSPHRASE_LENGTH_MIN, WIFI_PASSPHRASE_LENGTH_MAX);
 
-	_prepare_popup(ad, MH_POP_INFORMATION_WO_BUTTON, buf);
-	_create_popup(ad);
+	ret = notification_status_message_post(buf);
+	if (ret != NOTIFICATION_ERROR_NONE)
+		ERR("notification_status_message_post() is failed : %d\n", ret);
 
 	__MOBILE_AP_FUNC_EXIT__;
 }
@@ -328,14 +326,31 @@ static void __passphrase_activated_cb(void *data, Evas_Object *obj,
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
+	int ret;
+	char *ptr;
 
-	if (_hide_imf(ad->setup.pw_entry) == EINA_FALSE) {
-		ERR("_hide_imf is failed\n");
+	ecore_imf_input_panel_hide();
+	elm_object_focus_set(ad->setup.pw_entry, EINA_FALSE);
+
+	if (strlen(ad->setup.wifi_passphrase_new) < WIFI_PASSPHRASE_LENGTH_MIN) {
+		DBG("Password is shorter than %d\n", WIFI_PASSPHRASE_LENGTH_MIN);
+		ret = notification_status_message_post(_("IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"));
+		if (ret != NOTIFICATION_ERROR_NONE)
+			ERR("notification_status_message_post() is failed : %d\n", ret);
+
+		ptr = elm_entry_utf8_to_markup(ad->setup.wifi_passphrase);
+		if (ptr != NULL) {
+			elm_entry_entry_set(ad->setup.pw_entry, ptr);
+			free(ptr);
+		} else {
+			ERR("elm_entry_utf8_to_markup is failed\n");
+		}
+
+		return;
 	}
 
 	if (__save_wifi_passphrase(ad) == EINA_FALSE) {
 		ERR("__save_wifi_passphrase is failed\n");
-		return;
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -373,15 +388,16 @@ static void __pw_entry_changed_cb(void *data, Evas_Object *obj,
 		free(utf8_string);
 	}
 
-	if (!elm_object_focus_get(st->pw_layout))
+	if (!elm_object_focus_get(st->pw_entry)) {
 		return;
+	}
 
 	if (elm_entry_is_empty(st->pw_entry)) {
-		elm_object_signal_emit(st->pw_layout,
-				"elm,state,eraser,hide", "elm");
+		elm_object_item_signal_emit(st->pw_item,
+				"elm,state,eraser,hide", "");
 	} else {
-		elm_object_signal_emit(st->pw_layout,
-				"elm,state,eraser,show", "elm");
+		elm_object_item_signal_emit(st->pw_item,
+				"elm,state,eraser,show", "");
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -403,12 +419,11 @@ static void __pw_entry_focused_cb(void *data, Evas_Object *obj,
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	mh_wifi_setting_view_t *st = &ad->setup;
 
-	if (!elm_entry_is_empty(st->pw_entry))
-		elm_object_signal_emit(st->pw_layout,
-				"elm,state,eraser,show", "elm");
-
-	elm_object_signal_emit(st->pw_layout,
-			"elm,state,guidetext,hide", "elm");
+	if (!elm_entry_is_empty(st->pw_entry)) {
+		elm_entry_cursor_end_set(st->pw_entry);
+		elm_object_item_signal_emit(st->pw_item,
+				"elm,state,eraser,show", "");
+	}
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -429,12 +444,8 @@ static void __pw_entry_unfocused_cb(void *data, Evas_Object *obj,
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	mh_wifi_setting_view_t *st = &ad->setup;
 
-	if (elm_entry_is_empty(st->pw_entry))
-		elm_object_signal_emit(st->pw_layout,
-				"elm,state,guidetext,show", "elm");
-
-	elm_object_signal_emit(st->pw_layout,
-			"elm,state,eraser,hide", "elm");
+	elm_object_item_signal_emit(st->pw_item,
+			"elm,state,eraser,hide", "");
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -442,8 +453,7 @@ static void __pw_entry_unfocused_cb(void *data, Evas_Object *obj,
 
 }
 
-static void __pw_layout_eraser_clicked_cb(void *data, Evas_Object *obj,
-		const char *emission, const char *source)
+static void __pw_layout_eraser_clicked_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
@@ -463,6 +473,24 @@ static void __pw_layout_eraser_clicked_cb(void *data, Evas_Object *obj,
 
 }
 
+static char *__gl_pw_text_get(void *data, Evas_Object *obj, const char *part)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (data == NULL || obj == NULL || part == NULL) {
+		ERR("Invalid parameter\n");
+		return NULL;
+	}
+
+	if (g_strcmp0(part, "elm.text") != 0) {
+		ERR("Invalid part : %s\n", part);
+		return NULL;
+	}
+
+	__MOBILE_AP_FUNC_EXIT__;
+	return strdup(_("IDS_MOBILEAP_BODY_PASSWORD"));
+}
+
 static Evas_Object *__gl_pw_icon_get(void *data, Evas_Object *obj,
 		const char *part)
 {
@@ -473,111 +501,103 @@ static Evas_Object *__gl_pw_icon_get(void *data, Evas_Object *obj,
 		return NULL;
 	}
 
-	if (strcmp(part, "elm.icon") != 0) {
-		ERR("Invalid part : %s\n", part);
-		return NULL;
-	}
+	if (g_strcmp0(part, "elm.icon.entry") == 0) {
+		static Elm_Entry_Filter_Limit_Size limit_filter_data;
 
-	static Elm_Entry_Filter_Limit_Size limit_filter_data;
+		mh_appdata_t *ad = (mh_appdata_t *)data;
+		mh_wifi_setting_view_t *st = &ad->setup;
+		Evas_Object *entry = NULL;
+		char *ptr = NULL;
+		Ecore_IMF_Context *imf_context;
 
-	mh_appdata_t *ad = (mh_appdata_t *)data;
-	mh_wifi_setting_view_t *st = &ad->setup;
-	Evas_Object *entry = NULL;
-	char *ptr = NULL;
-	Ecore_IMF_Context *imf_context;
-
-	st->pw_layout = elm_layout_add(obj);
-	if (st->pw_layout == NULL) {
-		ERR("elm_layout_add returns NULL\n");
-		return NULL;
-	}
-	elm_layout_theme_set(st->pw_layout, "layout", "editfield", "title");
-	evas_object_size_hint_weight_set(st->pw_layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-
-	entry = elm_entry_add(st->pw_layout);
-	if (entry == NULL) {
-		ERR("elm_entry_add returns NULL\n");
-		evas_object_del(st->pw_layout);
-		st->pw_layout = NULL;
-		return NULL;
-	}
-	st->pw_entry = entry;
-
-	/* Set single line of entry */
-	elm_entry_scrollable_set(entry, EINA_TRUE);
-	elm_entry_single_line_set(entry, EINA_TRUE);
-	elm_entry_input_panel_layout_set(entry, ELM_INPUT_PANEL_LAYOUT_PASSWORD);
-
-	/* Set the maximum length filter for passphrase entry */
-	limit_filter_data.max_char_count = 0;
-	limit_filter_data.max_byte_count = WIFI_PASSPHRASE_LENGTH_MAX;
-	elm_entry_markup_filter_append(entry,
-			elm_entry_filter_limit_size, &limit_filter_data);
-
-	DBG("security_type : %d\n", st->security_type);
-	if (st->security_type == TETHERING_WIFI_SECURITY_TYPE_NONE) {
-		ptr = elm_entry_utf8_to_markup(st->wifi_passphrase);
-		if (ptr != NULL) {
-			elm_entry_entry_set(entry, ptr);
-			elm_entry_cursor_end_set(entry);
-			free(ptr);
-		} else {
-			ERR("elm_entry_utf8_to_markup is failed\n");
+		entry = elm_entry_add(obj);
+		if (entry == NULL) {
+			ERR("elm_entry_add returns NULL\n");
+			st->pw_entry = NULL;
+			return NULL;
 		}
 
-		/* Set editable mode */
-		elm_entry_input_panel_enabled_set(entry, EINA_FALSE);
+		/* Set single line of entry */
+		elm_entry_scrollable_set(entry, EINA_TRUE);
+		elm_entry_single_line_set(entry, EINA_TRUE);
+		elm_entry_input_panel_layout_set(entry, ELM_INPUT_PANEL_LAYOUT_PASSWORD);
+		elm_entry_select_allow_set(entry, EINA_FALSE);
 		elm_entry_context_menu_disabled_set(entry, EINA_TRUE);
-		elm_object_item_disabled_set(st->pw_item, EINA_TRUE);
-	} else {
-		ptr = elm_entry_utf8_to_markup(st->wifi_passphrase_new);
-		if (ptr != NULL) {
-			elm_entry_entry_set(entry, ptr);
-			elm_entry_cursor_end_set(entry);
-			free(ptr);
+
+		/* Set the maximum length filter for passphrase entry */
+		limit_filter_data.max_char_count = 0;
+		limit_filter_data.max_byte_count = WIFI_PASSPHRASE_LENGTH_MAX;
+		elm_entry_markup_filter_append(entry,
+				elm_entry_filter_limit_size, &limit_filter_data);
+
+		DBG("security_type : %d\n", st->security_type);
+		if (st->security_type == TETHERING_WIFI_SECURITY_TYPE_NONE) {
+			ptr = elm_entry_utf8_to_markup(st->wifi_passphrase);
+			if (ptr != NULL) {
+				elm_entry_entry_set(entry, ptr);
+				free(ptr);
+			} else {
+				ERR("elm_entry_utf8_to_markup is failed\n");
+			}
+
+			/* Set editable mode */
+			elm_entry_input_panel_enabled_set(entry, EINA_FALSE);
+			elm_object_disabled_set(entry, EINA_TRUE);
 		} else {
-			ERR("elm_entry_utf8_to_markup is failed\n");
+			ptr = elm_entry_utf8_to_markup(st->wifi_passphrase_new);
+			if (ptr != NULL) {
+				elm_entry_entry_set(entry, ptr);
+				free(ptr);
+			} else {
+				ERR("elm_entry_utf8_to_markup is failed\n");
+			}
 		}
-		elm_object_item_disabled_set(st->pw_item, EINA_FALSE);
+
+		evas_object_smart_callback_add(entry, "maxlength,reached",
+				__passphrase_maxlength_reached_cb, data);
+		evas_object_smart_callback_add(entry, "activated",
+				__passphrase_activated_cb, data);
+		evas_object_smart_callback_add(entry, "changed",
+				__pw_entry_changed_cb, data);
+		evas_object_smart_callback_add(entry, "focused",
+				__pw_entry_focused_cb, data);
+		evas_object_smart_callback_add(entry, "unfocused",
+				__pw_entry_unfocused_cb, data);
+
+		imf_context = (Ecore_IMF_Context *)elm_entry_imf_context_get(entry);
+		if (imf_context == NULL) {
+			ERR("elm_entry_imf_context_get() is failed\n");
+		} else {
+			ecore_imf_context_input_panel_event_callback_add(imf_context,
+					ECORE_IMF_INPUT_PANEL_STATE_EVENT,
+					__input_panel_event_cb, (void *)ad);
+		}
+
+		elm_object_item_signal_emit(st->pw_item,
+				"elm,state,rename,hide", "");
+		if (!elm_entry_is_empty(entry)) {
+			elm_object_item_signal_emit(st->pw_item,
+					"elm,state,eraser,hide", "");
+		}
+
+		elm_object_part_text_set(entry, "elm.guide",
+				S_("IDS_COM_BODY_ENTER_PASSWORD"));
+
+		evas_object_show(entry);
+		st->pw_entry = entry;
+
+		__MOBILE_AP_FUNC_EXIT__;
+		return st->pw_entry;
+	} else if (g_strcmp0(part, "elm.icon.eraser") == 0) {
+		Evas_Object *btn = elm_button_add(obj);
+		elm_object_style_set(btn, "editfield_clear");
+		evas_object_smart_callback_add(btn, "clicked", __pw_layout_eraser_clicked_cb, data);
+		return btn;
+	} else {
+		DBG("Unknown part : %s\n", part);
 	}
 
-	evas_object_smart_callback_add(entry, "maxlength,reached",
-			__passphrase_maxlength_reached_cb, data);
-	evas_object_smart_callback_add(entry, "activated",
-			__passphrase_activated_cb, data);
-	evas_object_smart_callback_add(entry, "changed",
-			__pw_entry_changed_cb, data);
-	evas_object_smart_callback_add(entry, "focused",
-			__pw_entry_focused_cb, data);
-	evas_object_smart_callback_add(entry, "unfocused",
-			__pw_entry_unfocused_cb, data);
-
-	imf_context = (Ecore_IMF_Context *)elm_entry_imf_context_get(entry);
-	if (imf_context)
-		ecore_imf_context_input_panel_event_callback_add(imf_context,
-				ECORE_IMF_INPUT_PANEL_STATE_EVENT,
-				__input_panel_event_cb, (void *)st->navi_it);
-
-	evas_object_show(entry);
-
-	elm_object_part_content_set(st->pw_layout, "elm.swallow.content", entry);
-	elm_object_part_text_set(st->pw_layout, "elm.text",
-			_("IDS_MOBILEAP_BODY_PASSWORD"));
-	elm_object_part_text_set(st->pw_layout, "elm.guidetext",
-			_("IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"));
-
-	if (!elm_entry_is_empty(entry))
-		elm_object_signal_emit(st->pw_layout,
-				"elm,state,guidetext,hide", "elm");
-
-	elm_object_signal_callback_add(st->pw_layout, "elm,eraser,clicked", "elm",
-			__pw_layout_eraser_clicked_cb, data);
-
-
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return st->pw_layout;
+	return NULL;
 }
 
 static void __gl_hide_item_sel(void *data, Evas_Object *obj, void *event_info)
@@ -660,8 +680,8 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	ad->setup.security_itc->func.del = NULL;
 
 	ad->setup.pw_itc = elm_genlist_item_class_new();
-	ad->setup.pw_itc->item_style = "dialogue/1icon";
-	ad->setup.pw_itc->func.text_get = NULL;
+	ad->setup.pw_itc->item_style = "dialogue/editfield/title";
+	ad->setup.pw_itc->func.text_get = __gl_pw_text_get;
 	ad->setup.pw_itc->func.content_get = __gl_pw_icon_get;
 	ad->setup.pw_itc->func.state_get = NULL;
 	ad->setup.pw_itc->func.del = NULL;
@@ -717,7 +737,6 @@ static void __deconstruct_wifi_setup_view(mh_wifi_setting_view_t *st)
 
 	st->hide_btn = NULL;
 	st->security_btn = NULL;
-	st->pw_layout = NULL;
 	st->pw_entry = NULL;
 	st->back_btn = NULL;
 	st->genlist = NULL;
@@ -736,27 +755,54 @@ static void __back_btn_cb(void *data, Evas_Object *obj, void *event_info)
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	mh_wifi_setting_view_t *st = &ad->setup;
+	Eina_Bool imf_state;
 	int ret;
+	char *ptr = NULL;
 
-	if (_hide_imf(st->pw_entry) == EINA_FALSE) {
-		ERR("_hide_imf is failed\n");
-	}
+	imf_state = ecore_imf_input_panel_hide();
+	elm_object_focus_set(st->pw_entry, EINA_FALSE);
 
-	if (__save_wifi_passphrase(ad) == EINA_FALSE) {
-		ERR("__save_wifi_passphrase is failed\n");
+	if (strlen(st->wifi_passphrase_new) < WIFI_PASSPHRASE_LENGTH_MIN) {
+		DBG("Password is shorter than %d\n", WIFI_PASSPHRASE_LENGTH_MIN);
+		ret = notification_status_message_post(_("IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"));
+		if (ret != NOTIFICATION_ERROR_NONE)
+			ERR("notification_status_message_post() is failed : %d\n", ret);
+
+		ptr = elm_entry_utf8_to_markup(st->wifi_passphrase);
+		if (ptr != NULL) {
+			elm_entry_entry_set(st->pw_entry, ptr);
+			free(ptr);
+		} else {
+			ERR("elm_entry_utf8_to_markup is failed\n");
+		}
+
 		return;
 	}
 
-	if (tethering_is_enabled(ad->handle, TETHERING_TYPE_WIFI) == false &&
-			ad->main.old_wifi_state == true) {
-		_update_wifi_item(ad, MH_STATE_PROCESS);
-		ret = tethering_enable(ad->handle, TETHERING_TYPE_WIFI);
-		if (ret != TETHERING_ERROR_NONE) {
-			ERR("wifi tethering on is failed : %d\n", ret);
-			_update_wifi_item(ad, MH_STATE_NONE);
+	if (g_strcmp0(st->wifi_passphrase, st->wifi_passphrase_new) != 0) {
+		if (__save_wifi_passphrase(ad) == EINA_FALSE) {
+			ERR("__save_wifi_passphrase is failed\n");
 		}
 	}
-	ad->main.old_wifi_state = false;
+
+	if (imf_state == EINA_TRUE) {
+		DBG("IMF is hided\n");
+		return;
+	}
+
+	if (ad->main.need_recover_wifi_tethering == true) {
+		DBG("Turn on Wi-Fi tethering again\n");
+		_update_wifi_item(ad, MH_STATE_PROCESS);
+		if (ad->main.help_item)
+			elm_genlist_item_update(ad->main.help_item);
+
+		ret = tethering_enable(ad->handle, TETHERING_TYPE_WIFI);
+		if (ret != TETHERING_ERROR_NONE) {
+			ERR("Wi-Fi tethering on is failed : %d\n", ret);
+			_update_wifi_item(ad, MH_STATE_NONE);
+			ad->main.need_recover_wifi_tethering = false;
+		}
+	}
 
 	__deconstruct_wifi_setup_view(st);
 
@@ -768,43 +814,45 @@ static void __back_btn_cb(void *data, Evas_Object *obj, void *event_info)
 	__MOBILE_AP_FUNC_EXIT__;
 }
 
-static void __title_back_btn_cb(void *data, Evas_Object *obj, void *event_info)
+static void __gl_realized(void *data, Evas_Object *obj, void *event_info)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
-	if (data == NULL || obj == NULL) {
-		ERR("Invalid param\n");
-		return;
-	}
-
-	mh_appdata_t *ad = (mh_appdata_t *)data;
-
-	if (_hide_imf(ad->setup.pw_entry) == EINA_FALSE) {
-		ERR("_hide_imf is failed\n");
-	}
-
-	if (__save_wifi_passphrase(ad) == EINA_FALSE) {
-		ERR("__save_wifi_passphrase is failed\n");
-		return;
-	}
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return;
-}
-
-static void __gl_realized(void *data, Evas_Object *obj, void *event_info)
-{
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	mh_wifi_setting_view_t *st = &(ad->setup);
 	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
+	Evas_Object *ao;
+	Evas_Object *btn;
+	char str[MH_LABEL_LENGTH_MAX] = {0, };
+	int i = 0;
 
-	if (item == st->hide_item)
+	if (item == st->hide_item) {
+		DBG("Hide item is realized\n");
 		elm_object_item_signal_emit(item, "elm,state,top", "");
-	else if (item == st->security_item)
+	} else if (item == st->security_item) {
+		DBG("Security item is realized\n");
 		elm_object_item_signal_emit(item, "elm,state,center", "");
-	else if (item == st->pw_item)
+	} else if (item == st->pw_item) {
+		DBG("Password item is realized\n");
 		elm_object_item_signal_emit(item, "elm,state,bottom", "");
+	} else if (item == st->name_item) {
+		DBG("Name item is realized\n");
+	}
+
+	for (i = 0; i < 2; i++) {
+		if (item == st->sp_item[i])
+			elm_object_item_access_unregister(item);
+	}
+
+	if (item == st->hide_item || item == st->security_item) {
+		ao = elm_object_item_access_object_get(item);
+		btn = elm_object_item_part_content_get(item, "on&off");
+		snprintf(str, sizeof(str), "%s, %s", "On/off button",
+				(elm_check_state_get(btn) ? "On" : "Off"));
+		elm_access_info_set(ao, ELM_ACCESS_CONTEXT_INFO, str);
+	}
+
+	__MOBILE_AP_FUNC_EXIT__;
 
 	return;
 }
@@ -820,14 +868,16 @@ Evas_Object *__create_genlist(mh_appdata_t *ad)
 
 	void *data = (void *)ad;
 	mh_wifi_setting_view_t *st = &ad->setup;
-	Evas_Object *genlist = NULL;
-	Elm_Object_Item *item = NULL;
+	Evas_Object *genlist;
+	Elm_Object_Item *item;
+	int i = 0;
 
 	genlist = elm_genlist_add(ad->naviframe);
 	if (genlist == NULL) {
 		ERR("genlist is NULL\n");
 		return NULL;
 	}
+
 	elm_object_style_set(genlist, "dialogue");
 	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
 	evas_object_smart_callback_add(genlist, "realized", __gl_realized, ad);
@@ -836,6 +886,7 @@ Evas_Object *__create_genlist(mh_appdata_t *ad)
 	item = elm_genlist_item_append(genlist, st->sp_itc, NULL, NULL,
 			ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	st->sp_item[i++] = item;
 
 	st->hide_item = elm_genlist_item_append(genlist, st->hide_itc, data, NULL,
 			ELM_GENLIST_ITEM_NONE, __gl_hide_item_sel, data);
@@ -843,10 +894,9 @@ Evas_Object *__create_genlist(mh_appdata_t *ad)
 	st->security_item = elm_genlist_item_append(genlist, st->security_itc, data, NULL,
 			ELM_GENLIST_ITEM_NONE, __gl_security_item_sel, data);
 
-	DBG("security_type : %d\n", st->security_type);
 	st->pw_item = elm_genlist_item_append(genlist, st->pw_itc, data, NULL,
 			ELM_GENLIST_ITEM_NONE, NULL, NULL);
-	elm_genlist_item_select_mode_set(st->pw_item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	elm_genlist_item_select_mode_set(st->pw_item, ELM_OBJECT_SELECT_MODE_NONE);
 
 	st->name_item = elm_genlist_item_append(genlist, st->name_itc, data, NULL,
 			ELM_GENLIST_ITEM_NONE, NULL, NULL);
@@ -855,11 +905,51 @@ Evas_Object *__create_genlist(mh_appdata_t *ad)
 	item = elm_genlist_item_append(genlist, st->end_sp_itc, NULL, NULL,
 			ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+	st->sp_item[i++] = item;
 
 
 	__MOBILE_AP_FUNC_EXIT__;
 
 	return genlist;
+}
+
+char *__slide_title_access_info_cb(void *data, Evas_Object *obj)
+{
+	Evas_Object *label;
+	Elm_Object_Item *navi_it;
+	Eina_Strbuf *buf;
+	const char *info;
+	char *ret;
+
+	navi_it = (Elm_Object_Item *) data;
+	label = elm_object_item_part_content_get(navi_it, "elm.swallow.title");
+	if (label == NULL)
+		return NULL;
+
+	info = elm_object_text_get(label);
+	if (info == NULL)
+		return NULL;
+
+	buf = eina_strbuf_new();
+	eina_strbuf_append(buf, info);
+
+	ret = eina_strbuf_string_steal(buf);
+	eina_strbuf_free(buf);
+	return ret;
+}
+
+static void __title_clicked_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	Evas_Object *label;
+	Elm_Object_Item *navi_it = event_info;
+	if (navi_it == NULL)
+		return;
+
+	label = elm_object_item_part_content_get(navi_it, "elm.swallow.title");
+	if (label == NULL)
+		return;
+
+	elm_label_slide_go(label);
 }
 
 void mh_draw_wifi_setup_view(mh_appdata_t *ad)
@@ -872,6 +962,9 @@ void mh_draw_wifi_setup_view(mh_appdata_t *ad)
 	}
 
 	mh_wifi_setting_view_t *st = &ad->setup;
+	Evas_Object *ao;
+	Evas_Object *label;
+
 
 	if (st->genlist != NULL) {
 		ERR("Wi-Fi setup view already exists\n");
@@ -892,15 +985,27 @@ void mh_draw_wifi_setup_view(mh_appdata_t *ad)
 	elm_object_style_set(st->back_btn, "naviframe/back_btn/default");
 	evas_object_smart_callback_add(st->back_btn, "clicked",
 			__back_btn_cb, ad);
+	elm_object_focus_allow_set(st->back_btn, EINA_FALSE);
 
 	st->navi_it = elm_naviframe_item_push(ad->naviframe,
-			_("IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"),
+			NULL,
 			st->back_btn, NULL, st->genlist, NULL);
 
-	st->title_back_btn = elm_button_add(ad->naviframe);
-	elm_object_style_set(st->title_back_btn, "naviframe/back_btn/default");
-	evas_object_smart_callback_add(st->title_back_btn, "clicked", __title_back_btn_cb, ad);
-	elm_object_item_part_content_set(st->navi_it, "title_prev_btn", st->title_back_btn);
+	/* Slide title */
+	label = _create_slide_title(ad->naviframe, _("IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"));
+	elm_object_item_part_content_set(st->navi_it, "elm.swallow.title", label);
+	evas_object_smart_callback_add(ad->naviframe, "title,clicked", __title_clicked_cb, NULL);
+
+	ao = elm_object_item_access_object_get(st->navi_it);
+	if (ao) {
+		elm_access_info_set(ao, ELM_ACCESS_TYPE, "title");
+		elm_access_info_cb_set(ao, ELM_ACCESS_INFO,
+				__slide_title_access_info_cb, st->navi_it);
+		elm_object_focus_set(ao, EINA_TRUE);
+	}
+
+	/* Realize genlist item forcely since UIFW doesn't make realize to avoid crash on landscape mode*/
+	elm_genlist_item_update(st->pw_item);
 
 	__MOBILE_AP_FUNC_EXIT__;
 

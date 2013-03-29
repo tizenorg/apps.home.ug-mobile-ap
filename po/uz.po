@@ -94,6 +94,9 @@ msgstr "USB-kabelni ulash"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parol eng kamida %d belgidan iborat bo‘lishi hamda %d belgidan oshmasligi lozim"
 
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Bog‘lanish batareya quvvatini ko‘proq sarflaydi va ma’lumot ishlatilishini oshiradi"
+
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Ulangan qurilma uziladi"
 

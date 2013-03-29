@@ -3,7 +3,7 @@
 
 Name:       ug-setting-mobileap-efl
 Summary:    Tethering UI Gadget Library
-Version:    0.1.158
+Version:    0.1.160
 Release:    1
 Group:      TO_BE/FILLED_IN
 License:    Flora License Version 1.0
@@ -20,6 +20,7 @@ BuildRequires: pkgconfig(capi-network-tethering)
 BuildRequires: pkgconfig(capi-network-connection)
 BuildRequires: pkgconfig(capi-network-wifi)
 BuildRequires: pkgconfig(capi-telephony-sim)
+BuildRequires: pkgconfig(notification)
 
 %description
 Tethering UI Gadget Library
@@ -46,6 +47,17 @@ rm -rf %{buildroot}
 %{_ugdir}/lib/libug-setting-mobile-ap-ug.so
 
 %changelog
+* Mon Jan 28 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.160-1
+- Remove unrequired log
+
+* Tue Jan 15 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.159-1
+- Fix : When device is rotated, guide text is displayed short time
+- Fix : Security / Hide items are disabled sometimes
+- Translation data is updated
+- Pop-up scenario for USB tethering is implemented
+- IMF is hided by focus out
+- Wi-Fi tethering is enabled without checking enable state
+
 * Fri Dec 07 2012 Seungyoun Ju <sy39.ju@samsung.com> 0.1.158-1
 - New winset is applied and some bugs are fixed
 

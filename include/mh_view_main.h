@@ -33,12 +33,6 @@ extern "C" {
 #define MH_KB			(1000)
 #define MH_MB			(MH_KB * MH_KB)
 
-#define MH_DEVICE_LIST_NO_NAME	"No name"
-#define MH_DEFAULT_DEVICE_NAME	"No name"
-
-#define MH_CONNECTED_DEVICE_WILL_BE_DISCONNECTED	"Connected device will be disconnected"
-#define MH_CONSUMES_MORE_BATTERY_POWER			"Tethering consumes more battery power and increases your data usage. Continue?"
-
 void ap_update_data_onoff(void *data);
 void ap_update_data_device(mh_appdata_t *ad);
 Eina_Bool ap_update_data_packet_usage(mh_appdata_t *ad);
