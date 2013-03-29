@@ -51,7 +51,7 @@ int _get_vconf_usb_state()
 
 static bool __is_connected_wifi_net(mh_appdata_t *ad)
 {
-	connection_wifi_state_e wifi_state;
+	connection_wifi_state_e wifi_state = CONNECTION_WIFI_STATE_DEACTIVATED;
 	int ret;
 
 	ret = connection_get_wifi_state(ad->conn_handle, &wifi_state);
@@ -71,7 +71,7 @@ static bool __is_connected_wifi_net(mh_appdata_t *ad)
 
 static bool __is_connected_ethernet_net(mh_appdata_t *ad)
 {
-	connection_ethernet_state_e ethernet_state;
+	connection_ethernet_state_e ethernet_state = CONNECTION_ETHERNET_STATE_DEACTIVATED;
 	int ret;
 
 	ret = connection_get_ethernet_state(ad->conn_handle, &ethernet_state);
@@ -91,19 +91,22 @@ static bool __is_connected_ethernet_net(mh_appdata_t *ad)
 
 static bool __is_connected_cellular_net(mh_appdata_t *ad)
 {
-	connection_cellular_state_e cellular_state;
-	sim_state_e sim_state;
+	connection_cellular_state_e cellular_state = CONNECTION_CELLULAR_STATE_OUT_OF_SERVICE;
+	sim_state_e sim_state = SIM_STATE_UNAVAILABLE;
 	int ret;
 
 	/* Check SIM state */
 	ret = sim_get_state(&sim_state);
 	if (ret != SIM_ERROR_NONE) {
 		ERR("sim_get_state() is failed : %d\n", ret);
+		_prepare_popup(MH_POP_INFORMATION,
+				_("IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"));
+		_create_popup(ad);
 		return false;
 	}
 	DBG("SIM State : %d\n", sim_state);
 	if (sim_state != SIM_STATE_AVAILABLE) {
-		_prepare_popup(ad, MH_POP_INFORMATION,
+		_prepare_popup(MH_POP_INFORMATION,
 				_("IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"));
 		_create_popup(ad);
 		return false;
@@ -116,14 +119,14 @@ static bool __is_connected_cellular_net(mh_appdata_t *ad)
 	}
 
 	if (cellular_state == CONNECTION_CELLULAR_STATE_FLIGHT_MODE) {
-		_prepare_popup(ad, MH_POP_INFORMATION_WO_BUTTON,
+		_prepare_popup(MH_POP_INFORMATION_WO_BUTTON,
 				_("IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"));
 		_create_popup(ad);
 		ERR("Cellular network is not connected\n");
 		return false;
 	} else if (cellular_state != CONNECTION_CELLULAR_STATE_CONNECTED &&
 			cellular_state != CONNECTION_CELLULAR_STATE_AVAILABLE) {
-		_prepare_popup(ad, MH_POP_INFORMATION,
+		_prepare_popup(MH_POP_INFORMATION,
 				_("IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"));
 		_create_popup(ad);
 		ERR("Cellular network is not connected : %d\n", cellular_state);
@@ -136,16 +139,15 @@ static bool __is_connected_cellular_net(mh_appdata_t *ad)
 
 static int __create_wifi_hotspot_on_popup(mh_appdata_t *ad)
 {
-	bool wifi_state;
-	char *str = NULL;
+	char *str;
+	bool wifi_state = false;
 
 	wifi_is_activated(&wifi_state);
 	if (wifi_state == true || _is_wifi_direct_on() == true)
 		str = _("IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q");
 	else
 		str = _("IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q");
-
-	_prepare_popup(ad, MH_POP_WIFI_ON_CONF, str);
+	_prepare_popup(MH_POP_WIFI_ON_CONF, str);
 	_create_popup(ad);
 
 	return 0;
@@ -153,8 +155,10 @@ static int __create_wifi_hotspot_on_popup(mh_appdata_t *ad)
 
 static int __create_bt_tethering_on_popup(mh_appdata_t *ad)
 {
-	_prepare_popup(ad, MH_POP_BT_ON_CONF,
-			_("IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"));
+	char *str;
+
+	str = _("IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE");
+	_prepare_popup(MH_POP_BT_ON_CONF, str);
 	_create_popup(ad);
 
 	return 0;
@@ -162,8 +166,10 @@ static int __create_bt_tethering_on_popup(mh_appdata_t *ad)
 
 static int __create_usb_tethering_on_popup(mh_appdata_t *ad)
 {
-	_prepare_popup(ad, MH_POP_USB_ON_CONF,
-			_("IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"));
+	char *str;
+
+	str = _("IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE");
+	_prepare_popup(MH_POP_USB_ON_CONF, str);
 	_create_popup(ad);
 
 	return 0;
@@ -295,7 +301,7 @@ static void __wifi_deactivated_cb(wifi_error_e result, void *user_data)
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t *)user_data;
-	int ret = 0;
+	int ret;
 
 	if (result != WIFI_ERROR_NONE) {
 		ERR("__wifi_deactivated_cb error : %d\n", result);
@@ -343,7 +349,7 @@ void _enabled_cb(tethering_error_e result, tethering_type_e type, bool is_reques
 	}
 
 	if (result != TETHERING_ERROR_NONE) {
-		_prepare_popup(ad, MH_POP_INFORMATION,
+		_prepare_popup(MH_POP_INFORMATION,
 				_("IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"));
 		_create_popup(ad);
 	}
@@ -379,7 +385,7 @@ void _disabled_cb(tethering_error_e result, tethering_type_e type, tethering_dis
 	}
 
 	if (result != TETHERING_ERROR_NONE) {
-		_prepare_popup(ad, MH_POP_INFORMATION,
+		_prepare_popup(MH_POP_INFORMATION,
 				_("IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"));
 		_create_popup(ad);
 		_update_main_view(ad);
@@ -442,7 +448,7 @@ int _handle_wifi_onoff_change(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
-	int ret = 0;
+	int ret;
 	int connected_wifi_clients = 0;
 
 	/* Turn off WiFi hotspot */
@@ -452,7 +458,7 @@ int _handle_wifi_onoff_change(mh_appdata_t *ad)
 			ERR("Getting the number of connected device is failed\n");
 		}
 		if (connected_wifi_clients > 0) {
-			_prepare_popup(ad, MH_POP_WIFI_OFF_CONF,
+			_prepare_popup(MH_POP_WIFI_OFF_CONF,
 					_("IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"));
 			_create_popup(ad);
 		} else {
@@ -505,7 +511,7 @@ int _handle_bt_onoff_change(mh_appdata_t *ad)
 	}
 
 	if (__create_bt_tethering_on_popup(ad) < 0) {
-		ERR("__create_wifi_hotspot_on_popup fail\n");
+		ERR("__create_bt_tethering_on_popup fail\n");
 		return -1;
 	}
 
@@ -538,7 +544,7 @@ int _handle_usb_onoff_change(mh_appdata_t *ad)
 	}
 
 	if (__create_usb_tethering_on_popup(ad) < 0) {
-		ERR("__create_wifi_hotspot_on_popup fail\n");
+		ERR("__create_usb_tethering_on_popup fail\n");
 		return -1;
 	}
 
@@ -576,7 +582,7 @@ int _turn_on_wifi(void)
 bool _is_wifi_direct_on(void)
 {
 	int wifi_direct_state = 0;
-	int ret = 0;
+	int ret;
 
 	ret = vconf_get_int(VCONFKEY_WIFI_DIRECT_STATE, &wifi_direct_state);
 	if (ret < 0) {
@@ -589,7 +595,7 @@ bool _is_wifi_direct_on(void)
 
 int _turn_off_wifi_direct(mh_appdata_t *ad)
 {
-	int ret = 0;
+	int ret;
 
 	ret = wifi_direct_initialize();
 	if (ret < 0) {

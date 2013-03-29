@@ -20,6 +20,7 @@ BuildRequires: pkgconfig(capi-network-tethering)
 BuildRequires: pkgconfig(capi-network-connection)
 BuildRequires: pkgconfig(capi-network-wifi)
 BuildRequires: pkgconfig(capi-telephony-sim)
+BuildRequires: pkgconfig(notification)
 
 %description
 Tethering UI Gadget Library

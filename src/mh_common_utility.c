@@ -20,6 +20,10 @@
 #include "mh_common_utility.h"
 #include "mobile_hotspot.h"
 
+static mh_popup_type_e popup_type = MH_POPUP_NONE;
+static Evas_Object *popup_content = NULL;
+static char *popup_string = NULL;
+
 static void __one_btn_popup_resp(void *data, Evas_Object *obj, void *event_info)
 {
 	__MOBILE_AP_FUNC_ENTER__;
@@ -34,8 +38,8 @@ static void __one_btn_popup_resp(void *data, Evas_Object *obj, void *event_info)
 	evas_object_del(ad->popup);
 	ad->popup = NULL;
 
-	DBG("popup_type : %d\n", ad->popup_type);
-	switch (ad->popup_type) {
+	DBG("popup_type : %d\n", popup_type);
+	switch (popup_type) {
 	case MH_POP_USB_CONNECT:
 		_update_usb_item(ad, MH_STATE_NONE);
 		vconf_ignore_key_changed(VCONFKEY_SETAPPL_USB_MODE_INT,
@@ -45,16 +49,8 @@ static void __one_btn_popup_resp(void *data, Evas_Object *obj, void *event_info)
 	case MH_POP_INFORMATION:
 		break;
 
-	case MH_POP_WIFI_PASSWORD_SHORT:
-		if (ad->setup.pw_entry == NULL)
-			break;
-
-		evas_object_show(ad->setup.pw_entry);
-		elm_object_focus_set(ad->setup.pw_entry, EINA_TRUE);
-		break;
-
 	default:
-		DBG("Unknown popup_type : %d\n", ad->popup_type);
+		DBG("Unknown popup_type : %d\n", popup_type);
 		break;
 	}
 
@@ -75,13 +71,13 @@ static void __alert_popup_resp(void *data, Evas_Object *obj, void *event_info)
 	evas_object_del(ad->popup);
 	ad->popup = NULL;
 
-	DBG("popup_type : %d\n", ad->popup_type);
-	switch (ad->popup_type) {
+	DBG("popup_type : %d\n", popup_type);
+	switch (popup_type) {
 	case MH_POP_INFORMATION_WO_BUTTON:
 		break;
 
 	default:
-		DBG("Unknown popup_type : %d\n", ad->popup_type);
+		DBG("Unknown popup_type : %d\n", popup_type);
 		break;
 	}
 
@@ -104,8 +100,8 @@ static void __popup_resp_yes(void *data, Evas_Object *obj, void *event_info)
 	evas_object_del(ad->popup);
 	ad->popup = NULL;
 
-	DBG("popup_type : %d\n", ad->popup_type);
-	switch (ad->popup_type) {
+	DBG("popup_type : %d\n", popup_type);
+	switch (popup_type) {
 	case MH_POP_WIFI_ON_CONF:
 		wifi_is_activated(&wifi_state);
 		if (wifi_state == true) {
@@ -145,7 +141,7 @@ static void __popup_resp_yes(void *data, Evas_Object *obj, void *event_info)
 
 	case MH_POP_USB_ON_CONF:
 		if (_get_vconf_usb_state() != VCONFKEY_SYSMAN_USB_AVAILABLE) {
-			_prepare_popup(ad, MH_POP_USB_CONNECT,
+			_prepare_popup(MH_POP_USB_CONNECT,
 					_("IDS_MOBILEAP_POP_CONNECT_USB_CABLE"));
 			_create_popup(ad);
 			vconf_notify_key_changed(VCONFKEY_SETAPPL_USB_MODE_INT,
@@ -153,7 +149,7 @@ static void __popup_resp_yes(void *data, Evas_Object *obj, void *event_info)
 			break;
 		}
 
-		_prepare_popup(ad, MH_POP_USB_ON_PREVCONN_CONF,
+		_prepare_popup(MH_POP_USB_ON_PREVCONN_CONF,
 				_("IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"));
 		_create_popup(ad);
 		break;
@@ -179,7 +175,7 @@ static void __popup_resp_yes(void *data, Evas_Object *obj, void *event_info)
 		break;
 
 	default:
-		DBG("Unknown popup_type : %d\n", ad->popup_type);
+		DBG("Unknown popup_type : %d\n", popup_type);
 		break;
 	}
 
@@ -200,8 +196,8 @@ static void __popup_resp_no(void *data, Evas_Object *obj, void *event_info)
 	evas_object_del(ad->popup);
 	ad->popup = NULL;
 
-	DBG("popup_type : %d\n", ad->popup_type);
-	switch (ad->popup_type) {
+	DBG("popup_type : %d\n", popup_type);
+	switch (popup_type) {
 	case MH_POP_WIFI_ON_CONF:
 		_update_wifi_item(ad, MH_STATE_NONE);
 		break;
@@ -226,7 +222,7 @@ static void __popup_resp_no(void *data, Evas_Object *obj, void *event_info)
 		break;
 
 	default:
-		DBG("Unknown popup_type : %d\n", ad->popup_type);
+		DBG("Unknown popup_type : %d\n", popup_type);
 		break;
 	}
 
@@ -247,24 +243,47 @@ static bool _count_connected_clients_cb(tethering_client_h client, void *user_da
 	return true;
 }
 
-void _prepare_popup(mh_appdata_t *ad, int type, const char *str)
+void _prepare_popup_with_content(int type, Evas_Object *obj)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
-	if (ad == NULL || str == NULL) {
-		ERR("param is NULL : ad[%x], str[%x]\n", ad, str);
+	if (obj == NULL) {
+		ERR("param is NULL\n");
 		return;
 	}
 
-	int nLen = 0;
+	popup_type = type;
 
-	nLen = strlen(str);
-	if (sizeof(ad->popup_string) <= nLen)
-		ERR("We should make the message[%s] less than %d",
-				str, sizeof(ad->popup_string));
+	if (popup_content)
+		evas_object_del(popup_content);
+	popup_content = obj;
 
-	ad->popup_type = type;
-	snprintf(ad->popup_string, sizeof(ad->popup_string), "%s", str);
+	if (popup_string) {
+		free(popup_string);
+		popup_string = NULL;
+	}
+
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+void _prepare_popup(int type, const char *str)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (str == NULL) {
+		ERR("param is NULL\n");
+		return;
+	}
+
+	popup_type = type;
+	popup_content = NULL;
+
+	if (popup_string)
+		free(popup_string);
+
+	popup_string = strndup(str, MH_LABEL_LENGTH_MAX);
+	if (popup_string == NULL)
+		ERR("strndup is failed\n");
 
 	__MOBILE_AP_FUNC_EXIT__;
 }
@@ -277,7 +296,13 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 
 	if (ad == NULL) {
 		ERR("The param is NULL\n");
-		return 0;
+		if (popup_string) {
+			free(popup_string);
+			popup_string = NULL;
+		}
+		popup_content = NULL;
+
+		return EINA_FALSE;
 	}
 
 	if (ad->popup != NULL) {
@@ -286,14 +311,17 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		ad->popup = NULL;
 	}
 
-	DBG("Create_popup %d\n", ad->popup_type);
-	switch (ad->popup_type) {
+	DBG("Create_popup %d\n", popup_type);
+	switch (popup_type) {
 	case MH_POP_WIFI_ON_CONF:
 		ad->popup = elm_popup_add(ad->win);
 		evas_object_size_hint_weight_set(ad->popup,
 				EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
-		elm_object_text_set(ad->popup, ad->popup_string);
+		if (popup_content == NULL)
+			elm_object_text_set(ad->popup, popup_string);
+		else
+			elm_object_content_set(ad->popup, popup_content);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
@@ -317,7 +345,10 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_size_hint_weight_set(ad->popup,
 				EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
-		elm_object_text_set(ad->popup, ad->popup_string);
+		if (popup_content == NULL)
+			elm_object_text_set(ad->popup, popup_string);
+		else
+			elm_object_content_set(ad->popup, popup_content);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
@@ -341,7 +372,10 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_size_hint_weight_set(ad->popup, EVAS_HINT_EXPAND,
 				EVAS_HINT_EXPAND);
 
-		elm_object_text_set(ad->popup, ad->popup_string);
+		if (popup_content == NULL)
+			elm_object_text_set(ad->popup, popup_string);
+		else
+			elm_object_content_set(ad->popup, popup_content);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
@@ -358,7 +392,10 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_size_hint_weight_set(ad->popup,
 				EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
-		elm_object_text_set(ad->popup, ad->popup_string);
+		if (popup_content == NULL)
+			elm_object_text_set(ad->popup, popup_string);
+		else
+			elm_object_content_set(ad->popup, popup_content);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
@@ -383,7 +420,10 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_size_hint_weight_set(ad->popup,
 				EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
-		elm_object_text_set(ad->popup, ad->popup_string);
+		if (popup_content == NULL)
+			elm_object_text_set(ad->popup, popup_string);
+		else
+			elm_object_content_set(ad->popup, popup_content);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
@@ -407,24 +447,10 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_size_hint_weight_set(ad->popup, EVAS_HINT_EXPAND,
 				EVAS_HINT_EXPAND);
 
-		elm_object_text_set(ad->popup, ad->popup_string);
-
-		btn = elm_button_add(ad->popup);
-		elm_object_style_set(btn, "popup_button/default");
-		elm_object_text_set(btn, S_("IDS_COM_POP_CLOSE"));
-		elm_object_part_content_set(ad->popup, "button1", btn);
-		evas_object_smart_callback_add(btn, "clicked",
-				__one_btn_popup_resp, (void *)ad);
-
-		evas_object_show(ad->popup);
-		break;
-
-	case MH_POP_WIFI_PASSWORD_SHORT:
-		ad->popup = elm_popup_add(ad->win);
-		evas_object_size_hint_weight_set(ad->popup, EVAS_HINT_EXPAND,
-				EVAS_HINT_EXPAND);
-
-		elm_object_text_set(ad->popup, ad->popup_string);
+		if (popup_content == NULL)
+			elm_object_text_set(ad->popup, popup_string);
+		else
+			elm_object_content_set(ad->popup, popup_content);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
@@ -441,7 +467,10 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_size_hint_weight_set(ad->popup, EVAS_HINT_EXPAND,
 				EVAS_HINT_EXPAND);
 
-		elm_object_text_set(ad->popup, ad->popup_string);
+		if (popup_content == NULL)
+			elm_object_text_set(ad->popup, popup_string);
+		else
+			elm_object_content_set(ad->popup, popup_content);
 
 		elm_popup_timeout_set(ad->popup, MH_POPUP_TIMEOUT);
 		evas_object_smart_callback_add(ad->popup, "timeout",
@@ -457,7 +486,10 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_size_hint_weight_set(ad->popup,
 				EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
-		elm_object_text_set(ad->popup, ad->popup_string);
+		if (popup_content == NULL)
+			elm_object_text_set(ad->popup, popup_string);
+		else
+			elm_object_content_set(ad->popup, popup_content);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
@@ -475,28 +507,37 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 
 		evas_object_show(ad->popup);
 		break;
+	default:
+		ERR("Unknown popup_type : %d\n", popup_type);
+		break;
 	}
+
+	if (popup_string) {
+		free(popup_string);
+		popup_string = NULL;
+	}
+	popup_content = NULL;
 
 	__MOBILE_AP_FUNC_EXIT__;
 
-	return TRUE;
+	return EINA_TRUE;
 }
 
 void _destroy_popup(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
-	if (ad == NULL) {
-		ERR("ad is NULL\n");
-		return;
-	}
-
-	if (ad->popup) {
+	if (ad && ad->popup) {
 		evas_object_del(ad->popup);
 		ad->popup = NULL;
 	}
 
-	ad->popup_type = MH_POPUP_NONE;
+	if (popup_string) {
+		free(popup_string);
+		popup_string = NULL;
+	}
+	popup_content = NULL;
+	popup_type = MH_POPUP_NONE;
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -647,4 +688,44 @@ Eina_Bool _get_no_of_connected_device(tethering_h handle, int *no, tethering_typ
 			_count_connected_clients_cb, (void *)no);
 
 	return TRUE;
+}
+
+Evas_Object *_create_label(Evas_Object *parent, const char *text)
+{
+	Evas_Object *label;
+
+	label = elm_entry_add(parent);
+	if (label == NULL) {
+		ERR("elm_entry_add is failed\n");
+		return NULL;
+	}
+
+	elm_entry_editable_set(label, EINA_FALSE);
+	elm_entry_context_menu_disabled_set(label, EINA_TRUE);
+	elm_object_text_set(label, text);
+
+	evas_object_size_hint_weight_set(label, EVAS_HINT_EXPAND, 0.0);
+	evas_object_size_hint_align_set(label, EVAS_HINT_FILL, EVAS_HINT_FILL);
+	evas_object_show(label);
+
+	return label;
+}
+
+Evas_Object *_create_slide_title(Evas_Object *parent, const char *text)
+{
+	if (parent == NULL || text == NULL)
+		return NULL;
+
+	Evas_Object *label;
+
+	label = elm_label_add(parent);
+	elm_object_style_set(label, "naviframe_title");
+	elm_label_slide_mode_set(label, ELM_LABEL_SLIDE_MODE_AUTO);
+	elm_label_wrap_width_set(label, 1);
+	elm_label_ellipsis_set(label, EINA_TRUE);
+	elm_object_text_set(label, text);
+	evas_object_show(label);
+
+	elm_access_object_unregister(label);
+	return label;
 }

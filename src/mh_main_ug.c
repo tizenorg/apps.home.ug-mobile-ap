@@ -24,6 +24,7 @@
 #include "mobile_hotspot.h"
 #include "mh_view_main.h"
 #include "mh_func_onoff.h"
+#include "mh_common_utility.h"
 
 static Evas_Object *create_content(mh_appdata_t *ad)
 {
@@ -39,32 +40,41 @@ static Evas_Object *create_content(mh_appdata_t *ad)
 
 static void __set_callbacks(tethering_h handle, void *user_data)
 {
-	tethering_set_enabled_cb(handle, TETHERING_TYPE_USB, _enabled_cb, user_data);
-	tethering_set_enabled_cb(handle, TETHERING_TYPE_WIFI, _enabled_cb, user_data);
-	tethering_set_enabled_cb(handle, TETHERING_TYPE_BT, _enabled_cb, user_data);
+	int ret;
 
-	tethering_set_disabled_cb(handle, TETHERING_TYPE_USB, _disabled_cb, user_data);
-	tethering_set_disabled_cb(handle, TETHERING_TYPE_WIFI, _disabled_cb, user_data);
-	tethering_set_disabled_cb(handle, TETHERING_TYPE_BT, _disabled_cb, user_data);
+	ret = tethering_set_enabled_cb(handle, TETHERING_TYPE_ALL,
+			_enabled_cb, user_data);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_set_enabled_cb [0x%X]\n", ret);
 
-	tethering_set_connection_state_changed_cb(handle, TETHERING_TYPE_USB, _connection_changed_cb, user_data);
-	tethering_set_connection_state_changed_cb(handle, TETHERING_TYPE_WIFI, _connection_changed_cb, user_data);
-	tethering_set_connection_state_changed_cb(handle, TETHERING_TYPE_BT, _connection_changed_cb, user_data);
+	ret = tethering_set_disabled_cb(handle, TETHERING_TYPE_ALL,
+			_disabled_cb, user_data);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_set_disabled_cb [0x%X]\n", ret);
+
+	ret = tethering_set_connection_state_changed_cb(handle,
+			TETHERING_TYPE_ALL,
+			_connection_changed_cb, user_data);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_set_connection_state_changed_cb [0x%X]\n", ret);
 }
 
 static void __unset_callbacks(tethering_h handle)
 {
-	tethering_unset_enabled_cb(handle, TETHERING_TYPE_USB);
-	tethering_unset_enabled_cb(handle, TETHERING_TYPE_WIFI);
-	tethering_unset_enabled_cb(handle, TETHERING_TYPE_BT);
+	int ret;
 
-	tethering_unset_disabled_cb(handle, TETHERING_TYPE_USB);
-	tethering_unset_disabled_cb(handle, TETHERING_TYPE_WIFI);
-	tethering_unset_disabled_cb(handle, TETHERING_TYPE_BT);
+	ret = tethering_unset_connection_state_changed_cb(handle,
+			TETHERING_TYPE_ALL);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_unset_connection_state_changed_cb[0x%X]\n", ret);
 
-	tethering_unset_connection_state_changed_cb(handle, TETHERING_TYPE_USB);
-	tethering_unset_connection_state_changed_cb(handle, TETHERING_TYPE_WIFI);
-	tethering_unset_connection_state_changed_cb(handle, TETHERING_TYPE_BT);
+	ret = tethering_unset_disabled_cb(handle, TETHERING_TYPE_ALL);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_unset_disabled_cb [0x%X]\n", ret);
+
+	ret = tethering_unset_enabled_cb(handle, TETHERING_TYPE_ALL);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_unset_enabled [0x%X]\n", ret);
 }
 
 static void *on_create(ui_gadget_h ug, enum ug_mode mode,
@@ -240,6 +250,47 @@ static void on_message(ui_gadget_h ug, service_h msg,
 {
 }
 
+static void __rotate_changed_cb(mh_appdata_t *ad, enum ug_event rotate_state)
+{
+	if (ad == NULL) {
+		ERR("ad is NULL\n");
+		return;
+	}
+
+	Elm_Object_Item *top_navi_it = NULL;
+	mh_wifi_setting_view_t *st = &ad->setup;
+
+	ad->rotate_state = rotate_state;
+
+	top_navi_it = elm_naviframe_top_item_get(ad->naviframe);
+	if (top_navi_it == NULL) {
+		ERR("elm_naviframe_top_item_get returns NULL\n");
+		return;
+	}
+
+	if (top_navi_it != st->navi_it) {
+		return;
+	}
+
+	if (rotate_state == UG_EVENT_ROTATE_PORTRAIT ||
+			rotate_state == UG_EVENT_ROTATE_PORTRAIT_UPSIDEDOWN) {
+		DBG("Naviframe title is shown\n");
+		elm_naviframe_item_title_visible_set(st->navi_it,
+				EINA_TRUE);
+	} else if (rotate_state == UG_EVENT_ROTATE_LANDSCAPE ||
+			rotate_state == UG_EVENT_ROTATE_LANDSCAPE_UPSIDEDOWN) {
+		if (ad->imf_state == ECORE_IMF_INPUT_PANEL_STATE_SHOW) {
+			DBG("Naviframe title is hided\n");
+			elm_naviframe_item_title_visible_set(st->navi_it,
+					EINA_FALSE);
+		}
+	} else {
+		ERR("Unknown rotate_state : %d\n", rotate_state);
+	}
+
+	return;
+}
+
 static void on_event(ui_gadget_h ug, enum ug_event event,
 		service_h service, void *priv)
 {
@@ -249,6 +300,9 @@ static void on_event(ui_gadget_h ug, enum ug_event event,
 		ERR("The param is NULL\n");
 		return;
 	}
+
+	mh_ugdata_t *ugd = (mh_ugdata_t *)priv;
+	mh_appdata_t *ad = ugd->ad;
 
 	switch (event) {
 	case UG_EVENT_LOW_MEMORY:
@@ -261,16 +315,14 @@ static void on_event(ui_gadget_h ug, enum ug_event event,
 		DBG("UG_EVENT_LANG_CHANGE\n");
 		break;
 	case UG_EVENT_ROTATE_PORTRAIT:
-		DBG("UG_EVENT_ROTATE_PORTRAIT\n");
-		break;
 	case UG_EVENT_ROTATE_PORTRAIT_UPSIDEDOWN:
-		DBG("UG_EVENT_ROTATE_PORTRAIT_UPSIDEDOWN\n");
+		DBG("UG_EVENT_ROTATE_PORTRAIT[_UPSIDEDOWN]\n");
+		__rotate_changed_cb(ad, event);
 		break;
 	case UG_EVENT_ROTATE_LANDSCAPE:
-		DBG("UG_EVENT_ROTATE_LANDSCAPE\n");
-		break;
 	case UG_EVENT_ROTATE_LANDSCAPE_UPSIDEDOWN:
-		DBG("UG_EVENT_ROTATE_LANDSCAPE_UPSIDEDOWN\n");
+		DBG("UG_EVENT_ROTATE_LANDSCAPE[_UPSIDEDOWN]\n");
+		__rotate_changed_cb(ad, event);
 		break;
 	default:
 		DBG("default\n");
@@ -300,17 +352,11 @@ static void on_key_event(ui_gadget_h ug, enum ug_key_event event,
 
 	switch (event) {
 	case UG_KEY_EVENT_END:
-		DBG("UG_KEY_EVENT_END is received  :  %p\n", ad->popup);
-		if (NULL == ad->popup) {
+		DBG("UG_KEY_EVENT_END is received : %p\n", ad->popup);
+		if (NULL == ad->popup)
 			ug_destroy_me(ug);
-			break;
-		}
-
-		if (ad->popup_type != MH_POP_INFORMATION_WO_BUTTON) {
-			evas_object_del(ad->popup);
-			ad->popup = NULL;
-			ad->popup_type = MH_POPUP_NONE;
-		}
+		else
+			_destroy_popup(ad);
 		break;
 
 	default:

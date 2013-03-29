@@ -110,7 +110,6 @@ typedef enum {
 	/* One button pop-up */
 	MH_POP_INFORMATION,
 	MH_POP_USB_CONNECT,
-	MH_POP_WIFI_PASSWORD_SHORT,
 
 	/* No button & timeout pop-up */
 	MH_POP_INFORMATION_WO_BUTTON,
@@ -145,6 +144,7 @@ typedef struct ap_app_main {
 	Elm_Genlist_Item_Class		*usage_itc;
 	Elm_Genlist_Item_Class		*dev_itc[TETHERING_TYPE_MAX];
 
+	Elm_Object_Item			*sp_item[4];
 	Elm_Object_Item			*wifi_item;
 	Elm_Object_Item			*setup_item;
 	Elm_Object_Item			*bt_item;
@@ -168,7 +168,6 @@ typedef struct {
 	Evas_Object			*title_back_btn;
 	Evas_Object 			*hide_btn;
 	Evas_Object 			*security_btn;
-	Evas_Object 	 		*pw_layout;
 	Evas_Object 	 		*pw_entry;
 
 	Elm_Genlist_Item_Class		*sp_itc;
@@ -178,6 +177,7 @@ typedef struct {
 	Elm_Genlist_Item_Class		*pw_itc;
 	Elm_Genlist_Item_Class		*name_itc;
 
+	Elm_Object_Item			*sp_item[2];
 	Elm_Object_Item			*hide_item;
 	Elm_Object_Item			*security_item;
 	Elm_Object_Item			*pw_item;
@@ -222,8 +222,8 @@ typedef struct {
 	mh_data_usage_t			data_statistics;
 	mh_clients_t			clients;
 
-	int				popup_type;
-	char                            popup_string[MH_LABEL_LENGTH_MAX];
+	enum ug_event			rotate_state;
+	Ecore_IMF_Input_Panel_State	imf_state;
 } mh_appdata_t;
 
 typedef struct {
