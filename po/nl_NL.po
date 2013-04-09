@@ -49,12 +49,6 @@ msgstr "Kan tethering niet gebruiken"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Kan tethering niet gebruiken in vliegtuigstand. Schakel vliegtuigstand uit om tethering te gebruiken"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Verbinding met Wi-Fi-netwerk wordt verbroken. Wi-Fi-tethering verbruikt meer voeding en verhoogt uw gegevensgebruik. Doorgaan?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi-tethering verbruikt meer voeding en verhoogt uw gegevensgebruik. Doorgaan?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Over het toestel"
 
@@ -94,9 +88,18 @@ msgstr "USB-kabel aansluiten"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Wachtwoord moet ten minste %d tekens bevatten en mag niet langer zijn dan %d tekens"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Tethering verbruikt meer voeding en verhoogt uw gegevensgebruik. Het maximumaantal toegestane apparaten met tethering is %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Verbinding met Wi-Fi-netwerk wordt verbroken. Tethering verbruikt meer voeding en verhoogt uw gegevensgebruik. Het maximumaantal toegestane apparaten met tethering is %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Tethering verbruikt meer voeding en verhoogt uw gegevensgebruik"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Aangesloten apparaat wordt losgekoppeld"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Aangesloten apparaten: %d"
 

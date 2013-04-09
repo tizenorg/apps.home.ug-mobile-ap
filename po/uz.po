@@ -49,12 +49,6 @@ msgstr "Bog‘lanishdan foydalanib bo‘lmaydi"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Uchish rejimida bog‘lanishdan foydalanib bo‘lmaydi. Bog‘lanishdan foydalanish uchun, Uchish rejimini o‘chiring"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi tarmoq uziladi. Wi-Fi bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Davom ettirilsinmi?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Davom ettirilsinmi?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Telefon haqida"
 
@@ -94,9 +88,18 @@ msgstr "USB-kabelni ulash"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parol eng kamida %d belgidan iborat bo‘lishi hamda %d belgidan oshmasligi lozim"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Bog‘lanish mumkin bo‘lgan qurilmalarning ruxsat etilgan maksimal miqdori: %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fi tarmoq uziladi. Bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Bog‘lanish mumkin bo‘lgan qurilmalarning ruxsat etilgan maksimal miqdori: %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Bog‘lanish batareya quvvatini ko‘proq sarflaydi va ma’lumot ishlatilishini oshiradi"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Ulangan qurilma uziladi"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Ulangan qurilmalar: %d"
 

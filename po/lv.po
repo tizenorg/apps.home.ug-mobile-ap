@@ -49,12 +49,6 @@ msgstr "Nevar izmantot piesaisti"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Lidojuma režīmā piesaisti nevar lietot. Lai lietotu piesaisti, deaktivizējiet lidojuma režīmu"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi tīkls tiks atvienots. Wi-Fi piesaiste patērē daudz akumulatora enerģijas un palielina datu lietošanas apjomu. Vai turpināt?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi piesaiste patērē daudz akumulatora enerģijas un palielina datu lietošanas apjomu. Vai turpināt?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Par tālruni"
 
@@ -94,9 +88,18 @@ msgstr "Pievienot USB kabeli"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parolē ir jābūt vismaz %d rakstzīmēm, bet ne vairāk par %d"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Piesaiste patērē vairāk akumulatora enerģijas un palielina datu lietojumu. Maksimālais piesaistīto ierīču skaits ir %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fi tīkls tiks atvienots. Piesaiste patērē vairāk akumulatora enerģijas un palielina datu lietojumu. Maksimālais piesaistīto ierīču skaits ir %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Piesaiste patērē vairāk akumulatora enerģijas un palielina datu lietojumu"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Pievienotā ierīce tiks atvienota"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Pievienotas ierīces: %d"
 

@@ -49,12 +49,6 @@ msgstr "Impossible d'utiliser le modem"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Impossible d'utiliser le modem en mode Hors-ligne. Pour utiliser le modem, désactivez le mode Hors-ligne"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Le réseau Wi-Fi sera déconnecté. Le modem Wi-Fi consomme plus d'énergie et augmente l'utilisation des données. Continuer ?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Le modem Wi-Fi consomme plus d'énergie et augmente l'utilisation des données. Continuer ?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "A propos du téléphone"
 
@@ -94,9 +88,18 @@ msgstr "Connecter le câble USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Le mot de passe doit contenir au moins %d caractères et ne pas dépasser %d caractères"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "L'utilisation du modem consomme davantage de batterie et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "La connexion au réseau Wi-Fi va être interrompue. L'utilisation du modem consomme davantage de batterie et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Le modem consomme plus d'énergie et augmente l'utilisation des données"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Le périphérique connecté sera déconnecté"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Périphériques connectés : %d"
 

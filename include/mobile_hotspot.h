@@ -25,7 +25,7 @@ extern "C" {
 #endif
 
 #if !defined(PACKAGE)
-#define PACKAGE "ug-setting-mobile-ap-ug"
+#define PACKAGE "ug-setting-mobileap-efl"
 #endif
 
 #if !defined(LOCALEDIR)
@@ -33,7 +33,7 @@ extern "C" {
 #endif
 
 #if !defined(EDJDIR)
-#define EDJDIR "/usr/ug/res/edje/ug-setting-mobile-ap-ug"
+#define EDJDIR "/usr/ug/res/edje/ug-setting-mobileap-efl"
 #endif
 
 #if !defined(PREFIX)
@@ -92,8 +92,13 @@ extern "C" {
 
 #define _EDJ(obj)			elm_layout_edje_get(obj)
 
+#define TETHERING_WIFI_MAX_CONNECTED_STA	8
+#define TETHERING_BT_MAX_CONNECTED_STA		7
+#define TETHERING_USB_MAX_CONNECTED_STA		1
+#define TETHERING_MAX_CONNECTED_STA \
+	(TETHERING_WIFI_MAX_CONNECTED_STA + TETHERING_BT_MAX_CONNECTED_STA + TETHERING_USB_MAX_CONNECTED_STA)
+
 /* This is from tethering_private.h */
-#define TETHERING_MAX_CONNECTED_STA	16	/**< Maximum connected station. 8(Wi-Fi) + 7(BT) + 1(USB) */
 #define TETHERING_TYPE_MAX		4	/**< All, USB, Wi-Fi, BT */
 
 typedef enum {

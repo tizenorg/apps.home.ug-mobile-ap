@@ -38,13 +38,17 @@ rm -rf %{buildroot}
 
 %post
 /usr/bin/vconftool set -t bool db/private/libug-setting-mobileap-efl/prev_wifi_status 0 -u 5000 -f
+mkdir -p /usr/ug/bin/
+ln -sf /usr/bin/ug-client /usr/ug/bin/setting-mobileap-efl
 
 %files
 %manifest ug-setting-mobileap-efl.manifest
 %defattr(-,root,root,-)
-%{_ugdir}/res/edje/ug-setting-mobile-ap-ug/*.edj
+%{_ugdir}/res/edje/ug-setting-mobileap-efl/*.edj
 %{_ugdir}/res/locale/*/LC_MESSAGES/*
-%{_ugdir}/lib/libug-setting-mobile-ap-ug.so
+%{_ugdir}/res/images/ug-setting-mobileap-efl/*.png
+%{_ugdir}/lib/libug-setting-mobileap-efl.so
+/usr/share/packages/ug-setting-mobileap-efl.xml
 
 %changelog
 * Fri Mar 29 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.161-2

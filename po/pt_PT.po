@@ -49,12 +49,6 @@ msgstr "Impossível utilizar a ancoragem"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Impossível utilizar a ancoragem no modo de Voo. Para utilizar a ancoragem, desactive o modo de Voo"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "A rede Wi-Fi será desligada. A ancoragem Wi-Fi consome mais bateria e aumenta a utilização de dados. Continuar?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "A ancoragem Wi-Fi consome mais bateria e aumenta a utilização de dados. Continuar?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Acerca do telefone"
 
@@ -94,9 +88,18 @@ msgstr "Ligar cabo USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "A palavra-passe tem de incluir pelo menos %d caracteres e não exceder %d caracteres"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "A ancoragem consome mais bateria e aumenta a utilização de dados. O número máximo de dispositivos ancorados permitido é %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "A rede Wi-Fi vai ser desligada. A ancoragem consome mais bateria e aumenta a utilização de dados. O número máximo de dispositivos ancorados permitido é %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "A ancoragem consome mais bateria e aumenta a utilização de dados"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "O dispositivo ligado será desligado"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Dispositivos ligados: %d"
 

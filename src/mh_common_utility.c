@@ -325,14 +325,14 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
-		elm_object_text_set(btn, S_("IDS_COM_SK_YES"));
+		elm_object_text_set(btn, S_("IDS_COM_SK_OK"));
 		elm_object_part_content_set(ad->popup, "button1", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_yes, (void *)ad);
 
 		btn = elm_button_add(ad->popup);
 		elm_object_style_set(btn, "popup_button/default");
-		elm_object_text_set(btn, S_("IDS_COM_SK_NO"));
+		elm_object_text_set(btn, S_("IDS_COM_SK_CANCEL"));
 		elm_object_part_content_set(ad->popup, "button2", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_no, (void *)ad);

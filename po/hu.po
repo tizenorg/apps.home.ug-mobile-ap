@@ -49,12 +49,6 @@ msgstr "Nem használható az internetmegosztás"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Repülő üzemmódban nem használható az internetmegosztás. Az internetmegosztás használatához tiltsa le a Repülő üzemmódot"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Megszűnik a Wi-Fi hálózati kapcsolat. A Wi-Fi internetmegosztás használata gyorsan meríti az akkumulátort, és nagyobb adatforgalmat eredményez. Folytatja?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "A Wi-Fi internetmegosztás használata gyorsan meríti az akkumulátort, és nagyobb adatforgalmat eredményez. Folytatja?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "A telefon névjegye"
 
@@ -94,9 +88,18 @@ msgstr "Csatlakoztassa az USB-kábelt"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "A jelszónak legalább %d, legfeljebb %d karakterből kell állnia"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Az internetmegosztás használata gyorsan meríti az akkumulátort, és nagyobb adatforgalmat eredményez. Az internetmegosztásban részt vevő eszközök maximális megengedett száma %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Megszűnik a Wi-Fi hálózati kapcsolat. Az internetmegosztás használata gyorsan meríti az akkumulátort, és nagyobb adatforgalmat eredményez. Az internetmegosztásban részt vevő eszközök maximális megengedett száma %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Az internetmegosztás használata gyorsan meríti az akkumulátort, és nagyobb adatforgalmat eredményez"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "A csatlakoztatott eszköz le lesz választva"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Csatlakoztatott eszközök: %d"
 

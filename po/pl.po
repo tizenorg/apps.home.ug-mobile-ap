@@ -49,12 +49,6 @@ msgstr "Nie można użyć routera"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Nie można korzystać z udostępniania w trybie Offline. Aby korzystać z udostępniania, wyłącz tryb Offline"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Sieć Wi-Fi zostanie rozłączona. Udostępnianie Wi-Fi zużywa dodatkową energię baterii i zwiększa użycie danych. Kontynuować?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Router Wi-Fi zwiększa zużycie baterii i danych. Kontynuować?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "O telefonie"
 
@@ -94,9 +88,18 @@ msgstr "Podłącz kabel USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Hasło musi zawierać co najmniej %d znaków i nie przekraczać %d znaków"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Router zużywa dodatkową energię baterii i zwiększa użycie danych. Maksymalna dozwolona liczba udostępnianych urządzeń to: %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Sieć Wi-Fi zostanie rozłączona. Router zużywa dodatkową energię baterii i zwiększa użycie danych. Maksymalna dozwolona liczba udostępnianych urządzeń to: %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Router zwiększa zużycie baterii i danych"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Podłączone urządzenie zostanie odłączone"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Podłączone urządzenia: %d"
 

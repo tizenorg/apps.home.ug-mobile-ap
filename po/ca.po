@@ -49,12 +49,6 @@ msgstr "No es pot utilitzar el tethering"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "No es pot utilitzar tethering en mode Vol. Per utilitzar tethering, desactivi el mode Vol"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Es desconnectarà la xarxa Wi-Fi. El tethering Wi-Fi consumeix més bateria i augmenta el consum de dades. Continuar?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "El tethering Wi-Fi consumeix més bateria i augmenta el consum de dades. Continuar?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Sobre el telèfon"
 
@@ -94,9 +88,18 @@ msgstr "Connectar cable USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "La contrasenya ha de contenir al menys %d caràcters i no excedir els %d"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "El tethering consumeix més bateria i augmenta el consum de dades. El nombre màxim de dispositius connectats amb tethering permesos és %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Es desconnectarà la xarxa Wi-Fi. El tethering consumeix més bateria i augmenta el consum de dades. El nombre màxim de dispositius connectats amb tethering permesos és %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "El tethering consumeix més bateria i augmenta el consum de dades"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Es desconnectarà el dispositiu connectat"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Dispositius connectats: %d"
 
