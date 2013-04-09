@@ -49,12 +49,6 @@ msgstr "يتعذر استخدام التقييد"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "يتعذر استخدام التقييد في وضع الطيران. لاستخدام التقييد، قم بإلغاء تفعيل وضع الطيران"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "سيتم قطع اتصال شبكة Wi-Fi. يستهلك تقييد Wi-Fi‬ الكثير من طاقة البطارية وتزيد من استخدام البيانات. هل تريد المتابعة؟"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "يستهلك تقييد Wi-Fi‬ الكثير من طاقة البطارية وتزيد من استخدام البيانات. هل تريد المتابعة؟"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "حول الهاتف"
 
@@ -94,9 +88,18 @@ msgstr "توصيل إلى كابل USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "يجب ألا تقل كلمة المرور عن %d أحرف وألا تزيد عن %d حرفا"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "يؤدي التقييد إلى استهلاك المزيد من طاقة البطارية وزيادة استخدام البيانات. الحد الأقصى لعدد الأجهزة المقيدة المسموح بها هو %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "‏‫سيتم قطع اتصال شبكة Wi-Fi. يؤدي التقييد إلى استهلاك المزيد من طاقة البطارية وزيادة استخدام البيانات. الحد الأقصى لعدد الأجهزة المقيدة المسموح بها هو %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "يستهلك التقييد الكثير من طاقة البطارية ويزيد من استخدام البيانات"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "سيتم قطع اتصال الجهاز المتصل"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "الأجهزة المتصلة: %d"
 

@@ -114,7 +114,7 @@ static char *__gl_hide_label_get(void *data, Evas_Object *obj, const char *part)
 	}
 
 	if (strcmp(part, "elm.text") != 0) {
-		ERR("Invalid param\n");
+		DBG("Unknown part : %s\n", part);
 		return NULL;
 	}
 
@@ -132,7 +132,7 @@ static char *__gl_security_label_get(void *data, Evas_Object *obj, const char *p
 	}
 
 	if (strcmp(part, "elm.text") != 0) {
-		ERR("Invalid param\n");
+		DBG("Unknown part : %s\n", part);
 		return NULL;
 	}
 
@@ -150,7 +150,7 @@ static char *__gl_name_label_get(void *data, Evas_Object *obj, const char *part)
 	}
 
 	if (strcmp(part, "elm.text") != 0) {
-		ERR("Invalid param : %s\n", part);
+		DBG("Unknown part : %s\n", part);
 		return NULL;
 	}
 
@@ -196,7 +196,7 @@ static Evas_Object *__gl_hide_icon_get(void *data, Evas_Object *obj,
 	}
 
 	if (strcmp(part, "elm.icon") != 0) {
-		ERR("Invalid param\n");
+		DBG("Unknown part : %s\n", part);
 		return NULL;
 	}
 
@@ -215,7 +215,6 @@ static Evas_Object *__gl_hide_icon_get(void *data, Evas_Object *obj,
 	elm_check_state_set(btn, ad->setup.visibility ? EINA_FALSE : EINA_TRUE);
 	evas_object_smart_callback_add(btn, "changed",
 			__hide_btn_changed_cb, (void *)ad);
-
 	ad->setup.hide_btn = btn;
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -233,7 +232,7 @@ static Evas_Object *__gl_security_icon_get(void *data, Evas_Object *obj,
 	}
 
 	if (strcmp(part, "elm.icon") != 0) {
-		ERR("Invalid param\n");
+		DBG("Unknown part : %s\n", part);
 		return NULL;
 	}
 
@@ -251,7 +250,6 @@ static Evas_Object *__gl_security_icon_get(void *data, Evas_Object *obj,
 			EINA_FALSE : EINA_TRUE);
 	evas_object_smart_callback_add(btn, "changed",
 			__security_btn_changed_cb, (void *)ad);
-
 	ad->setup.security_btn = btn;
 
 	__MOBILE_AP_FUNC_EXIT__;

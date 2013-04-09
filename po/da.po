@@ -49,12 +49,6 @@ msgstr "Kan ikke anvende deling"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Kan ikke bruge internetdeling i Flytilstand. For at bruge internetdeling skal du deaktivere Flytilstand"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi-netværk bliver frakoblet. Wi-Fi-deling bruger mere batteri og forøger dit dataforbrug. Fortsæt?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi-deling bruger mere batteri og forøger dit dataforbrug. Fortsæt?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Om enheden"
 
@@ -94,9 +88,18 @@ msgstr "Tilslut USB-kabel"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Adgangskode skal indeholde mindst %d tegn og må ikke overstige %d tegn"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Internetdeling bruger mere batteri og øger dit dataforbrug. Det maksimalt tilladte antal af enheder til internetdeling er %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fi-netværk vil blive frakoblet. Internetdeling bruger mere batteri og øger dit dataforbrug. Det maksimalt tilladte antal af enheder til internetdeling er %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Internetdeling bruger mere batteri og forøger dit dataforbrug"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Tilsluttet enhed vil blive frakoblet"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Tilsluttede enheder: %d"
 

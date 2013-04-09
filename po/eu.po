@@ -49,12 +49,6 @@ msgstr "Ezin izan da ainguraketa erabili"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Ezin da tethering erabili hegaldi moduan. Tethering erabiltzeko, desgaitu hegaldi modua"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi sarea deskonektatuko da. Wi-Fi ainguraketak bateria gehiago kontsumitzen du eta zure datuen erabilera areagotzen du. Jarraitu?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi ainguraketak bateria gehiago kontsumitzen du eta zure datuen erabilera areagotzen du. Jarraitu?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Telefonoari buruz"
 
@@ -94,9 +88,18 @@ msgstr "USB kablea konektatu"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Pasahitzak gutxienez %d karaktere izan behar ditu eta ezin ditu %d karaktereak gainditu"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Ainguraketak bateria gehiago kontsumitzen du eta zure datuen erabilera areagotzen du. Ainguratutako gehieneko gailu kopurua %d da"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fi sarea deskonektatuko da. Ainguraketak bateria gehiago kontsumitzen du eta zure datuen erabilera areagotzen du. Ainguratutako gehieneko gailu kopurua %d da"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Ainguraketak bateria gehiago kontsumitzen du eta zure datuen erabilera areagotzen du"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Konektatutako gailua deskonektatuko da"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Konektatutako gailuak: %d"
 

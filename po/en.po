@@ -47,13 +47,7 @@ msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
 msgstr "Unable to use tethering"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
-msgstr "Unable to use tethering in Flight mode. To use tethering, disable Flight mode"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi network will be disconnected. Wi-Fi tethering consumes more battery power and increases your data usage. Continue?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi tethering consumes more battery power and increases your data usage. Continue?"
+msgstr "Unable to use tethering in Flight mode. To use tethering, disable Flight mode."
 
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "About phone"
@@ -86,7 +80,7 @@ msgid "IDS_MOBILEAP_BODY_PD_MB"
 msgstr "%d MB"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
-msgstr "Unable to use packet data service. Out of coverage"
+msgstr "Unable to use packet data service. Out of coverage."
 
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "Connect USB cable"
@@ -94,9 +88,18 @@ msgstr "Connect USB cable"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Password must contain at least %d characters and not exceed %d characters"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Tethering consumes more battery power and increases your data usage. The maximum number of tethered devices allowed is %d."
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fi network will be disconnected. Tethering consumes more battery power and increases your data usage. The maximum number of tethered devices allowed is %d."
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Tethering consumes more battery power and increases your data usage"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Connected device will be disconnected"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Connected devices: %d"
 

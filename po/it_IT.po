@@ -32,7 +32,7 @@ msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Nascondi rete generata"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "Utilizzo dei dati"
+msgstr "Utilizzo dati"
 
 msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
 msgstr "Tethering USB"
@@ -48,12 +48,6 @@ msgstr "Impossibile utilizzare il tethering"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Impossibile utilizzare il tethering in modalità Offline. Disattivare la modalità per utilizzare il tethering"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "La rete Wi-Fi verrà disconnessa. Il tethering Wi-Fi aumenta il consumo della batteria e l'uso dei dati. Continuare?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Il tethering Wi-Fi aumenta il consumo della batteria e l'uso dei dati. Continuare?"
 
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Info sul dispositivo"
@@ -94,9 +88,18 @@ msgstr "Collegare cavo USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "La password deve contenere almeno %d caratteri e non superare %d caratteri"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Il tethering aumenta il consumo della batteria e l'uso dei dati. Il numero massimo consentito di dispositivi collegati tramite tethering è %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "La rete Wi-Fi verrà disconnessa. Il tethering aumenta il consumo della batteria e l'uso dei dati. Il numero massimo consentito di dispositivi collegati tramite tethering è %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Il tethering aumenta il consumo della batteria e l'utilizzo della connessione dati"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Il dispositivo connesso verrà disconnesso"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Dispositivi connessi: %d"
 

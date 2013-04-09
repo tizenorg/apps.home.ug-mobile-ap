@@ -49,12 +49,6 @@ msgstr "Nemoguće koristiti dijeljenje"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Nemoguće koristiti dijeljenje u profilu Bez mreže. Za korištenje dijeljenja isključite profil Bez mreže"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi mreža će se odspojiti. Wi-Fi dijeljenje povećava potrošnju baterije i količinu prijenosa podataka. Nastavak?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi dijeljenje povećava potrošnju baterije i količinu prijenosa podataka. Nastavak?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "O telefonu"
 
@@ -94,9 +88,18 @@ msgstr "Spoji USB kabel"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Šifra mora sadržavati najmanje %d, a najviše %d znakova"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Dijeljenje veze povećava potrošnju baterije i količinu prijenosa podataka. Maksimalan dopušten broj uređaja za dijeljenje veze je %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fi veza će se odspojiti. Dijeljenje veze povećava potrošnju baterije i količinu prijenosa podataka. Maksimalan dopušten broj uređaja za dijeljenje veze je %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Dijeljenje povećava potrošnju baterije i količinu prijenosa podataka"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Spojeni uređaj će se odspojiti"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Spojeni uređaji: %d"
 

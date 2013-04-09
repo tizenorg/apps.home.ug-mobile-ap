@@ -17,6 +17,7 @@
 *
 */
 
+#include <stdlib.h>
 #include <wifi-direct.h>
 
 #include "mh_func_onoff.h"
@@ -139,15 +140,21 @@ static bool __is_connected_cellular_net(mh_appdata_t *ad)
 
 static int __create_wifi_hotspot_on_popup(mh_appdata_t *ad)
 {
+	char *fmt;
 	char *str;
 	bool wifi_state = false;
 
 	wifi_is_activated(&wifi_state);
 	if (wifi_state == true || _is_wifi_direct_on() == true)
-		str = _("IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q");
+		fmt = _("IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD");
 	else
-		str = _("IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q");
+		fmt = _("IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD");
+
+	str = malloc(MH_LABEL_LENGTH_MAX);
+	snprintf(str, MH_LABEL_LENGTH_MAX, fmt, TETHERING_WIFI_MAX_CONNECTED_STA);
 	_prepare_popup(MH_POP_WIFI_ON_CONF, str);
+	free(str);
+
 	_create_popup(ad);
 
 	return 0;
@@ -157,8 +164,13 @@ static int __create_bt_tethering_on_popup(mh_appdata_t *ad)
 {
 	char *str;
 
-	str = _("IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE");
+	str = malloc(MH_LABEL_LENGTH_MAX);
+	snprintf(str, MH_LABEL_LENGTH_MAX,
+			_("IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"),
+			TETHERING_BT_MAX_CONNECTED_STA);
 	_prepare_popup(MH_POP_BT_ON_CONF, str);
+	free(str);
+
 	_create_popup(ad);
 
 	return 0;

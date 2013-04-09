@@ -49,12 +49,6 @@ msgstr "Nedá sa použiť zdieľanie pripojenia"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Zdieľanie pripojenia sa nedá použiť v letovom režime. Ak chcete použiť zdieľanie pripojenia, vypnite letový režim"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Sieť Wi-Fi sa odpojí. Zdieľanie pripojenia Wi-Fi spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov. Pokračovať?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Zdieľanie pripojenia Wi-Fi spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov. Pokračovať?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "O telefóne"
 
@@ -94,9 +88,18 @@ msgstr "Pripojiť kábel USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Heslo musí obsahovať aspoň %d znakov a nesmie prekročiť %d znakov"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Zdieľanie pripojenia spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov. Maximálny povolený počet zariadení zdieľajúcich pripojenie je %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Sieť Wi-Fi sa odpojí. Zdieľanie pripojenia spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov. Maximálny povolený počet zariadení zdieľajúcich pripojenie je %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Zdieľanie pripojenia spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Pripojené zariadenie sa odpojí"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Pripojené zariadenia: %d"
 

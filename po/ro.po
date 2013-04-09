@@ -49,12 +49,6 @@ msgstr "Imposibil de utilizat furnizarea de acces la Internet"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Imposibil de utilizat furnizarea accesului la Internet în modul Avion. Pentru a utiliza furnizarea accesului la Internet, dezactivaţi modul Avion"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Reţeaua Wi-Fi va fi întreruptă. Furnizarea accesului la Internet prin Wi-Fi consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Continuaţi?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Furnizarea accesului la Internet prin Wi-Fi consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Continuaţi?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Despre telefon"
 
@@ -94,9 +88,18 @@ msgstr "Conectaţi cablul USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parola trebuie să conţină minimum %d caractere şi nu poate depăşi %d caractere"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Numărul maxim de dispozitive cărora li se poate furniza acces la internet este %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Reţeaua Wi-Fi va fi deconectată. Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Numărul maxim de dispozitive cărora li se poate furniza acces la internet este %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Dispozitivul conectat va fi deconectat"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Dispozitive conectate: %d"
 

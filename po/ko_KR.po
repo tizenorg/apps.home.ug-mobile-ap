@@ -47,13 +47,7 @@ msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
 msgstr "테더링을 사용할 수 없습니다"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
-msgstr "비행기 탑승 모드에서 테더링을 사용할 수 없습니다. 테더링을 사용하려면 비행기 탑승 모드를 해제하세요"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi 네트워크 연결이 끊어집니다. Wi-Fi 테더링을 사용하면 배터리가 많이 소모되며 데이터 사용량이 증가합니다. 계속할까요?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fi 테더링을 사용하면 배터리가 많이 소모되며 데이터 사용량이 증가합니다. 계속할까요?"
+msgstr "비행기 탑승 모드에서 테더링을 사용할 수 없습니다. 테더링을 사용하려면 비행기 탑승 모드를 해제하세요."
 
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "휴대폰 정보"
@@ -94,9 +88,18 @@ msgstr "USB 케이블을 연결하세요"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "비밀번호는 %d자 이상 %d자 이하여야 합니다"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "테더링을 사용하면 배터리가 더 많이 소모되며 데이터 사용량이 증가합니다. 테더링할 수 있는 최대 기기 수는 %d개입니다."
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fi 네트워크 연결이 끊어집니다. 테더링을 사용하면 배터리가 더 많이 소모되며 데이터 사용량이 증가합니다. 테더링할 수 있는 최대 기기 수는 %d개입니다."
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "테더링을 사용하면 배터리가 더 많이 소모되며 데이터 사용량이 증가합니다"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "연결된 기기가 분리됩니다"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "연결된 기기: %d개"
 

@@ -3,8 +3,8 @@
 
 Name:       ug-setting-mobileap-efl
 Summary:    Tethering UI Gadget Library
-Version:    0.1.161
-Release:    2
+Version:    0.1.162
+Release:    1
 Group:      TO_BE/FILLED_IN
 License:    Flora License Version 1.0
 Source0:    %{name}-%{version}.tar.gz
@@ -38,15 +38,26 @@ rm -rf %{buildroot}
 
 %post
 /usr/bin/vconftool set -t bool db/private/libug-setting-mobileap-efl/prev_wifi_status 0 -u 5000 -f
+mkdir -p /usr/ug/bin/
+ln -sf /usr/bin/ug-client /usr/ug/bin/setting-mobileap-efl
 
 %files
 %manifest ug-setting-mobileap-efl.manifest
 %defattr(-,root,root,-)
-%{_ugdir}/res/edje/ug-setting-mobile-ap-ug/*.edj
+%{_ugdir}/res/edje/ug-setting-mobileap-efl/*.edj
 %{_ugdir}/res/locale/*/LC_MESSAGES/*
-%{_ugdir}/lib/libug-setting-mobile-ap-ug.so
+%{_ugdir}/res/images/ug-setting-mobileap-efl/*.png
+%{_ugdir}/lib/libug-setting-mobileap-efl.so
+/usr/share/packages/ug-setting-mobileap-efl.xml
 
 %changelog
+* Tue Apr 09 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.162-1
+- Maximum connection information is displayed
+- Implement connection timer
+- UX Change : Data usage and Connected device
+- Change ug name & Support appsvc
+- Translation data is updated
+
 * Fri Mar 29 2013 Seungyoun Ju <sy39.ju@samsung.com> 0.1.161-2
 - Fix : The grouping of genlist item is wrong
 - Back button position and Naviframe title visibility are changed

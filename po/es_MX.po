@@ -49,12 +49,6 @@ msgstr "No se puede usar redirección"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "No se puede usar redirección en el perfil Fuera de línea. Para usar redirección desactive el perfil Fuera de línea"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Se desconectará la red Wi-Fi. La redirección de Wi-Fi consume más batería y aumenta el uso de datos. ¿Continuar?"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "La redirección de Wi-Fi consume más batería y aumenta el uso de datos. ¿Continuar?"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Acerca del teléfono"
 
@@ -94,9 +88,18 @@ msgstr "Conectar cable USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "La contraseña debe contener al menos %d caracteres y no superar los %d caracteres"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "La redirección consume más batería y aumenta el uso de datos. La cantidad máxima de dispositivos redireccionados permitida es %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Se desconectará la red Wi-Fi. La redirección consume más batería y aumenta el uso de datos. La cantidad máxima de dispositivos redireccionados permitida es %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "El anclaje consume más batería y aumenta el uso de datos"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Se desconectará del dispositivo conectado"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Dispositivos conectados: %d"
 

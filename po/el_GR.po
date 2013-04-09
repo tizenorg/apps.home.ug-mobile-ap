@@ -49,12 +49,6 @@ msgstr "Δεν είναι δυνατή η χρήση tethering"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Δεν είναι δυνατή η χρήση του tethering στη λειτουργία πτήσης. Για να χρησιμοποιήσετε το tethering, απενεργοποιήστε τη λειτουργία πτήσης"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Το δίκτυο Wi-Fi θα αποσυνδεθεί. Το tethering μέσω Wi-Fi καταναλώνει περισσότερη ισχύ μπαταρίας και αυξάνει τη χρήση δεδομένων. Συνέχεια;"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Το tethering μέσω Wi-Fi καταναλώνει περισσότερη ισχύ μπαταρίας και αυξάνει τη χρήση δεδομένων. Συνέχεια;"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "Πληροφορίες σχετικά με το τηλέφωνο"
 
@@ -94,9 +88,18 @@ msgstr "Συνδέστε το καλώδιο USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Ο κωδικός πρόσβασης πρέπει να περιέχει %d χαρακτήρες τουλάχιστον και να μην ξεπερνά τους %d χαρακτήρες"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Το tethering καταναλώνει περισσότερη ισχύ μπαταρίας και αυξάνει τη χρήση δεδομένων. Ο μέγιστος αριθμός συσκευών με tethering που επιτρέπεται είναι %d"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Το δίκτυο Wi-Fi θα αποσυνδεθεί. Το tethering καταναλώνει περισσότερη ισχύ μπαταρίας και αυξάνει τη χρήση δεδομένων. Ο μέγιστος αριθμός συσκευών με tethering που επιτρέπεται είναι %d"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Το tethering καταναλώνει περισσότερη ισχύ μπαταρίας και αυξάνει τη χρήση δεδομένων"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "Η συνδεδεμένη συσκευή θα αποσυνδεθεί"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Συνδεδεμένες συσκευές: %d"
 

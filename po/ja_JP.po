@@ -49,12 +49,6 @@ msgstr "テザリングを使用できません。"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "機内モードではテザリングを使用できません。テザリングを使用するには、機内モードを無効にしてください。"
 
-msgid "IDS_MOBILEAP_POP_WI_FI_NETWORK_WILL_BE_DISCONNECTED_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fiネットワークが切断されました。Wi-Fiテザリングはバッテリーをより多く消費し、データ使用量が増加します。続行しますか？"
-
-msgid "IDS_MOBILEAP_POP_WI_FI_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_CONTINUE_Q"
-msgstr "Wi-Fiテザリングはバッテリーをより多く消費し、データ使用量が増加します。続行しますか？"
-
 msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "端末情報"
 
@@ -94,9 +88,18 @@ msgstr "USBケーブルを接続してください"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "パスワードの長さは%d文字以上、%d文字以下である必要があります。"
 
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "テザリングはより多くのバッテリーを消費し、データ使用量を増加させます。許可されたテザリング端末の最大数は、%dです。"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fiネットワークの接続が解除されます。テザリングはより多くのバッテリーを消費し、データ使用量を増加させます。許可されたテザリング端末の最大数は、%dです。"
+
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "テザリングはより多くのバッテリーを消費し、データ使用量が増加します。"
 
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
 msgstr "接続中のデバイスを切断します。"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "デバイス​に​接続​しました:​%d"
 
