@@ -3,7 +3,7 @@
 
 Name:       ug-setting-mobileap-efl
 Summary:    Tethering UI Gadget Library
-Version:    0.1.165
+Version:    0.1.166
 Release:    1
 Group:      TO_BE/FILLED_IN
 License:    Flora License Version 1.0
