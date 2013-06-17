@@ -4,20 +4,11 @@ msgstr "Denne adgangskode er kun til Wi-Fi-deling"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi-deling skjult"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Indstillinger for Wi-Fi-deling er kun tilgængelige, når Wi-Fi-deling er deaktiveret"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi-deling"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Indstilling. Wi-Fi-deling"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Modtaget:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Sendt:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Enhedsnavn"
@@ -88,11 +79,38 @@ msgstr "Tilslut USB-kabel"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Adgangskode skal indeholde mindst %d tegn og må ikke overstige %d tegn"
 
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Enhedsnavn: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Deling aktiv"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Internetdeling styres i øjeblikket af et andet program. For at konfigurere internetdeling vil nævnte program blive deaktiveret"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Sikkerhedstype: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Du skal oprette forbindelse til mobilt netværk for at bruge deling"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Forbindelses-timeout"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Data brugt: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Tryk for at konfigurere deling"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth-synlighed fik timeout. Din enhed er muligvis ikke blevet fundet"
+
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Internetdeling bruger mere batteri og øger dit dataforbrug. Det maksimalt tilladte antal af enheder til internetdeling er %d"
+msgstr "Internetdeling bruger mere batteri og øger dit dataforbrug. Det maksimalt tilladte antal af enheder til internetdeling er %d."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Wi-Fi-netværk vil blive frakoblet. Internetdeling bruger mere batteri og øger dit dataforbrug. Det maksimalt tilladte antal af enheder til internetdeling er %d"
+msgstr "Wi-Fi-netværk vil blive frakoblet. Internetdeling bruger mere batteri og øger dit dataforbrug. Det maksimalt tilladte antal af enheder til internetdeling er %d."
 
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Internetdeling bruger mere batteri og forøger dit dataforbrug"

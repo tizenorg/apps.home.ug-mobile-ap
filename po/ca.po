@@ -4,20 +4,11 @@ msgstr "Aquesta contrasenya només és pel tethering Wi-Fi"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Tethering Wi-Fi amagat"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Els ajustaments de tethering Wi-Fi només estan disponibles quan està deshabilitat"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Tethering Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Ajustam tethering Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Rebut:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Enviat:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nom dispositiu"
@@ -87,6 +78,33 @@ msgstr "Connectar cable USB"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "La contrasenya ha de contenir al menys %d caràcters i no excedir els %d"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nom de dispositiu: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Tethering actiu"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "El tethering està controlat actualment per una altra aplicació. Per configurar-lo, cal deshabilitar aquesta aplicació"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Tipus de seguretat: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Per utilitzar tethering, connecti a xarxes mòbils"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Temps d'espera de connexió"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Dades utilitzades: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Toqui per configurar tethering"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Ha caducat la visibilitat Bluetooth. No es pot trobar el seu dispositiu"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "El tethering consumeix més bateria i augmenta el consum de dades. El nombre màxim de dispositius connectats amb tethering permesos és %d"

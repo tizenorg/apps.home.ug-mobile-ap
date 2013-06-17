@@ -4,20 +4,11 @@ msgstr "यह पासवर्ड केवल Wi-Fi टेथरिंग �
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi टेथरिंग छुपाएँ"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "केवल Wi-Fi टेथरिंग अक्षम होने पर ही Wi-Fi टेथरिंग सेटिंग्स उपलब्ध है"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi टेथरिंग"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi टेथरिंग सेटिंग्स"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "प्राप्‍त:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "भेजा गया:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "डिवाइस नाम"
@@ -53,10 +44,10 @@ msgid "IDS_ST_BODY_ABOUT_PHONE"
 msgstr "फ़ोन के बारे में"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
-msgstr "जोड़ा गया उपकरण"
+msgstr "जोड़ा गया डिवाइस"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
-msgstr "ब्लूटूथ तेथरिंग"
+msgstr "ब्लूटूथ टेथरिंग"
 
 msgid "IDS_MOBILEAP_BODY_SECURITY"
 msgstr "सुरक्षा"
@@ -87,6 +78,33 @@ msgstr "USB केबल कनेक्‍ट करें"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "पासवर्ड में कम से कम %d वर्ण होने जरूरी है और %d वर्ण से अधिक नहीं होना चाहिए"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "साधन नाम: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "तेथरिंग सक्रिय"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "वर्तमान में टेथरिंग को अन्य एप्लीकेशन द्वारा नियंत्रित किया गया है। टेथरिंग कॉन्फ़िगर करने के लिए, उस एप्लिकेशन को अक्षम किया जाएगा।"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "सुरक्षा प्रकार: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "टेथरिंग का उपयोग करने के लिए, किसी मोबाइल नेटवर्क से केनक्ट करें"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "कनेक्शन समय समाप्ति"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "उपयोग किया गया डाटा: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "टेथरिंग कॉन्फ़िगर करने के लिए टैप करें"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "ब्लूटूथ दृश्‍यता समय-सीमा समाप्त हो गई है। शायद आपका डिवाइस खोजा न जा सके"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "टेथरिंग बैटरी पावर की ज्यादा खपत करता है और आपका डाटा उपयोग बढ़ाता है। अनुमति प्राप्त टेथर किए गए डिवाइसों की अधिकतम संख्या %d है।"

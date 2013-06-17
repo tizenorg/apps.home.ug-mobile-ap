@@ -4,20 +4,11 @@ msgstr "Toto heslo slúži iba na zdieľanie pripojenia Wi-Fi"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Zdieľanie pripojenia Wi-Fi je skryté"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Nastavenia zdieľania pripojenia Wi-Fi sú k dispozícii iba pri vypnutom zdieľaní pripojenia Wi-Fi"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Zdieľanie pripoj. Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Nast. zdieľ. prip. Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Prijaté:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Odoslané:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Meno zariadenia"
@@ -87,6 +78,33 @@ msgstr "Pripojiť kábel USB"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Heslo musí obsahovať aspoň %d znakov a nesmie prekročiť %d znakov"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Názov zariadenia: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Zdieľ. pr. akt."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Zdieľanie pripojenia momentálne ovláda iná aplikácia. Ak chcete konfigurovať zdieľanie pripojenia, daná aplikácia sa vypne"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Typ zabezpečenia: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Ak chcete použiť zdieľanie pripojenia, pripojte sa k mobilným sieťam"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Časový limit pripojenia"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Použité údaje: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Ťuknutím môžete konfigurovať zdieľanie pripojenia"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Uplynul časový limit viditeľnosti pre Bluetooth. Vaše zariadenie sa nemusí nájsť"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Zdieľanie pripojenia spotrebúva viac energie batérie a zvyšuje používanie dátových prenosov. Maximálny povolený počet zariadení zdieľajúcich pripojenie je %d"

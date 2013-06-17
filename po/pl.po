@@ -4,20 +4,11 @@ msgstr "To hasło jest tylko do routera Wi-Fi"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Router Wi-Fi ukryty"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Ustawienia routera Wi-Fi są dostępne tylko przy wyłączonym routerze Wi-Fi"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Router Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Ustawienia routera Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Odebrano:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Wysłano:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nazwa urządzenia"
@@ -87,6 +78,33 @@ msgstr "Podłącz kabel USB"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Hasło musi zawierać co najmniej %d znaków i nie przekraczać %d znaków"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nazwa urządzenia: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Udostęp. aktywne"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Router jest aktualnie sterowany przez inną aplikację. Aby skonfigurować router, ta aplikacja zostanie wyłączona"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Typ zabezpieczeń: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Aby używać routera, skorzystaj z sieci telefonii komórkowych"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Limit czasu połączenia"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Użyte dane: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Dotknij, aby skonfigurować udostępnianie"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Upłynął limit czasu widoczności Bluetooth. Nie można znaleźć urządzenia"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Router zużywa dodatkową energię baterii i zwiększa użycie danych. Maksymalna dozwolona liczba udostępnianych urządzeń to: %d"

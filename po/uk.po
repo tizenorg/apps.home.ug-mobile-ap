@@ -4,20 +4,11 @@ msgstr "Цей пароль може використовуватися лише
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Прив'язку Wi-Fi приховано"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Установки прив'язки Wi-Fi доступні, лише якщо її вимкнено"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Прив’язка Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Установки прив'язки Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Отримано:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Надіслано:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Ім'я пристрою"
@@ -87,6 +78,33 @@ msgstr "Підключити кабель USB"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Пароль має містити щонайменше %d символів і не перевищувати %d символів"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Ім’я пристрою: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Прив’язка актив."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Прив’язка наразі керується іншою програмою. Щоб настроїти прив'язку, потрібно вимкнути цю програму"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Тип захисту: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Щоб скористатися прив'язкою, встановіть підключення до мобільних мереж"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Час очікування підключення"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Використано даних: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Натисніть, щоб настроїти прив'язку"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Час видимості Bluetooth вичерпано. Пристрій не буде знайдено"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Прив'язка використовує більше заряду акумулятора та збільшує використання даних. Максимальна кількість дозволених пристроїв, які можна прив'язати: %d"

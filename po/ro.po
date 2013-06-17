@@ -4,20 +4,11 @@ msgstr "Această parolă este numai pentru furnizarea accesului la Internet prin
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Furnizarea de acces la Internet prin Wi-Fi a fost ascunsă"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Setările de furnizare a accesului la Internet prin Wi-Fi sunt disponibile numai când furnizarea accesului la Internet prin Wi-Fi este dezactivată"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Furn. acc. Internet Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Set. furn. ac. Int. Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Primit:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Trimis:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nume dispozitiv"
@@ -87,6 +78,33 @@ msgstr "Conectaţi cablul USB"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parola trebuie să conţină minimum %d caractere şi nu poate depăşi %d caractere"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nume dispozitiv: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Acces internet activ"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Furnizarea accesului la internet este controlată în prezent de o altă aplicaţie. Pentru a configura furnizarea accesului la internet, aplicaţia respectivă va fi dezactivată"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Tip de securitate: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Pentru a utiliza furnizarea accesului la internet, conectaţi-vă la reţele mobile"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Expirare conexiune"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Date utilizate: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Atingeţi pentru a configura furnizarea accesului la internet"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Vizibilitatea Bluetooth a expirat. Este posibil ca dispozitivul dvs. să nu poată fi găsit"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Numărul maxim de dispozitive cărora li se poate furniza acces la internet este %d"

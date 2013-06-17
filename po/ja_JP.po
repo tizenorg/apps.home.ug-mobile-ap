@@ -4,20 +4,11 @@ msgstr "このパスワードはWi-Fiテザリングのみに使用します。"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fiテザリング非表示"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fiテザリング設定は、Wi-Fiテザリングが無効のときのみ可能です。"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fiテザリング"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fiテザリング設定"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "受信済み："
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "送信："
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "デバイス名称"
@@ -83,16 +74,43 @@ msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "圏外です。パケットデータサービスを使用できません。"
 
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
-msgstr "USBケーブルを接続してください"
+msgstr "USBケーブルを接続してください。"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "パスワードの長さは%d文字以上、%d文字以下である必要があります。"
 
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "デバイス名称： %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "テザリング中"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "現在、テザリングは他のアプリケーションによってコントロールされています。テザリングを設定すると、他のアプリケーションは無効になります。"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "セキュリティタイプ: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "テザリングを使用するには、モバイルネットワークに接続してください。"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "接続タイムアウト"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "データ使用量: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "テザリングを設定するにはタップしてください。"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth公開設定がタイムアウトになりました。この端末は検出されない可能性があります。"
+
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "テザリングはより多くのバッテリーを消費し、データ使用量を増加させます。許可されたテザリング端末の最大数は、%dです。"
+msgstr "テザリングはより多くのバッテリーを消費し、データ使用量を増加させます。テザリング端末の最大数は%d台です。"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Wi-Fiネットワークの接続が解除されます。テザリングはより多くのバッテリーを消費し、データ使用量を増加させます。許可されたテザリング端末の最大数は、%dです。"
+msgstr "Wi-Fiネットワークの接続が解除されます。テザリングはより多くのバッテリーを消費し、データ使用量を増加させます。テザリング端末の最大数は%dです。"
 
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "テザリングはより多くのバッテリーを消費し、データ使用量が増加します。"

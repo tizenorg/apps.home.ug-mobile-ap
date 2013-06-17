@@ -4,20 +4,11 @@ msgstr "密碼僅可用於 Wi-Fi 網路共享"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "已隱藏 Wi-Fi 網路共享"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi 網路共享設定僅可於 Wi-Fi 網路共享停用時使用"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi 網路共享"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi 網路共享設定"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "已接收："
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "已傳送："
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "裝置名稱"
@@ -87,6 +78,33 @@ msgstr "連接 USB 纜線"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "密碼必須包含至少%d個字符，並且不得超過%d個字符"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "設備名稱：%s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "網路共享使用中"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "網路共享台目前由其他應用程式控制。若要設定網路共享，將停用該應用程式"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "安全性類型：%s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "若要使用網路共享，請連接至行動網路"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "連線逾時"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "已使用的數據：%s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "輕觸以設定網路共享"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "藍牙可見度已逾時。可能找不到您的裝置"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "網路共享會消耗更多電力並增加您的數據用量。可允許的最高網路共享裝置數量為 %d"

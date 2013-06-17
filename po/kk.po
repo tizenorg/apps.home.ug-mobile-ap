@@ -4,20 +4,11 @@ msgstr "Бұл құпиясөз тек Wi-Fi байланыстыруына ар
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi байланыстыру жасырулы"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi байланыстыру өшірілгенде ғана Wi-Fi байланыстыру параметрлері қол жетімді болады"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi байланыстыру"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi байл. параметрлері"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Қабылданды:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Жіберілді:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Құрылғының аты"
@@ -87,6 +78,33 @@ msgstr "USB кабелін қосу"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Құпиясөзде кемінде %d таңба болуы және %d таңбадан аспауы керек"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Құрылғы аты: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Байл-тыру қосулы"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Байланыстыру басқа бағдарламамен пайдалануда. Байланыстыруды конфигурациялау үшін, осы бағдарлама өшіріледі"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Қорғаныс түрі: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Байланыстыруды пайдалану үшін, ұялы желілерге қосылыңыз"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Байланыс уақыты бітті"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Пайдал-ған деректер: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Байланыстыруды конфигурациялау үшін түртіңіз"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth көрінуінің уақыты бітті. Құрылғыңыз табылмауы мүмкін"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Байланыстыру батарея зарядын көп пайдаланып, деректеріңіздің пайдаланылуын арттырады. Рұқсат етілген байланыстыру құрылғылардың ең көп саны — %d"

@@ -4,20 +4,11 @@ msgstr "Bu şifre sadece Wi-Fi bağlantısı içindir"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi bağlantısı gizli"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi bağlantısı ayarları sadece Wi-Fi bağlantısı devre dışı bırakıldığında kullanılabilir"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi bağlantısı"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi bağlantısı ayarları"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Alındı:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Gönderildi:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Cihaz adı"
@@ -87,6 +78,33 @@ msgstr "USB kablosunu bağlayın"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Şifre en az %d karakter içermeli ve %d karakteri geçmemelidir"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Cihaz adı: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Bağlantı etkin"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Bağlanma şu anda bir başka uygulama tarafından kullanılıyor. Bağlanmayı yapılandırmak için, uygulama devre dışı bırakılacak"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Güvenlik tipi: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Bağlantı kullanmak için, mobil ağlara bağlanın"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Bağlantı zaman aşımı"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Kullanılan veri: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Bağlanmayı yapılandırmak için dokunun"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth keşfedilebilirliğinin süresi doldu. Cihazınız bulunamayabilir"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Bağlantı daha fazla pil gücü tüketir ve veri kullanımınızı arttırır. İzin verilen maksimum bağlı cihaz sayısı: %d"

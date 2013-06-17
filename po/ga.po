@@ -4,20 +4,11 @@ msgstr "Is le nascaireacht Wi-Fi amháin an pasfhocal seo"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Nascaireacht Wi-Fi folaithe"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Níl socruithe nascaireachta Wi-Fi ar fáil ach amháin nuair atá nascaireacht Wi-Fi díchumasaithe"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Nascaireacht Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Soc. nascaireachta Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Faighte:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Seolta:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Ainm an ghléis"
@@ -88,11 +79,38 @@ msgstr "Ceangail cábla USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Ní mór %d carachtar ar a laghad a bheith sa phasfhocal agus gan %d carachtar a shárú"
 
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Ainm an ghléis: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Nascaireacht air"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Tá nascaireacht á rialú ag feidhmchlár eile faoi láthair. D'fhonn nascaireacht a chumrú, díchumasófar an feidhmchlár sin."
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Cineál slándála: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Le nascaireacht a úsáid, nasc le líonraí móibíleacha"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Am istigh don nasc"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Sonraí úsáidte: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Tapáil le nascaireacht a chumrú"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Tá an t-am istigh d'infheictheacht Bluetooth. Is féidir nár aimsíodh do ghléas."
+
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Ídítear níos mó cumhacht ceallra le nascaireacht agus méadaíonn sé úsáid sonraí agat. Is é uaslíon na ngléasanna a bhfuil nascaireacht déanta orthu a cheadaítear ná %d"
+msgstr "Ídítear tuilleadh cumhacht ceallra le nascaireacht agus méadaítear úsáid sonraí agat. Is iad %d uaslíon na ngléasanna ar a bhfuil nascaireacht ceadaithe."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Tá an líonra Wi-Fi dínasctha. Ídítear níos mó cumhacht ceallra le nascaireacht agus méadaíonn sé úsáid sonraí agat. Is é uaslíon na ngléasanna a bhfuil nascaireacht déanta orthu a cheadaítear ná %d"
+msgstr "Déanfar líonra Wi-Fi dínascadh. Ídítear tuilleadh cumhacht ceallra le nascaireacht agus méadaítear úsáid sonraí agat. Is iad %d uaslíon na ngléasanna ar a bhfuil nascaireacht ceadaithe."
 
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Úsáideann nascaireacht níos mó cumhacht ceallra agus méadaíonn sé úsáid sonraí agat"

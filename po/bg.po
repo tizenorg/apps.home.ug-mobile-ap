@@ -4,20 +4,11 @@ msgstr "Тази парола е само за Wi-Fi привързване"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi привързването е скрито"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Настройките за Wi-Fi привързване са достъпни само когато Wi-Fi привързване е деактивирано"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi привързване"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Наст. за Wi-Fi привързв."
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Получено:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Изпратен:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Име устройство"
@@ -87,6 +78,33 @@ msgstr "Свързване с USB кабел"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Паролата трябва да съдържа поне %d знака и да не е по-дълга от %d знака"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Име на устройството: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Привързв.активно"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Привързването в момента се управлява от друго приложение. За да конфигурирате привързването, приложението ще бъде деактивирано"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Тип защита: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "За да използвате привързване, свържете се към мобилни мрежи"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Изтекло време на изчакване на връзка"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Дата на използване: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Чукнете, за да конфигурирате привързване"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Видимостта на Bluetooth изтече. Вашето устройство може да не бъде открито"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Привързването консумира повече енергия от батерията и увеличава потреблението на данни. Максималният позволен брой привързани устройства е %d"
