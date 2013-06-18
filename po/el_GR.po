@@ -4,20 +4,11 @@ msgstr "Αυτός ο κωδικός πρόσβασης ισχύει μόνο γ
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Απόκρυψη tethering μέσω Wi-Fi"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Οι ρυθμίσεις του tethering μέσω Wi-Fi είναι διαθέσιμες μόνο όταν το tethering μέσω Wi-Fi είναι απενεργοποιημένο"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Tethering μέσω Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Ρυθμίσεις tethering Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Ελήφθη:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Εστάλη:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Όνομα συσκευής"
@@ -87,6 +78,33 @@ msgstr "Συνδέστε το καλώδιο USB"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Ο κωδικός πρόσβασης πρέπει να περιέχει %d χαρακτήρες τουλάχιστον και να μην ξεπερνά τους %d χαρακτήρες"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Όνομα συσκευής: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Tethering ενεργό"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Η λειτουργία tethering ελέγχεται από άλλη εφαρμογή αυτήν τη στιγμή. Η εν λόγω εφαρμογή θα απενεργοποιηθεί, για να πραγματοποιήσετε διαμόρφωση της λειτουργίας tethering"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Τύπος ασφάλειας: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Για τη χρήση της λειτουργίας tethering, συνδεθείτε σε δίκτυα κινητής τηλεφωνίας"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Λήξη χρόνου σύνδεσης"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Δεδομένα σε χρήση: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Πατήστε για να κάνετε διαμόρφωση του tethering"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Το χρονικό όριο της ορατότητας Bluetooth έληξε. Η συσκευή σας ενδέχεται να μην βρεθεί"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Το tethering καταναλώνει περισσότερη ισχύ μπαταρίας και αυξάνει τη χρήση δεδομένων. Ο μέγιστος αριθμός συσκευών με tethering που επιτρέπεται είναι %d"

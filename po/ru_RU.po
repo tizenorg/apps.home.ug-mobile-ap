@@ -4,20 +4,11 @@ msgstr "Этот пароль подходит только для модема 
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Модем Wi-Fi скрыт"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Параметры модема Wi-Fi отображаются только тогда, когда он отключен"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Модем Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Параметры модема Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Получено:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Отправлено:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Имя устройства"
@@ -87,6 +78,33 @@ msgstr "Подключите USB-кабель"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Допустимое число символов в пароле: от %d до %d"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Имя устройства: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Модем активен"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Модемом сейчас управляет другое приложение. Чтобы настроить его, это приложение будет отключено"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Тип защиты: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Чтобы использовать модем, подключитесь к мобильной сети"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Тайм-аут подключения"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Использов. данных: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Коснитесь для настройки модема"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Тайм-аут видимости Bluetooth. Вероятно, ваше устройство невозможно обнаружить"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "При использовании модема быстро расходуется заряд батареи и увеличивается объем передаваемых данных. Максимальное число подключенных устройств: %d"

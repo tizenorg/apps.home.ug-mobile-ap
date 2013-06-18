@@ -4,20 +4,11 @@ msgstr "Ez a jelszó csak a Wi-Fi internetmegosztáshoz használható"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi internetmegosztás elrejtve"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "A Wi-Fi internetmegosztás beállításai csak akkor érhetők el, ha a Wi-Fi internetmegosztás le van tiltva"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi internetmegosztás"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi int.megosztás beá."
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Fogadva:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Elküldve:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Eszköz név"
@@ -87,6 +78,33 @@ msgstr "Csatlakoztassa az USB-kábelt"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "A jelszónak legalább %d, legfeljebb %d karakterből kell állnia"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Eszköz neve: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Int.mego. aktív"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Az internetmegosztást jelenleg egy másik alkalmazás vezérli. Az internetmegosztás konfigurálásához ez az alkalmazás le lesz tiltva"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Biztonság típusa: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Az internetmegosztás használatához létesítsen mobilhálózati kapcsolatot"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Kapcsolat időtúllépése"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Adathasználat: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Érintse meg az internetmegosztás konfigurálásához"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "A Bluetooth láthatóság ideje lejárt. Az eszközt nem lehet megtalálni"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Az internetmegosztás használata gyorsan meríti az akkumulátort, és nagyobb adatforgalmat eredményez. Az internetmegosztásban részt vevő eszközök maximális megengedett száma %d"

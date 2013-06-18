@@ -4,20 +4,11 @@ msgstr "Šī parole ir paredzēta tikai Wi-Fi piesaistei"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi piesaiste ir paslēpta"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi piesaistes iestatījumi ir pieejami tikai tad, ja Wi-Fi piesaiste ir izslēgta"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi piesaiste"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi piesaistes iestat."
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Saņemts:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Nosūtīta:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Ierīces nosaukums"
@@ -87,6 +78,33 @@ msgstr "Pievienot USB kabeli"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parolē ir jābūt vismaz %d rakstzīmēm, bet ne vairāk par %d"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Ierīces nosaukums: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Piesaiste aktīva"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Piesaisti pašreiz pārvalda cita programma. Lai konfigurētu piesaisti, šī programma tiks deaktivizēta"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Drošības veids: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Lai lietotu piesaisti, izveidojiet savienojumu ar mobilajiem tīkliem"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Savienojuma taimauts"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Izmantotie dati: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Pieskarieties, lai konfigurētu piesaisti"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth redzamībai iestājās taimauts. Jūsu ierīce var nebūt atrodama"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Piesaiste patērē vairāk akumulatora enerģijas un palielina datu lietojumu. Maksimālais piesaistīto ierīču skaits ir %d"

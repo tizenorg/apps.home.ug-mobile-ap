@@ -1,11 +1,8 @@
 msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
-msgstr "Ova je šifra samo za Wi-Fi dijeljenje"
+msgstr "Ova je lozinka samo za Wi-Fi dijeljenje"
 
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi dijeljenje skriveno"
-
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Postavke Wi-Fi dijeljenja dostupne su samo kada je Wi-Fi dijeljenje isključeno"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi dijeljenje"
@@ -13,17 +10,11 @@ msgstr "Wi-Fi dijeljenje"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Postavke Wi-Fi dijeljenja"
 
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Primljeno:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Poslano:"
-
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Naziv uređaja"
 
 msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Šifra"
+msgstr "Lozinka"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Naziv uređaja može se promijeniti u %s"
@@ -65,7 +56,7 @@ msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Dijeljenje veze"
 
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Unesite šifru s min. 8 znakova"
+msgstr "Unesite lozinku s min. 8 znakova"
 
 msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
 msgstr "Uključivanje USB dijeljenja prekinut će prethodnu USB vezu"
@@ -86,7 +77,34 @@ msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "Spoji USB kabel"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
-msgstr "Šifra mora sadržavati najmanje %d, a najviše %d znakova"
+msgstr "Lozinka mora sadržavati najmanje %d, a najviše %d znakova"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Naziv uređaja: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Dijeli se"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Dijeljenjem veze trenutačno upravlja druga aplikacija. Da biste konfigurirali dijeljenje veze, ta će se aplikacija isključiti"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Vrsta sigurnosti: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Da biste koristili dijeljenje, spojite se na mobilne mreže"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Istek veze"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Korišteni podaci: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Dodirnite za konfiguraciju dijeljenja"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Vidljivost Bluetootha je istekla. Vaš uređaj možda neće biti pronađen"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Dijeljenje veze povećava potrošnju baterije i količinu prijenosa podataka. Maksimalan dopušten broj uređaja za dijeljenje veze je %d"

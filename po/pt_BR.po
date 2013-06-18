@@ -4,20 +4,11 @@ msgstr "Esta senha é apenas para a ancoragem Wi-Fi"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Ancoragem Wi-Fi oculta"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "As configurações de ancoragem Wi-Fi estão disponíveis apenas quando a ancoragem Wi-Fi está desativada"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Ancoragem Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Config. ancoragem Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Recebido:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Enviado:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nome do dispositivo"
@@ -88,11 +79,38 @@ msgstr "Conecte o cabo USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "A senha deve conter pelo menos %d caracteres e não exceder %d caracteres"
 
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nome do dispositivo: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Ancoragem ativa"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "A ancoragem está sendo controlada no momento por outro aplicativo. Para configurar a ancoragem, o aplicativo será desativado"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Tipo de segurança: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Para usar a ancoragem, conecte-se a uma rede móvel"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Tempo de conexão esgotado"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Dados usados: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Toque para configurar a ligação tethering"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "O período de visibilidade do Bluetooth expirou. Seu dispositivo não pode ser localizado"
+
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "A ligação tethering consome mais bateria e aumenta sua utilização de dados. O número máximo de dispositivo ligados permitidos é de %d"
+msgstr "A conexão tethering consome mais bateria e aumenta sua utilização de dados. O número máximo de dispositivo conectados permitidos é de %d"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "A rede Wi-Fi será desconectada. A ligação tethering consome mais bateria e aumenta sua utilização de dados. O número máximo de dispositivo ligados permitidos é de %d"
+msgstr "A rede Wi-Fi será desconectada. A conexão tethering consome mais bateria e aumenta sua utilização de dados. O número máximo de dispositivo conectados permitidos é de %d"
 
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "A ancoragem consome mais bateria e aumenta sua utilização de dados"

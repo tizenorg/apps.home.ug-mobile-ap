@@ -4,20 +4,11 @@ msgstr "Pasahitz hau Wi-Fi ainguraketarako bakarrik da"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi ainguraketa ezkutatuta"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi ainguraketaren ezarpenak Wi-Fi ainguraketa ezgaituta dagoenean soilik daude erabilgarri"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi ainguraketa"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi aingur. ezarpenak"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Jasoa:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Bidalia:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Gailuaren izena"
@@ -87,6 +78,33 @@ msgstr "USB kablea konektatu"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Pasahitzak gutxienez %d karaktere izan behar ditu eta ezin ditu %d karaktereak gainditu"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Gailuaren izena: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Aingurak. aktibo"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Beste aplikazio batek ainguraketa kontrolatzen du orain. Ainguraketa konfiguratzeko, aplikazio hori ezgaituko da"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Segurtasuna mota: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Ainguraketa erabiltzeko, konektatu sare mugikorrak"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Konexio denbora igaro da"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Erabilitako datuak: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Ukitu ainguraketa konfiguratzeko"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth-en ikusgaitasuna denboraz kanpo dago. Baliteke besteek zure gailua ez aurkitzea"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Ainguraketak bateria gehiago kontsumitzen du eta zure datuen erabilera areagotzen du. Ainguratutako gehieneko gailu kopurua %d da"

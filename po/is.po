@@ -4,20 +4,11 @@ msgstr "Þetta lykilorð er aðeins fyrir Wi-Fi tjóðrun"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi tjóðrun falin"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Stillingar fyrir Wi-Fi tjóðrun eru aðeins í boði þegar slökkt er á Wi-Fi tjóðrun"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi tjóðrun"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi tjóðrunarstillingar"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Móttekið:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Sent:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Heiti tækis"
@@ -87,6 +78,33 @@ msgstr "Tengjast USB-snúru"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Lykilorðið verður að vera a.m.k. %d stafir og má ekki vera lengra en %d stafir"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Heiti tækis: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Tjóðrun er virk"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Annað forrit er að stjórna tjóðrun. Slökkt verður á því forriti til að stilla tjóðrun"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Öryggisgerð: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Tengstu farsímakerfum til að nota tjóðrun"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Tenging útrunnin"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Notuð gögn: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Pikkaðu til að stilla tjóðrun"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth-sýnileiki rann út á tíma. Ekki er víst að tækið finnist"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Tjóðrun notar meiri orku og eykur gagnanotkun. Leyfilegur hámarksfjöldi tjóðraðra tækja er %d"

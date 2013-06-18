@@ -4,20 +4,11 @@ msgstr "To geslo velja samo za uporabo telefona kot modema prek omrežja Wi-Fi"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Uporaba telefona kot modema prek omrežja Wi-Fi je skrita"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Nastavitve uporabe telefona kot modema prek omrežja Wi-Fi so na voljo samo, ko je takšna uporaba onemogočena"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Up.tel. kot mod. po Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Nas.tel. kot mod.po Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Prejeto:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Poslano:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Ime naprave"
@@ -87,6 +78,33 @@ msgstr "Priključite kabel USB"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Geslo mora vsebovati vsaj %d znakov in ne sme presegati %d znakov"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Ime naprave: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Int. po tel. ak."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Privezovanje trenutno upravlja druga aplikacija. Če želite konfigurirati privezovanje, bo ta aplikacija onemogočena"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Vrsta varnosti: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Če želite internet dati v skupno rabo, se povežite z enim od mobilnih omrežij"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Povezava je bila predolgo neaktivna"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Porabljeni podatki: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Pritisnite za konfiguracijo uporabe telefona kot modema"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Časovna omejitev vidnosti za Bluetooth je potekla. Naprave ne bo mogoče poiskati"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Uporaba telefona kot modema porabi več baterije in poveča porabo podatkov. Največje dovoljeno število naprav za uporabo kot modem je %d"

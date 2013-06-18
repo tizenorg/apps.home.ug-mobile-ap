@@ -4,20 +4,11 @@ msgstr "Este contrasinal só é para a ancoraxe á rede Wi-Fi"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Ancoraxe á rede Wi-Fi oculta"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Os axustes da ancoraxe á rede Wi-Fi só se atopan dispoñibles cando a ancoraxe á rede Wi-Fi está desactivada"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Ancoraxe á rede Wi-Fi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Axus. ancoraxe rede Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Recibida:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Enviada:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nome do dispositivo"
@@ -87,6 +78,33 @@ msgstr "Conectar cable USB"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "O contrasinal ten que ter polo menos %d carácteres e non superar %d carácteres"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nome do dispositivo: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Ancoraxe activa"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "A ancoraxe á rede está a ser controlada actualmente por outra aplicación. Para configurar a ancoraxe á rede, esa aplicación desactivarase"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Tipo de seguridade: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Para usar a ancoraxe á rede, conéctate a unha rede móbil"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Superouse o tempo de espera da conexión"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Datos usados: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Toca para configurar a ancoraxe á rede"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Esgotouse o tempo de espera da visibilidade do Bluetooth. É posible que o teu dispositivo non se atope"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "A ancoraxe á rede consume máis batería e incrementa o uso de datos. O número máximo de dispositivos ancorados á rede permitido é de %d"

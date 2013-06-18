@@ -4,20 +4,11 @@ msgstr "Der här lösenordet är gäller endast för Wi-Fi-internetdelning"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi-internetdelning är dolt"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Inställningarna för Wi-Fi-internetdelning är endast tillgängliga när Wi-Fi-internetdelning är inaktiverat"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi-internetdelning"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Inst. f. Wi-Fi-internetd."
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Mottaget:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Skickat:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Enhetsnamn"
@@ -87,6 +78,33 @@ msgstr "Anslut USB-kabeln"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Lösenord måste innehålla minst %d tecken och inte överstiga %d tecken"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Enhetsnamn: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Internetdeln akt"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Internetdelning kontrolleras för närvarande av ett annat program. Om du vill konfigurera internetdelning måste du inaktivera programmet"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Säkerhetstyp: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Anslut till mobila nätverk om du vill använda Internetdelning"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Anslutningstimeout"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Använda data :%s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Tryck för att konfigurera internetdelning"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Timeout för Bluetooth-synlighet. Det kanske inte går att hitta din enhet"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Internetdelning förbrukar mer batteri och dataanvändningen ökar. Högst %d enheter kan dela Internetanslutningen"

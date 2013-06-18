@@ -4,20 +4,11 @@ msgstr "Ova lozinka je samo za Wi-Fi vezivanje"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi vezivanje je skriveno"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Podešavanja Wi-Fi vezivanja su dostupna samo kada je Wi-Fi vezivanje onemogućeno"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi vezivanje"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Podeš. Wi-Fi povezivanja"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Primljeno:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Poslato:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Ime uređaja"
@@ -87,6 +78,33 @@ msgstr "Priključi USB kabl"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Šifra mora da sadrži najmanje %d i najviše %d znakova"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Naziv uređaja: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Delj. veze akt."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Vezivanje trenutno kontroliše druga aplikacija. Da bi konfigurisao/la vezivanje, ta aplikacija će biti onemogućena"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Tip bezbednosti: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Za korišćenje vezivanja, poveži se na mreže mobilne telefonije"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Vremensko prekoračenje veze"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Iskorišćeni podaci: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Kucni za konfigurisanje vezivanja"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth vidljivost je istekla. Tvoj uređaj možda neće biti pronađen"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Vezivanje troši više energije i povećava upotrebu podataka. Maksimalni dozvoljeni broj povezanih uređaja je %d"

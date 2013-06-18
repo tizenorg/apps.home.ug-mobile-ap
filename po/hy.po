@@ -4,20 +4,11 @@ msgstr "Այս գաղտնաբառը միայն Wi-Fi տեղակապման համ
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi տեղակապումը թաքցված է"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi տեղակապման դրվածքները մատչելի են միայն երբ Wi-Fi տեղակապումը կասեցված է"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi տեղակապում"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi տեղակապ. դրվածքներ"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Ստացված."
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Ուղարկված՝"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Սարքի Անունը"
@@ -87,6 +78,33 @@ msgstr "Միացնել USB մալուխը"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Գաղտնաբառը պետք է պարունակի առնվազն %d նիշ և չգերազանցի %d նիշը"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Սարքի անվանումը՝ %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Տեղակապ. ակտիվ է"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Ներկա պահին տեղակապումը վերահսկվում է այլ ծրագրի կողմից: Տեղակապումը կազմաձևելու համար այդ ծրագիրը կկասեցվի"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Անվտանգության տիպը՝ %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Տեղակապում օգտագործելու համար միացեք շարժական կապի ցանցերին"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Միացման պարապուրդ"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Օգտագործ. տվյալներ` %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Թակել՝ տեղակապումը կազմաձևելու համար"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth տեսանելիության համար հատկացված ժամանակը սպառվել է: Ձեր սարքը գուցե չգտնվի"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Տեղակապումը մարտկոցի ավելի շատ էներգիա է սպառում և ավելացնում է տվյալների օգտագործումը: Տեղակապված սարքերի առավելագույն թույլատրված քանակը %d է"

@@ -4,20 +4,11 @@ msgstr "Šis slaptažodis skirtas tik „Wi-Fi“ siejimui"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "„Wi-Fi“ siejimas paslėptas"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "„Wi-Fi“ siejimo nustatymai galimi tik kai „Wi-Fi“ siejimas išjungtas"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "„Wi-Fi“ siejimas"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "„Wi-Fi“ siej. nustatymai"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Gauta:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Išsiųsta:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Įrenginio vardas"
@@ -87,6 +78,33 @@ msgstr "Prijungti USB kabelį"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Slaptažodį turi sudaryti ne mažiau kaip %d simboliai (-ių), bet ne daugiau kaip %d simboliai (-ių)"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Įrenginio pavadinimas: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Siejimas įjungt."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Siejimą dabar kontroliuoja kita programa. Konfigūruojant siejimą programa bus išjungta"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Saugos tipas: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Norėdami naudoti siejimo funkciją prisijunkite prie mobiliųjų tinklų"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Baigėsi prisijungimui skirtas laikas"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Naudojami duomenys: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Bakstelėkite, kad sukonfigūruotumėte siejimą"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "„Bluetooth“ pasiekiamumo laikas baigėsi. Jūsų įrenginys gali būti nerastas"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Kai įjungtas siejimas, suvartojama daugiau akumuliatoriaus energijos ir padidėja duomenų naudojimas. Didžiausias leistinas susietų įrenginių skaičius yra %d"

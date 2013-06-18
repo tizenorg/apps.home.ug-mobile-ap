@@ -4,20 +4,11 @@ msgstr "See parool on ainult Wi-Fi kaudu vahendamise jaoks"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi kaudu vahendamine on peidetud"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi kaudu vahendamise seaded on saadaval ainult siis, kui Wi-Fi kaudu vahendamine on keelatud"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi kaudu vahendamine"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi-vahendamise seaded"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Vastuvõetud:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Saadetud:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Seadme nimi"
@@ -87,6 +78,33 @@ msgstr "Ühenda USB-kaabel"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parool peab sisaldama vähemalt %d tähemärki, kuid ei tohi olla pikem kui %d tähemärki"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Seadme nimi: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Modem aktiivne"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Modemit juhib hetkel teine rakendus. Modemi konfigureerimiseks desaktiveeritakse see rakendus"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Turvalisuse tüüp: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Modemi kasutamiseks looge ühendus mobiilsidevõrkudega"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Ühenduse ajalõpp"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Kasutatud andmed: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Toksake, et konfigureerida modemit"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth-ühenduse nähtavus on aegunud. Teie seade ei pruugi olla leitav"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Modemi kasutamine tarbib rohkem akutoidet ja suurendab andmekasutust. Maksimaalne lubatud modemiseadmete arv on %d"

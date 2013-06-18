@@ -4,20 +4,11 @@ msgstr "Tämä salasana on tarkoitettu vain Wi-Fi-yhteyden jakamista varten"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi-yhteyden jakaminen piilotettu"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi-yhteyden jaon asetukset ovat käytettävissä vain silloin, kun Wi-Fi-yhteys on poistettu käytöstä"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi-yhteyden jakaminen"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi-yht. jaon asetukset"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Vastaanotettu:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Lähetetty:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Laitteen nimi"
@@ -87,6 +78,33 @@ msgstr "Liitä USB-kaapeli"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Salasanassa on oltava ainakin %d merkkiä eikä se saa olla yli %d merkkiä pitkä"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Laitteen nimi: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Yhteyden jak. k."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Yhteyttä hallitaan tällä hetkellä toisella sovelluksella. Sovellus on yhteyden määrittämiseksi poistettava käytöstä"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Suojaustyyppi: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Jos haluat käyttää yhteyttä, muodosta yhteys mobiiliverkkoihin"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Yhteyden aikakatkaisu"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Käyttöpäivä: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Määritä yhteys napauttamalla"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth-näkyvyys on aikakatkaistu. Laitetta ei ehkä löydy"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Yhdistäminen kuluttaa enemmän virtaa ja lisää datan käyttöä. Yhdistettyjen laitteiden suurin sallittu määrä on %d"

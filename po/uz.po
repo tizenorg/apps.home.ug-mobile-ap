@@ -4,20 +4,11 @@ msgstr "Ushbu parol faqat Wi-Fi bog‘lanish uchun"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi bog‘lanish yashirilgan"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi bog‘lanish parametrlaridan faqatgina Wi-Fi bog‘lanish o‘chirilganda foydalanish mumkin"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi bog‘lanish"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi bog‘lan. parametri"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Qabul qilindi:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Yuborilgan:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Qurilma nomi"
@@ -87,6 +78,33 @@ msgstr "USB-kabelni ulash"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Parol eng kamida %d belgidan iborat bo‘lishi hamda %d belgidan oshmasligi lozim"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Qurilma nomi: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Bog‘lanish faol"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Bog‘lanish hozirda boshqa ilova tomonidan nazorat qilinmoqda. Bog‘lanishni sozlash uchun o‘sha ilova o‘chiriladi"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Xavfsizlik turi: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Bog‘lanishdan foydalanish uchun mobil tarmoqlarga ulaning"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Ulanish vaqti o‘tdi"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Ishlatil. ma’lumot: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Bog‘lanishni sozlash uchun cherting"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth ko‘rinish imkoniyatining vaqti o‘tdi. Qurilmangizni topib bo‘lmadi"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Bog‘lanish mumkin bo‘lgan qurilmalarning ruxsat etilgan maksimal miqdori: %d"

@@ -4,20 +4,11 @@ msgstr "Ce mot de passe est uniquement pour le modem Wifi"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Modem Wifi masqué"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Vous pouvez accéder aux paramètres du modem Wifi lorsque celui-ci est désactivé"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Modem Wifi"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Paramètres du modem Wifi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Reçu :"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Envoyé :"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nom de périphérique"
@@ -88,11 +79,38 @@ msgstr "Branchez le câble USB"
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "Le mot de passe doit contenir au moins %d caractères et ne pas dépasser %d caractères"
 
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nom de l'appareil : %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "Modem actif"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "Le modem est actuellement contrôlé par une autre application. Pour configurer le modem, cette application va être désactivée"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Type de sécurité : %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Pour utiliser le modem, connectez-vous aux réseaux mobiles"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Connexion expirée"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Données utilisées : %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Touchez pour configurer le modem"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "La visibilité Bluetooth a expiré. Votre appareil risque de ne pas être détecté"
+
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "L'utilisation du modem consomme davantage de batterie et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d"
+msgstr "L'utilisation du modem est énergivore et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "La connexion au réseau Wi-Fi va être interrompue. L'utilisation du modem consomme davantage de batterie et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d"
+msgstr "La connexion au réseau Wifi va être interrompue. L'utilisation du modem est énergivore et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d"
 
 msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
 msgstr "Le modem consomme plus d'énergie et augmente l'utilisation des données"

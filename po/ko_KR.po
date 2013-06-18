@@ -4,20 +4,11 @@ msgstr "이 비밀번호는 Wi-Fi 테더링 전용입니다"
 msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
 msgstr "Wi-Fi 테더링이 표시되지 않습니다"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_SETTINGS_ARE_ONLY_AVAILABLE_WHEN_WI_FI_TETHERING_IS_DISABLED"
-msgstr "Wi-Fi 테더링이 해제된 경우에만 Wi-Fi 테더링 설정을 사용할 수 있습니다"
-
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
 msgstr "Wi-Fi 테더링"
 
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi 테더링 설정"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "수신 시간:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "발신 시간:"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "디바이스 이름"
@@ -32,7 +23,7 @@ msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "내 디바이스 숨기기"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
-msgstr "데이터 사용"
+msgstr "데이터 사용량"
 
 msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
 msgstr "USB 테더링"
@@ -87,6 +78,33 @@ msgstr "USB 케이블을 연결하세요"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "비밀번호는 %d자 이상 %d자 이하여야 합니다"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "디바이스 이름: %s"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "테더링 실행 중"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "다른 애플리케이션이 테더링을 제어하고 있습니다. 설정을 위해 다른 애플리케이션을 비활성화합니다."
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "보안 형식: %s"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "테터링을 사용하려면 모바일 네트워크에 연결하세요"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "연결 시간을 초과하였습니다"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "데이터 사용량: %s"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "테더링을 설정하려면 누르세요"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "블루투스 검색 허용 시간이 초과되어 디바이스가 검색되지 않을 수 있습니다"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "테더링을 사용하면 배터리가 더 많이 소모되며 데이터 사용량이 증가합니다. 테더링할 수 있는 최대 기기 수는 %d개입니다."
