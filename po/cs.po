@@ -10,6 +10,12 @@ msgstr "Sdílení připojení Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Nast. sdílení přip. Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Přijato:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Odesláno:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Jméno zařízení"
 

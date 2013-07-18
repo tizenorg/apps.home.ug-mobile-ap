@@ -10,6 +10,12 @@ msgstr "Wi-Fi 테더링"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi 테더링 설정"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "수신 시간:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "발신 시간:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "디바이스 이름"
 

@@ -10,6 +10,12 @@ msgstr "Wi-Fi kaudu vahendamine"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi-vahendamise seaded"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Vastuvõetud:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Saadetud:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Seadme nimi"
 

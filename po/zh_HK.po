@@ -10,6 +10,12 @@ msgstr "Wi-Fi 網絡共用"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi 網絡共用設定"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "已接收："
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "已發送："
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "裝置名稱"
 

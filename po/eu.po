@@ -10,6 +10,12 @@ msgstr "Wi-Fi ainguraketa"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi aingur. ezarpenak"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Jasoa:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Bidalia:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Gailuaren izena"
 

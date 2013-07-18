@@ -10,6 +10,12 @@ msgstr "Wi-Fi vezivanje"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Podeš. Wi-Fi povezivanja"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Primljeno:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Poslato:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Ime uređaja"
 

@@ -10,6 +10,12 @@ msgstr "Wi-Fi-tethering"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Instell. Wi-Fi-tethering"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Ontvangen:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Verzonden:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Naam apparaat"
 

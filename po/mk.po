@@ -10,6 +10,12 @@ msgstr "Делење Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Опции за делење Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Примено на:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Пратено на:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Име на уред"
 

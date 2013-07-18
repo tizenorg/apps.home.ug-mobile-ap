@@ -10,6 +10,12 @@ msgstr "„Wi-Fi“ siejimas"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "„Wi-Fi“ siej. nustatymai"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Gauta:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Išsiųsta:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Įrenginio vardas"
 

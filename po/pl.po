@@ -10,6 +10,12 @@ msgstr "Router Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Ustawienia routera Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Odebrano:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Wysłano:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nazwa urządzenia"
 

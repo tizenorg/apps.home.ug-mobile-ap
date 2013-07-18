@@ -10,6 +10,12 @@ msgstr "Wi-Fi-deling"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Indstilling. Wi-Fi-deling"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Modtaget:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Sendt:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Enhedsnavn"
 

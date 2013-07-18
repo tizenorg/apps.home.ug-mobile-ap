@@ -10,6 +10,12 @@ msgstr "Ancoragem Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Config. ancoragem Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Recebido:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Enviado:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nome do dispositivo"
 

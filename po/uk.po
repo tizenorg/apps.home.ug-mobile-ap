@@ -10,6 +10,12 @@ msgstr "Прив’язка Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Установки прив'язки Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Отримано:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Надіслано:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Ім'я пристрою"
 

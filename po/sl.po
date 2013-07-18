@@ -10,6 +10,12 @@ msgstr "Up.tel. kot mod. po Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Nas.tel. kot mod.po Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Prejeto:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Poslano:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Ime naprave"
 

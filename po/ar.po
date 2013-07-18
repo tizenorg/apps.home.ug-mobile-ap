@@ -10,6 +10,12 @@ msgstr "تقييد Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "إعدادات تقييد Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "مستقبلة:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "مرسلة:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "اسم الجهاز"
 

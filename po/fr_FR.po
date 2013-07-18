@@ -10,6 +10,12 @@ msgstr "Modem Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Paramètres du modem Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Reçu :"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Envoyé :"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Nom de l'appareil"
 

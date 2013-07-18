@@ -10,6 +10,12 @@ msgstr "Wi-Fi bog‘lanish"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Wi-Fi bog‘lan. parametri"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Qabul qilindi:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Yuborilgan:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Qurilma nomi"
 

@@ -10,6 +10,12 @@ msgstr "Модем Wi-Fi"
 msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
 msgstr "Параметры модема Wi-Fi"
 
+msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
+msgstr "Получено:"
+
+msgid "IDS_MOBILEAP_BODY_SENT_C"
+msgstr "Отправлено:"
+
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
 msgstr "Имя устройства"
 
