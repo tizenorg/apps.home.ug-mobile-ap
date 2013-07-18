@@ -17,9 +17,12 @@
 *
 */
 
+#include <efl_assist.h>
+
 #include "mh_common_utility.h"
 #include "mobile_hotspot.h"
 
+//#define SK_BACK_SUPPORT
 static mh_popup_type_e popup_type = MH_POPUP_NONE;
 static Evas_Object *popup_content = NULL;
 static char *popup_string = NULL;
@@ -337,6 +340,11 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_no, (void *)ad);
 
+#ifndef SK_BACK_SUPPORT
+		ea_object_event_callback_add(ad->popup, EA_CALLBACK_BACK,
+				__popup_resp_no, (void *)ad);
+#endif
+
 		evas_object_show(ad->popup);
 		break;
 
@@ -364,6 +372,11 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_no, (void *)ad);
 
+#ifndef SK_BACK_SUPPORT
+		ea_object_event_callback_add(ad->popup, EA_CALLBACK_BACK,
+				__popup_resp_no, (void *)ad);
+#endif
+
 		evas_object_show(ad->popup);
 		break;
 
@@ -383,6 +396,11 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		elm_object_part_content_set(ad->popup, "button1", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__one_btn_popup_resp, (void *)ad);
+
+#ifndef SK_BACK_SUPPORT
+		ea_object_event_callback_add(ad->popup, EA_CALLBACK_BACK,
+				__one_btn_popup_resp, (void *)ad);
+#endif
 
 		evas_object_show(ad->popup);
 		break;
@@ -410,6 +428,11 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		elm_object_part_content_set(ad->popup, "button2", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_no, (void *)ad);
+
+#ifndef SK_BACK_SUPPORT
+		ea_object_event_callback_add(ad->popup, EA_CALLBACK_BACK,
+				__popup_resp_no, (void *)ad);
+#endif
 
 		evas_object_show(ad->popup);
 		break;
@@ -439,6 +462,11 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_no, (void *)ad);
 
+#ifndef SK_BACK_SUPPORT
+		ea_object_event_callback_add(ad->popup, EA_CALLBACK_BACK,
+				__popup_resp_no, (void *)ad);
+#endif
+
 		evas_object_show(ad->popup);
 		break;
 
@@ -459,6 +487,11 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_smart_callback_add(btn, "clicked",
 				__one_btn_popup_resp, (void *)ad);
 
+#ifndef SK_BACK_SUPPORT
+		ea_object_event_callback_add(ad->popup, EA_CALLBACK_BACK,
+				__one_btn_popup_resp, (void *)ad);
+#endif
+
 		evas_object_show(ad->popup);
 		break;
 
@@ -478,6 +511,10 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		evas_object_smart_callback_add(ad->popup, "block,clicked",
 				__alert_popup_resp, (void *)ad);
 
+#ifndef SK_BACK_SUPPORT
+		ea_object_event_callback_add(ad->popup, EA_CALLBACK_BACK,
+				__alert_popup_resp, (void *)ad);
+#endif
 		evas_object_show(ad->popup);
 		break;
 
@@ -504,6 +541,11 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		elm_object_part_content_set(ad->popup, "button2", btn);
 		evas_object_smart_callback_add(btn, "clicked",
 				__popup_resp_no, (void *)ad);
+
+#ifndef SK_BACK_SUPPORT
+		ea_object_event_callback_add(ad->popup, EA_CALLBACK_BACK,
+				__popup_resp_no, (void *)ad);
+#endif
 
 		evas_object_show(ad->popup);
 		break;

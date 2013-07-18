@@ -19,6 +19,7 @@
 #include <notification.h>
 #include "mh_view_wifi_setup.h"
 
+//#define SK_BACK_SUPPORT
 static void __back_btn_cb(void *data, Evas_Object *obj, void *event_info);
 static void __gl_realized(void *data, Evas_Object *obj, void *event_info);
 
@@ -986,11 +987,16 @@ void mh_draw_wifi_setup_view(mh_appdata_t *ad)
 	elm_object_focus_allow_set(st->back_btn, EINA_FALSE);
 
 	st->navi_it = elm_naviframe_item_push(ad->naviframe,
-			NULL,
+			_("IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"),
 			st->back_btn, NULL, st->genlist, NULL);
+
+#ifndef SK_BACK_SUPPORT
+	elm_naviframe_item_pop_cb_set(st->navi_it, __back_btn_cb, (void *)ad);
+#endif
 
 	/* Slide title */
 	label = _create_slide_title(ad->naviframe, _("IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"));
+
 	elm_object_item_part_content_set(st->navi_it, "elm.swallow.title", label);
 	evas_object_smart_callback_add(ad->naviframe, "title,clicked", __title_clicked_cb, NULL);
 

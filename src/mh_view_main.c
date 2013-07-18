@@ -18,7 +18,11 @@
 */
 
 #include <time.h>
+#include <efl_assist.h>
+
 #include "mh_view_main.h"
+
+// #define SK_BACK_SUPPORT
 
 static void _gl_device_item_sel(void *data, Evas_Object *obj, void *event_info);
 static void _gl_exp(void *data, Evas_Object *obj, void *event_info);
@@ -1505,7 +1509,7 @@ void ap_update_data_onoff(void* data)
 void ap_draw_contents(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
-
+#ifdef SK_BACK_SUPPORT
 	__create_inner_contents(ad);
 
 	ad->main.back_btn = elm_button_add(ad->naviframe);
@@ -1526,7 +1530,19 @@ void ap_draw_contents(mh_appdata_t *ad)
 	elm_naviframe_item_push(ad->naviframe,
 			_("IDS_MOBILEAP_BODY_TETHERING"),
 			ad->main.back_btn, NULL, ad->main.genlist, NULL);
+#else
+	Elm_Object_Item *navi_item;
 
+	__create_inner_contents(ad);
+
+	ea_object_event_callback_add(ad->naviframe, EA_CALLBACK_BACK, ea_naviframe_back_cb, NULL);
+
+	navi_item = elm_naviframe_item_push(ad->naviframe,
+			 _("IDS_MOBILEAP_BODY_TETHERING"),
+			 ad->main.back_btn, NULL, ad->main.genlist, NULL);
+
+	elm_naviframe_item_pop_cb_set(navi_item, __back_btn_cb, (void *)ad);
+#endif
 	__MOBILE_AP_FUNC_EXIT__;
 	return;
 }

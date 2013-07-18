@@ -3,7 +3,7 @@
 
 Name:       ug-setting-mobileap-efl
 Summary:    Tethering UI Gadget Library
-Version:    0.1.167
+Version:    0.1.168
 Release:    1
 Group:      TO_BE/FILLED_IN
 License:    Flora License Version 1.0
@@ -13,6 +13,7 @@ BuildRequires: cmake
 BuildRequires: edje-bin
 BuildRequires: gettext-tools
 BuildRequires: pkgconfig(elementary)
+BuildRequires: pkgconfig(efl-assist)
 BuildRequires: pkgconfig(evas)
 BuildRequires: pkgconfig(ui-gadget-1)
 BuildRequires: pkgconfig(wifi-direct)

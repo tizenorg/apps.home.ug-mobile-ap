@@ -19,7 +19,7 @@ SET(SRCS
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-SET(dependents "elementary evas ui-gadget-1 wifi-direct capi-network-tethering capi-network-connection capi-network-wifi capi-telephony-sim notification")
+SET(dependents "elementary efl-assist evas ui-gadget-1 wifi-direct capi-network-tethering capi-network-connection capi-network-wifi capi-telephony-sim notification")
 
 IF("${CMAKE_BUILD_TYPE}" STREQUAL "")
 	SET(CMAKE_BUILD_TYPE "Release")
