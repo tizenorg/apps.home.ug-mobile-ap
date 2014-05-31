@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="ug-setting-mobileap-efl" version="2.0.25" install-location="internal-only">
+	<label>Tethering</label>
+	<author email="sy39.ju@samsung.com" href="www.samsung.com">Seungyoun Ju</author>
+	<description>Tethering UG</description>
+	<ui-application appid="setting-mobileap-efl" exec="/usr/ug/bin/setting-mobileap-efl" nodisplay="true" multiple="true" type="capp" taskmanage="false">
+		<label>Tethering</label>
+		<icon>/usr/ug/res/images/ug-setting-mobileap-efl/com.samsung.tethering.png</icon>
+		<application-service>
+			<operation name="http://tizen.org/appcontrol/operation/pick"/>
+		</application-service>
+	</ui-application>
+</manifest>
