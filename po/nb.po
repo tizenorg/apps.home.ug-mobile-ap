@@ -1,71 +1,95 @@
-msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
-msgstr "Dette passordet gjelder bare for Wi-Fi-Internettdeling"
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Avbryt"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
-msgstr "Wi-Fi-Internettdeling skjult"
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
 
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
-msgstr "Wi-Fi-Internettdeling"
-
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
-msgstr "Wi-Fi-Internettdel.innst."
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Mottatt:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Sendt:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Enhetsnavn"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Passord"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Enhetsnavnet kan endres i %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Skjul min enhet"
+msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
+msgstr "Når Wi-Fi slås på, vil Mobile Hotspot deaktiveres. Fortsette?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Databruk"
 
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "USB-internettdeling"
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Internettdeling"
 
-msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
-msgstr "Deaktivering av Internettdeling hindrer tilkoblede enheter i å få tilgang til Internett. Fortsette?"
+msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
+msgstr "Ikke vis igjen"
 
-msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
-msgstr "Sett inn SIM-kort og start enheten på nytt for å bruke Internettdeling"
+msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
+msgstr "Hvis du slår på Wi-Fi, vil Wi-Fi-internettdeling deaktiveres."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
-msgstr "Kan ikke bruke Internettdeling"
+msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
+msgstr "Maksimalt antall tegn %d er nådd."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
-msgstr "Kan ikke bruke Internettdeling i Flymodus. For å bruke Internettdeling må Flymodus deaktiveres"
+msgid "IDS_COM_SK_NO"
+msgstr "Nei"
 
-msgid "IDS_ST_BODY_ABOUT_PHONE"
-msgstr "Om telefonen"
+msgid "IDS_BR_SK_YES"
+msgstr "Ja"
+
+msgid "IDS_BR_SK_NO"
+msgstr "Nei"
+
+msgid "IDS_BR_SK_DONE"
+msgstr "Utført"
+
+msgid "IDS_BR_SK_CANCEL"
+msgstr "Avbryt"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
+msgstr "Kan ikke bruke Internettdeling via Bluetooth mens et Wi-Fi-nettverk er koblet til."
+
+msgid "IDS_ST_HEADER_RENAME_DEVICE"
+msgstr "Gi nytt navn til enhet"
+
+msgid "IDS_ST_HEADER_MY_DEVICE_NAME"
+msgstr "Mitt enhetsnavn"
+
+msgid "IDS_COM_BODY_ENTER_PASSWORD"
+msgstr "Angi passord."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "FULLFØRT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "AVBRYT"
+
+msgid "IDS_COM_SK_YES"
+msgstr "Ja"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Lagre"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Innstillinger"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Internettdeling via Bluetooth"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Tilkoblet enhet"
 
-msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
-msgstr "Bluetooth-internettdeling"
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Data brukt: %s"
 
-msgid "IDS_MOBILEAP_BODY_SECURITY"
-msgstr "Sikkerhet"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Enhetsnavn"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Internettdeling"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Enhetsnavnet kan endres i %s."
 
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Angi et passord på minst 8 tegn"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Enhetsnavn: %s"
 
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Aktivering av USB-internettdeling vil koble fra tidligere USB-tilkobling"
+msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
+msgstr "Angi minst %d tegn."
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Skjul min enhet"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Passord"
 
 msgid "IDS_MOBILEAP_BODY_PD_BYTES"
 msgstr "%d Byte"
@@ -76,54 +100,171 @@ msgstr "%d kB"
 msgid "IDS_MOBILEAP_BODY_PD_MB"
 msgstr "%d MB"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
-msgstr "Kan ikke bruke pakketjeneste. Utenfor dekningsområdet"
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Sikkerhet"
 
-msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
-msgstr "Koble til USB-kabel"
-
-msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
-msgstr "Passordet må inneholde minst %d tegn og ikke overstige %d tegn"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Enhetsnavn: %s"
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Trykk for å konfigurere Internettdeling."
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
 msgstr "Deling aktiv"
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
-msgstr "Internettdeling kontrolleres for øyeblikket av et annet program. Du må deaktivere dette programmet før du kan konfigurere Internettdeling"
+msgstr "Internettdeling kontrolleres for øyeblikket av en annen app. Du må deaktivere denne appen før du kan konfigurere Internettdeling."
+
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Dette passordet gjelder bare for Wi-Fi-internettdeling."
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fi-internettdeling skjult."
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_TO_MOBILE_NETWORK_ABB"
+msgstr "Koble til mobilnett"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_USB_CABLE_ABB"
+msgstr "Koble til USB-kabel"
+
+msgid "IDS_MOBILEAP_HEADER_DISABLE_FLIGHT_MODE_ABB"
+msgstr "Deaktiver Flymodus"
+
+msgid "IDS_MOBILEAP_HEADER_INSERT_SIM_CARD_ABB"
+msgstr "Sett inn SIM-kort"
+
+msgid "IDS_MOBILEAP_HEADER_TETHERING_FAILED_ABB"
+msgstr "Internettdeling mislyktes"
+
+msgid "IDS_MOBILEAP_HEADER_UNABLE_TO_USE_TETHERING_ABB"
+msgstr "Kan ikke bruke Internettdeling."
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USB-internettdeling"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fi-Internettdeling"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fi-Internettdel.innst."
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Tilkoblede enheter: %d"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Tilkoblet enhet blir koblet fra."
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Koble til USB-kabel."
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Deaktivering av Internettdeling hindrer tilkoblede enheter i å få tilgang til Internett. Fortsette?"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Aktivering av USB-internettdeling vil koble fra tidligere USB-tilkobling."
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Sett inn SIM-kort og start enheten på nytt for å bruke Internettdeling."
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Passordet må inneholde minst %d tegn og ikke overstige %d tegn."
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Internettdeling forbruker mer batteristrøm og øker databruken."
+
+msgid "IDS_MOBILEAP_POP_TO_ENABLE_THIS_TETHERING_FUNCTION_CONNECT_TO_A_MOBILE_OR_WI_FI_NETWORK"
+msgstr "Koble til et mobil- eller Wi-Fi-nettverk for å aktivere denne funksjonen for Internettdeling."
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Kan ikke bruke Internettdeling."
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Kan ikke bruke Internettdeling i Flymodus. For å bruke Internettdeling må Flymodus deaktiveres."
+
+msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Intern.del.forbind. tidsavbrutt"
+
+msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Internettdelingsforbindelse ble tidsavbrutt."
+
+msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Mobildata er deaktivert. Aktiver mobildata, og prøv på nytt."
+
+msgid "IDS_BR_MBODY_CONNECT_TO_MOBILE_NETWORK"
+msgstr "Koble til mobilnett"
+
+msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
+msgstr "Ikke vis igjen"
+
+msgid "IDS_BR_SK_OK"
+msgstr "OK"
+
+msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
+msgstr "Minst %d tegn"
+
+msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
+msgstr "Deaktiver Internettdeling"
+
+msgid "IDS_COM_BODY_NO_NAME"
+msgstr "Ingen navn"
+
+msgid "IDS_COM_BODY_TETHERING_ENABLED"
+msgstr "Internettdeling aktivert."
+
+msgid "IDS_COM_BODY_TURN_OFF"
+msgstr "Slå av"
+
+msgid "IDS_MSG_HEADER_NO_NETWORK_CONNECTION"
+msgstr "Ingen nettverksforbindelse"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth-synligheten har blitt tidsavbrutt. Enheten din vil kanskje ikke kunne oppdages."
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Tidsavbrudd for tilkobling."
+
+msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
+msgstr "Do not show again"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Angi et passord på minst 8 tegn."
 
 msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
 msgstr "Sikkerhetstype: %s"
 
-msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
-msgstr "Hvis du vil bruke Internettdeling, må du koble til mobilnettverk"
-
-msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
-msgstr "Tidsavbrudd for tilkobling"
-
-msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
-msgstr "Data brukt: %s"
-
-msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
-msgstr "Trykk for å konfigurere Internettdeling"
-
-msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
-msgstr "Bluetooth-synligheten har blitt tidsavbrutt. Enheten din vil kanskje ikke kunne oppdages"
+msgid "IDS_ST_BODY_SETTINGS"
+msgstr "Innstillinger"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Internettdeling bruker mer batteristrøm og øker dataforbruket. Maksimalt antall tillatte enheter som kan bruke Internettdeling, er %d"
+msgstr "Internettdeling bruker mer batteristrøm og øker dataforbruket. Maksimalt antall tillatte enheter som kan bruke Internettdeling, er %d."
+
+msgid "IDS_ST_BODY_TETHERING_ENABLED"
+msgstr "Internettdeling aktivert."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Wi-Fi-nettverket vil bli frakoblet. Internettdeling bruker mer batteristrøm og øker dataforbruket. Maksimalt antall tillatte enheter som kan bruke Internettdeling, er %d"
+msgstr "Wi-Fi-nettverket vil bli frakoblet. Internettdeling bruker mer batteristrøm og øker dataforbruket. Maksimalt antall tillatte enheter som kan bruke Internettdeling, er %d."
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Internettdeling forbruker mer batteristrøm og øker databruken"
+msgid "IDS_ST_BUTTON_ENABLE_M_USE"
+msgstr "Aktiver"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Tilkoblet enhet blir koblet fra"
+msgid "IDS_ST_HEADER_DATA_USAGE_LIMIT_REACHED_ABB2"
+msgstr "Databruksgrense er nådd"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
-msgstr "Tilkoblede enheter: %d"
+msgid "IDS_ST_MBODY_FLIGHT_MODE_ABB"
+msgstr "Flymodus"
+
+msgid "IDS_ST_POP_DEVICE_NAMES_ARE_DISPLAYED_TO_DISTINGUISH_EACH_OF_THE_DEVICES_AVAILABLE_MSG"
+msgstr "Enhetsnavn vises for å skille hver enhet som er tilgjengelig, på listen over enheter i nærheten og via Bluetooth, Wi-Fi Direct og andre metoder."
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Hvis du vil bruke Internettdeling, må du koble til mobilnett."
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Endre navn"
+
+msgid "IDS_WIFI_HEADER_CONNECTED_DEVICES"
+msgstr "Tilkoblede enheter"
+
+msgid "MIDS_SWALL_HEADER_SIM_CARD_ERROR_OCCURRED_ABB"
+msgstr "Det oppstod en SIM-kortfeil"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Kan ikke bruke pakketjeneste. Utenfor dekningsområdet."
 

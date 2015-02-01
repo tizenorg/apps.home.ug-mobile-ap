@@ -1,13 +1,13 @@
 /*
 * ug-mobile-ap
 *
-* Copyright 2012-2013  Samsung Electronics Co., Ltd
+* Copyright 2012  Samsung Electronics Co., Ltd
 
-* Licensed under the Flora License, Version 1.1 (the "License");
+* Licensed under the Flora License, Version 1.0 (the "License");
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 
-* http://floralicense.org/license
+* http://www.tizenopensource.org/license
 
 * Unless required by applicable law or agreed to in writing, software
 * distributed under the License is distributed on an "AS IS" BASIS,
@@ -18,141 +18,66 @@
 */
 
 #include <time.h>
+#include <limits.h>
 #include <efl_assist.h>
 
 #include "mh_view_main.h"
+#include "mh_popup.h"
+#include "mh_string.h"
 
-// #define SK_BACK_SUPPORT
+static void __ctx_move_more_ctxpopup(Evas_Object *ctx, mh_appdata_t *ad);
+static void __ctx_delete_more_ctxpopup_cb(void *data, Evas *e, Evas_Object *obj, void *event_info);
+static Eina_Bool rotate_flag = EINA_FALSE;
+void _genlist_update_device_item(mh_appdata_t *ad);
+mh_appdata_t *g_ad = NULL;
+#define UPDATE_INTERVAL 1
 
-static void _gl_device_item_sel(void *data, Evas_Object *obj, void *event_info);
-static void _gl_exp(void *data, Evas_Object *obj, void *event_info);
-static void _gl_con(void *data, Evas_Object *obj, void *event_info);
+void _rotate_adjust_rename_popup(void)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	int change_ang = 0;
+
+	change_ang = elm_win_rotation_get(g_ad->win);
+	if (change_ang == 0 || change_ang == 180) {
+		_hadnle_rename_popup_rotation(EINA_TRUE);
+	} else {
+		_hadnle_rename_popup_rotation(EINA_FALSE);
+	}
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+void _select_connected_dev(void *data, Evas_Object *obj, void *event_info)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (data == NULL) {
+		ERR("data is NULL\n");
+		return;
+	}
+
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+
+	elm_genlist_item_selected_set((Elm_Object_Item *)event_info, EINA_FALSE);
+	_create_connected_client_view(ad);
+	__MOBILE_AP_FUNC_EXIT__;
+}
 
 static bool _connected_clients_cb(tethering_client_h client, void *user_data)
 {
+	__MOBILE_AP_FUNC_ENTER__;
+
 	if (user_data == NULL) {
 		ERR("user_data is NULL\n");
 		return true;
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t *)user_data;
-	int i = ad->clients.number++;
 
-	tethering_client_clone(&(ad->clients.handle[i]), client);
+	_append_list_client_handle(ad, client);
 
+	__MOBILE_AP_FUNC_EXIT__;
 	return true;
-}
-
-static void __genlist_update_device_subitem(mh_appdata_t *ad)
-{
-	__MOBILE_AP_FUNC_ENTER__;
-
-	if (ad == NULL) {
-		ERR("Invalid param\n");
-		return;
-	}
-
-	Elm_Object_Item *item = NULL;
-	tethering_type_e connection_type = 0;
-	int i;
-
-	for (i = 0; i < ad->clients.number; i++) {
-		tethering_client_get_tethering_type(ad->clients.handle[i], &connection_type);
-
-		item = elm_genlist_item_append(ad->main.genlist,
-				ad->main.dev_itc[connection_type],
-				(void *)ad->clients.handle[i],
-				ad->main.device_item, ELM_GENLIST_ITEM_NONE,
-				NULL, NULL);
-		if (item == NULL) {
-			ERR("elm_genlist_item_append is failed\n");
-			continue;
-		}
-
-		elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-	}
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return;
-}
-
-static void __genlist_update_device_item(mh_appdata_t *ad, int no_of_dev)
-{
-	__MOBILE_AP_FUNC_ENTER__;
-
-	if (ad == NULL) {
-		ERR("Invalid param\n");
-		return;
-	}
-
-	Elm_Object_Item *item = NULL;
-	const Elm_Genlist_Item_Class *itc = NULL;
-	Elm_Genlist_Item_Type item_flags = ELM_GENLIST_ITEM_NONE;
-	Eina_Bool expanded = EINA_FALSE;
-
-	if (ad->main.device_item != NULL) {
-		itc = elm_genlist_item_item_class_get(ad->main.device_item);
-		if (itc == NULL) {
-			ERR("itc is NULL\n");
-			return;
-		}
-
-		if ((itc == ad->main.device0_itc && no_of_dev == 0) ||
-				(itc == ad->main.device_itc && no_of_dev > 0)) {
-			DBG("No need to change genlist item flags\n");
-			elm_genlist_item_update(ad->main.device_item);
-
-			expanded = elm_genlist_item_expanded_get(ad->main.device_item);
-			if (expanded == EINA_TRUE) {
-				elm_genlist_item_subitems_clear(ad->main.device_item);
-				__genlist_update_device_subitem(ad);
-			}
-
-			return;
-		}
-
-		elm_genlist_item_subitems_clear(ad->main.device_item);
-		elm_object_item_del(ad->main.device_item);
-		ad->main.device_item = NULL;
-	}
-
-	if (no_of_dev == 0) {
-		itc = ad->main.device0_itc;
-		item_flags = ELM_GENLIST_ITEM_NONE;
-	} else if (no_of_dev > 0) {
-		itc = ad->main.device_itc;
-		item_flags = ELM_GENLIST_ITEM_TREE;
-	}
-
-	item = elm_genlist_item_insert_before(ad->main.genlist,
-			itc, ad, NULL, ad->main.usage_item, item_flags,
-			_gl_device_item_sel, NULL);
-	if (item == NULL) {
-		ERR("elm_genlist_item_insert_before is failed.\n");
-		return;
-	}
-	elm_object_item_signal_emit(item, "elm,state,top", "");
-
-	ad->main.device_item = item;
-
-	if (no_of_dev == 0) {
-		elm_genlist_item_select_mode_set(item,
-				ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-		evas_object_smart_callback_del(ad->main.genlist, "expanded",
-				_gl_exp);
-		evas_object_smart_callback_del(ad->main.genlist, "contracted",
-				_gl_con);
-	} else if (no_of_dev > 0) {
-		evas_object_smart_callback_add(ad->main.genlist, "expanded",
-				_gl_exp, ad);
-		evas_object_smart_callback_add(ad->main.genlist, "contracted",
-				_gl_con, ad);
-	}
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return;
 }
 
 void ap_update_data_device(mh_appdata_t *ad)
@@ -164,40 +89,23 @@ void ap_update_data_device(mh_appdata_t *ad)
 		return;
 	}
 
-	int i;
-
-	if (ad->clients.number > 0) {
-		for (i = 0; i < ad->clients.number; i++) {
-			if (!ad->clients.handle[i])
-				continue;
-
-			tethering_client_destroy(ad->clients.handle[i]);
-			ad->clients.handle[i] = NULL;
-		}
-	}
-	ad->clients.number = 0;
-
-	tethering_foreach_connected_clients(ad->handle, TETHERING_TYPE_ALL,
-			_connected_clients_cb, (void *)ad);
-	__genlist_update_device_item(ad, ad->clients.number);
+	_genlist_update_device_item(ad);
 
 	__MOBILE_AP_FUNC_EXIT__;
 }
 
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 Eina_Bool ap_update_data_packet_usage(mh_appdata_t *ad)
 {
 	if (ad == NULL) {
 		ERR("Invalid param\n");
 		return EINA_FALSE;
 	}
-
 	if (ad->main.usage_item == NULL) {
-		DBG("usage_item is removed\n");
 		return EINA_TRUE;
 	}
 
 	elm_genlist_item_update(ad->main.usage_item);
-
 	return EINA_TRUE;
 }
 
@@ -210,14 +118,14 @@ Eina_Bool ap_get_data_statistics(void *data)
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 
 	if (ad->main.hotspot_mode == VCONFKEY_MOBILE_HOTSPOT_MODE_NONE) {
-		DBG("Mobile hotspot is turned off.\n");
 		ad->update_statistics_handle = NULL;
 		return ECORE_CALLBACK_CANCEL;
 	}
 
 	/* If previous data is not updated, new data is not required */
-	if (ad->data_statistics.is_updated == false)
+	if (ad->data_statistics.is_updated == false) {
 		return ECORE_CALLBACK_RENEW;
+	}
 
 	/* Because previous data is updated, new data is required.
 	   It will be returned asynchronously. */
@@ -226,7 +134,67 @@ Eina_Bool ap_get_data_statistics(void *data)
 
 	return ECORE_CALLBACK_RENEW;
 }
+#endif
 
+Eina_Bool ap_update_device_conn_time(void * data)
+{
+	if (!data) {
+		ERR("The param is NULL\n");
+		return ECORE_CALLBACK_CANCEL;
+	}
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+
+	int count = 0;
+	if (ad->main.hotspot_mode == VCONFKEY_MOBILE_HOTSPOT_MODE_NONE) {
+		_stop_update_device_conn_time(ad);
+		__MOBILE_AP_FUNC_EXIT__;
+		return ECORE_CALLBACK_CANCEL;
+	}
+
+	while (count < ad->connected_device.no_of_clients) {
+		if (ad->connected_device.station_items[count])
+			elm_genlist_item_fields_update(ad->connected_device.station_items[count++],
+					"elm.text.sub.left.bottom", ELM_GENLIST_ITEM_FIELD_TEXT);
+	}
+	return ECORE_CALLBACK_RENEW;
+}
+
+void _start_update_device_conn_time(mh_appdata_t *ad)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (ad == NULL) {
+		ERR("Invalid param\n");
+		__MOBILE_AP_FUNC_EXIT__;
+		return;
+	}
+
+	if (ad->update_conn_time_handle) {
+		_stop_update_device_conn_time(ad);
+	}
+	ad->update_conn_time_handle = ecore_timer_add(UPDATE_INTERVAL,
+			ap_update_device_conn_time, (void *)ad);
+
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+void _stop_update_device_conn_time(mh_appdata_t *ad)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (ad == NULL) {
+		ERR("Invalid param\n");
+		return;
+	}
+
+	if (ad->update_conn_time_handle) {
+		ecore_timer_del(ad->update_conn_time_handle);
+		ad->update_conn_time_handle = NULL;
+	}
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 void _start_update_data_packet_usage(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
@@ -237,7 +205,6 @@ void _start_update_data_packet_usage(mh_appdata_t *ad)
 	}
 
 	if (ad->update_statistics_handle) {
-		DBG("update_statistics_handle is not NULL.\n");
 		_stop_update_data_packet_usage(ad);
 	}
 
@@ -268,6 +235,7 @@ void _stop_update_data_packet_usage(mh_appdata_t *ad)
 	__MOBILE_AP_FUNC_EXIT__;
 	return;
 }
+#endif
 
 static void __read_setting(mh_appdata_t *ad)
 {
@@ -281,20 +249,17 @@ static void __read_setting(mh_appdata_t *ad)
 	int ret = 0;
 	char *ssid = NULL;
 	char *passphrase = NULL;
+	bool visibility;
+	tethering_wifi_security_type_e type;
 
 	ad->main.hotspot_mode = _get_vconf_hotspot_mode();
 
-	ret = vconf_get_int(VCONFKEY_MOBILE_HOTSPOT_CONNECTED_DEVICE,
-			&ad->clients.number);
-	if (ret != 0) {
-		ERR("vconf_get_int is failed\n");
-		ad->clients.number = 0;
-	}
-
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 	ad->data_statistics.pdp_total_sent = 0;
 	ad->data_statistics.pdp_total_receive = 0;
 	if (ad->main.hotspot_mode != VCONFKEY_MOBILE_HOTSPOT_MODE_NONE)
 		tethering_get_data_usage(ad->handle, _data_usage_cb, (void *)ad);
+#endif
 
 	ret = tethering_wifi_get_ssid(ad->handle, &ssid);
 	if (ret != TETHERING_ERROR_NONE || ssid == NULL) {
@@ -309,22 +274,26 @@ static void __read_setting(mh_appdata_t *ad)
 		ERR("tethering_wifi_get_passphrase is failed : %d\n", ret);
 		return;
 	}
+
 	g_strlcpy(ad->setup.wifi_passphrase, passphrase,
 			sizeof(ad->setup.wifi_passphrase));
 	g_strlcpy(ad->setup.wifi_passphrase_new, passphrase,
 			sizeof(ad->setup.wifi_passphrase_new));
 	free(passphrase);
 
-	ret = tethering_wifi_get_ssid_visibility(ad->handle, &ad->setup.visibility);
+	ret = tethering_wifi_get_ssid_visibility(ad->handle, &visibility);
 	if (ret != TETHERING_ERROR_NONE) {
 		ERR("tethering_wifi_get_ssid_visibility is failed\n");
 	}
+	ad->setup.visibility = visibility;
+	ad->setup.visibility_new = visibility;
 
-	ret = tethering_wifi_get_security_type(ad->handle, &ad->setup.security_type);
+	ret = tethering_wifi_get_security_type(ad->handle, &type);
 	if (ret != TETHERING_ERROR_NONE) {
 		ERR("tethering_wifi_get_security_type is failed\n");
 	}
-	DBG("End of Load setting value \n");
+	ad->setup.security_type = type;
+	ad->setup.security_type_new = type;
 
 	__MOBILE_AP_FUNC_EXIT__;
 }
@@ -334,18 +303,15 @@ void _update_wifi_item(mh_appdata_t *ad, int wifi_state)
 	__MOBILE_AP_FUNC_ENTER__;
 
 	if (ad->main.wifi_state == wifi_state) {
-		DBG("aready updated\n");
 		return;
 	}
 
 	if (ad->main.wifi_state == MH_STATE_PROCESS) {
 		ad->main.wifi_state = MH_STATE_NONE;
 		elm_genlist_item_select_mode_set(ad->main.wifi_item, ELM_OBJECT_SELECT_MODE_DEFAULT);
-		elm_object_item_disabled_set(ad->main.setup_item, EINA_FALSE);
 	} else if (ad->main.wifi_state == MH_STATE_NONE) {
 		ad->main.wifi_state = MH_STATE_PROCESS;
 		elm_genlist_item_select_mode_set(ad->main.wifi_item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-		elm_object_item_disabled_set(ad->main.setup_item, EINA_TRUE);
 	}
 
 	elm_genlist_item_update(ad->main.wifi_item);
@@ -361,7 +327,6 @@ void _update_bt_item(mh_appdata_t *ad, int bt_state)
 	__MOBILE_AP_FUNC_ENTER__;
 
 	if (ad->main.bt_state == bt_state) {
-		DBG("aready updated\n");
 		return;
 	}
 
@@ -385,7 +350,6 @@ void _update_usb_item(mh_appdata_t *ad, int usb_state)
 	__MOBILE_AP_FUNC_ENTER__;
 
 	if (ad->main.usb_state == usb_state) {
-		DBG("aready updated\n");
 		return;
 	}
 
@@ -404,7 +368,44 @@ void _update_usb_item(mh_appdata_t *ad, int usb_state)
 	return;
 }
 
-void _update_main_view(mh_appdata_t *ad)
+void _genlist_update_device_item(mh_appdata_t *ad)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (ad == NULL) {
+		ERR("Invalid param\n");
+		return;
+	}
+	unsigned int no_of_dev = 0;
+	no_of_dev = _get_list_clients_count(ad);
+	Elm_Object_Item *item = NULL;
+
+	if (ad->main.device_item) {
+		elm_object_item_del(ad->main.device_item);
+		ad->main.device_item = NULL;
+		if (no_of_dev == 0) {
+			item = elm_genlist_item_append(ad->main.genlist,
+					ad->main.device0_itc, ad, NULL,
+					ELM_GENLIST_ITEM_NONE, NULL, NULL);
+			elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		} else {
+			item = elm_genlist_item_append(ad->main.genlist,
+					ad->main.device_itc, ad, NULL,
+					ELM_GENLIST_ITEM_NONE, _select_connected_dev, (void *)ad);
+			elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DEFAULT);
+		}
+		ad->main.device_item = item;
+	}
+
+	if (ad->connected_device.navi_it) {
+		_update_conn_clients(ad);
+	}
+
+	__MOBILE_AP_FUNC_EXIT__;
+	return;
+}
+
+void _update_main_view(mh_appdata_t *ad, tethering_type_e type)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
@@ -417,7 +418,10 @@ void _update_main_view(mh_appdata_t *ad)
 	Eina_Bool wifi_state = EINA_FALSE;
 	Eina_Bool bt_state = EINA_FALSE;
 	Eina_Bool usb_state = EINA_FALSE;
+	Eina_Bool wifi_ap_state = EINA_FALSE;
 	Elm_Object_Item *item = NULL;
+	Evas_Object *obj;
+	int no_of_dev = 0;
 
 	ad->main.hotspot_mode = _get_vconf_hotspot_mode();
 	state = ad->main.hotspot_mode;
@@ -425,90 +429,135 @@ void _update_main_view(mh_appdata_t *ad)
 	wifi_state = (Eina_Bool)(state & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI);
 	bt_state = (Eina_Bool)(state & VCONFKEY_MOBILE_HOTSPOT_MODE_BT);
 	usb_state = (Eina_Bool)(state & VCONFKEY_MOBILE_HOTSPOT_MODE_USB);
-	DBG("wifi_state : %d, bt_state : %d, usb_state : %d\n",
-			wifi_state, bt_state, usb_state);
+	wifi_ap_state = (Eina_Bool)(state & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI_AP);
 
-	/* Update Wi-Fi tethering on / off button */
-	if (ad->main.wifi_state != MH_STATE_NONE) {
-		_update_wifi_item(ad, MH_STATE_NONE);
+	if (wifi_ap_state) {
+		elm_object_item_disabled_set(ad->main.wifi_item, EINA_TRUE);
+		elm_object_item_disabled_set(ad->main.setup_item, EINA_TRUE);
+		elm_object_item_disabled_set(ad->main.bt_item, EINA_TRUE);
+		elm_object_item_disabled_set(ad->main.usb_item, EINA_TRUE);
 	} else {
-		elm_check_state_set(ad->main.wifi_btn, wifi_state);
-	}
-
-	/* Update BT tethering on / off button */
-	if (ad->main.bt_state != MH_STATE_NONE) {
-		_update_bt_item(ad, MH_STATE_NONE);
-	} else {
-		elm_check_state_set(ad->main.bt_btn, bt_state);
-	}
-
-	/* Update USB tethering on / off button */
-	if (ad->main.usb_state != MH_STATE_NONE) {
-		_update_usb_item(ad, MH_STATE_NONE);
-	} else {
-		elm_check_state_set(ad->main.usb_btn, usb_state);
+		elm_object_item_disabled_set(ad->main.setup_item, EINA_FALSE);
+		elm_object_item_disabled_set(ad->main.bt_item, EINA_FALSE);
+		if (_get_vconf_usb_state() != VCONFKEY_SYSMAN_USB_AVAILABLE) {
+			elm_object_item_disabled_set(ad->main.usb_item, EINA_TRUE);
+		} else {
+			elm_object_item_disabled_set(ad->main.usb_item, EINA_FALSE);
+		}
 	}
 
 	if (wifi_state || bt_state || usb_state) {
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 		if (ad->main.usage_item == NULL) {
 			item = elm_genlist_item_insert_before(ad->main.genlist,
 					ad->main.usage_itc, ad, NULL,
-					ad->main.sp_item[3],
+					ad->main.sp_item[0],
 					ELM_GENLIST_ITEM_NONE, NULL, NULL);
 			elm_genlist_item_select_mode_set(item,
 					ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 			ad->main.usage_item = item;
 		}
+#endif
 
+		no_of_dev = _get_list_clients_count(ad);
 		if (ad->main.device_item == NULL) {
-			ap_update_data_device(ad);
+			if (no_of_dev == 0) {
+				item = elm_genlist_item_append(ad->main.genlist,
+						ad->main.device0_itc, ad, NULL,
+						ELM_GENLIST_ITEM_NONE, NULL, NULL);
+				elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+			} else {
+				item = elm_genlist_item_append(ad->main.genlist,
+						ad->main.device_itc, ad, NULL,
+						ELM_GENLIST_ITEM_NONE, _select_connected_dev, (void *)ad);
+				elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DEFAULT);
+			}
+			ad->main.device_item = item;
 		}
-
-		_start_update_data_packet_usage(ad);
 	} else {
-		_stop_update_data_packet_usage(ad);
-
 		if (ad->main.device_item) {
-			elm_genlist_item_subitems_clear(ad->main.device_item);
 			elm_object_item_del(ad->main.device_item);
 			ad->main.device_item = NULL;
 		}
-
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 		if (ad->main.usage_item) {
 			elm_object_item_del(ad->main.usage_item);
 			ad->main.usage_item = NULL;
 		}
+#endif
 	}
 
-	if (wifi_state || bt_state) {
+	if (wifi_state) {
 		if (ad->main.help_item) {
-			DBG("Just update help label item\n");
 			elm_genlist_item_update(ad->main.help_item);
-			return;
 		} else {
-			DBG("Add help item\n");
 			item = elm_genlist_item_insert_after(ad->main.genlist,
 					ad->main.help_itc, ad, NULL,
-					ad->main.usb_item,
+					ad->main.wifi_item,
 					ELM_GENLIST_ITEM_NONE, NULL,
 					NULL);
 			if (item == NULL) {
 				ERR("elm_genlist_item_insert_after NULL\n");
-				return;
+			} else {
+				elm_genlist_item_select_mode_set(item,
+						ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+				ad->main.help_item = item;
 			}
-			elm_genlist_item_select_mode_set(item,
-					ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-			ad->main.help_item = item;
 		}
 	} else {
 		if (ad->main.help_item) {
-			DBG("Remove help item\n");
 			elm_object_item_del(ad->main.help_item);
 			ad->main.help_item = NULL;
 		}
 	}
 
+	switch (type) {
+	case TETHERING_TYPE_WIFI:
+		/* Update Wi-Fi tethering on / off button */
+		if (ad->main.wifi_state != MH_STATE_NONE) {
+			_update_wifi_item(ad, MH_STATE_NONE);
+		} else {
+			obj = elm_object_item_part_content_get(ad->main.wifi_item, "elm.icon.2");
+			if (obj != NULL) {
+				elm_check_state_set(obj, wifi_state);
+			}
+			elm_genlist_item_update(ad->main.wifi_item);
+		}
+		break;
+
+	case TETHERING_TYPE_BT:
+		/* Update BT tethering on / off button */
+		if (ad->main.bt_state != MH_STATE_NONE) {
+			_update_bt_item(ad, MH_STATE_NONE);
+		} else {
+			obj = elm_object_item_part_content_get(ad->main.bt_item, "elm.icon.2");
+			if (obj != NULL) {
+				elm_check_state_set(obj, bt_state);
+			}
+			elm_genlist_item_update(ad->main.bt_item);
+		}
+		break;
+
+	case TETHERING_TYPE_USB:
+		/* Update USB tethering on / off button */
+		if (ad->main.usb_state != MH_STATE_NONE) {
+			_update_usb_item(ad, MH_STATE_NONE);
+		} else {
+			obj = elm_object_item_part_content_get(ad->main.usb_item, "elm.icon.2");
+			if (obj != NULL)
+				elm_check_state_set(obj, usb_state);
+			elm_genlist_item_update(ad->main.usb_item);
+		}
+		break;
+
+	default:
+		DBG("Unknown tethering type : %d\n", type);
+		break;
+	}
+
 	__MOBILE_AP_FUNC_EXIT__;
+
+	return;
 }
 
 static void __wifi_onoff_changed_cb(void *data, Evas_Object *obj,
@@ -524,10 +573,12 @@ static void __wifi_onoff_changed_cb(void *data, Evas_Object *obj,
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 
 	_update_wifi_item(ad, MH_STATE_PROCESS);
-
+	ad->type = TETHERING_TYPE_WIFI;
+	ad->is_wifi_teth_enabling = true;
 	if (_handle_wifi_onoff_change(ad) != 0) {
 		ERR("_handle_wifi_onoff_change is failed\n");
 		_update_wifi_item(ad, MH_STATE_NONE);
+		ad->is_wifi_teth_enabling = false;
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -543,60 +594,10 @@ static void __select_wifi_item(void *data, Evas_Object *obj, void *event_info)
 		ERR("The param is NULL\n");
 		return;
 	}
-
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 
 	elm_genlist_item_selected_set((Elm_Object_Item *)event_info, EINA_FALSE);
-
-	__wifi_onoff_changed_cb(data, ad->main.wifi_btn, NULL);
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return;
-}
-
-static void __select_setup_item(void *data, Evas_Object *obj, void *event_info)
-{
-	__MOBILE_AP_FUNC_ENTER__;
-
-	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
-	mh_appdata_t *ad = (mh_appdata_t *)data;
-	int connected_wifi_clients = 0;
-	int ret = 0;
-
-	if (data == NULL) {
-		ERR("The param is NULL\n");
-		return;
-	}
-
-	elm_genlist_item_selected_set(item, EINA_FALSE);
-
-	if (tethering_is_enabled(ad->handle, TETHERING_TYPE_WIFI) == false) {
-		mh_draw_wifi_setup_view(ad);
-		return;
-	}
-
-	DBG("Wi-Fi tethering is on\n");
-	if (_get_no_of_connected_device(ad->handle, &connected_wifi_clients,
-				TETHERING_TYPE_WIFI) == FALSE) {
-		ERR("Getting the number of connected device is failed\n");
-	}
-
-	if (connected_wifi_clients > 0) {
-		_prepare_popup(MH_POP_ENTER_TO_WIFI_SETUP_CONF,
-				_("IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"));
-		_create_popup(ad);
-	} else {
-		_update_wifi_item(ad, MH_STATE_PROCESS);
-		ret = tethering_disable(ad->handle, TETHERING_TYPE_WIFI);
-		if (ret != TETHERING_ERROR_NONE) {
-			ERR("Wi-Fi tethering off is failed : %d\n", ret);
-			_update_wifi_item(ad, MH_STATE_NONE);
-		} else
-			ad->main.need_recover_wifi_tethering = true;
-
-		mh_draw_wifi_setup_view(ad);
-	}
+	mh_draw_wifi_setup_view(ad);
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -615,10 +616,13 @@ static void __bt_onoff_changed_cb(void *data, Evas_Object *obj, void *event_info
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 
 	_update_bt_item(ad, MH_STATE_PROCESS);
+	ad->type = TETHERING_TYPE_BT;
+	ad->is_bt_teth_enabling = true;
 
 	if (_handle_bt_onoff_change(ad) != 0) {
 		ERR("_handle_bt_onoff_change is failed\n");
 		_update_bt_item(ad, MH_STATE_NONE);
+		ad->is_bt_teth_enabling = false;
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -630,8 +634,8 @@ static void __select_bt_item(void *data, Evas_Object *obj, void *event_info)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
+	Evas_Object *content;
 	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
-	mh_appdata_t *ad = (mh_appdata_t *)data;
 
 	if (data == NULL) {
 		ERR("The param is NULL\n");
@@ -640,7 +644,8 @@ static void __select_bt_item(void *data, Evas_Object *obj, void *event_info)
 
 	elm_genlist_item_selected_set(item, EINA_FALSE);
 
-	__bt_onoff_changed_cb(data, ad->main.bt_btn, NULL);
+	content = elm_object_item_part_content_get(item, "elm.icon");
+	__bt_onoff_changed_cb(data, content, NULL);
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -657,11 +662,13 @@ static void __usb_onoff_changed_cb(void *data, Evas_Object *obj, void *event_inf
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t *)data;
-
 	_update_usb_item(ad, MH_STATE_PROCESS);
+	ad->type = TETHERING_TYPE_USB;
+	ad->is_usb_teth_enabling = true;
 	if (_handle_usb_onoff_change(ad) != 0) {
 		ERR("_handle_usb_onoff_change is failed\n");
 		_update_usb_item(ad, MH_STATE_NONE);
+		ad->is_usb_teth_enabling = false;
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -673,8 +680,8 @@ static void __select_usb_item(void *data, Evas_Object *obj, void *event_info)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
+	Evas_Object *content;
 	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
-	mh_appdata_t *ad = (mh_appdata_t *)data;
 
 	if (data == NULL) {
 		ERR("The param is NULL\n");
@@ -683,69 +690,68 @@ static void __select_usb_item(void *data, Evas_Object *obj, void *event_info)
 
 	elm_genlist_item_selected_set(item, EINA_FALSE);
 
-	__usb_onoff_changed_cb(data, ad->main.usb_btn, NULL);
+	content = elm_object_item_part_content_get(item, "elm.icon");
+	__usb_onoff_changed_cb(data, content, NULL);
 
 	__MOBILE_AP_FUNC_EXIT__;
 
 	return;
 }
 
-static void __back_btn_cb(void *data, Evas_Object *obj, void *event_info)
+static Eina_Bool __back_btn_cb(void *data, Elm_Object_Item *navi_item)
 {
-	__MOBILE_AP_FUNC_ENTER__;
+	INFO("+\n");
 
 	if (data == NULL) {
 		ERR("The param is NULL\n");
-		return;
+		return EINA_FALSE;
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t*)data;
 
+	_release_list_client_handle(ad);
+	_main_callback_del(ad);
+
 	ug_destroy_me(((mh_ugdata_t *)ad->gadget)->ug);
 
-	__MOBILE_AP_FUNC_EXIT__;
+	INFO("-\n");
+	return EINA_FALSE;
 }
 
 static char *__get_wifi_label(void *data, Evas_Object *obj, const char *part)
 {
-	if (strcmp(part, "elm.text") != 0) {
-		DBG("Unknown part : %s\n", part);
+
+	if (strcmp(part, "elm.text.main.left") != 0) {
 		return NULL;
 	}
 
-	return strdup(_("IDS_MOBILEAP_MBODY_WI_FI_TETHERING"));
+	return strdup(STR_WIFI_TETH);
 }
 
 static Evas_Object *__get_wifi_icon(void *data, Evas_Object *obj,
 		const char *part)
 {
-	__MOBILE_AP_FUNC_ENTER__;
-
 	if (data == NULL) {
 		ERR("The param is NULL\n");
 		return NULL;
 	}
 
-	if (strcmp(part, "elm.icon") != 0) {
-		DBG("Unknown part : %s\n", part);
+	if (strcmp(part, "elm.icon.2") != 0) {
 		return NULL;
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t*)data;
 	Evas_Object *btn = NULL;
 	Evas_Object *progressbar = NULL;
+	Evas_Object *icon_layout = NULL;
+
+	icon_layout = elm_layout_add(obj);
+	elm_layout_theme_set(icon_layout, "layout", "list/C/type.3", "default");
 
 	if (ad->main.wifi_state == MH_STATE_PROCESS) {
-		progressbar = elm_progressbar_add(obj);
-		if (progressbar == NULL) {
-			ERR("progressbar is NULL\n");
-			return NULL;
-		}
-		elm_object_style_set(progressbar, "list_process");
-		elm_progressbar_horizontal_set(progressbar, EINA_TRUE);
-		elm_progressbar_pulse(progressbar, EINA_TRUE);
-		evas_object_show(progressbar);
-		ad->main.wifi_btn = progressbar;
+		progressbar = _create_progressbar(obj, "process_medium");
+		elm_layout_content_set(icon_layout, "elm.swallow.content", progressbar);
+		return icon_layout;
 	} else {
 		btn = elm_check_add(obj);
 		elm_object_style_set(btn, "on&off");
@@ -758,49 +764,29 @@ static Evas_Object *__get_wifi_icon(void *data, Evas_Object *obj,
 
 		evas_object_smart_callback_add(btn, "changed", __wifi_onoff_changed_cb,
 				ad);
-		ad->main.wifi_btn = btn;
+		elm_layout_content_set(icon_layout, "elm.swallow.content", btn);
+		return icon_layout;
 	}
-
-	__MOBILE_AP_FUNC_EXIT__;
-	return ad->main.wifi_btn;
-}
-
-static char *__get_setup_label(void *data, Evas_Object *obj, const char *part)
-{
-	if (data == NULL) {
-
-		ERR("The param is NULL\n");
-		return NULL;
-	}
-
-	if (strcmp(part, "elm.text") != 0) {
-		DBG("Unknown part : %s\n", part);
-		return NULL;
-	}
-
-	return strdup(_("IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"));
 }
 
 static char *__get_bt_label(void *data, Evas_Object *obj, const char *part)
 {
-	if (strcmp(part, "elm.text") != 0) {
-		DBG("Unknown part : %s\n", part);
+
+	if (strcmp(part, "elm.text.main.left") != 0) {
 		return NULL;
 	}
 
-	return strdup(_("IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"));
+	return strdup(STR_BLUETOOTH_TETH);
 }
 
 static Evas_Object *__get_bt_icon(void *data, Evas_Object *obj, const char *part)
 {
-	__MOBILE_AP_FUNC_ENTER__;
-
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	Evas_Object *btn = NULL;
 	Evas_Object *progressbar = NULL;
+	Evas_Object *icon_layout = NULL;
 
-	if (strcmp(part, "elm.icon") != 0) {
-		DBG("Unknown part : %s\n", part);
+	if (strcmp(part, "elm.icon.2") != 0) {
 		return NULL;
 	}
 
@@ -809,18 +795,13 @@ static Evas_Object *__get_bt_icon(void *data, Evas_Object *obj, const char *part
 		return NULL;
 	}
 
-	ad->main.bt_btn = NULL;
+	icon_layout = elm_layout_add(obj);
+	elm_layout_theme_set(icon_layout, "layout", "list/C/type.3", "default");
+
 	if (ad->main.bt_state == MH_STATE_PROCESS) {
-		progressbar = elm_progressbar_add(obj);
-		if (progressbar == NULL) {
-			ERR("progressbar is NULL\n");
-			return NULL;
-		}
-		elm_object_style_set(progressbar, "list_process");
-		elm_progressbar_horizontal_set(progressbar, EINA_TRUE);
-		elm_progressbar_pulse(progressbar, EINA_TRUE);
-		evas_object_show(progressbar);
-		ad->main.bt_btn = progressbar;
+		progressbar = _create_progressbar(obj, "process_medium");
+		elm_layout_content_set(icon_layout, "elm.swallow.content", progressbar);
+		return icon_layout;
 	} else {
 		btn = elm_check_add(obj);
 		if (btn == NULL) {
@@ -835,35 +816,29 @@ static Evas_Object *__get_bt_icon(void *data, Evas_Object *obj, const char *part
 		evas_object_show(btn);
 		evas_object_smart_callback_add(btn, "changed", __bt_onoff_changed_cb,
 				ad);
-		ad->main.bt_btn = btn;
+		elm_layout_content_set(icon_layout, "elm.swallow.content", btn);
+		return icon_layout;
 	}
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return ad->main.bt_btn;
 }
 
 static char *__get_usb_label(void *data, Evas_Object *obj, const char *part)
 {
-	if (strcmp(part, "elm.text") != 0) {
-		DBG("Unknown part : %s\n", part);
+	if (strcmp(part, "elm.text.main.left") != 0) {
 		return NULL;
 	}
 
-	return strdup(_("IDS_MOBILEAP_MBODY_USB_TETHERING"));
+	return strdup(STR_USB_TETH);
 }
 
 static Evas_Object *__get_usb_icon(void *data, Evas_Object *obj,
 							const char *part)
 {
-	__MOBILE_AP_FUNC_ENTER__;
-
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	Evas_Object *btn = NULL;
 	Evas_Object *progressbar = NULL;
+	Evas_Object *icon_layout = NULL;
 
-	if (strcmp(part, "elm.icon") != 0) {
-		DBG("Unknown part : %s\n", part);
+	if (strcmp(part, "elm.icon.2") != 0) {
 		return NULL;
 	}
 
@@ -871,19 +846,13 @@ static Evas_Object *__get_usb_icon(void *data, Evas_Object *obj,
 		ERR("The param is NULL\n");
 		return NULL;
 	}
+	icon_layout = elm_layout_add(obj);
+	elm_layout_theme_set(icon_layout, "layout", "list/C/type.3", "default");
 
-	ad->main.usb_btn = NULL;
 	if (ad->main.usb_state == MH_STATE_PROCESS) {
-		progressbar = elm_progressbar_add(obj);
-		if (progressbar == NULL) {
-			ERR("progressbar is NULL\n");
-			return NULL;
-		}
-		elm_object_style_set(progressbar, "list_process");
-		elm_progressbar_horizontal_set(progressbar, EINA_TRUE);
-		elm_progressbar_pulse(progressbar, EINA_TRUE);
-		evas_object_show(progressbar);
-		ad->main.usb_btn = progressbar;
+		progressbar = _create_progressbar(obj, "process_medium");
+		elm_layout_content_set(icon_layout, "elm.swallow.content", progressbar);
+		return icon_layout;
 	} else {
 		btn = elm_check_add(obj);
 		if (btn == NULL) {
@@ -898,28 +867,25 @@ static Evas_Object *__get_usb_icon(void *data, Evas_Object *obj,
 		evas_object_show(btn);
 		evas_object_smart_callback_add(btn, "changed", __usb_onoff_changed_cb,
 				ad);
-		ad->main.usb_btn = btn;
+		elm_layout_content_set(icon_layout, "elm.swallow.content", btn);
+		return icon_layout;
+
 	}
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return ad->main.usb_btn;
 }
 
 static char *__get_help_label(void *data, Evas_Object *obj, const char *part)
 {
-	__MOBILE_AP_FUNC_ENTER__;
-
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	char buf[MH_LABEL_LENGTH_MAX] = {0, };
 	char device_name[MH_LABEL_LENGTH_MAX] = {0, };
 	char passphrase[MH_LABEL_LENGTH_MAX] = {0, };
+	char security_type[MH_LABEL_LENGTH_MAX] = {0, };
 	char *hidden = "";
 	char *ptr = NULL;
+	char *device_name_utf = NULL;
 	int wifi_state = VCONFKEY_MOBILE_HOTSPOT_MODE_NONE;
 
-	if (strcmp(part, "elm.text") != 0) {
-		DBG("Unknown part : %s\n", part);
+	if (strcmp(part, "elm.text.multiline") != 0) {
 		return NULL;
 	}
 
@@ -928,14 +894,23 @@ static char *__get_help_label(void *data, Evas_Object *obj, const char *part)
 		return NULL;
 	}
 
-	ptr = elm_entry_utf8_to_markup(ad->setup.device_name);
+	device_name_utf = vconf_get_str(VCONFKEY_SETAPPL_DEVICE_NAME_STR);
+	if (device_name_utf == NULL) {
+		ERR("vconf_get_str failed \n");
+		return NULL;
+	}
+	ptr = elm_entry_utf8_to_markup(device_name_utf);
 	if (ptr == NULL) {
+		g_free(device_name_utf);
 		ERR("elm_entry_utf8_to_markup is failed\n");
 		return NULL;
 	}
+	g_strlcpy(ad->setup.device_name, ptr,
+			sizeof(ad->setup.device_name));
 	g_strlcpy(device_name, ptr, MH_LABEL_LENGTH_MAX);
-	free(ptr);
-
+	g_free(device_name_utf);
+	g_free(ptr);
+	ptr = NULL;
 	if (ad->setup.security_type != TETHERING_WIFI_SECURITY_TYPE_NONE) {
 		ptr = elm_entry_utf8_to_markup(ad->setup.wifi_passphrase);
 		if (ptr == NULL) {
@@ -943,48 +918,50 @@ static char *__get_help_label(void *data, Evas_Object *obj, const char *part)
 			return NULL;
 		}
 		g_strlcpy(passphrase, ptr, MH_LABEL_LENGTH_MAX);
-		free(ptr);
+		g_free(ptr);
+
+		snprintf(security_type, sizeof(security_type),
+				STR_SECURITY_TYPE_PS, "WPA2 PSK");
 	}
 
 	wifi_state = ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI;
 
 	if (wifi_state && ad->setup.visibility == false)
-		hidden = _("IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN");
+		hidden = STR_WIFI_TETH_HIDDEN;
 
 	if (wifi_state && ad->setup.security_type != TETHERING_WIFI_SECURITY_TYPE_NONE) {
 		snprintf(buf, MH_LABEL_LENGTH_MAX,
 				"%s: %s<br>"
-				"%s: %s<br><br>"
-				"%s"
-				"%s"
+				"%s: %s<br>"
+				"%s<br>"
+				"%s%s"
 				"%s",
-				_("IDS_MOBILEAP_BODY_DEVICE_NAME"),
+				STR_DEV_NAME,
 				device_name,
-				_("IDS_MOBILEAP_BODY_PASSWORD"),
+				STR_PASSWORD,
 				passphrase,
-				_("IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"),
+				security_type,
+				STR_PASSWORD_FOR_WIFI_TETH,
 				hidden[0] != '\0' ? "<br>" : "",
 				hidden);
-
 	} else {
 		snprintf(buf, MH_LABEL_LENGTH_MAX,
-				"%s : %s%s%s",
-				_("IDS_MOBILEAP_BODY_DEVICE_NAME"),
+				"%s : %s%s"
+				"%s",
+				STR_DEV_NAME,
 				device_name,
 				hidden[0] != '\0' ? "<br>" : "",
 				hidden);
 	}
 
-	__MOBILE_AP_FUNC_EXIT__;
-
 	return strdup(buf);
 }
 
-static char *__get_connected_device_label(void *data, Evas_Object *obj,
+static char *__get_no_connected_device_label(void *data, Evas_Object *obj,
 							const char *part)
 {
-	if (strcmp(part, "elm.text.1") != 0 && strcmp(part, "elm.text.2") != 0) {
-		DBG("Unknown part : %s\n", part);
+
+	if (strcmp(part, "elm.text.multiline") != 0) {
 		return NULL;
 	}
 
@@ -993,19 +970,47 @@ static char *__get_connected_device_label(void *data, Evas_Object *obj,
 		return NULL;
 	}
 
+	char buf[MH_LABEL_LENGTH_MAX] = {0, };
+	int no_of_dev;
+	mh_appdata_t *ad = (mh_appdata_t*)data;
+
+	no_of_dev = _get_list_clients_count(ad);
+	snprintf(buf, sizeof(buf), "%s<br>%d", STR_CONNECTED_DEV, no_of_dev);
+	return strdup(buf);
+}
+
+static char *__get_connected_device_label(void *data, Evas_Object *obj,
+							const char *part)
+{
+
+	if (data == NULL) {
+		ERR("The param is NULL\n");
+		return NULL;
+	}
+
+	if (strcmp(part, "elm.text.multiline") != 0 && strcmp(part, "elm.text.sub") != 0)	{
+		return NULL;
+	}
+
 	mh_appdata_t *ad = (mh_appdata_t*)data;
 	char buf[MH_LABEL_LENGTH_MAX] = {0, };
+	int no_of_dev;
 
-	if (strcmp(part, "elm.text.1") != 0)
-		snprintf(buf, MH_LABEL_LENGTH_MAX, "%d",
-				ad->clients.number);
-	else if (strcmp(part, "elm.text.2") != 0)
-		g_strlcpy(buf, _("IDS_MOBILEAP_BODY_CONNECTED_DEVICE"),
-				sizeof(buf));
+	no_of_dev = _get_list_clients_count(ad);
+
+	if (!strcmp(part, "elm.text.sub")) {
+		g_strlcpy(buf, STR_CONNECTED_DEV,
+							sizeof(buf));
+	}
+
+	if (!strcmp(part, "elm.text.multiline")) {
+		snprintf(buf, MH_LABEL_LENGTH_MAX, "%d", no_of_dev);
+	}
 
 	return strdup(buf);
 }
 
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 static char *__get_usage_label(void *data, Evas_Object *obj, const char *part)
 {
 	if (data == NULL) {
@@ -1013,226 +1018,57 @@ static char *__get_usage_label(void *data, Evas_Object *obj, const char *part)
 		return NULL;
 	}
 
-	if (strcmp(part, "elm.text.1") != 0 && strcmp(part, "elm.text.2") != 0)	{
-		DBG("Unknown part : %s\n", part);
+	if (strcmp(part, "elm.text.multiline") != 0 && strcmp(part, "elm.text.sub") != 0)	{
 		return NULL;
 	}
 
 	mh_appdata_t *ad = (mh_appdata_t*)data;
-	int sent = 0;
-	int received = 0;
-	char *sent_str = NULL;
-	char *received_str = NULL;
-	char fmt[MH_LABEL_LENGTH_MAX] = {0, };
+	unsigned long long total = 0;
+	unsigned long long sent = 0;
+	unsigned long long received = 0;
+	char *fmt_str;
+	char buf[MH_LABEL_LENGTH_MAX] = {0, };
 	char label[MH_LABEL_LENGTH_MAX] = {0, };
 
-	if (strcmp(part, "elm.text.1") != 0 ) {
+	if (!strcmp(part, "elm.text.multiline")) {
 		sent = ad->data_statistics.pdp_total_sent;
 		received = ad->data_statistics.pdp_total_receive;
 
-		if (sent >= MH_MB) {
+		if (sent >= MH_MB || received >= MH_MB) {
 			sent /= MH_MB;
-			sent_str =  _("IDS_MOBILEAP_BODY_PD_MB");
-		} else if (sent >= MH_KB) {
-			sent /= MH_KB;
-			sent_str =  _("IDS_MOBILEAP_BODY_PD_KB");
-		} else {
-			sent_str =  _("IDS_MOBILEAP_BODY_PD_BYTES");
-		}
-
-		if (received >= MH_MB) {
 			received /= MH_MB;
-			received_str =  _("IDS_MOBILEAP_BODY_PD_MB");
-		} else if (received >= MH_KB) {
+
+			total = sent + received;
+			fmt_str = STR_MB;
+		} else if (sent + received >= MH_MB) {
+			total = (sent + received) / MH_MB;
+			fmt_str = STR_MB;
+		} else if (sent >= MH_KB || received >= MH_KB) {
+			sent /= MH_KB;
 			received /= MH_KB;
-			received_str =  _("IDS_MOBILEAP_BODY_PD_KB");
+
+			total = sent + received;
+			fmt_str = STR_KB;
+		} else if (sent + received >= MH_KB) {
+			total = (sent + received) / MH_KB;
+			fmt_str = STR_KB;
 		} else {
-			received_str =  _("IDS_MOBILEAP_BODY_PD_BYTES");
+			total = sent + received;
+			fmt_str = STR_BYTE;
 		}
 
-		snprintf(fmt, sizeof(fmt), "%s %s / %s %s",
-				_("IDS_MOBILEAP_BODY_SENT_C"),
-				sent_str,
-				_("IDS_MOBILEAP_BODY_RECEIVED_C"),
-				received_str);
-		snprintf(label, sizeof(label), fmt, sent, received);
-	} else if (strcmp(part, "elm.text.2") != 0)
-		g_strlcpy(label, _("IDS_MOBILEAP_MBODY_DATA_USAGE"),
+		if (total > INT_MAX) {
+			ERR("data usage overflow\n");
+			total = 0;
+		}
+		snprintf(label, sizeof(buf), fmt_str, (int)total);
+	} else if (!strcmp(part, "elm.text.sub")) {
+		g_strlcpy(label, STR_DATA_USAGE,
 				sizeof(label));
-
+	}
 	return strdup(label);
 }
-
-static char *__get_diff_time(time_t connection_time)
-{
-	time_t current_time;
-	char buf[MH_LABEL_LENGTH_MAX] = {0, };
-	int day;
-	int hour;
-	int min;
-	int sec;
-	double diff;
-
-	time(&current_time);
-	diff = difftime(current_time, connection_time);
-	day = diff / (60 * 60 * 24);
-	diff = diff - (day * 60 * 60 * 24);
-	hour = diff / (60 * 60);
-	diff = diff - (hour * 60 * 60);
-	min = diff / 60;
-	diff = diff - (min * 60);
-	sec = diff;
-
-	if (day > 0)
-		hour = hour + day * 24;
-
-	if (hour > 0)
-		snprintf(buf, sizeof(buf), "%02d : %02d : %02d", hour, min, sec);
-	else
-		snprintf(buf, sizeof(buf), "%02d : %02d", min, sec);
-
-        return g_strdup(buf);
-}
-
-static char *__gl_get_dev_label(void *data, Evas_Object *obj, const char *part)
-{
-	if (data == NULL || part == NULL) {
-		ERR("Invalid param\n");
-		return NULL;
-	}
-
-	tethering_client_h client = (tethering_client_h)data;
-	char *name = NULL;
-	time_t tm;
-
-	if (!strcmp(part, "elm.text.1")) {
-		tethering_client_get_name(client, &name);
-		DBG("Device name : %s\n", name);
-
-		if (!strcmp(name, "UNKNOWN")) {
-			return strdup(S_("IDS_COM_BODY_NO_NAME"));
-		}
-
-		return name;
-	} else if (!strcmp(part, "elm.text.2")) {
-		tethering_client_get_time(client, &tm);
-		return __get_diff_time(tm);
-	}
-
-	return NULL;
-}
-
-static Evas_Object *__gl_get_dev_wifi_icon(void *data, Evas_Object *obj,
-							const char *part)
-{
-	Evas_Object *icon;
-
-	if (!strncmp(part, "elm.icon", 8)) {
-		icon = elm_icon_add(obj);
-		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, WIFI_ICON);
-		evas_object_size_hint_aspect_set(icon,
-				EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
-		return icon;
-	}
-	return NULL;
-}
-
-static Evas_Object *__gl_get_dev_usb_icon(void *data, Evas_Object *obj,
-							const char *part)
-{
-	Evas_Object *icon;
-
-	if (!strncmp(part, "elm.icon", 8)) {
-		icon = elm_icon_add(obj);
-		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, USB_ICON);
-		evas_object_size_hint_aspect_set(icon,
-				EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
-		return icon;
-	}
-	return NULL;
-}
-
-static Evas_Object *__gl_get_dev_bt_icon(void *data, Evas_Object *obj,
-							const char *part)
-{
-	Evas_Object *icon;
-
-	if (!strncmp(part, "elm.icon", 8)) {
-		icon = elm_icon_add(obj);
-		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, BT_ICON);
-		evas_object_size_hint_aspect_set(icon,
-					EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
-		return icon;
-	}
-	return NULL;
-}
-
-static void _gl_exp(void *data, Evas_Object *obj, void *event_info)
-{
-	__MOBILE_AP_FUNC_ENTER__;
-
-	if (data == NULL) {
-		ERR("Invalid param\n");
-		return;
-	}
-
-	mh_appdata_t *ad = (mh_appdata_t *)data;
-
-	ap_update_data_device(ad);
-
-	__MOBILE_AP_FUNC_EXIT__;
-}
-
-static void _gl_con(void *data, Evas_Object *obj, void *event_info)
-{
-	__MOBILE_AP_FUNC_ENTER__;
-
-	if (event_info == NULL) {
-		ERR("Invalid param\n");
-		return;
-	}
-
-	mh_appdata_t *ad = (mh_appdata_t *)data;
-
-	elm_genlist_item_subitems_clear(ad->main.device_item);
-
-	__MOBILE_AP_FUNC_EXIT__;
-}
-
-static void _gl_device_item_sel(void *data, Evas_Object *obj, void *event_info)
-{
-	__MOBILE_AP_FUNC_ENTER__;
-
-	Elm_Object_Item *item = (Elm_Object_Item*)event_info;
-
-	elm_genlist_item_selected_set(item, EINA_FALSE);
-
-	Eina_Bool status = elm_genlist_item_expanded_get(item);
-	DBG("+ expand status:%d\n", status);
-
-	elm_genlist_item_expanded_set(item, !status);
-
-	__MOBILE_AP_FUNC_EXIT__;
-
-	return;
-}
-
-static void __free_genlist_itc(mh_appdata_t *ad)
-{
-	elm_genlist_item_class_free(ad->main.sp_itc);
-	elm_genlist_item_class_free(ad->main.wifi_itc);
-	elm_genlist_item_class_free(ad->main.setup_itc);
-	elm_genlist_item_class_free(ad->main.bt_itc);
-	elm_genlist_item_class_free(ad->main.usb_itc);
-	elm_genlist_item_class_free(ad->main.help_itc);
-	elm_genlist_item_class_free(ad->main.device_itc);
-	elm_genlist_item_class_free(ad->main.device0_itc);
-	elm_genlist_item_class_free(ad->main.usage_itc);
-	elm_genlist_item_class_free(ad->main.dev_itc[TETHERING_TYPE_WIFI]);
-	elm_genlist_item_class_free(ad->main.dev_itc[TETHERING_TYPE_USB]);
-	elm_genlist_item_class_free(ad->main.dev_itc[TETHERING_TYPE_BT]);
-	return;
-}
+#endif
 
 static void __set_genlist_itc(mh_appdata_t *ad)
 {
@@ -1245,44 +1081,37 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	ad->main.sp_itc->func.del = NULL;
 
 	ad->main.wifi_itc = elm_genlist_item_class_new();
-	ad->main.wifi_itc->item_style = "dialogue/1text.1icon";
+	ad->main.wifi_itc->item_style = "1line";
 	ad->main.wifi_itc->func.text_get = __get_wifi_label;
-	ad->main.wifi_itc->func.content_get = __get_wifi_icon;
+	ad->main.wifi_itc->func.content_get =  __get_wifi_icon;
 	ad->main.wifi_itc->func.state_get = NULL;
 	ad->main.wifi_itc->func.del = NULL;
 
-	ad->main.end_sp_itc = elm_genlist_item_class_new();
-	ad->main.end_sp_itc->item_style = "dialogue/separator";
-	ad->main.end_sp_itc->func.text_get = NULL;
-	ad->main.end_sp_itc->func.content_get = NULL;
-	ad->main.end_sp_itc->func.state_get = NULL;
-	ad->main.end_sp_itc->func.del = NULL;
+	ad->main.sp2_itc = elm_genlist_item_class_new();
+	ad->main.sp2_itc->item_style = "dialogue/separator.2";
+	ad->main.sp2_itc->func.text_get = NULL;
+	ad->main.sp2_itc->func.content_get = NULL;
+	ad->main.sp2_itc->func.state_get = NULL;
+	ad->main.sp2_itc->func.del = NULL;
 	/* End of On, Off view's item class for genlist */
 
 	/* Off view's item class for genlist */
-	ad->main.setup_itc = elm_genlist_item_class_new();
-	ad->main.setup_itc->item_style = "dialogue/1text";
-	ad->main.setup_itc->func.text_get = __get_setup_label;
-	ad->main.setup_itc->func.content_get = NULL;
-	ad->main.setup_itc->func.state_get = NULL;
-	ad->main.setup_itc->func.del = NULL;
-
 	ad->main.bt_itc = elm_genlist_item_class_new();
-	ad->main.bt_itc->item_style = "dialogue/1text.1icon";
+	ad->main.bt_itc->item_style = "1line";
 	ad->main.bt_itc->func.text_get = __get_bt_label;
 	ad->main.bt_itc->func.content_get = __get_bt_icon;
 	ad->main.bt_itc->func.state_get = NULL;
 	ad->main.bt_itc->func.del = NULL;
 
 	ad->main.usb_itc = elm_genlist_item_class_new();
-	ad->main.usb_itc->item_style = "dialogue/1text.1icon";
+	ad->main.usb_itc->item_style = "1line";
 	ad->main.usb_itc->func.text_get = __get_usb_label;
 	ad->main.usb_itc->func.content_get = __get_usb_icon;
 	ad->main.usb_itc->func.state_get = NULL;
 	ad->main.usb_itc->func.del = NULL;
 
 	ad->main.help_itc = elm_genlist_item_class_new();
-	ad->main.help_itc->item_style = "multiline/1text";
+	ad->main.help_itc->item_style = "multiline_sub";
 	ad->main.help_itc->func.text_get = __get_help_label;
 	ad->main.help_itc->func.content_get = NULL;
 	ad->main.help_itc->func.state_get = NULL;
@@ -1291,49 +1120,29 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	/* End of Off view's item class for genlist */
 
 	/* On view's item class for genlist */
+	ad->main.device0_itc = elm_genlist_item_class_new();
+	ad->main.device0_itc->item_style = "multiline_sub";
+	ad->main.device0_itc->func.text_get = __get_no_connected_device_label;
+	ad->main.device0_itc->func.content_get = NULL;
+	ad->main.device0_itc->func.state_get = NULL;
+	ad->main.device0_itc->func.del = NULL;
+
 	ad->main.device_itc = elm_genlist_item_class_new();
-	ad->main.device_itc->item_style = "dialogue/2text.3/expandable";
+	ad->main.device_itc->item_style = "multiline_main.sub";
 	ad->main.device_itc->func.text_get = __get_connected_device_label;
 	ad->main.device_itc->func.content_get = NULL;
 	ad->main.device_itc->func.state_get = NULL;
 	ad->main.device_itc->func.del = NULL;
 
-	ad->main.device0_itc = elm_genlist_item_class_new();
-	ad->main.device0_itc->item_style = "dialogue/2text.3";
-	ad->main.device0_itc->func.text_get = __get_connected_device_label;
-	ad->main.device0_itc->func.content_get = NULL;
-	ad->main.device0_itc->func.state_get = NULL;
-	ad->main.device0_itc->func.del = NULL;
-
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 	ad->main.usage_itc = elm_genlist_item_class_new();
-	ad->main.usage_itc->item_style = "dialogue/2text.3";
+	ad->main.usage_itc->item_style = "multiline_main.sub";
 	ad->main.usage_itc->func.text_get = __get_usage_label;
 	ad->main.usage_itc->func.content_get = NULL;
 	ad->main.usage_itc->func.state_get = NULL;
 	ad->main.usage_itc->func.del = NULL;
-
-	ad->main.dev_itc[TETHERING_TYPE_WIFI] = elm_genlist_item_class_new();
-	ad->main.dev_itc[TETHERING_TYPE_WIFI]->item_style = "dialogue/2text.1icon.2";
-	ad->main.dev_itc[TETHERING_TYPE_WIFI]->func.text_get = __gl_get_dev_label;
-	ad->main.dev_itc[TETHERING_TYPE_WIFI]->func.content_get = __gl_get_dev_wifi_icon;
-	ad->main.dev_itc[TETHERING_TYPE_WIFI]->func.state_get = NULL;
-	ad->main.dev_itc[TETHERING_TYPE_WIFI]->func.del = NULL;
-
-	ad->main.dev_itc[TETHERING_TYPE_USB] = elm_genlist_item_class_new();
-	ad->main.dev_itc[TETHERING_TYPE_USB]->item_style = "dialogue/2text.1icon.2";
-	ad->main.dev_itc[TETHERING_TYPE_USB]->func.text_get = __gl_get_dev_label;
-	ad->main.dev_itc[TETHERING_TYPE_USB]->func.content_get = __gl_get_dev_usb_icon;
-	ad->main.dev_itc[TETHERING_TYPE_USB]->func.state_get = NULL;
-	ad->main.dev_itc[TETHERING_TYPE_USB]->func.del = NULL;
-
-	ad->main.dev_itc[TETHERING_TYPE_BT] = elm_genlist_item_class_new();
-	ad->main.dev_itc[TETHERING_TYPE_BT]->item_style = "dialogue/2text.1icon.2";
-	ad->main.dev_itc[TETHERING_TYPE_BT]->func.text_get = __gl_get_dev_label;
-	ad->main.dev_itc[TETHERING_TYPE_BT]->func.content_get = __gl_get_dev_bt_icon;
-	ad->main.dev_itc[TETHERING_TYPE_BT]->func.state_get = NULL;
-	ad->main.dev_itc[TETHERING_TYPE_BT]->func.del = NULL;
+#endif
 	/* End of On view's item class for genlist */
-
 	return;
 }
 
@@ -1358,19 +1167,21 @@ static void __gl_realized(void *data, Evas_Object *obj, void *event_info)
 				(elm_check_state_get(btn) ? "On" : "Off"));
 		elm_access_info_set(ao, ELM_ACCESS_CONTEXT_INFO, str);
 
-		if (item == ad->main.wifi_item || item == ad->main.bt_item)  {
+		if (item == ad->main.wifi_item || item == ad->main.bt_item) {
+			DBG("Wi-Fi or BT item : %p\n", item);
 			elm_object_item_signal_emit(item, "elm,state,top", "");
 		} else if (item == ad->main.usb_item) {
+			DBG("USB item\n");
 			elm_object_item_signal_emit(item, "elm,state,bottom", "");
 		}
 	} else if (item == ad->main.setup_item) {
+		DBG("setup_item\n");
 		ao = elm_object_item_access_object_get(item);
 		elm_access_info_set(ao, ELM_ACCESS_CONTEXT_INFO, "Item");
 
 		elm_object_item_signal_emit(item, "elm,state,bottom", "");
-	} else if (item == ad->main.usage_item) {
-		elm_object_item_signal_emit(item, "elm,state,bottom", "");
 	} else if (item == ad->main.device_item) {
+		DBG("device_item\n");
 		ao = elm_object_item_access_object_get(item);
 		snprintf(str, sizeof(str), "%s, %s", "Expandable list",
 				"Double tap to open list");
@@ -1378,7 +1189,8 @@ static void __gl_realized(void *data, Evas_Object *obj, void *event_info)
 
 		elm_object_item_signal_emit(item, "elm,state,top", "");
 	} else if (ad->main.device_item != NULL &&
-			ad->main.device_item == elm_genlist_item_parent_get(item))  {
+			ad->main.device_item == elm_genlist_item_parent_get(item)) {
+		DBG("device_item's child\n");
 		elm_object_item_signal_emit(item, "elm,state,center", "");
 	} else {
 		for (i = 0; i < 4; i++) {
@@ -1386,7 +1198,12 @@ static void __gl_realized(void *data, Evas_Object *obj, void *event_info)
 				elm_object_item_access_unregister(item);
 		}
 	}
-
+#ifdef TETHERING_DATA_USAGE_SUPPORT
+	if (item == ad->main.usage_item) {
+			DBG("usage_item\n");
+			elm_object_item_signal_emit(item, "elm,state,bottom", "");
+	}
+#endif
 	return;
 }
 
@@ -1395,7 +1212,7 @@ static void __create_inner_contents(mh_appdata_t *ad)
 	__MOBILE_AP_FUNC_ENTER__;
 
 	Elm_Object_Item *item = NULL;
-	int i = 0;
+	int no_of_dev = 0;
 
 	__read_setting(ad);
 	ad->main.genlist = elm_genlist_add(ad->naviframe);
@@ -1404,27 +1221,18 @@ static void __create_inner_contents(mh_appdata_t *ad)
 
 	__set_genlist_itc(ad);
 
-	/* separator */
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, NULL,
-			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
-	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-	ad->main.sp_item[i++] = item;
-
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.wifi_itc,
 			ad, NULL, ELM_GENLIST_ITEM_NONE,
 			__select_wifi_item, ad);
 	ad->main.wifi_item = item;
 
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.setup_itc,
-			ad, NULL, ELM_GENLIST_ITEM_NONE,
-			__select_setup_item, ad);
-	ad->main.setup_item = item;
-
-	/* separator */
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, NULL,
-			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
-	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-	ad->main.sp_item[i++] = item;
+	if (ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI) {
+		item = elm_genlist_item_append(ad->main.genlist, ad->main.help_itc,
+				ad, NULL, ELM_GENLIST_ITEM_NONE,
+				NULL, NULL);
+		elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		ad->main.help_item = item;
+	}
 
 	item = elm_genlist_item_append(ad->main.genlist, ad->main.bt_itc,
 			ad, NULL, ELM_GENLIST_ITEM_NONE,
@@ -1435,46 +1243,78 @@ static void __create_inner_contents(mh_appdata_t *ad)
 			ad, NULL, ELM_GENLIST_ITEM_NONE,
 			__select_usb_item, ad);
 	ad->main.usb_item = item;
-
-	if (ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI ||
-			ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_BT) {
-		item = elm_genlist_item_append(ad->main.genlist, ad->main.help_itc,
-				ad, NULL, ELM_GENLIST_ITEM_NONE,
-				NULL, NULL);
-		elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-		DBG("elm_genlist_item_append for help_itc : %x\n", item);
-		ad->main.help_item = item;
+	if (_get_vconf_usb_state() != VCONFKEY_SYSMAN_USB_AVAILABLE) {
+		elm_object_item_disabled_set(ad->main.usb_item, EINA_TRUE);
+	} else {
+		elm_object_item_disabled_set(ad->main.usb_item, EINA_FALSE);
 	}
-
-	/* separator */
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.sp_itc, ad,
-			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
-	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-	ad->main.sp_item[i++] = item;
-
-	if (ad->main.hotspot_mode != VCONFKEY_MOBILE_HOTSPOT_MODE_NONE) {
+	if (ad->main.hotspot_mode & (VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI |
+				VCONFKEY_MOBILE_HOTSPOT_MODE_USB |
+				VCONFKEY_MOBILE_HOTSPOT_MODE_BT)) {
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 		item = elm_genlist_item_append(ad->main.genlist, ad->main.usage_itc,
 				ad, NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 		elm_genlist_item_select_mode_set(item,
 				ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
 		ad->main.usage_item = item;
-
+#endif
 		/* Insert "Connected devices" item */
-		ap_update_data_device(ad);
+		tethering_foreach_connected_clients(ad->handle, TETHERING_TYPE_ALL,
+				_connected_clients_cb, (void *)ad);
 
-		_start_update_data_packet_usage(ad);
+		no_of_dev = _get_list_clients_count(ad);
+		if (no_of_dev == 0) {
+			item = elm_genlist_item_append(ad->main.genlist,
+						ad->main.device0_itc, ad, NULL,
+						ELM_GENLIST_ITEM_NONE, NULL, NULL);
+			elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+		} else {
+			item = elm_genlist_item_append(ad->main.genlist,
+						ad->main.device_itc, ad, NULL,
+						ELM_GENLIST_ITEM_NONE, _select_connected_dev, (void *)ad);
+			elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DEFAULT);
+		}
+		ad->main.device_item = item;
 	}
 
-	item = elm_genlist_item_append(ad->main.genlist, ad->main.end_sp_itc, NULL,
-			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
-	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
-	ad->main.sp_item[i++] = item;
+	if (ad->main.hotspot_mode & VCONFKEY_MOBILE_HOTSPOT_MODE_WIFI_AP) {
+		elm_object_item_disabled_set(ad->main.wifi_item, EINA_TRUE);
+		elm_object_item_disabled_set(ad->main.setup_item, EINA_TRUE);
+		elm_object_item_disabled_set(ad->main.bt_item, EINA_TRUE);
+		elm_object_item_disabled_set(ad->main.usb_item, EINA_TRUE);
+	}
 
 	__MOBILE_AP_FUNC_EXIT__;
 	return;
 }
 
-void ap_callback_del(mh_appdata_t *ad)
+void _main_free_genlist_itc(mh_appdata_t *ad)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (ad == NULL)
+		return;
+
+	mh_main_view_t *mv = &ad->main;
+
+#ifdef TETHERING_DATA_USAGE_SUPPORT
+	_free_genlist_itc(&mv->usage_itc);
+#endif
+	_free_genlist_itc(&mv->device_itc);
+	_free_genlist_itc(&mv->device0_itc);
+	_free_genlist_itc(&mv->help_itc);
+	_free_genlist_itc(&mv->usb_itc);
+	_free_genlist_itc(&mv->bt_itc);
+	_free_genlist_itc(&mv->setup_itc);
+	_free_genlist_itc(&mv->sp2_itc);
+	_free_genlist_itc(&mv->wifi_itc);
+	_free_genlist_itc(&mv->sp_itc);
+
+	__MOBILE_AP_FUNC_EXIT__;
+	return;
+}
+
+void _main_callback_del(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
@@ -1483,33 +1323,173 @@ void ap_callback_del(mh_appdata_t *ad)
 		return;
 	}
 
-	evas_object_smart_callback_del(ad->main.back_btn, "clicked",
-			__back_btn_cb);
-	evas_object_smart_callback_del(ad->main.wifi_btn, "changed",
-			__wifi_onoff_changed_cb);
-	evas_object_smart_callback_del(ad->main.bt_btn, "changed",
-			__bt_onoff_changed_cb);
-	evas_object_smart_callback_del(ad->main.usb_btn, "changed",
-			__usb_onoff_changed_cb);
+	Evas_Object *obj;
 
-	evas_object_smart_callback_del(ad->main.genlist, "expanded", _gl_exp);
-	evas_object_smart_callback_del(ad->main.genlist, "contracted", _gl_con);
+	obj = elm_object_item_part_content_get(ad->main.wifi_item, "elm.icon.2");
+	if (obj != NULL)
+		evas_object_smart_callback_del(obj, "changed", __wifi_onoff_changed_cb);
+
+	obj = elm_object_item_part_content_get(ad->main.bt_item, "elm.icon.2");
+	if (obj != NULL)
+		evas_object_smart_callback_del(obj, "changed", __bt_onoff_changed_cb);
+
+	obj = elm_object_item_part_content_get(ad->main.usb_item, "elm.icon.2");
+	if (obj != NULL)
+		evas_object_smart_callback_del(obj, "changed", __usb_onoff_changed_cb);
+
 	evas_object_smart_callback_del(ad->main.genlist, "realized", __gl_realized);
 
 	__MOBILE_AP_FUNC_EXIT__;
 }
 
-void ap_update_data_onoff(void* data)
+static void __ctx_move_more_ctxpopup(Evas_Object *ctx, mh_appdata_t *ad)
+{
+	Evas_Coord w;
+	Evas_Coord h;
+	int pos = -1;
+	__MOBILE_AP_FUNC_ENTER__;
+
+	elm_win_screen_size_get(ad->win, NULL, NULL, &w, &h);
+	pos = elm_win_rotation_get(ad->win);
+
+	switch (pos) {
+		case 0:
+		case 180:
+			evas_object_move(ctx, w/2, h);
+			break;
+		case 90:
+			evas_object_move(ctx, h/2, w);
+			break;
+		case 270:
+			evas_object_move(ctx, h/2, w);
+			break;
+	}
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+static void __rotate_more_ctxpopup_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	__MOBILE_AP_FUNC_ENTER__;
+
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+	Evas_Object *ctx = ad->ctxpopup;
+
+	__ctx_move_more_ctxpopup(ctx, ad);
+	evas_object_show(ctx);
 
 	__MOBILE_AP_FUNC_EXIT__;
 }
 
-void ap_draw_contents(mh_appdata_t *ad)
+static void __dismissed_more_ctxpopup_cb(void *data, Evas_Object *obj, void *event)
 {
 	__MOBILE_AP_FUNC_ENTER__;
-#ifdef SK_BACK_SUPPORT
+
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+	Evas_Object *ctx = ad->ctxpopup;
+
+	if (!rotate_flag) {
+		evas_object_del(ctx);
+		ctx = NULL;
+	} else {
+		__ctx_move_more_ctxpopup(ctx, ad);
+		evas_object_show(ctx);
+		rotate_flag = EINA_FALSE;
+	}
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+static void __ctx_delete_more_ctxpopup_cb(void *data, Evas *e, Evas_Object *obj,
+		void *event_info)
+{
+	Evas_Object *navi = (Evas_Object *)data;
+	Evas_Object *ctx = obj;
+
+	if (navi == NULL) {
+		ERR("data is null\n");
+		return;
+	}
+	__MOBILE_AP_FUNC_ENTER__;
+
+	evas_object_smart_callback_del(ctx, "dismissed",
+			__dismissed_more_ctxpopup_cb);
+	evas_object_smart_callback_del(elm_object_top_widget_get(ctx),
+			"rotation,changed", __rotate_more_ctxpopup_cb);
+	evas_object_event_callback_del_full(ctx, EVAS_CALLBACK_DEL,
+			__ctx_delete_more_ctxpopup_cb, navi);
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+static void _gl_rename_device_sel(void *data, Evas_Object *obj, void *event_info)
+{
+	__MOBILE_AP_FUNC_ENTER__;
+
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+
+	if (ad == NULL) {
+		ERR("ad is null\n");
+		return;
+	}
+	evas_object_del(ad->ctxpopup);
+	ad->ctxpopup = NULL;
+
+	_create_rename_device_popup((void *)ad);
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+static void __create_ctxpopup_more_button(void *data, Evas_Object *obj,
+		void *event_info)
+{
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+	Evas_Object *ctxpopup = NULL;
+
+	if (ad == NULL) {
+		ERR("ad is null\n");
+		return;
+	}
+	__MOBILE_AP_FUNC_ENTER__;
+
+	if (ad->setup.navi_it == NULL) {
+		return;
+	}
+
+	elm_naviframe_item_pop_cb_set(ad->setup.navi_it, _setting_back_btn_cb, (void *)ad);
+	ctxpopup = elm_ctxpopup_add(ad->naviframe);
+	elm_ctxpopup_auto_hide_disabled_set(ctxpopup, EINA_TRUE);
+
+	ea_object_event_callback_add(ctxpopup, EA_CALLBACK_BACK,
+			ea_ctxpopup_back_cb, ad);
+	ea_object_event_callback_add(ctxpopup, EA_CALLBACK_MORE,
+			ea_ctxpopup_back_cb, ad);
+	elm_object_style_set(ctxpopup, "more/default");
+	evas_object_smart_callback_add(ctxpopup, "dismissed",
+			__dismissed_more_ctxpopup_cb, ad);
+	evas_object_smart_callback_add(elm_object_top_widget_get(ctxpopup), "rotation,changed",
+			__rotate_more_ctxpopup_cb, ad);
+	evas_object_event_callback_add(ctxpopup, EVAS_CALLBACK_DEL,
+			__ctx_delete_more_ctxpopup_cb, ad->naviframe);
+
+	elm_ctxpopup_direction_priority_set(ctxpopup, ELM_CTXPOPUP_DIRECTION_UP,
+			ELM_CTXPOPUP_DIRECTION_DOWN,
+			ELM_CTXPOPUP_DIRECTION_UNKNOWN,
+			ELM_CTXPOPUP_DIRECTION_UNKNOWN);
+
+	__ctx_move_more_ctxpopup(ctxpopup, ad);
+	elm_ctxpopup_item_append(ctxpopup, STR_RENAME_DEVICE_HEADER,
+			NULL, _gl_rename_device_sel, ad);
+
+	evas_object_show(ctxpopup);
+
+	ad->ctxpopup = ctxpopup;
+
+	__MOBILE_AP_FUNC_EXIT__;
+}
+
+void _main_draw_contents(mh_appdata_t *ad)
+{
+	INFO("+\n");
+
+	Elm_Object_Item *navi_item;
+
 	__create_inner_contents(ad);
 
 	ad->main.back_btn = elm_button_add(ad->naviframe);
@@ -1521,28 +1501,20 @@ void ap_draw_contents(mh_appdata_t *ad)
 		}
 		return;
 	}
-
 	elm_object_style_set(ad->main.back_btn, "naviframe/back_btn/default");
-	evas_object_smart_callback_add(ad->main.back_btn, "clicked",
-			__back_btn_cb, ad);
-	elm_object_focus_allow_set(ad->main.back_btn, EINA_FALSE);
 
-	elm_naviframe_item_push(ad->naviframe,
-			_("IDS_MOBILEAP_BODY_TETHERING"),
-			ad->main.back_btn, NULL, ad->main.genlist, NULL);
-#else
-	Elm_Object_Item *navi_item;
+	ea_object_event_callback_add(ad->naviframe, EA_CALLBACK_BACK,
+			ea_naviframe_back_cb, NULL);
+	ea_object_event_callback_add(ad->naviframe, EA_CALLBACK_MORE,
+			__create_ctxpopup_more_button, ad);
 
-	__create_inner_contents(ad);
-
-	ea_object_event_callback_add(ad->naviframe, EA_CALLBACK_BACK, ea_naviframe_back_cb, NULL);
-
-	navi_item = elm_naviframe_item_push(ad->naviframe,
-			 _("IDS_MOBILEAP_BODY_TETHERING"),
-			 ad->main.back_btn, NULL, ad->main.genlist, NULL);
+	navi_item = elm_naviframe_item_push(ad->naviframe, IDS_TETH,
+				ad->main.back_btn, NULL, ad->main.genlist, NULL);
+	elm_object_item_domain_text_translatable_set(navi_item, PKGNAME, EINA_TRUE);
 
 	elm_naviframe_item_pop_cb_set(navi_item, __back_btn_cb, (void *)ad);
-#endif
-	__MOBILE_AP_FUNC_EXIT__;
+	ad->navi_item = navi_item;
+	g_ad = ad;
+	INFO("-\n");
 	return;
 }

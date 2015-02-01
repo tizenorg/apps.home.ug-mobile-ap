@@ -1,5 +1,9 @@
 <manifest>
-    <request>
-        <domain name="_"/>
-    </request>
+	<request>
+		<domain name="_"/>
+	</request>
+	<assign>
+		<filesystem path="/usr/apps/ug-setting-mobileap-efl/shared/res/tables/ug-setting-mobileap-efl_ChangeableColorInfo.xml" label="_"/>
+		<filesystem path="/usr/apps/ug-setting-mobileap-efl/shared/res/tables/ug-setting-mobileap-efl_fontInfoTable.xml" label="_"/>
+	</assign>  
 </manifest>

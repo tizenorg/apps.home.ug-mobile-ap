@@ -1,8 +1,8 @@
 #include "tethering_image_macro.edc"
 
 collections {
-   RESOURCE_IMAGE("Bluetooth.png");
-   RESOURCE_IMAGE("USB.png");
-   RESOURCE_IMAGE("Wifi.png");
+	RESOURCE_IMAGE("A01-5_device_bluetooth.png");
+	RESOURCE_IMAGE("A01-5_device_USB_icon.png");
+	RESOURCE_IMAGE("A01-5_device_WIFI.png");
+	base_scale: 1.8;
 }
-

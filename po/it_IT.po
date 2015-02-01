@@ -1,71 +1,95 @@
-msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
-msgstr "Password valida solo per tethering Wi-Fi"
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Annulla"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
-msgstr "Tethering Wi-Fi nascosto"
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
 
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
-msgstr "Tethering Wi-Fi"
-
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
-msgstr "Impost. tethering Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Ricevuto:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Inviato:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Nome dispositivo"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Password"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Il nome dispositivo può essere modificato in %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Nascondi rete generata"
+msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
+msgstr "L'attivazione del Wi-Fi disattiva il Router Wi-Fi. Continuare?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Utilizzo dati"
 
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "Tethering USB"
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Tethering"
 
-msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
-msgstr "Disattivando il tethering i dispositivi collegati non potranno accedere più a Internet. Continuare?"
+msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
+msgstr "Non mostrare più"
 
-msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
-msgstr "Inserire la scheda SIM e riavviare il dispositivo per utilizzare il tethering"
+msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
+msgstr "L'attivazione del Wi-Fi causa la disattivazione del tethering Wi-Fi."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
-msgstr "Impossibile utilizzare il tethering"
+msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
+msgstr "È stato raggiunto il numero massimo di caratteri (%d)."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
-msgstr "Impossibile utilizzare il tethering in modalità Offline. Disattivare la modalità per utilizzare il tethering"
+msgid "IDS_COM_SK_NO"
+msgstr "No"
 
-msgid "IDS_ST_BODY_ABOUT_PHONE"
-msgstr "Info sul dispositivo"
+msgid "IDS_BR_SK_YES"
+msgstr "Sì"
 
-msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
-msgstr "Dispositivo connesso"
+msgid "IDS_BR_SK_NO"
+msgstr "No"
+
+msgid "IDS_BR_SK_DONE"
+msgstr "Fatto"
+
+msgid "IDS_BR_SK_CANCEL"
+msgstr "Annulla"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
+msgstr "Impossibile utilizzare tethering Bluetooth se connessi a una rete Wi-Fi."
+
+msgid "IDS_ST_HEADER_RENAME_DEVICE"
+msgstr "Rinomina il dispositivo"
+
+msgid "IDS_ST_HEADER_MY_DEVICE_NAME"
+msgstr "Nome mio dispositivo"
+
+msgid "IDS_COM_BODY_ENTER_PASSWORD"
+msgstr "Inserisci password."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "FATTO"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULLA"
+
+msgid "IDS_COM_SK_YES"
+msgstr "Sì"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Salva"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Impostazioni"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Tethering Bluetooth"
 
-msgid "IDS_MOBILEAP_BODY_SECURITY"
-msgstr "Sicurezza"
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Dispositivo connesso"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Tethering"
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Dati utilizzati: %s"
 
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Immettere password di almeno 8 caratteri"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Nome dispositivo"
 
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Attivando il tethering USB verranno interrotte le connessioni USB precedenti"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Il nome dispositivo può essere modificato in %s."
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nome dispositivo: %s"
+
+msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
+msgstr "Immettere almeno %d caratteri."
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Nascondi rete generata"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Password"
 
 msgid "IDS_MOBILEAP_BODY_PD_BYTES"
 msgstr "%d byte"
@@ -76,54 +100,171 @@ msgstr "%d KB"
 msgid "IDS_MOBILEAP_BODY_PD_MB"
 msgstr "%d MB"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
-msgstr "Impossibile utilizzare servizio a pacchetti. Fuori da copertura"
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Sicurezza"
 
-msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
-msgstr "Collegare cavo USB"
-
-msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
-msgstr "La password deve contenere almeno %d caratteri e non superare %d caratteri"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Nome dispositivo: %s"
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Toccate per configurare il tethering."
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
 msgstr "Tethering attivo"
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
-msgstr "Il tethering è attualmente controllato da un'altra applicazione. Per configurare il tethering, l'applicazione verrà disattivata"
+msgstr "Il tethering è attualmente controllato da un'altra applicazione. Per configurare il tethering, l'applicazione verrà disattivata."
+
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Password valida solo per tethering Wi-Fi."
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Tethering Wi-Fi nascosto."
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_TO_MOBILE_NETWORK_ABB"
+msgstr "Connetti con rete mobile"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_USB_CABLE_ABB"
+msgstr "Collegate il cavo USB"
+
+msgid "IDS_MOBILEAP_HEADER_DISABLE_FLIGHT_MODE_ABB"
+msgstr "Disattiva Modalità offline"
+
+msgid "IDS_MOBILEAP_HEADER_INSERT_SIM_CARD_ABB"
+msgstr "Inserisci scheda SIM"
+
+msgid "IDS_MOBILEAP_HEADER_TETHERING_FAILED_ABB"
+msgstr "Tethering non riuscito"
+
+msgid "IDS_MOBILEAP_HEADER_UNABLE_TO_USE_TETHERING_ABB"
+msgstr "Impossibile usare il tethering"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Tethering USB"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Tethering Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Impost. tethering Wi-Fi"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Dispositivi connessi: %d"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Il dispositivo connesso verrà disconnesso."
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Collegare cavo USB."
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Disattivando il tethering i dispositivi collegati non potranno accedere più a Internet. Continuare?"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Attivando il tethering USB verranno interrotte le connessioni USB precedenti."
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Inserire la scheda SIM e riavviare il dispositivo per utilizzare il tethering."
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "La password deve contenere almeno %d caratteri e non superare %d caratteri."
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Il tethering aumenta il consumo della batteria e l'utilizzo della connessione dati."
+
+msgid "IDS_MOBILEAP_POP_TO_ENABLE_THIS_TETHERING_FUNCTION_CONNECT_TO_A_MOBILE_OR_WI_FI_NETWORK"
+msgstr "Per attivare questa funzione di tethering, connettetevi a una rete mobile o Wi-Fi"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Impossibile utilizzare il tethering."
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Impossibile utilizzare il tethering in Modalità offline. Disattivare la modalità per utilizzare il tethering."
+
+msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Connessione tethering scaduta"
+
+msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Connessione tethering scaduta."
+
+msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Connessione dati disattiva. Connettetevi ad una rete Wi-Fi o attivate la connessione dati e riprovate."
+
+msgid "IDS_BR_MBODY_CONNECT_TO_MOBILE_NETWORK"
+msgstr "Connetti alla rete mobile"
+
+msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
+msgstr "Non mostrare più"
+
+msgid "IDS_BR_SK_OK"
+msgstr "OK"
+
+msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
+msgstr "Almeno %d caratteri"
+
+msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
+msgstr "Disattiva tethering"
+
+msgid "IDS_COM_BODY_NO_NAME"
+msgstr "Nessun nome"
+
+msgid "IDS_COM_BODY_TETHERING_ENABLED"
+msgstr "Tethering attivato."
+
+msgid "IDS_COM_BODY_TURN_OFF"
+msgstr "Disattiva"
+
+msgid "IDS_MSG_HEADER_NO_NETWORK_CONNECTION"
+msgstr "Connessione di rete assente"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "La visibilità Bluetooth è scaduta. Il dispositivo in uso potrebbe non essere trovato."
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Timeout connessione."
+
+msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
+msgstr "Non mostrare più"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Immettete password di almeno 8 caratteri."
 
 msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
 msgstr "Tipo di protezione: %s"
 
-msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
-msgstr "Per utilizzare il tethering, connettetevi a una rete mobile"
-
-msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
-msgstr "Timeout connessione"
-
-msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
-msgstr "Dati utilizzati: %s"
-
-msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
-msgstr "Toccate per configurare il tethering"
-
-msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
-msgstr "La visibilità Bluetooth è scaduta. Il dispositivo in uso potrebbe non essere trovato"
+msgid "IDS_ST_BODY_SETTINGS"
+msgstr "Impostazioni"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Il tethering aumenta il consumo della batteria e l'uso dei dati. Il numero massimo consentito di dispositivi collegati tramite tethering è %d"
+msgstr "Il tethering aumenta il consumo della batteria e l'uso dei dati. Il numero massimo consentito di dispositivi collegati tramite tethering è %d."
+
+msgid "IDS_ST_BODY_TETHERING_ENABLED"
+msgstr "Tethering attivato."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "La rete Wi-Fi verrà disconnessa. Il tethering aumenta il consumo della batteria e l'uso dei dati. Il numero massimo consentito di dispositivi collegati tramite tethering è %d"
+msgstr "La rete Wi-Fi verrà disconnessa. Il tethering aumenta il consumo della batteria e l'uso dei dati. Il numero massimo consentito di dispositivi collegati tramite tethering è %d."
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Il tethering aumenta il consumo della batteria e l'utilizzo della connessione dati"
+msgid "IDS_ST_BUTTON_ENABLE_M_USE"
+msgstr "Attiva"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Il dispositivo connesso verrà disconnesso"
+msgid "IDS_ST_HEADER_DATA_USAGE_LIMIT_REACHED_ABB2"
+msgstr "Limite utiliz. dati ragg."
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
-msgstr "Dispositivi connessi: %d"
+msgid "IDS_ST_MBODY_FLIGHT_MODE_ABB"
+msgstr "Mod. offl."
+
+msgid "IDS_ST_POP_DEVICE_NAMES_ARE_DISPLAYED_TO_DISTINGUISH_EACH_OF_THE_DEVICES_AVAILABLE_MSG"
+msgstr "I nomi dei dispositivi consentono di distinguere ciascun dispositivo vicino presente in elenco e quelli connessi con Bluetooth, Wi-Fi Direct e altri metodi."
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Per utilizzare il tethering, connettetevi a una rete mobile."
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Rinomina"
+
+msgid "IDS_WIFI_HEADER_CONNECTED_DEVICES"
+msgstr "Dispositivi connessi"
+
+msgid "MIDS_SWALL_HEADER_SIM_CARD_ERROR_OCCURRED_ABB"
+msgstr "Errore scheda SIM"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Impossibile utilizzare servizio a pacchetti. Fuori da copertura."
 

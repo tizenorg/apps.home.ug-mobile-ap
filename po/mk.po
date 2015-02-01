@@ -1,71 +1,95 @@
-msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
-msgstr "Оваа лозинка е само за делење Wi-Fi"
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Откажи"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
-msgstr "Скриено делење Wi-Fi"
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
 
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
-msgstr "Делење Wi-Fi"
-
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
-msgstr "Опции за делење Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Примено на:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Пратено на:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Име на уред"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Лозинка"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Името на уредот може да се смени во %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Прикриј го мојот уред"
+msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
+msgstr "Вклучувањето на Wi-Fi ќе го исклучи Mobile Hotspot. Продолжи?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Користење податоци"
 
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "Делење преку USB"
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Споделување"
 
-msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
-msgstr "Со исклучување на делењето ќе се исклучи врската со интернет на поврзаните уреди. Продолжи?"
+msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
+msgstr "Не прикажувај веќе"
 
-msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
-msgstr "Вметнете SIM-картичка и рестартирајте го уредот за да го користите делењето"
+msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
+msgstr "Вклучувањето Wi-Fi ќе го исклучи поврзувањето Wi-Fi."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
-msgstr "Не може да се користи делење"
+msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
+msgstr "Достигнат е максималниот број знаци %d."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
-msgstr "Не може да се користи делење во режим за летало. За да користите делење, исклучете го режимот за летало"
+msgid "IDS_COM_SK_NO"
+msgstr "Не"
 
-msgid "IDS_ST_BODY_ABOUT_PHONE"
-msgstr "За телефонот"
+msgid "IDS_BR_SK_YES"
+msgstr "Да"
 
-msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
-msgstr "Поврзан уред"
+msgid "IDS_BR_SK_NO"
+msgstr "Не"
+
+msgid "IDS_BR_SK_DONE"
+msgstr "Готово"
+
+msgid "IDS_BR_SK_CANCEL"
+msgstr "Откажи"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
+msgstr "Не може да се користи поврзувањето Bluetooth додека е поврзана мрежа Wi-Fi."
+
+msgid "IDS_ST_HEADER_RENAME_DEVICE"
+msgstr "Преименувај го уредот"
+
+msgid "IDS_ST_HEADER_MY_DEVICE_NAME"
+msgstr "Име на мојот уред"
+
+msgid "IDS_COM_BODY_ENTER_PASSWORD"
+msgstr "Внесете лозинка."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "ГОТОВО"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ОТКАЖИ"
+
+msgid "IDS_COM_SK_YES"
+msgstr "Да"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Сочувај"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Опции"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Делење опсег Bluetooth"
 
-msgid "IDS_MOBILEAP_BODY_SECURITY"
-msgstr "Сигурност"
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Поврзан уред"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Споделување"
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Употребени податоци: %s"
 
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Внесете лозинка од барем 8 знаци"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Име на уред"
 
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Со вклучување на делење преку USB ќе се прекине претходното поврзување USB"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Името на уредот може да се смени во %s."
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Име на уредот: %s"
+
+msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
+msgstr "Внесете барем %d знаци."
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Прикриј го мојот уред"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Лозинка"
 
 msgid "IDS_MOBILEAP_BODY_PD_BYTES"
 msgstr "%d бајти"
@@ -76,54 +100,171 @@ msgstr "%d KB"
 msgid "IDS_MOBILEAP_BODY_PD_MB"
 msgstr "%d MB"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
-msgstr "Не може да се користи пакетната услуга. Надвор од опсегот"
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Сигурност"
 
-msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
-msgstr "Приклучете го USB кабелот"
-
-msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
-msgstr "Лозинката мора да содржи најмалку %d, а најмногу %d знаци"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Име на уредот: %s"
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Допрете за конфигурирање на поврзувањето."
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
 msgstr "Активно делење"
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
-msgstr "Делењето моментално го контролира друга апликација. За да го конфигурирате делењето, таа апликација ќе се исклучи"
+msgstr "Делењето моментално го контролира друга апликација. За да го конфигурирате делењето, таа апликација ќе се исклучи."
+
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Оваа лозинка е само за делење Wi-Fi."
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Скриено делење Wi-Fi."
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_TO_MOBILE_NETWORK_ABB"
+msgstr "Поврзи со мобилна мрежа"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_USB_CABLE_ABB"
+msgstr "Поврзете кабел USB"
+
+msgid "IDS_MOBILEAP_HEADER_DISABLE_FLIGHT_MODE_ABB"
+msgstr "Исклучи режим за летало"
+
+msgid "IDS_MOBILEAP_HEADER_INSERT_SIM_CARD_ABB"
+msgstr "Вметнете SIM-картичка"
+
+msgid "IDS_MOBILEAP_HEADER_TETHERING_FAILED_ABB"
+msgstr "Споделување не успеа"
+
+msgid "IDS_MOBILEAP_HEADER_UNABLE_TO_USE_TETHERING_ABB"
+msgstr "Не може да се користи делење"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Делење преку USB"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Делење Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Опции за делење Wi-Fi"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Поврзани уреди: %d"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Ќе се прекине врската со поврзаниот уред."
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Приклучете го USB кабелот."
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Со исклучување на делењето ќе се исклучи врската со интернет на поврзаните уреди. Продолжи?"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Со вклучување на делење преку USB ќе се прекине претходното поврзување USB."
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Вметнете SIM-картичка и рестартирајте го уредот за да го користите делењето."
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Лозинката мора да содржи најмалку %d, а најмногу %d знаци."
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Споделувањето троши повеќе батерија и го зголемува користењето податоци."
+
+msgid "IDS_MOBILEAP_POP_TO_ENABLE_THIS_TETHERING_FUNCTION_CONNECT_TO_A_MOBILE_OR_WI_FI_NETWORK"
+msgstr "За да се овозможи оваа функција за поврзување, поврзете се со мобилна или мрежа Wi-Fi."
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Не може да се користи делење."
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Не може да се користи делење во режим за летало. За да користите делење, исклучете го режимот за летало."
+
+msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Застој на споделувањето"
+
+msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Застој на споделувањето."
+
+msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Мобилните податоци се исклучени. Вклучете мобилни податоци и обидете се повторно."
+
+msgid "IDS_BR_MBODY_CONNECT_TO_MOBILE_NETWORK"
+msgstr "Поврзи со мобилна мрежа"
+
+msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
+msgstr "Не прикажувај веќе"
+
+msgid "IDS_BR_SK_OK"
+msgstr "OK"
+
+msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
+msgstr "Барем %d знаци"
+
+msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
+msgstr "Исклучи споделување"
+
+msgid "IDS_COM_BODY_NO_NAME"
+msgstr "Нема име"
+
+msgid "IDS_COM_BODY_TETHERING_ENABLED"
+msgstr "Вклучено е делење опсег."
+
+msgid "IDS_COM_BODY_TURN_OFF"
+msgstr "Исклучи"
+
+msgid "IDS_MSG_HEADER_NO_NETWORK_CONNECTION"
+msgstr "Нема мрежно поврзување"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Истече времето на видливоста Bluetooth. Уредот не може да се најде."
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Застој на врската."
+
+msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
+msgstr "Do not show again"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Внесете лозинка од барем 8 знаци."
 
 msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
 msgstr "Тип безбедност: %s"
 
-msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
-msgstr "За да користите делење, поврзете се со мобилни мрежи"
-
-msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
-msgstr "Застој на врската"
-
-msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
-msgstr "Употребени податоци: %s"
-
-msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
-msgstr "Допрете за конфигурирање на поврзувањето"
-
-msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
-msgstr "Истече времето на видливоста Bluetooth. Уредот не може да се најде"
+msgid "IDS_ST_BODY_SETTINGS"
+msgstr "Опции"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Делењето троши повеќе батерија и го зголемува користењето податоци. Максималниот дозволен број уреди за делење е %d"
+msgstr "Делењето троши повеќе батерија и го зголемува користењето податоци. Максималниот дозволен број уреди за делење е %d."
+
+msgid "IDS_ST_BODY_TETHERING_ENABLED"
+msgstr "Вклучено е делење опсег."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Ќе се прекине врската со мрежата Wi-Fi. Делењето троши повеќе батерија и го зголемува користењето податоци. Максималниот дозволен број уреди за делење е %d"
+msgstr "Ќе се прекине врската со мрежата Wi-Fi. Делењето троши повеќе батерија и го зголемува користењето податоци. Максималниот дозволен број уреди за делење е %d."
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Споделувањето троши повеќе батерија и го зголемува користењето податоци"
+msgid "IDS_ST_BUTTON_ENABLE_M_USE"
+msgstr "Вклучи"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Ќе се прекине врската со поврзаниот уред"
+msgid "IDS_ST_HEADER_DATA_USAGE_LIMIT_REACHED_ABB2"
+msgstr "Дост.е огран.за кор.под."
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
-msgstr "Поврзани уреди: %d"
+msgid "IDS_ST_MBODY_FLIGHT_MODE_ABB"
+msgstr "Реж.за лет."
+
+msgid "IDS_ST_POP_DEVICE_NAMES_ARE_DISPLAYED_TO_DISTINGUISH_EACH_OF_THE_DEVICES_AVAILABLE_MSG"
+msgstr "Имињата на уредите се прикажани за да се разликува секој уред од уредите достапни на листата блиски уреди, како и преку Bluetooth, Wi-Fi Direct и други начини."
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "За да користите делење, поврзете се со мобилни мрежи."
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Преименувај"
+
+msgid "IDS_WIFI_HEADER_CONNECTED_DEVICES"
+msgstr "Поврзани уреди"
+
+msgid "MIDS_SWALL_HEADER_SIM_CARD_ERROR_OCCURRED_ABB"
+msgstr "Дојде до грешка на SIM-карт."
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Не може да се користи пакетната услуга. Надвор од опсегот."
 

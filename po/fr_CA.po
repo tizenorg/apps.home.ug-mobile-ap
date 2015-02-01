@@ -1,71 +1,95 @@
-msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
-msgstr "Ce mot de passe est uniquement pour le modem Wifi"
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Annuler"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
-msgstr "Modem Wifi masqué"
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
 
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
-msgstr "Modem Wifi"
-
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
-msgstr "Paramètres du modem Wifi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Reçu :"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Envoyé :"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Nom de périphérique"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Mot de passe"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Le nom de l'appareil ne peut pas être remplacé par %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Masquer mon périphérique"
+msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
+msgstr "L'activation du Wifi va désactiver Point d'accès mobile. Continuer ?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Utilisation des données"
 
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "Modem USB"
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Fonction modem"
 
-msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
-msgstr "La désactivation du modem empêchera les appareils associés d'accéder à Internet. Continuer ?"
+msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
+msgstr "Ne plus afficher"
 
-msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
-msgstr "Insérez une carte SIM et redémarrez l'appareil pour utiliser le modem"
+msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
+msgstr "L'activation du Wifi va désactiver le modem Wifi."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
-msgstr "Impossible d'utiliser le modem"
+msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
+msgstr "Le nombre maximum de caractères (%d) est atteint."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
-msgstr "Impossible d'utiliser le modem en mode Hors-ligne. Pour utiliser le modem, désactivez le mode Hors-ligne"
+msgid "IDS_COM_SK_NO"
+msgstr "Non"
 
-msgid "IDS_ST_BODY_ABOUT_PHONE"
-msgstr "À propos du téléphone"
+msgid "IDS_BR_SK_YES"
+msgstr "Oui"
 
-msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
-msgstr "Périphérique connecté"
+msgid "IDS_BR_SK_NO"
+msgstr "Non"
+
+msgid "IDS_BR_SK_DONE"
+msgstr "OK"
+
+msgid "IDS_BR_SK_CANCEL"
+msgstr "Annuler"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
+msgstr "Impossible d'utiliser le modem Bluetooth si une connexion au réseau Wifi est en cours."
+
+msgid "IDS_ST_HEADER_RENAME_DEVICE"
+msgstr "Renommer l'appareil"
+
+msgid "IDS_ST_HEADER_MY_DEVICE_NAME"
+msgstr "Nom de mon périphérique"
+
+msgid "IDS_COM_BODY_ENTER_PASSWORD"
+msgstr "Saisir le mot de passe."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "OK"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANNULER"
+
+msgid "IDS_COM_SK_YES"
+msgstr "Oui"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Sauv."
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Réglages"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Modem Bluetooth"
 
-msgid "IDS_MOBILEAP_BODY_SECURITY"
-msgstr "Sécurité"
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "Périphérique connecté"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Fonction modem"
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Données utilisées : %s"
 
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Entrez un mot de passe contenant au moins 8 caractères"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Nom d'appareil"
 
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "L'activation du modem USB va déconnecter la connexion USB précédente"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Le nom de l'appareil ne peut pas être remplacé par %s."
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nom de l'appareil : %s"
+
+msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
+msgstr "Entrez au moins %d caractères."
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Masquer mon périphérique"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Mot de passe"
 
 msgid "IDS_MOBILEAP_BODY_PD_BYTES"
 msgstr "%d octets"
@@ -76,54 +100,171 @@ msgstr "%d Ko"
 msgid "IDS_MOBILEAP_BODY_PD_MB"
 msgstr "%d Mo"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
-msgstr "Impossible d'utiliser le service de paquets. Hors zone de couverture"
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Sécurité"
 
-msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
-msgstr "Branchez le câble USB"
-
-msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
-msgstr "Le mot de passe doit contenir au moins %d caractères et ne pas dépasser %d caractères"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Nom de l'appareil : %s"
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Touchez pour configurer le modem."
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
 msgstr "Modem actif"
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
-msgstr "Le modem est actuellement contrôlé par une autre application. Pour configurer le modem, cette application va être désactivée"
+msgstr "Le modem est actuellement contrôlé par une autre application. Pour configurer le modem, cette application va être désactivée."
+
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Ce mot de passe est uniquement pour le modem Wifi."
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Modem Wifi masqué"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_TO_MOBILE_NETWORK_ABB"
+msgstr "Connexion au réseau mobile"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_USB_CABLE_ABB"
+msgstr "Brancher un câble USB"
+
+msgid "IDS_MOBILEAP_HEADER_DISABLE_FLIGHT_MODE_ABB"
+msgstr "Désactiver le mode Hors-ligne"
+
+msgid "IDS_MOBILEAP_HEADER_INSERT_SIM_CARD_ABB"
+msgstr "Insérer la carte SIM"
+
+msgid "IDS_MOBILEAP_HEADER_TETHERING_FAILED_ABB"
+msgstr "Échec du modem"
+
+msgid "IDS_MOBILEAP_HEADER_UNABLE_TO_USE_TETHERING_ABB"
+msgstr "Impossible d'utiliser le modem"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Modem USB"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Modem Wifi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Paramètres du modem Wifi"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Périphériques connectés : %d"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Le périphérique connecté sera déconnecté."
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Branchez le câble USB."
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "La désactivation du modem empêchera les appareils associés d'accéder à Internet. Continuer ?"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "L'activation du modem USB va déconnecter la connexion USB précédente."
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Insérez une carte SIM et redémarrez l'appareil pour utiliser le modem."
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Le mot de passe doit contenir au moins %d caractères et ne pas dépasser %d caractères."
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Le modem consomme plus d'énergie et augmente l'utilisation des données."
+
+msgid "IDS_MOBILEAP_POP_TO_ENABLE_THIS_TETHERING_FUNCTION_CONNECT_TO_A_MOBILE_OR_WI_FI_NETWORK"
+msgstr "Pour activer la fonction de modem, connectez-vous à un réseau mobile ou Wifi"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Impossible d'utiliser le modem."
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Impossible d'utiliser le modem en mode Hors-ligne. Pour utiliser le modem, désactivez le mode Hors-ligne."
+
+msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Connexion au modem expirée"
+
+msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "La connexion au modem a expiré."
+
+msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Les données mobiles sont désactivées. Activez les données mobiles et réessayez."
+
+msgid "IDS_BR_MBODY_CONNECT_TO_MOBILE_NETWORK"
+msgstr "Connexion au réseau mob."
+
+msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
+msgstr "Ne plus afficher"
+
+msgid "IDS_BR_SK_OK"
+msgstr "OK"
+
+msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
+msgstr "Au moins %d caractères"
+
+msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
+msgstr "Désactiver le modem"
+
+msgid "IDS_COM_BODY_NO_NAME"
+msgstr "Aucun nom"
+
+msgid "IDS_COM_BODY_TETHERING_ENABLED"
+msgstr "Modem activé."
+
+msgid "IDS_COM_BODY_TURN_OFF"
+msgstr "Désactiver"
+
+msgid "IDS_MSG_HEADER_NO_NETWORK_CONNECTION"
+msgstr "Aucune connexion réseau"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "La visibilité Bluetooth a expiré. Votre appareil risque de ne pas être détecté."
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "Connexion expirée."
+
+msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
+msgstr "Ne plus afficher"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Saisissez un mot de passe contenant au moins 8 caractères."
 
 msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
 msgstr "Type de sécurité : %s"
 
-msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
-msgstr "Pour utiliser le modem, connectez-vous aux réseaux mobiles"
-
-msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
-msgstr "Connexion expirée"
-
-msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
-msgstr "Données utilisées : %s"
-
-msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
-msgstr "Touchez pour configurer le modem"
-
-msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
-msgstr "La visibilité Bluetooth a expiré. Votre appareil risque de ne pas être détecté"
+msgid "IDS_ST_BODY_SETTINGS"
+msgstr "Réglages"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "L'utilisation du modem est énergivore et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d"
+msgstr "L'utilisation du modem est énergivore et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d."
+
+msgid "IDS_ST_BODY_TETHERING_ENABLED"
+msgstr "Modem activé."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "La connexion au réseau Wifi va être interrompue. L'utilisation du modem est énergivore et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d"
+msgstr "La connexion au réseau Wifi va être interrompue. L'utilisation du modem est énergivore et augmente l'utilisation des données. Le nombre maximum d'appareils connectés est limité à %d."
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Le modem consomme plus d'énergie et augmente l'utilisation des données"
+msgid "IDS_ST_BUTTON_ENABLE_M_USE"
+msgstr "Activer"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Le périphérique connecté sera déconnecté"
+msgid "IDS_ST_HEADER_DATA_USAGE_LIMIT_REACHED_ABB2"
+msgstr "Limite données atteinte"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
-msgstr "Périphériques connectés : %d"
+msgid "IDS_ST_MBODY_FLIGHT_MODE_ABB"
+msgstr "M. Hs-ligne"
+
+msgid "IDS_ST_POP_DEVICE_NAMES_ARE_DISPLAYED_TO_DISTINGUISH_EACH_OF_THE_DEVICES_AVAILABLE_MSG"
+msgstr "Les noms des appareils sont affichés pour vous permettre de distinguer les appareils disponibles dans la liste des appareils à proximité, ainsi que via Bluetooth, Wifi Direct ou par d'autres méthodes."
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Pour utiliser le modem, connectez-vous aux réseaux mobiles."
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Renommer"
+
+msgid "IDS_WIFI_HEADER_CONNECTED_DEVICES"
+msgstr "Périphériques connectés"
+
+msgid "MIDS_SWALL_HEADER_SIM_CARD_ERROR_OCCURRED_ABB"
+msgstr "Erreur de carte SIM"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Impossible d'utiliser le service de paquets. Hors zone de couverture."
 

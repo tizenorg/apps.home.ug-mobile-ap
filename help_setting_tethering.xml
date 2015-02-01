@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<help package="ug-setting-mobileap-efl" version="0.0.1">
+	<label id="IDS_MOBILEAP_BODY_TETHERING">Tethering</label>
+	<summary id="IDS_HELP_BODY_SHARE_MOBILE_NETWORK_CONNECTION_WITH_OTHER_DEVICES_ABB">Share mobile network connection with other devices</summary>
+		<items>
+			<item>
+				<title id="IDS_MOBILEAP_MBODY_WI_FI_TETHERING">Wi-Fi tethering</title>
+				<contents>
+					<![CDATA[
+					<br>
+					<text id="IDS_HELP_BODY_YOU_CAN_ENABLE_WI_FI_TETHERING_ON_YOUR_DEVICE_TO_SHARE_ITS_INTERNET_CONNECTION_WITH_COMPUTERS_OR_OTHER_DEVICES">You can turn on Wi-Fi tethering on your device to share its Internet connection with computers or other devices.</text>
+					<br>
+					<br>
+					<text id="IDS_HELP_BODY_YOU_CANNOT_USE_DEVICE_APPLICATIONS_TO_ACCESS_THE_INTERNET_VIA_A_WI_FI_CONNECTION_WHILE_THE_DEVICE_IS_TETHERING_VIA_WI_FI">- You cannot use device applications to access the Internet via a Wi-Fi connection while the device is tethering via Wi-Fi.</text>
+					<br>
+					<br>
+					<text id="IDS_HELP_BODY_YOU_CAN_CONFIGURE_PORTABLE_WI_FI_TETHERING_IN_WI_FI_TETHERING_SETTINGS">- You can configure portable Wi-Fi tethering in Wi-Fi tethering settings.</text>
+					]]>
+				</contents>
+			</item>
+			<item>
+				<title id="IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING">Bluetooth tethering</title>
+				<contents>
+					<![CDATA[
+					<br>
+					<text id="IDS_HELP_BODY_YOU_CAN_SHARE_YOUR_DEVICES_INTERNET_CONNECTION_WITH_YOUR_COMPUTER_BY_TETHERING_THEM_TOGETHER_VIA_A_BLUETOOTH_CONNECTION">You can share your device's Internet connection with your computer by tethering them together via a Bluetooth connection.</text>
+					<br>
+					<br>
+					<text id="IDS_HELP_BODY_BLUETOOTH_TETHERING_WORKS_WITH_ANY_COMPUTER_OR_DEVICE_THAT_CAN_ACCESS_INTERNET_VIA_BLUETOOTH">- Bluetooth tethering works with any computer or device that can access Internet via Bluetooth.</text>
+					]]>
+				</contents>
+			</item>
+			<item>
+				<title id="IDS_MOBILEAP_MBODY_USB_TETHERING">USB tethering</title>
+				<contents>
+					<![CDATA[
+					<br>
+					<text id="IDS_HELP_BODY_YOU_CAN_SHARE_YOUR_DEVICES_INTERNET_CONNECTION_WITH_YOUR_COMPUTER_BY_TETHERING_THEM_TOGETHER_VIA_A_USB_CABLE">You can share your device's Internet connection with your computer by tethering them together via a USB cable.</text>
+					<br>
+					<br>
+					<text id="IDS_HELP_BODY_TETHERING_WORKS_WITH_WINDOWS_7_WINDOWS_VISTA_AND_LINUX">- Tethering works with Windows 7, Windows Vista, and Linux.</text>
+					<br>
+					<br>
+					<text id="IDS_HELP_BODY_YOU_CANNOT_CONNECT_TO_THE_DEVICE_MEMORY_OR_SD_CARD_FROM_YOUR_COMPUTER_WHEN_IT_IS_TETHERED_VIA_USB">- You cannot connect to the device memory or SD card from your computer when it is tethered via USB.</text>
+					]]>
+				</contents>
+			</item>
+	</items>
+</help>

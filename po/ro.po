@@ -1,71 +1,95 @@
-msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
-msgstr "Această parolă este numai pentru furnizarea accesului la Internet prin Wi-Fi"
+msgid "IDS_COM_SK_CANCEL"
+msgstr "Anulare"
 
-msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
-msgstr "Furnizarea de acces la Internet prin Wi-Fi a fost ascunsă"
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
 
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
-msgstr "Furn. acc. Internet Wi-Fi"
-
-msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
-msgstr "Set. furn. ac. Int. Wi-Fi"
-
-msgid "IDS_MOBILEAP_BODY_RECEIVED_C"
-msgstr "Primit:"
-
-msgid "IDS_MOBILEAP_BODY_SENT_C"
-msgstr "Trimis:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
-msgstr "Nume dispozitiv"
-
-msgid "IDS_MOBILEAP_BODY_PASSWORD"
-msgstr "Parolă"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
-msgstr "Numele dispozitivului poate fi modificat în %s"
-
-msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
-msgstr "Ascundere dispozitiv"
+msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
+msgstr "Activarea Wi-Fi va dezactiva Mobile Hotspot. Continuaţi?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Utilizare date"
 
-msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
-msgstr "Partajare conex. Internet"
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "Tethering"
 
-msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
-msgstr "Prin dezactivarea furnizării accesului la Internet, nu se va permite accesul la Internet al dispozitivelor conectate. Continuaţi?"
+msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
+msgstr "Nu se mai afişează"
 
-msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
-msgstr "Introduceţi cartela SIM şi reporniţi dispozitivul pentru a utiliza furnizarea accesului la Internet"
+msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
+msgstr "Activarea Wi-Fi va dezactiva furnizarea accesului la internet prin Wi-Fi."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
-msgstr "Imposibil de utilizat furnizarea de acces la Internet"
+msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
+msgstr "S-a atins numărul maxim de %d caractere."
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
-msgstr "Imposibil de utilizat furnizarea accesului la Internet în modul Avion. Pentru a utiliza furnizarea accesului la Internet, dezactivaţi modul Avion"
+msgid "IDS_COM_SK_NO"
+msgstr "Nu"
 
-msgid "IDS_ST_BODY_ABOUT_PHONE"
-msgstr "Despre telefon"
+msgid "IDS_BR_SK_YES"
+msgstr "Da"
+
+msgid "IDS_BR_SK_NO"
+msgstr "Nu"
+
+msgid "IDS_BR_SK_DONE"
+msgstr "Gata"
+
+msgid "IDS_BR_SK_CANCEL"
+msgstr "Anulare"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
+msgstr "Nu se poate utiliza furnizarea accesului la Internet prin Bluetooth în timp ce sunteţi conectat la reţeaua Wi-Fi."
+
+msgid "IDS_ST_HEADER_RENAME_DEVICE"
+msgstr "Redenumire dispozitiv"
+
+msgid "IDS_ST_HEADER_MY_DEVICE_NAME"
+msgstr "Numele dispozitivului meu"
+
+msgid "IDS_COM_BODY_ENTER_PASSWORD"
+msgstr "Introduceţi parola."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "EFECTUAT"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "ANULARE"
+
+msgid "IDS_COM_SK_YES"
+msgstr "Da"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "Salvare"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "Setări"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Tethering prin Bluetooth"
 
 msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
 msgstr "Dispozitiv conectat"
 
-msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
-msgstr "Furnizare acces la Internet prin Bluetooth"
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "Date utilizate: %s"
 
-msgid "IDS_MOBILEAP_BODY_SECURITY"
-msgstr "Securitate"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "Nume dispozitiv"
 
-msgid "IDS_MOBILEAP_BODY_TETHERING"
-msgstr "Tethering"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "Numele dispozitivului poate fi modificat în %s."
 
-msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
-msgstr "Introduceţi o parolă de minimum 8 caractere"
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "Nume dispozitiv: %s"
 
-msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
-msgstr "Activarea furnizării accesului la Internet prin USB va determina deconectarea conexiunii USB anterioare"
+msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
+msgstr "Introduceţi minimum %d caractere."
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "Ascundere dispozitiv"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "Parolă"
 
 msgid "IDS_MOBILEAP_BODY_PD_BYTES"
 msgstr "%d octeţi"
@@ -76,54 +100,171 @@ msgstr "%d KB"
 msgid "IDS_MOBILEAP_BODY_PD_MB"
 msgstr "%d MB"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
-msgstr "Imposibil de utilizat serviciul de transfer de pachete. În afara ariei de acoperire"
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "Securitate"
 
-msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
-msgstr "Conectaţi cablul USB"
-
-msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
-msgstr "Parola trebuie să conţină minimum %d caractere şi nu poate depăşi %d caractere"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Nume dispozitiv: %s"
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "Atingeţi pentru a configura furnizarea accesului la internet."
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
 msgstr "Acces internet activ"
 
 msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
-msgstr "Furnizarea accesului la internet este controlată în prezent de o altă aplicaţie. Pentru a configura furnizarea accesului la internet, aplicaţia respectivă va fi dezactivată"
+msgstr "Furnizarea accesului la internet este controlată în prezent de o altă aplicaţie. Pentru a configura furnizarea accesului la internet, aplicaţia respectivă va fi dezactivată."
 
-msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
-msgstr "Tip de securitate: %s"
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "Această parolă este numai pentru furnizarea accesului la Internet prin Wi-Fi."
 
-msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
-msgstr "Pentru a utiliza furnizarea accesului la internet, conectaţi-vă la reţele mobile"
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Furnizarea de acces la Internet prin Wi-Fi a fost ascunsă."
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_TO_MOBILE_NETWORK_ABB"
+msgstr "Conectare la reţeaua mobilă"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_USB_CABLE_ABB"
+msgstr "Conectaţi cablul USB"
+
+msgid "IDS_MOBILEAP_HEADER_DISABLE_FLIGHT_MODE_ABB"
+msgstr "Dezactivare mod Avion"
+
+msgid "IDS_MOBILEAP_HEADER_INSERT_SIM_CARD_ABB"
+msgstr "Introduceţi cartela SIM"
+
+msgid "IDS_MOBILEAP_HEADER_TETHERING_FAILED_ABB"
+msgstr "Tetheringul nu a reuşit"
+
+msgid "IDS_MOBILEAP_HEADER_UNABLE_TO_USE_TETHERING_ABB"
+msgstr "Nu se poate util. tetheringul"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "Partajare conex. Internet"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Furn. acc. Internet Wi-Fi"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Set. furn. ac. Int. Wi-Fi"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "Dispozitive conectate: %d"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "Dispozitivul conectat va fi deconectat."
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "Conectaţi cablul USB."
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "Prin dezactivarea furnizării accesului la Internet, nu se va permite accesul la Internet al dispozitivelor conectate. Continuaţi?"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "Activarea furnizării accesului la Internet prin USB va determina deconectarea conexiunii USB anterioare."
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "Introduceţi cartela SIM şi reporniţi dispozitivul pentru a utiliza furnizarea accesului la Internet."
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "Parola trebuie să conţină minimum %d caractere şi nu poate depăşi %d caractere."
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat."
+
+msgid "IDS_MOBILEAP_POP_TO_ENABLE_THIS_TETHERING_FUNCTION_CONNECT_TO_A_MOBILE_OR_WI_FI_NETWORK"
+msgstr "Pentru a activa această funcţie de tethering, conectaţi-vă la o reţea mobilă sau Wi-Fi"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "Imposibil de utilizat furnizarea de acces la Internet"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "Imposibil de utilizat furnizarea accesului la Internet în modul Avion. Pentru a utiliza furnizarea accesului la Internet, dezactivaţi modul Avion."
+
+msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Conex. de tethering a expirat"
+
+msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "Conexiunea de tethering a expirat."
+
+msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "Datele mobile sunt dezactivate. Activaţi datele mobile şi încercaţi din nou."
+
+msgid "IDS_BR_MBODY_CONNECT_TO_MOBILE_NETWORK"
+msgstr "Conect. la reţea mobilă"
+
+msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
+msgstr "Nu se afişează din nou"
+
+msgid "IDS_BR_SK_OK"
+msgstr "OK"
+
+msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
+msgstr "Cel puţin %d caractere"
+
+msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
+msgstr "Dezactivaţi tetheringul"
+
+msgid "IDS_COM_BODY_NO_NAME"
+msgstr "Nici un nume"
+
+msgid "IDS_COM_BODY_TETHERING_ENABLED"
+msgstr "Furnizare acces la Internet activată"
+
+msgid "IDS_COM_BODY_TURN_OFF"
+msgstr "Oprire"
+
+msgid "IDS_MSG_HEADER_NO_NETWORK_CONNECTION"
+msgstr "Nicio conexiune la reţea"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Vizibilitatea Bluetooth a expirat. Este posibil ca dispozitivul dvs. să nu poată fi găsit."
 
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Expirare conexiune"
 
-msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
-msgstr "Date utilizate: %s"
+msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
+msgstr "Do not show again"
 
-msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
-msgstr "Atingeţi pentru a configura furnizarea accesului la internet"
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "Introduceţi o parolă de minimum 8 caractere."
 
-msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
-msgstr "Vizibilitatea Bluetooth a expirat. Este posibil ca dispozitivul dvs. să nu poată fi găsit"
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "Tip de securitate: %s"
+
+msgid "IDS_ST_BODY_SETTINGS"
+msgstr "Setări"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Numărul maxim de dispozitive cărora li se poate furniza acces la internet este %d"
+msgstr "Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Numărul maxim de dispozitive cărora li se poate furniza acces la internet este %d."
+
+msgid "IDS_ST_BODY_TETHERING_ENABLED"
+msgstr "Furnizare acces la Internet activată"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
-msgstr "Reţeaua Wi-Fi va fi deconectată. Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Numărul maxim de dispozitive cărora li se poate furniza acces la internet este %d"
+msgstr "Reţeaua Wi-Fi va fi deconectată. Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat. Numărul maxim de dispozitive cărora li se poate furniza acces la internet este %d."
 
-msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
-msgstr "Furnizarea accesului la internet consumă mai mult din energia bateriei şi creşte volumul de date utilizat"
+msgid "IDS_ST_BUTTON_ENABLE_M_USE"
+msgstr "Activare"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Dispozitivul conectat va fi deconectat"
+msgid "IDS_ST_HEADER_DATA_USAGE_LIMIT_REACHED_ABB2"
+msgstr "Lim. utiliz. date atinsă"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
-msgstr "Dispozitive conectate: %d"
+msgid "IDS_ST_MBODY_FLIGHT_MODE_ABB"
+msgstr "Modul Zbor"
+
+msgid "IDS_ST_POP_DEVICE_NAMES_ARE_DISPLAYED_TO_DISTINGUISH_EACH_OF_THE_DEVICES_AVAILABLE_MSG"
+msgstr "Numele dispozitivelor sunt afişate pentru a diferenţia dispozitivele disponibile pe lista de dispozitive din apropiere, dar şi prin Bluetooth, Wi-Fi Direct şi alte metode."
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "Pentru a utiliza furnizarea accesului la internet, conectaţi-vă la reţele mobile."
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "Redenumire"
+
+msgid "IDS_WIFI_HEADER_CONNECTED_DEVICES"
+msgstr "Dispozitive conectate"
+
+msgid "MIDS_SWALL_HEADER_SIM_CARD_ERROR_OCCURRED_ABB"
+msgstr "Eroare de cartelă SIM"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "Imposibil de utilizat serviciul de transfer de pachete. În afara ariei de acoperire."
 

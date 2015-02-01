@@ -1,13 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns="http://tizen.org/ns/packages" package="ug-setting-mobileap-efl" version="2.0.25" install-location="internal-only">
 	<label>Tethering</label>
-	<author email="sy39.ju@samsung.com" href="www.samsung.com">Seungyoun Ju</author>
 	<description>Tethering UG</description>
-	<ui-application appid="setting-mobileap-efl" exec="/usr/ug/bin/setting-mobileap-efl" nodisplay="true" multiple="true" type="capp" taskmanage="false">
+	<ui-application appid="setting-mobileap-efl" exec="/usr/apps/ug-setting-mobileap-efl/bin/ug-setting-mobileap-efl" ui-gadget="true" nodisplay="true" multiple="false" type="capp" taskmanage="false" process-pool="true" hw-acceleration="use-GL">
 		<label>Tethering</label>
-		<icon>/usr/ug/res/images/ug-setting-mobileap-efl/com.samsung.tethering.png</icon>
+		<label xml:lang="ar-ae">ﺖﻘﻴﻳﺩ</label>
+		<label xml:lang="az-az">Bağlanma</label>
+		<label xml:lang="bg-bg">Привързване</label>
+		<label xml:lang="ca-es">Tethering</label>
+		<label xml:lang="cs-cz">Sdílení internetového připojení</label>
+		<label xml:lang="da-dk">Internetdeling</label>
+		<label xml:lang="de-de">Tethering</label>
+		<label xml:lang="el-gr">Tethering</label>
+		<label xml:lang="en-gb">Tethering</label>
+		<label xml:lang="en-ph">Tethering</label>
+		<label xml:lang="en-us">Tethering</label>
+		<label xml:lang="es-es">Módem USB</label>
+		<label xml:lang="es-mx">Anclaje a red</label>
+		<label xml:lang="et-ee">Mobiilse internetiga ühendamine</label>
+		<label xml:lang="eu-es">Sare ainguraketa</label>
+		<label xml:lang="fi-fi">Yhteyden jako</label>
+		<label xml:lang="fr-ca">Fonction modem</label>
+		<label xml:lang="fr-fr">Fonction modem</label>
+		<label xml:lang="ga-ie">Ag déanamh teaghráin</label>
+		<label xml:lang="gl-es">Ancoraxe á rede</label>
+		<label xml:lang="hi-in">"टेथरिंग</label>
+		<label xml:lang="hr-hr">Dijeljenje veze</label>
+		<label xml:lang="hu-hu">Internetmegosztás</label>
+		<label xml:lang="hy-am">Տեղակապում</label>
+		<label xml:lang="is-is">Sími sem netaðgangsstaður</label>
+		<label xml:lang="it-it">Tethering</label>
+		<label xml:lang="ja-jp">テザリング</label>
+		<label xml:lang="ka-ge">მიბმა</label>
+		<label xml:lang="kk-kz">Шектеу</label>
+		<label xml:lang="ko-kr">테더링</label>
+		<label xml:lang="lt-lt">Siejama</label>
+		<label xml:lang="lv-lv">Ierīces piesaiste tālrunim</label>
+		<label xml:lang="mk-mk">Споделување</label>
+		<label xml:lang="nb-no">Internettdeling</label>
+		<label xml:lang="nl-nl">Tethering</label>
+		<label xml:lang="pl-pl">Udost. poł. internetowego</label>
+		<label xml:lang="pt-br">Ancoragem</label>
+		<label xml:lang="pt-pt">Partilha de Internet</label>
+		<label xml:lang="ro-ro">Tethering</label>
+		<label xml:lang="ru-ru">Модем</label>
+		<label xml:lang="sk-sk">Zdieľanie pripojenia</label>
+		<label xml:lang="sl-si">Tethering</label>
+		<label xml:lang="sr-rs">Vezivanje</label>
+		<label xml:lang="sv-se">Internetdelning</label>
+		<label xml:lang="tr-tr">Bağlantı</label>
+		<label xml:lang="uk-ua">Прив’язка</label>
+		<label xml:lang="uz-uz">Bog‘lash</label>
+		<label xml:lang="zh-cn">网络分享</label>
+		<label xml:lang="zh-hk">網絡共享</label>
+		<label xml:lang="zh-sg">网络分享</label>
+		<label xml:lang="zh-tw">網路共享</label>
+		<icon>/usr/apps/ug-setting-mobileap-efl/res/images/ug-setting-mobileap-efl/org.tizen.tethering.png</icon>
 		<application-service>
 			<operation name="http://tizen.org/appcontrol/operation/pick"/>
 		</application-service>
 	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/tethering.admin</privilege>
+	</privileges>
 </manifest>

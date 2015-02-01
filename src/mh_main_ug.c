@@ -1,13 +1,13 @@
 /*
 * ug-mobile-ap
 *
-* Copyright 2012-2013  Samsung Electronics Co., Ltd
+* Copyright 2012  Samsung Electronics Co., Ltd
 
-* Licensed under the Flora License, Version 1.1 (the "License");
+* Licensed under the Flora License, Version 1.0 (the "License");
 * you may not use this file except in compliance with the License.
 * You may obtain a copy of the License at
 
-* http://floralicense.org/license
+* http://www.tizenopensource.org/license
 
 * Unless required by applicable law or agreed to in writing, software
 * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,17 +21,24 @@
 #define UG_MODULE_API __attribute__ ((visibility("default")))
 #endif
 
+//#include <setting-cfg.h>
+
 #include "mobile_hotspot.h"
 #include "mh_view_main.h"
 #include "mh_func_onoff.h"
 #include "mh_common_utility.h"
+#include "mh_popup.h"
+#include "mh_string.h"
+#include "mh_view_wifi_setup.h"
+
+//UG_MODULE_API int setting_plugin_search_init(app_control_h app_control, void * priv, char ** domainname);
 
 static Evas_Object *create_content(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
 	ad->naviframe = _create_naviframe(ad->layout);
-	ap_draw_contents(ad);
+	_main_draw_contents(ad);
 
 	__MOBILE_AP_FUNC_EXIT__;
 
@@ -40,6 +47,8 @@ static Evas_Object *create_content(mh_appdata_t *ad)
 
 static void __set_callbacks(tethering_h handle, void *user_data)
 {
+	DBG("+\n");
+
 	int ret;
 
 	ret = tethering_set_enabled_cb(handle, TETHERING_TYPE_ALL,
@@ -47,7 +56,32 @@ static void __set_callbacks(tethering_h handle, void *user_data)
 	if (ret != TETHERING_ERROR_NONE)
 		ERR("tethering_set_enabled_cb [0x%X]\n", ret);
 
+	ret = tethering_set_enabled_cb(handle, TETHERING_TYPE_RESERVED,
+			_enabled_cb, user_data);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_set_enabled_cb [0x%X]\n", ret);
+
+	ret = tethering_wifi_set_passphrase_changed_cb(handle,
+			_passphrase_changed_cb, user_data);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_wifi_set_passphrase_changed_cb [0x%X]\n", ret);
+
+	ret = tethering_wifi_set_ssid_visibility_changed_cb(handle,
+			_visibility_changed_cb, user_data);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_wifi_set_ssid_visibility_changed_cb [0x%X]\n", ret);
+
+	ret = tethering_wifi_set_security_type_changed_cb(handle,
+			_security_type_changed_cb, user_data);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_wifi_set_security_type_changed_cb [0x%X]\n", ret);
+
 	ret = tethering_set_disabled_cb(handle, TETHERING_TYPE_ALL,
+			_disabled_cb, user_data);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_set_disabled_cb [0x%X]\n", ret);
+
+	ret = tethering_set_disabled_cb(handle, TETHERING_TYPE_RESERVED,
 			_disabled_cb, user_data);
 	if (ret != TETHERING_ERROR_NONE)
 		ERR("tethering_set_disabled_cb [0x%X]\n", ret);
@@ -57,30 +91,106 @@ static void __set_callbacks(tethering_h handle, void *user_data)
 			_connection_changed_cb, user_data);
 	if (ret != TETHERING_ERROR_NONE)
 		ERR("tethering_set_connection_state_changed_cb [0x%X]\n", ret);
+
+	ret = wifi_set_device_state_changed_cb(_wifi_state_changed_cb, user_data);
+	if (ret != WIFI_ERROR_NONE)
+		ERR("wifi_set_device_state_changed_cb [0x%X]\n", ret);
+	vconf_notify_key_changed(VCONFKEY_SETAPPL_DEVICE_NAME_STR,
+				_device_name_changed_cb, user_data);
+
+	vconf_notify_key_changed(VCONFKEY_NETWORK_CELLULAR_STATE,
+			_handle_network_cellular_state_changed_cb, user_data);
+
+	vconf_notify_key_changed(VCONFKEY_SYSMAN_USB_STATUS,
+			_handle_usb_status_change, (void *)user_data);
+
+	vconf_notify_key_changed(VCONF_KEY_MOBILEAP_SYSPOPUP_RESPONSE,
+			_handle_mobileap_syspopup_popup_response, (void *)user_data);
+
+	DBG("-\n");
 }
 
 static void __unset_callbacks(tethering_h handle)
 {
+	DBG("+\n");
+
 	int ret;
+
+	ret = wifi_unset_device_state_changed_cb();
+	if (ret != WIFI_ERROR_NONE)
+		ERR("wifi_unset_device_state_changed_cb [0x%X]\n", ret);
 
 	ret = tethering_unset_connection_state_changed_cb(handle,
 			TETHERING_TYPE_ALL);
 	if (ret != TETHERING_ERROR_NONE)
 		ERR("tethering_unset_connection_state_changed_cb[0x%X]\n", ret);
 
+	ret = tethering_unset_disabled_cb(handle, TETHERING_TYPE_RESERVED);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_unset_disabled_cb [0x%X]\n", ret);
+
 	ret = tethering_unset_disabled_cb(handle, TETHERING_TYPE_ALL);
 	if (ret != TETHERING_ERROR_NONE)
 		ERR("tethering_unset_disabled_cb [0x%X]\n", ret);
 
+	ret = tethering_wifi_unset_security_type_changed_cb(handle);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_wifi_unset_security_type_changed_cb [0x%X]\n", ret);
+
+	ret = tethering_wifi_unset_ssid_visibility_changed_cb(handle);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_wifi_unset_ssid_visibility_changed_cb [0x%X]\n", ret);
+
+	ret = tethering_wifi_unset_passphrase_changed_cb(handle);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_wifi_unset_passphrase_changed_cb [0x%X]\n", ret);
+
+	ret = tethering_unset_enabled_cb(handle, TETHERING_TYPE_RESERVED);
+	if (ret != TETHERING_ERROR_NONE)
+		ERR("tethering_unset_enabled [0x%X]\n", ret);
+
 	ret = tethering_unset_enabled_cb(handle, TETHERING_TYPE_ALL);
 	if (ret != TETHERING_ERROR_NONE)
 		ERR("tethering_unset_enabled [0x%X]\n", ret);
+
+	vconf_ignore_key_changed(VCONFKEY_SETAPPL_DEVICE_NAME_STR,
+			_device_name_changed_cb);
+
+	vconf_ignore_key_changed(VCONFKEY_NETWORK_CELLULAR_STATE,
+			_handle_network_cellular_state_changed_cb);
+
+	vconf_ignore_key_changed(VCONFKEY_SYSMAN_USB_STATUS, _handle_usb_status_change);
+
+	vconf_ignore_key_changed(VCONF_KEY_MOBILEAP_SYSPOPUP_RESPONSE,
+			_handle_mobileap_syspopup_popup_response);
+
+	DBG("-\n");
+}
+
+Ea_Theme_Color_Table *_color_table_set(void)
+{
+	Ea_Theme_Color_Table *table;
+
+	table = ea_theme_color_table_new(COLOR_TABLE);
+	DBG("Tethering color table : %p \n");
+	ea_theme_colors_set(table, EA_THEME_STYLE_DEFAULT);
+	return table;
+}
+
+Ea_Theme_Font_Table *_font_table_set(void)
+{
+	Ea_Theme_Font_Table *table;
+
+	table = ea_theme_color_table_new(FONT_TABLE);
+	DBG("Tethering font table : %p \n");
+	ea_theme_fonts_set(table);
+	return table;
 }
 
 static void *on_create(ui_gadget_h ug, enum ug_mode mode,
-		service_h service, void *priv)
+		app_control_h app_control, void *priv)
 {
-	__MOBILE_AP_FUNC_ENTER__;
+	DBG("+\n");
 
 	if (!ug || !priv) {
 		ERR("The param is NULL\n");
@@ -97,13 +207,13 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 	mh_ugdata_t *ugd;
 	mh_appdata_t *ad;
 	int ret;
+	int rots[4] = { 0, 90, 180, 270 };
 
 	bindtextdomain(MH_TEXT_DOMAIN, MH_LOCALEDIR);
 	dgettext(PACKAGE, LOCALEDIR);
 
 	ad = (mh_appdata_t *)malloc(sizeof(mh_appdata_t));
 	if (ad == NULL) {
-		// TODO review this
 		ERR("Error!!! failed to allocate memory()\n");
 		return NULL;
 	}
@@ -113,6 +223,8 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 	ugd->ad = ad;
 	ugd->ug = ug;
 	ad->gadget = ugd;
+
+	_send_signal_qp(QP_SIGNAL_PROGRESS_RESET);
 
 	ecore_imf_init();
 
@@ -132,6 +244,14 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 		return NULL;
 	}
 
+	if (!elm_win_wm_rotation_supported_get(ad->win)) {
+		return NULL;
+	}
+
+	elm_win_wm_rotation_available_rotations_set(ad->win, rots, 1);
+	ea_theme_changeable_ui_enabled_set(EINA_TRUE);
+	ad->color_table = _color_table_set();
+	ad->font_table = _font_table_set();
 	layout = _create_win_layout(ad);
 	if (layout == NULL) {
 		ERR("_create_win_layout is failed\n");
@@ -150,7 +270,6 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 
 	elm_object_part_content_set(layout, "elm.swallow.content", content);
 	evas_object_show(layout);
-
 	ret = connection_create(&ad->conn_handle);
 	if (ret != CONNECTION_ERROR_NONE) {
 		ERR("connection_create() is failed : %d\n", ret);
@@ -163,27 +282,96 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 
 	__set_callbacks(ad->handle, (void *)ad);
 
-	__MOBILE_AP_FUNC_EXIT__;
+	DBG("-\n");
 	return layout;
 }
 
-static void on_start(ui_gadget_h ug, service_h service, void *priv)
+static void on_start(ui_gadget_h ug, app_control_h app_control, void *priv)
 {
+	DBG("+\n");
+
+	char * viewtype = NULL;
+
+	mh_ugdata_t *ugd = (mh_ugdata_t *)priv;
+	mh_appdata_t *ad = ugd->ad;
+
+	ad->is_foreground = true;
+
+	if (_get_list_clients_count(ad) > 0) {
+#ifdef TETHERING_DATA_USAGE_SUPPORT
+		_start_update_data_packet_usage(ad);
+#endif
+		if (ad->connected_device.navi_it) {
+			_start_update_device_conn_time(ad);
+		}
+	}
+
+	if (tethering_is_enabled(NULL, TETHERING_TYPE_RESERVED) == true) {
+		DBG("MobileAP is turned on\n");
+		_prepare_popup(MH_POPUP_WIFI_AP_OFF, STR_WIFI_AP_CONTROLLED_ANOTHER_APP);
+		_create_popup(ad);
+	}
+
+	app_control_get_extra_data(app_control, "viewtype", &viewtype);
+
+	if (viewtype != NULL) {
+		if(strcmp(viewtype, "wifisettings") == 0)
+			mh_draw_wifi_setup_view(ad);
+		g_free(viewtype);
+	}
+
+	DBG("-\n");
+	return;
 }
 
-static void on_pause(ui_gadget_h ug, service_h service, void *priv)
+static void on_pause(ui_gadget_h ug, app_control_h app_control, void *priv)
 {
+	DBG("+\n");
 
+	mh_ugdata_t *ugd = (mh_ugdata_t *)priv;
+	mh_appdata_t *ad = ugd->ad;
+
+#ifdef TETHERING_DATA_USAGE_SUPPORT
+	_stop_update_data_packet_usage(ad);
+#endif
+	_stop_update_device_conn_time(ad);
+	ad->is_foreground = false;
+
+	DBG("-\n");
 }
 
-static void on_resume(ui_gadget_h ug, service_h service, void *priv)
+static void on_resume(ui_gadget_h ug, app_control_h app_control, void *priv)
 {
+	DBG("+\n");
 
+	mh_ugdata_t *ugd = (mh_ugdata_t *)priv;
+	mh_appdata_t *ad = ugd->ad;
+	Elm_Object_Item *item = ad->main.device_item;
+	GSList *l = NULL;
+
+	ad->is_foreground = true;
+
+	if (item && elm_genlist_item_expanded_get(item)) {
+		for (l = ad->client_list; l != NULL; l = g_slist_next(l) ) {
+			item = elm_genlist_item_next_get(item);
+			elm_genlist_item_fields_update(item, "elm.text.2", ELM_GENLIST_ITEM_FIELD_TEXT);
+		}
+	}
+
+	if (_get_list_clients_count(ad) > 0) {
+#ifdef TETHERING_DATA_USAGE_SUPPORT
+		_start_update_data_packet_usage(ad);
+#endif
+		if (ad->connected_device.navi_it) {
+			_start_update_device_conn_time(ad);
+		}
+	}
+	DBG("-\n");
 }
 
-static void on_destroy(ui_gadget_h ug, service_h service, void *priv)
+static void on_destroy(ui_gadget_h ug, app_control_h app_control, void *priv)
 {
-	__MOBILE_AP_FUNC_ENTER__;
+	DBG("+\n");
 
 	if (priv == NULL) {
 		ERR("The param is NULL\n");
@@ -200,7 +388,15 @@ static void on_destroy(ui_gadget_h ug, service_h service, void *priv)
 	}
 
 	__unset_callbacks(ad->handle);
+
+#ifdef TETHERING_DATA_USAGE_SUPPORT
 	_stop_update_data_packet_usage(ad);
+#endif
+	_stop_update_device_conn_time(ad);
+
+	if (vconf_set_int(VCONF_MOBILE_AP_CONNECT_USB_POPUP_STATUS, 0) < 0) {
+		ERR("vconf_set_int is failed\n");
+	}
 
 	ret = wifi_deinitialize();
 	if (ret != WIFI_ERROR_NONE) {
@@ -224,10 +420,14 @@ static void on_destroy(ui_gadget_h ug, service_h service, void *priv)
 		return;
 	}
 
-	ap_callback_del(ad);
 	if (ad->popup) {
 		evas_object_del(ad->popup);
 		ad->popup = NULL;
+	}
+
+	if(ad->ps_recheck_timer_id > 0) {
+		g_source_remove(ad->ps_recheck_timer_id);
+		ad->ps_recheck_timer_id = 0;
 	}
 
 	evas_object_del(ad->bg);
@@ -236,63 +436,24 @@ static void on_destroy(ui_gadget_h ug, service_h service, void *priv)
 	evas_object_del(ad->layout);
 	ad->layout = NULL;
 
+	_main_free_genlist_itc(ad);
+
 	ecore_imf_shutdown();
 
 	free(ugd->ad);
 	ugd->ad = NULL;
 
-	__MOBILE_AP_FUNC_EXIT__;
+	DBG("-\n");
 	return;
 }
 
-static void on_message(ui_gadget_h ug, service_h msg,
-		service_h service, void *priv)
+static void on_message(ui_gadget_h ug, app_control_h msg,
+		app_control_h app_control, void *priv)
 {
-}
-
-static void __rotate_changed_cb(mh_appdata_t *ad, enum ug_event rotate_state)
-{
-	if (ad == NULL) {
-		ERR("ad is NULL\n");
-		return;
-	}
-
-	Elm_Object_Item *top_navi_it = NULL;
-	mh_wifi_setting_view_t *st = &ad->setup;
-
-	ad->rotate_state = rotate_state;
-
-	top_navi_it = elm_naviframe_top_item_get(ad->naviframe);
-	if (top_navi_it == NULL) {
-		ERR("elm_naviframe_top_item_get returns NULL\n");
-		return;
-	}
-
-	if (top_navi_it != st->navi_it) {
-		return;
-	}
-
-	if (rotate_state == UG_EVENT_ROTATE_PORTRAIT ||
-			rotate_state == UG_EVENT_ROTATE_PORTRAIT_UPSIDEDOWN) {
-		DBG("Naviframe title is shown\n");
-		elm_naviframe_item_title_visible_set(st->navi_it,
-				EINA_TRUE);
-	} else if (rotate_state == UG_EVENT_ROTATE_LANDSCAPE ||
-			rotate_state == UG_EVENT_ROTATE_LANDSCAPE_UPSIDEDOWN) {
-		if (ad->imf_state == ECORE_IMF_INPUT_PANEL_STATE_SHOW) {
-			DBG("Naviframe title is hided\n");
-			elm_naviframe_item_title_visible_set(st->navi_it,
-					EINA_FALSE);
-		}
-	} else {
-		ERR("Unknown rotate_state : %d\n", rotate_state);
-	}
-
-	return;
 }
 
 static void on_event(ui_gadget_h ug, enum ug_event event,
-		service_h service, void *priv)
+		app_control_h app_control, void *priv)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
@@ -301,31 +462,24 @@ static void on_event(ui_gadget_h ug, enum ug_event event,
 		return;
 	}
 
-	mh_ugdata_t *ugd = (mh_ugdata_t *)priv;
-	mh_appdata_t *ad = ugd->ad;
-
 	switch (event) {
 	case UG_EVENT_LOW_MEMORY:
-		DBG("UG_EVENT_LOW_MEMORY\n");
 		break;
 	case UG_EVENT_LOW_BATTERY:
-		DBG("UG_EVENT_LOW_BATTERY\n");
 		break;
 	case UG_EVENT_LANG_CHANGE:
-		DBG("UG_EVENT_LANG_CHANGE\n");
 		break;
 	case UG_EVENT_ROTATE_PORTRAIT:
 	case UG_EVENT_ROTATE_PORTRAIT_UPSIDEDOWN:
 		DBG("UG_EVENT_ROTATE_PORTRAIT[_UPSIDEDOWN]\n");
-		__rotate_changed_cb(ad, event);
+		_rotate_adjust_rename_popup();
 		break;
 	case UG_EVENT_ROTATE_LANDSCAPE:
 	case UG_EVENT_ROTATE_LANDSCAPE_UPSIDEDOWN:
 		DBG("UG_EVENT_ROTATE_LANDSCAPE[_UPSIDEDOWN]\n");
-		__rotate_changed_cb(ad, event);
+		_rotate_adjust_rename_popup();
 		break;
 	default:
-		DBG("default\n");
 		break;
 	}
 
@@ -333,7 +487,7 @@ static void on_event(ui_gadget_h ug, enum ug_event event,
 }
 
 static void on_key_event(ui_gadget_h ug, enum ug_key_event event,
-		service_h service, void *priv)
+		app_control_h app_control, void *priv)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
@@ -368,7 +522,7 @@ static void on_key_event(ui_gadget_h ug, enum ug_key_event event,
 
 UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
 {
-	__MOBILE_AP_FUNC_ENTER__;
+	DBG("+\n");
 
 	if (!ops) {
 		ERR("The param is NULL\n");
@@ -393,14 +547,12 @@ UG_MODULE_API int UG_MODULE_INIT(struct ug_module_ops *ops)
 	ops->priv = ugd;
 	ops->opt = UG_OPT_INDICATOR_ENABLE;
 
-	__MOBILE_AP_FUNC_EXIT__;
-
 	return 0;
 }
 
 UG_MODULE_API void UG_MODULE_EXIT(struct ug_module_ops *ops)
 {
-	__MOBILE_AP_FUNC_ENTER__;
+	DBG("+\n");
 
 	if (!ops) {
 		ERR("The param is NULL\n");
@@ -411,32 +563,46 @@ UG_MODULE_API void UG_MODULE_EXIT(struct ug_module_ops *ops)
 
 	if (ugd)
 		free(ugd);
-
-	__MOBILE_AP_FUNC_EXIT__;
 }
 
 static void __mh_reset_vconf(tethering_h handle)
 {
 	int ret = 0;
 
+	ret = vconf_set_int(VCONF_MOBILE_AP_WIFI_POPUP_CHECKBOX_STATUS, 0);
+	if (ret != 0)
+		ERR("vconf_set_int failed\n");
+
+	ret = vconf_set_int(VCONF_MOBILE_AP_BT_POPUP_CHECKBOX_STATUS, 0);
+	if (ret != 0)
+		ERR("vconf_set_int failed\n");
+
+	ret = vconf_set_int(VCONF_MOBILE_AP_USB_POPUP_CHECKBOX_STATUS, 0);
+	if (ret != 0)
+		ERR("vconf_set_int failed\n");
+
 	ret = vconf_set_int(VCONF_MOBILE_AP_PREV_WIFI_STATUS, 0);
 	if (ret != 0)
 		ERR("vconf_set_int failed\n");
+
+	ret = vconf_set_int(VCONF_MOBILE_AP_CONNECT_USB_POPUP_STATUS, 0);
+	if (ret != 0)
+		ERR("vconf_set_int is failed\n");
 
 	ret = tethering_wifi_set_ssid_visibility(handle, true);
 	if (ret != TETHERING_ERROR_NONE)
 		ERR("tethering_wifi_set_ssid_visibility failed\n");
 
-	ret = tethering_wifi_set_security_type(handle, TETHERING_WIFI_SECURITY_TYPE_NONE);
+	ret = tethering_wifi_set_security_type(handle, TETHERING_WIFI_SECURITY_TYPE_WPA2_PSK);
 	if (ret != TETHERING_ERROR_NONE)
 		ERR("tethering_wifi_set_security_type failed\n");
 
 	return;
 }
 
-UG_MODULE_API int setting_plugin_reset(service_h service, void *priv)
+UG_MODULE_API int setting_plugin_reset(app_control_h app_control, void *priv)
 {
-	__MOBILE_AP_FUNC_ENTER__;
+	DBG("+\n");
 
 	int ret = -1;
 	tethering_h handle = NULL;
@@ -462,7 +628,37 @@ UG_MODULE_API int setting_plugin_reset(service_h service, void *priv)
 
 	tethering_destroy(handle);
 
-	__MOBILE_AP_FUNC_EXIT__;
+	return 0;
+}
+
+/* Below code is commented as search in setting is no more supported in kiran */
+
+#if 0
+UG_MODULE_API int setting_plugin_search_init(app_control_h app_control, void * priv, char ** domainname)
+{
+	*domainname = strdup(PACKAGE":/usr/apps/ug-setting-mobileap-efl/res/locale");
+
+	Eina_List ** pplist = (Eina_List**)priv;
+	void * node = NULL;
+
+	node = setting_plugin_search_item_add("IDS_MOBILEAP_MBODY_USB_TETHERING", "viewtype:frontpage", NULL, 5, NULL);
+	*pplist = eina_list_append(*pplist, node);
+
+	node = setting_plugin_search_item_add("IDS_MOBILEAP_MBODY_WI_FI_TETHERING", "viewtype:frontpage", NULL, 5, NULL);
+	*pplist = eina_list_append(*pplist, node);
+
+	node = setting_plugin_search_item_add("IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING", "viewtype:frontpage", NULL, 5, NULL);
+	*pplist = eina_list_append(*pplist, node);
+
+	node = setting_plugin_search_item_add("IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS", "viewtype:wifisettings", NULL, 5, NULL);
+	*pplist = eina_list_append(*pplist, node);
+
+	node = setting_plugin_search_item_add("IDS_MOBILEAP_BODY_HIDE_MY_DEVICE", "viewtype:wifisettings", NULL, 5, NULL);
+	*pplist = eina_list_append(*pplist, node);
+
+	node = setting_plugin_search_item_add("IDS_MOBILEAP_BODY_SECURITY", "viewtype:wifisettings", NULL, 5, NULL);
+	*pplist = eina_list_append(*pplist, node);
 
 	return 0;
 }
+#endif
