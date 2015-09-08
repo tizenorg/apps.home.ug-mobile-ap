@@ -1,0 +1,270 @@
+msgid "IDS_COM_SK_CANCEL"
+msgstr "გაუქმება"
+
+msgid "IDS_COM_SK_OK"
+msgstr "კი"
+
+msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
+msgstr "Wi-Fi-ის ჩართვით გაითიშება მობილური ცხელი წერტილი. განაგრძობთ?"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "მონაცემთა გამოყენება"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "მიბმა"
+
+msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
+msgstr "აღარ მაჩვენო"
+
+msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
+msgstr "თუ ჩართავთ Wi-Fi-ს, გამოირთვება Wi-Fi მობილური ინტერნეტი კომპიუტერში."
+
+msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
+msgstr "მიღწეულია სიმბოლოების მაქსიმალური რაოდენობა %d"
+
+msgid "IDS_COM_SK_NO"
+msgstr "არა"
+
+msgid "IDS_BR_SK_YES"
+msgstr "კი"
+
+msgid "IDS_BR_SK_NO"
+msgstr "არა"
+
+msgid "IDS_BR_SK_DONE"
+msgstr "შესრულდა"
+
+msgid "IDS_BR_SK_CANCEL"
+msgstr "გაუქმება"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
+msgstr "Bluetooth-ით მობილურ ინტერნეტს ვერ გამოიყენებთ კომპიუტერში, როდესაც კავშირი დამყარებულია Wi-Fi ქსელთან."
+
+msgid "IDS_ST_HEADER_RENAME_DEVICE"
+msgstr "მოწყობილობის სახელის შეცვლა"
+
+msgid "IDS_ST_HEADER_MY_DEVICE_NAME"
+msgstr "ჩემი მოწყობილობის სახელი"
+
+msgid "IDS_COM_BODY_ENTER_PASSWORD"
+msgstr "პაროლის შეყვანა."
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "მზადაა"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "გაუქმება"
+
+msgid "IDS_COM_SK_YES"
+msgstr "კი"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "შენახვა"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "პარამეტრები"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "მობილური ინტერნეტის გაზიარება Bluetooth-ით"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "დაკავშირებული მოწყობილობა"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "გამოყენებულია: %s"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "მოწყობილობის სახელი"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "თუ გსურთ შეცვალოთ აპარატის სახელი, გახსენით %s."
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "მოწყობილობის სახელი: %s"
+
+msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
+msgstr "ჩაწერეთ მინიმუმ %d სიმბოლო."
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "დაიმალოს ჩემი მოწყობილობა"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "პაროლი"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d ბაიტი"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d კბ."
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%d მბ"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "უსაფრთხოება"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "შეეხეთ და აირჩიეთ კომპიუტერში მობილური ინტერნეტის კონფიგურაცია."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "მობ. ქსელი ჩართ."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "კომპიუტერში მობილურ ინტერნეტს ამჟამად აკონტროლებს სხვა პროგრამა. კომპიუტერში მობილურ ინტერნეტის კონფიგურაციის შერჩევისთვის ეს პროგრამა გამოირთვება"
+
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "ეს პაროლი არის მხოლოდ Wi-Fi მობილური ინტერნეტისთვის."
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fi მობილური ინტერნეტი დამალულია."
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_TO_MOBILE_NETWORK_ABB"
+msgstr "მობილურ ქსელთან დაკავშირება"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_USB_CABLE_ABB"
+msgstr "USB სადენის მიერთება"
+
+msgid "IDS_MOBILEAP_HEADER_DISABLE_FLIGHT_MODE_ABB"
+msgstr "ფრენის რეჟიმის გამორთვა"
+
+msgid "IDS_MOBILEAP_HEADER_INSERT_SIM_CARD_ABB"
+msgstr "ჩადეთ SIM ბარათი"
+
+msgid "IDS_MOBILEAP_HEADER_TETHERING_FAILED_ABB"
+msgstr "მობილური ინტერნეტი ვერ ჩაირთო"
+
+msgid "IDS_MOBILEAP_HEADER_UNABLE_TO_USE_TETHERING_ABB"
+msgstr "მობ. ინტერნეტს ვერ გამოიყენებთ"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "მობილური ქსელი USB-თი"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fi მობილური ინტერნეტი"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fi ინტერნეტის პარამეტ."
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "დაკავშირებული მოწყობილობები: %d"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "დაკავშირებულ მოწყობილობასთან კავშირი შეწყდა."
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "USB კაბელის მიერთება."
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "კომპიუტერით მობილური ინტერნეტის გამორთვა არ მისცემს საშუალებას დაკავშირებულ მოწყობილობებს დაუკავშირდნენ ინტერნეტს. განაგრძობთ?"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "თუ ნოუთბუქში ჩართავთ მობილურ ინტერნეტს USB-თი, წინა USB კავშირი გაითიშება."
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "ჩადეთ SIM და გადატვირთეთ აპარატი, რომ გამოიყენოთ მობილური ინტერნეტი კომპიუტერში."
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "პაროლი უნდა შეიცავდეს მინიმუმ %d და მაქსიმუმ %d სიმბოლოს."
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "მობილური ინტერნეტი ხარჯავს უფო მეტ ენერგიას და ზრდის მონაცემთა გამოყენებას."
+
+msgid "IDS_MOBILEAP_POP_TO_ENABLE_THIS_TETHERING_FUNCTION_CONNECT_TO_A_MOBILE_OR_WI_FI_NETWORK"
+msgstr "კომპიუტერში მობილური ინტერნეტის ფუნქციის გასააქტიურებლად, დაუკავშირდით მობილურ ან Wi-Fi ქსელს"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "კომპიუტერით მობილური ინტერნეტის გამოყენება შეუძლებელია."
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "ნოუთბუქით მობილურ ინტერნეტ–კავშირს ვერ გამოიყენებთ ფრენის რეჟიმში. მობილური ინტერნეტის გამოსაყენებლად, გამორთეთ ფრენის რეჟიმი."
+
+msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "ქსელის გაზიარების დრო გავიდა"
+
+msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "მობილური ინტერნეტის გაზიარების დრო გავიდა."
+
+msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "მობილური მონაცემები გამორთულია. ჩართეთ მობილურ მონაცემთა გადაცემა და ისევ ცადეთ."
+
+msgid "IDS_BR_MBODY_CONNECT_TO_MOBILE_NETWORK"
+msgstr "მობილურ ქსელთან კავშირი"
+
+msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
+msgstr "აღარ მაჩვენო"
+
+msgid "IDS_BR_SK_OK"
+msgstr "კი"
+
+msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
+msgstr "მინიმუმ %d სიმბოლო"
+
+msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
+msgstr "მობილური ინტერნეტის გამორთვა"
+
+msgid "IDS_COM_BODY_NO_NAME"
+msgstr "უსახელო"
+
+msgid "IDS_COM_BODY_TETHERING_ENABLED"
+msgstr "მობილური ინტერნეტის გაზიარება ჩართულია."
+
+msgid "IDS_COM_BODY_TURN_OFF"
+msgstr "გამორთვა"
+
+msgid "IDS_MSG_HEADER_NO_NETWORK_CONNECTION"
+msgstr "ქსელთან კავშირი არ არის"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth ხილვადობის დრო გავიდა. თქვენი მოწყობილობა შეიძლება ვერ მოიძებნოს."
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "კავშირს დრო გაუვიდა."
+
+msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
+msgstr "Do not show again"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "ჩაწერეთ მინიმუმ 8 სიმბოლოსგან შედგენილი პაროლი."
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "დაცვის ტიპი: %s"
+
+msgid "IDS_ST_BODY_SETTINGS"
+msgstr "პარამეტრები"
+
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "მობილური ინტერნეტი ხარჯავს უფო მეტ ენერგიას და ზრდის მონაცემთა გამოყენებას. გაზიარებული მობილური ინტერნეტის მქონე მოწყობილობების დასაშვები მაქსიმალური რაოდენობაა %d"
+
+msgid "IDS_ST_BODY_TETHERING_ENABLED"
+msgstr "მობილური ინტერნეტის გაზიარება ჩართულია."
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fi ქსელი გაითიშება. მობილური ინტერნეტი ხარჯავს უფო მეტ ენერგიას და ზრდის მონაცემთა გამოყენებას. გაზიარებული მობილური ინტერნეტის მქონე მოწყობილობების დასაშვები მაქსიმალური რაოდენობაა %d"
+
+msgid "IDS_ST_BUTTON_ENABLE_M_USE"
+msgstr "გააქტიურება"
+
+msgid "IDS_ST_HEADER_DATA_USAGE_LIMIT_REACHED_ABB2"
+msgstr "შეივსო მონაცემთა ლიმიტი"
+
+msgid "IDS_ST_MBODY_FLIGHT_MODE_ABB"
+msgstr "ფრენის რეჟ."
+
+msgid "IDS_ST_POP_DEVICE_NAMES_ARE_DISPLAYED_TO_DISTINGUISH_EACH_OF_THE_DEVICES_AVAILABLE_MSG"
+msgstr "ნაჩვენებია მოწყობილობების სახელები, რათა განასხვაოთ ახლომდებარე მოწყობილობების სიაში მყოფი თითოეული მათგანი, რომელთანაც შეიძლება კავშირის დამყარება Bluetooth-ით, Wi-Fi Direct-ითა და სხვა მეთოდებით."
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "კომპიუტერში მობილური ინტერნეტის გამოსაყენებლად, დაუკავშირდით მობილურ ქსელებს."
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "გადარქმ."
+
+msgid "IDS_WIFI_HEADER_CONNECTED_DEVICES"
+msgstr "დაკავშირებული მოწყობილობები"
+
+msgid "MIDS_SWALL_HEADER_SIM_CARD_ERROR_OCCURRED_ABB"
+msgstr "მოხდა SIM ბარათის შეცდომა"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "პაკეტის სერვისს ვერ გამოიყენებთ. დაფარვის ზონის გარეთ."
+

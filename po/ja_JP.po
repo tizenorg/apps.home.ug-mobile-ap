@@ -1,0 +1,270 @@
+msgid "IDS_COM_SK_CANCEL"
+msgstr "キャンセル"
+
+msgid "IDS_COM_SK_OK"
+msgstr "OK"
+
+msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
+msgstr "Wi-FiをONにすると、モバイルホットスポットが無効になります。続行しますか？"
+
+msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
+msgstr "データ​使用量"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING"
+msgstr "テザリング"
+
+msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
+msgstr "今後表示しない"
+
+msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
+msgstr "Wi-FiをONにすると、Wi-Fiテザリングが無効になります。"
+
+msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
+msgstr "最大文字数(%d文字)に達しました。"
+
+msgid "IDS_COM_SK_NO"
+msgstr "いいえ"
+
+msgid "IDS_BR_SK_YES"
+msgstr "はい"
+
+msgid "IDS_BR_SK_NO"
+msgstr "いいえ"
+
+msgid "IDS_BR_SK_DONE"
+msgstr "完了"
+
+msgid "IDS_BR_SK_CANCEL"
+msgstr "キャンセル"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
+msgstr "Wi-Fiネットワークに接続中は、Bluetoothテザリングを使用できません。"
+
+msgid "IDS_ST_HEADER_RENAME_DEVICE"
+msgstr "デバイス名称を変更"
+
+msgid "IDS_ST_HEADER_MY_DEVICE_NAME"
+msgstr "マイデバイス名"
+
+msgid "IDS_COM_BODY_ENTER_PASSWORD"
+msgstr "パスワードを入力"
+
+msgid "IDS_TPLATFORM_ACBUTTON_DONE_ABB"
+msgstr "完了"
+
+msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
+msgstr "キャンセル"
+
+msgid "IDS_COM_SK_YES"
+msgstr "はい"
+
+msgid "IDS_COM_SK_SAVE"
+msgstr "保存"
+
+msgid "IDS_COM_BODY_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
+msgstr "Bluetoothテザリング"
+
+msgid "IDS_MOBILEAP_BODY_CONNECTED_DEVICE"
+msgstr "接続中のデバイス"
+
+msgid "IDS_MOBILEAP_BODY_DATA_USED_C_PS_ABB"
+msgstr "データ使用量: %s"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME"
+msgstr "デバイス名称"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
+msgstr "端末名は%sで変更できます。"
+
+msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
+msgstr "デバイス名称： %s"
+
+msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
+msgstr "%d文字以上入力してください。"
+
+msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
+msgstr "マイデバイスを非表示"
+
+msgid "IDS_MOBILEAP_BODY_PASSWORD"
+msgstr "パスワード"
+
+msgid "IDS_MOBILEAP_BODY_PD_BYTES"
+msgstr "%d Bytes"
+
+msgid "IDS_MOBILEAP_BODY_PD_KB"
+msgstr "%d KB"
+
+msgid "IDS_MOBILEAP_BODY_PD_MB"
+msgstr "%dMB"
+
+msgid "IDS_MOBILEAP_BODY_SECURITY"
+msgstr "セキュリティ"
+
+msgid "IDS_MOBILEAP_BODY_TAP_TO_CONFIGURE_TETHERING"
+msgstr "テザリングを設定するにはタップしてください。"
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_ACTIVE_ABB"
+msgstr "テザリング中..."
+
+msgid "IDS_MOBILEAP_BODY_TETHERING_IS_CURRENTLY_BEING_CONTROLLED_BY_ANOTHER_APPLICATION_TO_CONFIGURE_TETHERING_THAT_APPLICATION_WILL_BE_DISABLED"
+msgstr "現在、テザリングは他のアプリケーションによってコントロールされています。テザリングを設定すると、他のアプリケーションは無効になります。"
+
+msgid "IDS_MOBILEAP_BODY_THIS_PASSWORD_IS_ONLY_FOR_WI_FI_TETHERING"
+msgstr "このパスワードはWi-Fiテザリングのみに使用します。"
+
+msgid "IDS_MOBILEAP_BODY_WI_FI_TETHERING_HIDDEN"
+msgstr "Wi-Fiテザリング非表示"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_TO_MOBILE_NETWORK_ABB"
+msgstr "モバイルネットワークに接続"
+
+msgid "IDS_MOBILEAP_HEADER_CONNECT_USB_CABLE_ABB"
+msgstr "USBケーブルを接続"
+
+msgid "IDS_MOBILEAP_HEADER_DISABLE_FLIGHT_MODE_ABB"
+msgstr "機内モードを無効にする"
+
+msgid "IDS_MOBILEAP_HEADER_INSERT_SIM_CARD_ABB"
+msgstr "SIMカードを挿入"
+
+msgid "IDS_MOBILEAP_HEADER_TETHERING_FAILED_ABB"
+msgstr "テザリングに失敗"
+
+msgid "IDS_MOBILEAP_HEADER_UNABLE_TO_USE_TETHERING_ABB"
+msgstr "テザリング使用不可"
+
+msgid "IDS_MOBILEAP_MBODY_USB_TETHERING"
+msgstr "USBテザリング"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING"
+msgstr "Wi-Fiテザリング"
+
+msgid "IDS_MOBILEAP_MBODY_WI_FI_TETHERING_SETTINGS"
+msgstr "Wi-Fiテザリング設定"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
+msgstr "接続デバイス:%d"
+
+msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
+msgstr "接続中のデバイスを切断します。"
+
+msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
+msgstr "USBケーブルを接続してください。"
+
+msgid "IDS_MOBILEAP_POP_DISABLING_TETHERING_WILL_PREVENT_LINKED_DEVICES_FROM_ACCESSING_THE_INTERNET_CONTINUE_Q"
+msgstr "テザリングを無効にすると、インターネットにアクセスしている端末の接続を停止します。続行しますか？"
+
+msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONNECTION"
+msgstr "USBテザリングを有効にすると、USB接続が切断されます。"
+
+msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
+msgstr "テザリングを使用するには、SIMカードを挿入し、端末を再起動してください。"
+
+msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
+msgstr "パスワードの長さは%d文字以上、%d文字以下である必要があります。"
+
+msgid "IDS_MOBILEAP_POP_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE"
+msgstr "テザリングはより多くのバッテリーを消費し、データ使用量が増加します。"
+
+msgid "IDS_MOBILEAP_POP_TO_ENABLE_THIS_TETHERING_FUNCTION_CONNECT_TO_A_MOBILE_OR_WI_FI_NETWORK"
+msgstr "テザリング機能を有効にするには、モバイルネットワークまたはWi-Fiに接続してください。"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING"
+msgstr "テザリングを使用できません。"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
+msgstr "機内モードではテザリングを使用できません。テザリングを使用するには、機内モードを無効にしてください。"
+
+msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "テザリング接続がタイムアウト"
+
+msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
+msgstr "テザリング接続がタイムアウトになりました。"
+
+msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
+msgstr "モバイルデータが無効です。モバイルデータを有効にしてから、再度実行してください。"
+
+msgid "IDS_BR_MBODY_CONNECT_TO_MOBILE_NETWORK"
+msgstr "ﾓﾊﾞｲﾙﾈｯﾄﾜｰｸに接続"
+
+msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
+msgstr "今後表示しない"
+
+msgid "IDS_BR_SK_OK"
+msgstr "OK"
+
+msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
+msgstr "%d文字以上必要です。"
+
+msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
+msgstr "テザリングを無効にする"
+
+msgid "IDS_COM_BODY_NO_NAME"
+msgstr "名前なし"
+
+msgid "IDS_COM_BODY_TETHERING_ENABLED"
+msgstr "テザリングが有効です。"
+
+msgid "IDS_COM_BODY_TURN_OFF"
+msgstr "OFF"
+
+msgid "IDS_MSG_HEADER_NO_NETWORK_CONNECTION"
+msgstr "ネットワーク接続不可"
+
+msgid "IDS_ST_BODY_BLUETOOTH_VISIBILITY_HAS_TIMED_OUT_YOUR_DEVICE_MIGHT_NOT_BE_FOUND"
+msgstr "Bluetooth公開設定がOFFになっています。この端末は検出されない可能性があります。"
+
+msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
+msgstr "接続タイムアウト"
+
+msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
+msgstr "Do not show again"
+
+msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
+msgstr "8文字以上でパスワードを入力してください。"
+
+msgid "IDS_ST_BODY_SECURITY_TYPE_C_PS"
+msgstr "セキュリティタイプ: %s"
+
+msgid "IDS_ST_BODY_SETTINGS"
+msgstr "設定"
+
+msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "テザリングを有効にするとバッテリー消費量とデータ使用量が増加します。テザリング端末は最大%d台まで接続できます。"
+
+msgid "IDS_ST_BODY_TETHERING_ENABLED"
+msgstr "テザリングが有効です。"
+
+msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
+msgstr "Wi-Fiネットワークの接続が解除されます。テザリングを有効にするとバッテリー消費量とデータ使用量が増加します。テザリング端末は最大%d台まで接続できます。"
+
+msgid "IDS_ST_BUTTON_ENABLE_M_USE"
+msgstr "有効"
+
+msgid "IDS_ST_HEADER_DATA_USAGE_LIMIT_REACHED_ABB2"
+msgstr "データ使用制限に到達"
+
+msgid "IDS_ST_MBODY_FLIGHT_MODE_ABB"
+msgstr "機内モード"
+
+msgid "IDS_ST_POP_DEVICE_NAMES_ARE_DISPLAYED_TO_DISTINGUISH_EACH_OF_THE_DEVICES_AVAILABLE_MSG"
+msgstr "近くのデバイス、Bluetooth、Wi-Fi Directなどで表示される利用可能なデバイスリストに、デバイスの名前を表示して、簡単に区別することができます。"
+
+msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
+msgstr "テザリングを使用するには、モバイルネットワークに接続してください。"
+
+msgid "IDS_ST_SK_RENAME"
+msgstr "名前変更"
+
+msgid "IDS_WIFI_HEADER_CONNECTED_DEVICES"
+msgstr "接続デバイス"
+
+msgid "MIDS_SWALL_HEADER_SIM_CARD_ERROR_OCCURRED_ABB"
+msgstr "SIMカードエラー発生"
+
+msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
+msgstr "圏外です。パケットデータサービスを使用できません。"
+
