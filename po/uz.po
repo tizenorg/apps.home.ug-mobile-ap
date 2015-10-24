@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "Bekor qilish"
-
 msgid "IDS_COM_SK_OK"
 msgstr "OK"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Wi-Fini yoqish Mobil faol nuqtani o‘chiradi. Davom ettirilsinmi?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Ma’lumotdan foydalanish"
@@ -13,17 +7,8 @@ msgstr "Ma’lumotdan foydalanish"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Bog‘lash"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "Boshqa ko‘rsatilmasin"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Wi-Fini yoqish Wi-Fi bog‘lanishni o‘chiradi."
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "Belgilar soni ruxsat etilgan maksimal miqdorga %d yetdi"
-
-msgid "IDS_COM_SK_NO"
-msgstr "Yo‘q"
 
 msgid "IDS_BR_SK_YES"
 msgstr "Ha"
@@ -31,14 +16,11 @@ msgstr "Ha"
 msgid "IDS_BR_SK_NO"
 msgstr "Yo‘q"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "Bajarildi"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "Bekor qilish"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Wi-Fi tarmoqqa ulanganda, Bluetooth bog‘lanishidan foydalanib bo‘lmaydi."
+msgid "IDS_COM_BODY_HELP"
+msgstr "Yordam"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "Qurilma nomini o'zgartirish"
@@ -55,14 +37,8 @@ msgstr "BAJARILDI"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "BEKOR QILISH"
 
-msgid "IDS_COM_SK_YES"
-msgstr "Ha"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "Saqlash"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "Parametrlar"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Bluetooth bog‘lanishi"
@@ -78,12 +54,6 @@ msgstr "Qurilma nomi"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Qurilma nomi %sda o‘zgartirilishi mumkin."
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Qurilma nomi: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "Eng kamida %d belgi kiriting."
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Mening qurilmamni yashirish"
@@ -148,9 +118,6 @@ msgstr "Wi-Fi bog‘lan. parametri"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "Ulangan qurilmalar: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Ulangan qurilma uziladi."
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "USB-kabelni ulash."
 
@@ -178,12 +145,6 @@ msgstr "Bog‘lanishdan foydalanib bo‘lmaydi."
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Parvoz rejimida bog‘lanishdan foydalanib bo‘lmaydi. Bog‘lanishdan foydalanish uchun Parvoz rejimini o‘chiring."
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Bog‘lanish ulanish vaqti tugadi"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Bog‘lanish ulanishi vaqti tugadi."
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "Mobil ma’lumot o‘chirilgan. Mobil ma’lumotni yoqing va qayta urinib ko‘ring."
 
@@ -193,20 +154,11 @@ msgstr "Mobil tarmoqqa ulanish"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "Boshqa ko‘rsatilmasin"
 
-msgid "IDS_BR_SK_OK"
-msgstr "OK"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "Kamida %dta belgi"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "Bog‘lanishni o‘chirish"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "Nom yo‘q"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "Bog‘lash yoqildi."
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "O‘chirish"
@@ -220,9 +172,6 @@ msgstr "Bluetooth ko‘rinish imkoniyatining vaqti o‘tdi. Qurilmangizni topib 
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Ulanish vaqti o‘tdi."
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "Kamida 8 belgidan iborat parol kiriting."
 
@@ -234,9 +183,6 @@ msgstr "Parametrlar"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Bog‘lanish mumkin bo‘lgan qurilmalarning ruxsat etilgan maksimal miqdori: %d"
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "Bog‘lash yoqildi."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Wi-Fi tarmoq uziladi. Bog‘lanish ko‘proq batareya quvvatini sarflaydi va ma’lumot ishlatilishini oshiradi. Bog‘lanish mumkin bo‘lgan qurilmalarning ruxsat etilgan maksimal miqdori: %d"
@@ -267,4 +213,10 @@ msgstr "SIM-karta xatosi yuzaga keldi"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Paketli ma’l. xizmatidan foydal. bo‘lmaydi. Xizmat ko‘rsatish doirasidan tashqarida."
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Telefon haqida"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "Mobil qurilmangizni USB-kabel orqali ShKga ulang."
 

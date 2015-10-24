@@ -7,6 +7,7 @@
 
 #include <Elementary.h>
 #include <vconf.h>
+#include <efl_extension.h>
 
 #include "mh_view_main.h"
 #include "mh_string.h"
@@ -330,13 +331,15 @@ static Evas_Object *__rename_entry_icon_get(void *data, Evas_Object *obj, const 
 		return NULL;
 	}
 
-	entry = ea_editfield_add(obj, EA_EDITFIELD_SCROLL_SINGLELINE);
+	entry = elm_entry_add(obj);
+	elm_entry_single_line_set(entry, EINA_TRUE);
+	elm_entry_scrollable_set(entry, EINA_TRUE);
 	limit_filter_data.max_char_count = DEVICE_NAME_LENGTH_MAX;
 	elm_entry_markup_filter_append(entry, elm_entry_filter_limit_size, &limit_filter_data);
 
 	evas_object_size_hint_weight_set(entry, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(entry, EVAS_HINT_FILL, EVAS_HINT_FILL);
-	ea_entry_selection_back_event_allow_set(entry, EINA_TRUE);
+	eext_entry_selection_back_event_allow_set(entry, EINA_TRUE);
 	elm_object_signal_emit(entry, "elm,action,hide,search_icon", "");
 	elm_object_domain_translatable_part_text_set(entry, "elm.guide", PACKAGE,
 			STR_DEVICE_NAME);
@@ -421,7 +424,7 @@ void _create_rename_device_popup(void *data)
 	evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	elm_object_domain_translatable_part_text_set(popup, "title,text", PACKAGE,
 			"IDS_ST_HEADER_RENAME_DEVICE");
-	ea_object_event_callback_add(popup, EA_CALLBACK_BACK,
+	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
 			__rename_popup_keyback_cb, (void *)ad);
 	evas_object_event_callback_add(popup, EVAS_CALLBACK_MOUSE_UP,
 			__rename_popup_mouseup_cb, (void *)ad);

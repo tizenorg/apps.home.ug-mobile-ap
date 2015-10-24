@@ -3,20 +3,25 @@
 
 Name:		ug-setting-mobileap-efl
 Summary:	Tethering UI Gadget Library
-Version:	1.0.95
+Version:	1.0.123
 Release:	1
 Group:		App/Network
-License:	Flora-1.0
+License:	Flora-1.1
 Source0:	%{name}-%{version}.tar.gz
+
+%if "%{?tizen_profile_name}" == "wearable"
+ExcludeArch: %{arm} %ix86 x86_64
+%endif
+
 BuildRequires:	pkgconfig(evas)
 BuildRequires:	pkgconfig(utilX)
 BuildRequires:	pkgconfig(elementary)
-BuildRequires:	pkgconfig(efl-assist)
 BuildRequires:	pkgconfig(ui-gadget-1)
 BuildRequires:	pkgconfig(capi-network-wifi)
 BuildRequires:	pkgconfig(capi-network-tethering)
 BuildRequires:	pkgconfig(capi-network-connection)
 BuildRequires:	pkgconfig(notification)
+BuildRequires:	pkgconfig(efl-extension)
 BuildRequires:	cmake
 BuildRequires:	edje-bin
 BuildRequires:	gettext-tools
@@ -48,12 +53,12 @@ mkdir -p %{buildroot}%{_datadir}/license
 cp LICENSE %{buildroot}%{_datadir}/license/%{name}
 
 %post
-/usr/bin/vconftool set -t bool db/private/libug-setting-mobileap-efl/prev_wifi_status 0 -u 5000 -f -s ug-setting-mobileap-efl
-/usr/bin/vconftool set -t int file/private/libug-setting-mobileap-efl/wifi_popup_check_box_status 0 -u 5000 -i -f -s ug-setting-mobileap-efl
-/usr/bin/vconftool set -t int file/private/libug-setting-mobileap-efl/bt_popup_check_box_status 0 -u 5000 -i -f -s ug-setting-mobileap-efl
-/usr/bin/vconftool set -t int file/private/libug-setting-mobileap-efl/usb_popup_check_box_status 0 -u 5000 -i -f -s ug-setting-mobileap-efl
-/usr/bin/vconftool set -t int file/private/libug-setting-mobileap-efl/is_device_rename_local 0 -u 5000 -i -f -s ug-setting-mobileap-efl
-/usr/bin/vconftool set -t int memory/private/libug-setting-mobileap-efl/trying_usb_tethering 0 -u 5000 -i -f -s ug-setting-mobileap-efl
+/usr/bin/vconftool set -t bool db/private/libug-setting-mobileap-efl/prev_wifi_status 0 -u 5000 -s ug-setting-mobileap-efl
+/usr/bin/vconftool set -t int file/private/libug-setting-mobileap-efl/wifi_popup_check_box_status 0 -u 5000 -i -s ug-setting-mobileap-efl
+/usr/bin/vconftool set -t int file/private/libug-setting-mobileap-efl/bt_popup_check_box_status 0 -u 5000 -i -s ug-setting-mobileap-efl
+/usr/bin/vconftool set -t int file/private/libug-setting-mobileap-efl/usb_popup_check_box_status 0 -u 5000 -i -s ug-setting-mobileap-efl
+/usr/bin/vconftool set -t int file/private/libug-setting-mobileap-efl/is_device_rename_local 0 -u 5000 -i -s ug-setting-mobileap-efl
+/usr/bin/vconftool set -t int memory/private/libug-setting-mobileap-efl/trying_usb_tethering 0 -u 5000 -i -s ug-setting-mobileap-efl
 
 mkdir -p /usr/apps/ug-setting-mobileap-efl/bin/ -m 777
 chown -R 5000:5000 /usr/apps/ug-setting-mobileap-efl/bin/

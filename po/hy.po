@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "Չեղարկել"
-
 msgid "IDS_COM_SK_OK"
 msgstr "Ընդունել"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Wi-Fi միացնելը կկասեցնի Շարժական թեժ կետը. շարունակե՞լ:"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Տվյալների օգտագործում"
@@ -13,17 +7,8 @@ msgstr "Տվյալների օգտագործում"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Տեղակապում"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "Չցուցադրել կրկին"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Wi-Fi-ը միացնելը կկասեցնի Wi-Fi տեղակապումը:"
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "Հասել է նիշերի առավելագույն քանակին՝ %d"
-
-msgid "IDS_COM_SK_NO"
-msgstr "Ոչ"
 
 msgid "IDS_BR_SK_YES"
 msgstr "Այո"
@@ -31,14 +16,11 @@ msgstr "Այո"
 msgid "IDS_BR_SK_NO"
 msgstr "Ոչ"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "Պատրաստ"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "Չեղարկել"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Անհնար է Bluetooth տեղակապում օգտագործել Wi-Fi ցանցին միացված ժամանակ:"
+msgid "IDS_COM_BODY_HELP"
+msgstr "Օգնություն"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "Վերանվանել սարքը"
@@ -55,14 +37,8 @@ msgstr "ԱՐՎԱԾ"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "ԴԱԴԱՐԵՑՆԵԼ"
 
-msgid "IDS_COM_SK_YES"
-msgstr "Այո"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "Պահել"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "Պարամետրեր"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Bluetooth տեղակապում"
@@ -78,12 +54,6 @@ msgstr "Սարքի Անունը"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Սարքի անունը կարող է փոխվել %sում:"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Սարքի անվանումը՝ %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "Մուտքագրել առնվազն %d նիշ:"
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Թաքցնել իմ սարքը"
@@ -148,9 +118,6 @@ msgstr "Wi-Fi տեղակապ. դրվածքներ"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "Միացված սարքեր՝ %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Կապակցված սարքը կանջատվի:"
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "Միացնել USB մալուխը:"
 
@@ -178,12 +145,6 @@ msgstr "Անհնար է օգտագործել տեղակապում:"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Անհնար է տեղակապումն օգտագործել Թռիչքային ռեժիմում: Տեղակապումից օգտվելու համար կասեցնել Թռիչքային ռեժիմը:"
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Տեղակապման միացման ժկ սպառվել է"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Տեղակապման միացման ժամանակը սպառվել է:"
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "Շարժական տվյալները կասեցված են: Ընձեռեք շարժական տվյալները և նորից փորձեք:"
 
@@ -193,20 +154,11 @@ msgstr "Միանալ շարժական ցանցին"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "Այլևս ցույց չտալ"
 
-msgid "IDS_BR_SK_OK"
-msgstr "Ընդունել"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "Առնվազն %d նիշ"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "Կասեցնել Տեղակապումը"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "Անուն չկա"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "Տեղակապումն ընձեռված է:"
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "Անջատել"
@@ -220,9 +172,6 @@ msgstr "Bluetooth տեսանելիության համար հատկացված ժ�
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Միացման պարապուրդ:"
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "Մուտքագրել առնվազն 8-նիշանի գաղտնաբառ:"
 
@@ -234,9 +183,6 @@ msgstr "Պարամետրեր"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Տեղակապումը մարտկոցի ավելի շատ էներգիա է սպառում և ավելացնում է տվյալների օգտագործումը: Տեղակապված սարքերի առավելագույն թույլատրված քանակը %d է"
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "Տեղակապումն ընձեռված է:"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Wi-Fi ցանցը կանջատվի: Տեղակապումը մարտկոցի ավելի շատ էներգիա է սպառում և ավելացնում է տվյալների օգտագործումը: Տեղակապված սարքերի առավելագույն թույլատրված քանակը %d է"
@@ -267,4 +213,10 @@ msgstr "SIM քարտի սխալ է տեղի ունեցել"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Անհնար է օգտագործել Ձայնային հրամայող: Ծածկույթից դուրս:"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Հեռախոսի մասին"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "Ձեր շարժական սարքը USB լարով կապակցեք ԱՀ-ի հետ:"
 

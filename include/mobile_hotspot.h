@@ -46,7 +46,6 @@ extern "C" {
 #include <sys/time.h>
 #include <glib.h>
 #include <Elementary.h>
-#include <efl_assist.h>
 #include <vconf.h>
 #include <ui-gadget-module.h>
 #include <wifi.h>
@@ -131,8 +130,10 @@ typedef struct ap_app_main {
 	Evas_Object		*back_btn;
 	Evas_Object		*check_popup_ly;
 
+#if 0 /* not used */
 	Elm_Genlist_Item_Class	*sp_itc;
 	Elm_Genlist_Item_Class	*sp2_itc;
+#endif
 	Elm_Genlist_Item_Class	*wifi_itc;
 	Elm_Genlist_Item_Class	*setup_itc;
 	Elm_Genlist_Item_Class	*bt_itc;
@@ -176,8 +177,10 @@ typedef struct {
 	Evas_Object		*save_button;
 	Evas_Object		*cancel_button;
 
+#if 0 /* not used */
 	Elm_Genlist_Item_Class		*sp_itc;
 	Elm_Genlist_Item_Class		*sp2_itc;
+#endif
 	Elm_Genlist_Item_Class		*hide_itc;
 	Elm_Genlist_Item_Class		*security_itc;
 	Elm_Genlist_Item_Class		*pw_itc;
@@ -242,9 +245,6 @@ typedef struct {
 	Evas_Object		*rename_popup;
 	Evas_Object		*rename_button;
 	Elm_Object_Item		*navi_item;
-
-	Ea_Theme_Color_Table * color_table;
-	Ea_Theme_Font_Table * font_table;
 
 	int		ps_recheck_timer_id;
 	int		is_wifi_teth_enabling;

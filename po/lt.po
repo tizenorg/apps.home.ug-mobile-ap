@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "Atšaukti"
-
 msgid "IDS_COM_SK_OK"
 msgstr "Gerai"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Įjungus „Wi-Fi“ bus išjungta mobilioji saitvietė. Tęsti?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Duomenų naudojimas"
@@ -13,17 +7,8 @@ msgstr "Duomenų naudojimas"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Siejama"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "Daugiau nerodyti"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Įjungus „Wi-Fi“ bus išjungtas „Wi-Fi“ siejimas."
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "Pasiektas didžiausias simbolių skaičius: %d"
-
-msgid "IDS_COM_SK_NO"
-msgstr "Ne"
 
 msgid "IDS_BR_SK_YES"
 msgstr "Taip"
@@ -31,14 +16,11 @@ msgstr "Taip"
 msgid "IDS_BR_SK_NO"
 msgstr "Ne"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "Atlikta"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "Atšaukti"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Negalima naudoti „Bluetooth“ siejimo, kai prisijungta prie „Wi-Fi“ tinklo."
+msgid "IDS_COM_BODY_HELP"
+msgstr "Pagalba"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "Pervardyti įrenginį"
@@ -55,14 +37,8 @@ msgstr "ATLIKTA"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "ATŠAUKTI"
 
-msgid "IDS_COM_SK_YES"
-msgstr "Taip"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "Išsaug."
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "Nustatymai"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "„Bluetooth“ siejimas"
@@ -78,12 +54,6 @@ msgstr "Įrenginio vardas"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Įrenginio pavadinimas gali būti pakeistas į %s."
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Įrenginio pavadinimas: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "Įveskite bent %d simbolius (-ių)."
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Slėpti mano įrenginį"
@@ -148,9 +118,6 @@ msgstr "„Wi-Fi“ siej. nustatymai"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "Prijungti įrenginiai: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Prijungtas įrenginys bus atjungtas."
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "Prijungti USB kabelį."
 
@@ -178,12 +145,6 @@ msgstr "Negalima naudoti siejimo."
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Skrydžio režimu negalima naudoti siejimo. Jei norite naudoti siejimą, išjunkite skrydžio režimą."
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Baigėsi siejimo ryšio laikas"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Baigėsi siejimo ryšio laikas."
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "Mobiliojo telefono duomenys išjungti. Įjunkite mobiliojo telefono duomenis ir bandykite dar kartą."
 
@@ -193,20 +154,11 @@ msgstr "Jungtis prie mob. tinklo"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "Neberodyti"
 
-msgid "IDS_BR_SK_OK"
-msgstr "Gerai"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "Bent %d simbolis (-ių)"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "Išjungti siejimą"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "Nėra vardo"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "Siejimas įjungtas."
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "Išjungti"
@@ -220,9 +172,6 @@ msgstr "„Bluetooth“ pasiekiamumo laikas baigėsi. Jūsų įrenginys gali bū
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Baigėsi prisijungimui skirtas laikas."
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "Įveskite slaptažodį bent iš 8 simbolių."
 
@@ -234,9 +183,6 @@ msgstr "Nustatymai"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Kai įjungtas siejimas, suvartojama daugiau akumuliatoriaus energijos ir padidėja duomenų naudojimas. Didžiausias leistinas susietų įrenginių skaičius yra %d."
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "Siejimas įjungtas."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "„Wi-Fi“ tinklas bus atjungtas. Kai įjungtas siejimas, suvartojama daugiau akumuliatoriaus energijos ir padidėja duomenų naudojimas. Didžiausias leistinas susietų įrenginių skaičius yra %d."
@@ -267,4 +213,10 @@ msgstr "Įvyko SIM kortelės klaida"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Neįmanoma naudoti paketinių duomenų paslaugos. Ne ryšio zonoje."
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Apie telefoną"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "Prijunkite mobilųjį įrenginį prie kompiuterio USB kabeliu."
 

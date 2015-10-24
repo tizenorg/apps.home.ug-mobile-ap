@@ -17,7 +17,7 @@ SET(SRCS
 	src/mh_func_onoff.c
 	src/mh_common_utility.c
 	src/mh_popup.c
-	src/mh_device_rename.c
+#	src/mh_device_rename.c
 	src/mh_connected_client.c
 )
 
@@ -27,7 +27,7 @@ ENDIF (TIZEN_DUALSIM_ENABLE)
 
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-SET(dependents "elementary efl-assist utilX evas ui-gadget-1 capi-network-tethering capi-network-connection capi-network-wifi notification")
+SET(dependents "elementary utilX evas ui-gadget-1 capi-network-tethering capi-network-connection capi-network-wifi notification efl-extension")
 
 SET(CMAKE_BUILD_TYPE "Release")
 

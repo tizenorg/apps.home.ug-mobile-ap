@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "إلغاء"
-
 msgid "IDS_COM_SK_OK"
 msgstr "موافق"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "سوف يؤدي تشغيل شبكة Wi-Fi إلى إلغاء تفعيل Mobile Hotspot. هل تريد المتابعة؟"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "استخدام البيانات"
@@ -13,17 +7,8 @@ msgstr "استخدام البيانات"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "تقييد"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "عدم العرض مرة أخرى"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "سيؤدي تشغيل شبكة Wi-Fi إلى إلغاء تفعيل الربط باستخدام Wi-Fi."
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "تم الوصول إلى الحد الأقصى من عدد الأحرف %d"
-
-msgid "IDS_COM_SK_NO"
-msgstr "لا"
 
 msgid "IDS_BR_SK_YES"
 msgstr "نعم"
@@ -31,14 +16,11 @@ msgstr "نعم"
 msgid "IDS_BR_SK_NO"
 msgstr "لا"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "تمت"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "إلغاء"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "يتعذر استخدام تقييد البلوتوث أثناء الاتصال بشبكة Wi-Fi."
+msgid "IDS_COM_BODY_HELP"
+msgstr "مساعدة"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "إعادة تسمية الجهاز"
@@ -55,14 +37,8 @@ msgstr "تم"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "إلغاء"
 
-msgid "IDS_COM_SK_YES"
-msgstr "نعم"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "حفظ"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "الضبط"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "تقييد البلوتوث"
@@ -78,12 +54,6 @@ msgstr "اسم الجهاز"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "يمكن تغيير اسم الجهاز في %s."
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "اسم الجهاز: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "أدخل %d حروف على الأقل."
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "إخفاء جهازي"
@@ -148,9 +118,6 @@ msgstr "إعدادات تقييد Wi-Fi"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "الأجهزة المتصلة: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "سيتم قطع اتصال الجهاز المتصل."
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "قم بتوصيل إلى كابل USB."
 
@@ -178,12 +145,6 @@ msgstr "يتعذر استخدام التقييد."
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "يتعذر استخدام التقييد في وضع الطيران. لاستخدام التقييد، قم بإلغاء تفعيل وضع الطيران."
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "انتهاء مهلة الاتصال المقيد"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "انتهت مهلة الاتصال المقيد."
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "تم إلغاء تفعيل بيانات الهاتف المحمول. قم بتفعيل بيانات الهاتف المحمول، ثم أعد المحاولة."
 
@@ -193,20 +154,11 @@ msgstr "الاتصال بشبكة المحمول"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "عدم العرض مرة أخرى"
 
-msgid "IDS_BR_SK_OK"
-msgstr "موافق"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "%d أحرف على الأقل"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "إلغاء تفعيل التقييد"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "لا يوجد اسم"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "تم تمكين التقييد."
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "إيقاف تشغيل"
@@ -220,9 +172,6 @@ msgstr "انتهت مهلة رؤية البلوتوث‬. قد لا يتم ال�
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "مهلة الاتصال."
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "أدخل كلمة مرور تتألف من ٨ أحرف على الأقل."
 
@@ -234,9 +183,6 @@ msgstr "الضبط"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "يؤدي التقييد إلى استهلاك المزيد من طاقة البطارية وزيادة استخدام البيانات. الحد الأقصى لعدد الأجهزة المقيدة المسموح بها هو %d."
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "تم تمكين التقييد."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "‏‫سيتم قطع اتصال شبكة Wi-Fi. يؤدي التقييد إلى استهلاك المزيد من طاقة البطارية وزيادة استخدام البيانات. الحد الأقصى لعدد الأجهزة المقيدة المسموح بها هو %d."
@@ -251,7 +197,7 @@ msgid "IDS_ST_MBODY_FLIGHT_MODE_ABB"
 msgstr "وضع الطيران"
 
 msgid "IDS_ST_POP_DEVICE_NAMES_ARE_DISPLAYED_TO_DISTINGUISH_EACH_OF_THE_DEVICES_AVAILABLE_MSG"
-msgstr "تعرض أسماء الأجهزة لتمييز كل جهاز متوفر في قائمة الأجهزة القريبة، عبر البلوتوث ومباشر Wi-Fi وغيرها من الطرق."
+msgstr "تعرض أسماء الأجهزة لتمييز كل جهاز متوفر في قائمة الأجهزة القريبة، عبر البلوتوث وWi-Fi مباشر وغيرها من الطرق."
 
 msgid "IDS_ST_POP_TO_USE_TETHERING_CONNECT_TO_A_MOBILE_NETWORKS"
 msgstr "لاستخدام التقييد، قم بالتوصيل بشبكات المحمول"
@@ -267,4 +213,10 @@ msgstr "حدث خطأ في بطاقة SIM"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "يتعذر استخدام خدمة الحزمة. خارج نطاق التغطية."
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "حول الهاتف"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "قم بتوصيل الجهاز المحمول بالكمبيوتر عبر كابل USB."
 

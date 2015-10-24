@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "Peruuta"
-
 msgid "IDS_COM_SK_OK"
 msgstr "OK"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Jos otat Wi-Fi-yhteyden käyttöön, mobiilitukiasema poistetaan käytöstä. Jatketaanko?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Datan käyttö"
@@ -13,17 +7,8 @@ msgstr "Datan käyttö"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Yhteyden jako"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "Älä näytä uudestaan"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Wi-Fi-yhteyden ottaminen käyttöön poistaa Wi-Fi-yhteyden jakamisen käytöstä."
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "Merkkien enimmäismäärä %d on saavutettu."
-
-msgid "IDS_COM_SK_NO"
-msgstr "Ei"
 
 msgid "IDS_BR_SK_YES"
 msgstr "Kyllä"
@@ -31,14 +16,11 @@ msgstr "Kyllä"
 msgid "IDS_BR_SK_NO"
 msgstr "Ei"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "Valmis"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "Peruuta"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Bluetooth-yhteyttä ei voi käyttää, kun Wi-Fi-verkkoyhteys on muodostettu."
+msgid "IDS_COM_BODY_HELP"
+msgstr "Ohje"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "Nimeä laite uudelleen"
@@ -55,14 +37,8 @@ msgstr "VALMIS"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "PERUUTA"
 
-msgid "IDS_COM_SK_YES"
-msgstr "Kyllä"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "Tallenna"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "Asetukset"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Bluetooth-liitos"
@@ -78,12 +54,6 @@ msgstr "Laitteen nimi"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Laitteen nimi voidaan muuttaa kohdassa %s."
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Laitteen nimi: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "Anna vähintään %d merkkiä."
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Piilota oma laite"
@@ -148,9 +118,6 @@ msgstr "Wi-Fi-yht. jaon asetukset"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "Yhdistetyt laitteet: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Yhdistetyn laitteen yhteys katkaistaan."
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "Liitä USB-kaapeli."
 
@@ -178,12 +145,6 @@ msgstr "Yhteyttä ei voi jakaa."
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Yhteyttä ei voi jakaa lentotilassa. Jos haluat jakaa yhteyden, poista lentotila käytöstä."
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Jaettu yhteys aikakatkaistu"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Jaettu yhteys aikakatkaistu."
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "Mobiilidata on poistettu käytöstä. Ota mobiilidata käyttöön ja yritä uudelleen."
 
@@ -193,20 +154,11 @@ msgstr "Yhdistä matkapuh.verkkoon"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "Älä näytä uudelleen"
 
-msgid "IDS_BR_SK_OK"
-msgstr "OK"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "Vähintään %d merkkiä"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "Poista yhteyden jako käytöstä"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "Ei nimeä"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "Internet-yhteyden jako käytössä."
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "Poista käytöstä"
@@ -220,9 +172,6 @@ msgstr "Bluetooth-näkyvyys on aikakatkaistu. Laitetta ei ehkä löydy."
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Yhteyden aikakatkaisu"
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "Anna vähintään 8 merkkiä pitkä salasana."
 
@@ -234,9 +183,6 @@ msgstr "Asetukset"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Yhdistäminen kuluttaa enemmän virtaa ja lisää datan käyttöä. Yhdistettyjen laitteiden suurin sallittu määrä on %d."
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "Internet-yhteyden jako käytössä."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Wi-Fi-verkkoyhteys katkaistaan. Yhdistäminen kuluttaa enemmän virtaa ja lisää datan käyttöä. Yhdistettyjen laitteiden suurin sallittu määrä on %d."
@@ -267,4 +213,10 @@ msgstr "SIM-korttivirhe"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Pakettipalvelua ei voi käyttää. Peittoalueen ulkopuolella."
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Tietoja puhelimesta"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "Yhdistä mobiililaite USB-kaapelilla tietokoneeseen."
 

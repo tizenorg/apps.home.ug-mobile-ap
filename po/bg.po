@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "Отмени"
-
 msgid "IDS_COM_SK_OK"
 msgstr "OK"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Включването на Wi-Fi ще деактивира Mobile Hotspot. Продължаване?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Ползване на данни"
@@ -13,17 +7,8 @@ msgstr "Ползване на данни"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Привързване"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "Не показвай отново"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Включването на Wi-Fi ще деактивира Wi-Fi привързване."
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "Достигнат е максималният брой знаци %d."
-
-msgid "IDS_COM_SK_NO"
-msgstr "Не"
 
 msgid "IDS_BR_SK_YES"
 msgstr "Да"
@@ -31,14 +16,11 @@ msgstr "Да"
 msgid "IDS_BR_SK_NO"
 msgstr "Не"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "Готово"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "Отмени"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Не може да се използва Bluetooth привързване, докато сте свързани към Wi-Fi мрежа."
+msgid "IDS_COM_BODY_HELP"
+msgstr "Помощ"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "Преименуване на устройството"
@@ -55,14 +37,8 @@ msgstr "ГОТОВО"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "ОТКАЗ"
 
-msgid "IDS_COM_SK_YES"
-msgstr "Да"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "Запази"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "Настройки"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Bluetooth привързване"
@@ -78,12 +54,6 @@ msgstr "Име устройство"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Името на устройството може да бъде променено в %s."
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Име на устройството: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "Въведете поне %d знака."
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Скрий моето устройство"
@@ -148,9 +118,6 @@ msgstr "Наст. за Wi-Fi привързв."
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "Свързани устройства: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Свързаното устройство ще бъде прекъснато."
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "Свързване с USB кабел"
 
@@ -178,12 +145,6 @@ msgstr "Не може да се използва привързване."
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Привързването не може да се използва в режим Полет. За да използвате привързване, деактивирайте режим Полет."
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Времето на тетъринга изтече"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Времето на тетъринг връзката изтече."
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "Мобилните данни са деактивирани. Активирайте мобилните данни и опитайте отново."
 
@@ -193,20 +154,11 @@ msgstr "Свързв. към мобилна мрежа"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "Не показвай повече"
 
-msgid "IDS_BR_SK_OK"
-msgstr "OK"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "Поне %d знака"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "Деактивиране на тетъринг"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "Без име"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "Привързването е активирано."
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "Изключване"
@@ -220,9 +172,6 @@ msgstr "Видимостта на Bluetooth изтече. Вашето устр�
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Изтекло време на изчакване на връзка."
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "Въведете парола с поне 8 знака."
 
@@ -234,9 +183,6 @@ msgstr "Настройки"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Привързването консумира повече енергия от батерията и увеличава потреблението на данни. Максималният позволен брой привързани устройства е %d."
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "Привързването е активирано."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Wi-Fi мрежата ще бъде прекъсната. Привързването консумира повече енергия от батерията и увеличава потреблението на данни. Максималният позволен брой привързани устройства е %d."
@@ -267,4 +213,10 @@ msgstr "Възникна грешка в SIM картата"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Не може да се използва пакетна услуга. Извън покритие."
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Относно телефона"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "Свържете мобилното си устройство към компютъра през USB кабел."
 

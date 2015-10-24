@@ -55,9 +55,11 @@ void _stop_update_device_conn_time(mh_appdata_t *ad);
 void _main_draw_contents(mh_appdata_t *ad);
 void _main_callback_del(mh_appdata_t *ad);
 void _main_free_genlist_itc(mh_appdata_t *ad);
+#if 0 /* device rename not supported */
 void _create_rename_device_popup(void *data);
 void _hadnle_rename_popup_rotation(Eina_Bool is_portrait);
 void _rotate_adjust_rename_popup(void);
+#endif
 void _select_connected_dev(void *data, Evas_Object *obj, void *event_info);
 void _genlist_update_device_item(mh_appdata_t *ad);
 void _update_conn_clients(mh_appdata_t *ad);

@@ -19,8 +19,7 @@
 
 #include <net_connection.h>
 #include <dbus/dbus.h>
-#include <dbus/dbus-glib.h>
-#include <dbus/dbus-glib-lowlevel.h>
+#include <gio/gio.h>
 
 #include "mh_common_utility.h"
 #include "mobile_hotspot.h"
@@ -637,54 +636,40 @@ bool _get_vconf_prev_wifi_state()
 
 int _send_signal_qp(const char *cmd)
 {
+	DBG("+\n");
+
 	if (cmd == NULL) {
 		ERR("Invalid param");
 		return -1;
 	}
 
-	DBusGConnection *conn = NULL;
-	DBusConnection *gconn = NULL;
-	DBusMessage *msg = NULL;
+	GDBusConnection *conn = NULL;
+	int ret = 0;
+	GVariant *message = NULL;
 	GError *err = NULL;
-	char *module = "wifi_hotspot";
 
-	conn = dbus_g_bus_get(DBUS_BUS_SYSTEM, &err);
+	DBG("Sent dbus signal : %s\n", cmd);
+
+	conn = g_bus_get_sync(DBUS_BUS_SYSTEM, NULL, &err);
 	if (err != NULL) {
 		ERR("Failed connection to system bus[%s]", err->message);
 		g_error_free(err);
+		err = NULL;
 		return -1;
 	}
-
-	gconn = dbus_g_connection_get_connection(conn);
-	if (gconn == NULL) {
-		ERR("Failed to get connection \n");
-		dbus_g_connection_unref(conn);
-		return -1;
+	message = g_variant_new("(ss)", "wifi_hotspot", cmd);
+	g_dbus_connection_emit_signal(conn, NULL, "/Org/Tizen/Quickpanel",
+			"org.tizen.quickpanel", "ACTIVITY", message, &err);
+	if (err) {
+		ERR("g_dbus_connection_emit_signal is failed and error is %s\n", err->message);
+		g_error_free(err);
+		ret = -1;
 	}
+	g_variant_unref(message);
 
-	msg = dbus_message_new_signal("/Org/Tizen/Quickpanel",
-					  "org.tizen.quickpanel",
-					  "ACTIVITY");
-	if (!msg) {
-		ERR("Unable to allocate D-Bus signal\n");
-		dbus_g_connection_unref(conn);
-		return -1;
-	}
+	if (conn)
+		g_object_unref(conn);
 
-	if (!dbus_message_append_args(msg,
-			DBUS_TYPE_STRING, &module,
-			DBUS_TYPE_STRING, &cmd,
-			DBUS_TYPE_INVALID)) {
-		ERR("Event sending failed");
-		dbus_message_unref(msg);
-		dbus_g_connection_unref(conn);
-		return -1;
-	}
-
-	DBG("Send dbus signal : %s\n", cmd);
-	dbus_connection_send(gconn, msg, NULL);
-	dbus_message_unref(msg);
-	dbus_g_connection_unref(conn);
-
-	return 0;
+	DBG("-\n");
+	return ret;
 }

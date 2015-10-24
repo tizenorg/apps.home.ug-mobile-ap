@@ -31,6 +31,16 @@ extern "C" {
 #define QP_SIGNAL_PROGRESS_OFF	"progress_off"
 #define QP_SIGNAL_PROGRESS_RESET	"progress_reset"
 
+/* Genlist new style for Tizen 2.4 */
+#define MH_GENLIST_1LINE_TEXT_STYLE "type1"
+#define MH_GENLIST_1LINE_TEXT_ICON_STYLE "type1"
+#define MH_GENLIST_2LINE_TOP_TEXT_STYLE "type1"
+#define MH_GENLIST_2LINE_TOP_TEXT_ICON_STYLE "type1"
+#define MH_GENLIST_2LINE_BOTTOM_TEXT_STYLE "type2"
+#define MH_GENLIST_2LINE_BOTTOM_TEXT_ICON_STYLE "type2"
+#define MH_GENLIST_MULTILINE_TEXT_STYLE "multiline"
+#define MH_GENLIST_GROUP_INDEX_STYLE "group_index"
+
 Evas_Object *_create_progressbar(Evas_Object *parent, const char *style);
 Evas_Object *_create_bg(Evas_Object *parent, const char *style);
 Evas_Object *_create_win_layout(mh_appdata_t *ad);

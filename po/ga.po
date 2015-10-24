@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "Cuir ar ceal"
-
 msgid "IDS_COM_SK_OK"
 msgstr "OK"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Díchumasófar Ball Te Móibíleach má chastar Wi-Fi air. Ar aghaidh?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Úsáid sonraí"
@@ -13,17 +7,8 @@ msgstr "Úsáid sonraí"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Ag déanamh teaghráin"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "Ná taispeáin arís"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Díchumasófar nascaireacht Wi-Fi má chastar Wi-Fi air"
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "Uaslíon na gcarachtar %d bainte amach."
-
-msgid "IDS_COM_SK_NO"
-msgstr "Ná déan é"
 
 msgid "IDS_BR_SK_YES"
 msgstr "Déan é"
@@ -31,14 +16,11 @@ msgstr "Déan é"
 msgid "IDS_BR_SK_NO"
 msgstr "Ná déan é"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "Déanta"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "Cuir ar ceal"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Ní féidir nascaireacht Bluetooth a úsáid agus tú nasctha le líonra Wi-Fi."
+msgid "IDS_COM_BODY_HELP"
+msgstr "Cuidiú"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "Athainmnigh an gléas"
@@ -55,14 +37,8 @@ msgstr "DÉANTA"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "CUIR AR CEAL"
 
-msgid "IDS_COM_SK_YES"
-msgstr "Déan é"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "Sábháil"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "Socruithe"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Nascaireacht Bluetooth"
@@ -78,12 +54,6 @@ msgstr "Ainm an ghléis"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Is féidir ainm an ghléis a athrú i %s"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Ainm an ghléis: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "Iontráil %d carachtar ar a laghad"
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Folaigh mo ghléas"
@@ -148,9 +118,6 @@ msgstr "Soc. nascaireachta Wi-Fi"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "Gléasanna nasctha: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Dínascfar an gléas nasctha"
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "Ceangail cábla USB"
 
@@ -178,12 +145,6 @@ msgstr "Ní féidir nascaireacht a úsáid."
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Ní féidir nascaireacht a úsáid sa mhód Eitilte. Díchumasaigh mód Eitilte le nascaireacht a úsáid."
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Am ist. don nasc nascaireachta"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Am ist. don nasc nascaireachta."
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "Tá sonraí móibíleacha díchumasaithe. Cumasaigh sonraí móibíleacha agus triail arís é."
 
@@ -193,20 +154,11 @@ msgstr "Nasc le líonra móibíleach"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "Ná taispeáin arís"
 
-msgid "IDS_BR_SK_OK"
-msgstr "OK"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "%d carachtar ar a laghad"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "Díchumasaigh Nascaireacht"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "Níl ainm ann"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "Nascaireacht cumasaithe."
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "Cas As"
@@ -220,9 +172,6 @@ msgstr "Tá an t-am istigh d'infheictheacht Bluetooth. Is féidir nár aimsíodh
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Am istigh don nasc."
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "Iontráil pasfhocal 8 gcarachtar ar a laghad"
 
@@ -234,9 +183,6 @@ msgstr "Socruithe"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Ídítear tuilleadh cumhacht ceallra le nascaireacht agus méadaítear úsáid sonraí agat. Is iad %d uaslíon na ngléasanna ar a bhfuil nascaireacht ceadaithe."
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "Nascaireacht cumasaithe."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Déanfar líonra Wi-Fi dínascadh. Ídítear tuilleadh cumhacht ceallra le nascaireacht agus méadaítear úsáid sonraí agat. Is iad %d uaslíon na ngléasanna ar a bhfuil nascaireacht ceadaithe."
@@ -267,4 +213,10 @@ msgstr "Tharla earráid cárta SIM"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Ní féidir seirbhís paicéid a úsáid. As raon clúdaigh."
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Eolas faoin bhfóin"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "Ceangail do ghléas móibíleach leis an ríomhaire trí chábla USB."
 

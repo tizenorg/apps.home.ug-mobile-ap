@@ -55,7 +55,7 @@
 		<label xml:lang="zh-hk">網絡共享</label>
 		<label xml:lang="zh-sg">网络分享</label>
 		<label xml:lang="zh-tw">網路共享</label>
-		<icon>/usr/apps/ug-setting-mobileap-efl/res/images/ug-setting-mobileap-efl/org.tizen.tethering.png</icon>
+		<icon>/usr/ug/res/images/ug-setting-mobileap-efl/org.tizen.tethering.png</icon>
 		<application-service>
 			<operation name="http://tizen.org/appcontrol/operation/pick"/>
 		</application-service>

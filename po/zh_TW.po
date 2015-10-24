@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "取消"
-
 msgid "IDS_COM_SK_OK"
 msgstr "確定"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "開啟 Wi-Fi 將停用手機無線基地台。繼續嗎？"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "數據使用量"
@@ -13,17 +7,8 @@ msgstr "數據使用量"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "網路共享"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "不再顯示"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "開啟 Wi-Fi 將停用 Wi-Fi 網路共享。"
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "已達字元數量上限  %d"
-
-msgid "IDS_COM_SK_NO"
-msgstr "否"
 
 msgid "IDS_BR_SK_YES"
 msgstr "是"
@@ -31,14 +16,11 @@ msgstr "是"
 msgid "IDS_BR_SK_NO"
 msgstr "否"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "完成"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "取消"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "連接至 Wi-Fi 網路時無法使用藍牙共享。"
+msgid "IDS_COM_BODY_HELP"
+msgstr "說明"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "重新命名裝置"
@@ -55,14 +37,8 @@ msgstr "完成"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "取消"
 
-msgid "IDS_COM_SK_YES"
-msgstr "是"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "儲存"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "設定"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "藍牙網路共享"
@@ -78,12 +54,6 @@ msgstr "裝置名稱"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "裝置名稱可於 %s 中變更。"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "設備名稱：%s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "請輸入至少 %d 個字元。"
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "隱藏我的裝置"
@@ -148,9 +118,6 @@ msgstr "Wi-Fi 網路共享設定"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "連接的設備：％d個"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "將中斷連接的裝置。"
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "連接 USB 纜線。"
 
@@ -178,12 +145,6 @@ msgstr "無法使用網路共享。"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "在飛航模式中無法使用網路共享。要使用網路共享需停用飛航模式。"
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "網路共享連線逾時"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "網路共享連線逾時。"
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "行動數據已停用。啟用行動數據後重試。"
 
@@ -193,20 +154,11 @@ msgstr "連接至行動網路"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "不再顯示"
 
-msgid "IDS_BR_SK_OK"
-msgstr "確定"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "至少 %d 個字元"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "停用網路共享"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "無姓名"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "已啟用網路共享。"
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "關閉"
@@ -220,9 +172,6 @@ msgstr "藍牙可見度已逾時。可能找不到您的裝置。"
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "連線逾時。"
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "輸入至少 8 個字元的密碼。"
 
@@ -234,9 +183,6 @@ msgstr "設定"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "網路共享會消耗更多電力並增加您的數據用量。可允許的最高網路共享裝置數量為 %d。"
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "已啟用網路共享。"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Wi-Fi 網路將中斷連接。網路共享會消耗更多電力並增加您的數據用量。可允許的最高網路共享裝置數量為 %d。"
@@ -267,4 +213,10 @@ msgstr "發生 SIM 卡錯誤"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "無法使用數據傳輸。超出覆蓋範圍。"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "關於手機"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "經 USB 傳輸線將行動裝置連接至電腦。"
 

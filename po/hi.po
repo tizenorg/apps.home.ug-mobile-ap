@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "रद्द"
-
 msgid "IDS_COM_SK_OK"
 msgstr "ओके"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Wi-Fi चालू करने पर मोबाइल हॉटस्पॉट अक्षम हो जाएगा। जारी रखें?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "डाटा उपयोग"
@@ -13,17 +7,8 @@ msgstr "डाटा उपयोग"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "टेथरिंग"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "दोबारा न दिखाएँ।"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Wi-Fi चालू करने पर Wi-Fi टेथरिंग अक्षम हो जाएगा"
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "वर्णों की अधिकतम संख्या %d तक पहुँच गई।"
-
-msgid "IDS_COM_SK_NO"
-msgstr "नहीं"
 
 msgid "IDS_BR_SK_YES"
 msgstr "हाँ"
@@ -31,14 +16,11 @@ msgstr "हाँ"
 msgid "IDS_BR_SK_NO"
 msgstr "नहीं"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "पूर्ण"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "रद्द"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Wi-Fi नेटवर्क से कनेक्ट होने के दौरान ब्लूटूथ टेथरिंग उपयोग करने में असमर्थ।"
+msgid "IDS_COM_BODY_HELP"
+msgstr "सहायता"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "डिवाइस का नाम बदलें"
@@ -55,14 +37,8 @@ msgstr "पूर्ण"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "रद्द करें"
 
-msgid "IDS_COM_SK_YES"
-msgstr "हाँ"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "सुरक्षित"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "सेटिंग्स"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "ब्लूटूथ टेथरिंग"
@@ -78,12 +54,6 @@ msgstr "डिवाइस का नाम"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "डिवाइस नाम %s में बदला जा सकता है"
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "डिवाइस का नाम: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "कम से कम %d वर्ण प्रविष्ट करें।"
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "मेरी डिवाइस छिपाएँ"
@@ -128,7 +98,7 @@ msgid "IDS_MOBILEAP_HEADER_DISABLE_FLIGHT_MODE_ABB"
 msgstr "फ्लाइट मोड अक्षम करें"
 
 msgid "IDS_MOBILEAP_HEADER_INSERT_SIM_CARD_ABB"
-msgstr "SIM कार्ड डालें"
+msgstr "SIM कार्ड इंसर्ट करें"
 
 msgid "IDS_MOBILEAP_HEADER_TETHERING_FAILED_ABB"
 msgstr "टेथरिंग विफल"
@@ -148,9 +118,6 @@ msgstr "Wi-Fi टेथरिंग सेटिंग्स"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "कनेक्ट किए गए डिवाइसेस: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "कनेक्ट किया गया डिवाइस डिस्कनेक्ट हो जाएगा।"
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "USB केबल कनेक्‍ट करें"
 
@@ -161,7 +128,7 @@ msgid "IDS_MOBILEAP_POP_ENABLING_USB_TETHERING_WILL_DISCONNECT_PREVIOUS_USB_CONN
 msgstr "USB तेथरिंग सक्षम करने से पिछला USB कनेक्‍शन डिस्कनेक्ट किया जाएगा"
 
 msgid "IDS_MOBILEAP_POP_INSERT_SIM_CARD_AND_RESTART_DEVICE_TO_USE_TETHERING"
-msgstr "टेथरिंग का उपयोग करने के लिए SIM कार्ड डालें और डिवाइस पुनः चालू करें"
+msgstr "टेथरिंग का उपयोग करने के लिए SIM कार्ड इंसर्ट करें और डिवाइस पुनः चालू करें।"
 
 msgid "IDS_MOBILEAP_POP_PASSWORD_MUST_CONTAIN_AT_LEAST_PD_CHARACTERS_AND_NOT_EXCEED_PD_CHARACTERS"
 msgstr "पासवर्ड में कम से कम %d वर्ण होने जरूरी है और %d वर्ण से अधिक नहीं होने चाहिए।"
@@ -178,12 +145,6 @@ msgstr "टेथरिंग का उपयोग करने में अ�
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "फ़्लाइट मोड में टेथरिंग उपयोग करने में असमर्थ। टेथरिंग का उपयोग करने के लिए फ़्लाइट मोड अक्षम करें।"
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "टेथरिंग कनेक्शन का समय समाप्त"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "टेथरिंग कनेक्शन का समय समाप्त हुआ।"
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "मोबाइल डाटा अक्षम है। मोबाइल डाटा सक्षम करें और फिर से प्रयास करें।"
 
@@ -193,20 +154,11 @@ msgstr "मोबाइल नेटवर्क से कनेक्ट क�
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "दोबारा न दिखाएँ"
 
-msgid "IDS_BR_SK_OK"
-msgstr "ओके"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "कम से कम %d वर्ण"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "टेथरिंग अक्षम करें"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "नाम नहीं"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "टेथरिंग सक्षम किया गया"
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "बंद करें"
@@ -220,9 +172,6 @@ msgstr "ब्लूटूथ दृश्‍यता समय-सीमा �
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "कनेक्शन समय समाप्ति।"
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "कम से कम 8 वर्णों का पासवर्ड प्रविष्ट करें।"
 
@@ -234,9 +183,6 @@ msgstr "सेटिंग्स"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "टेथरिंग बैटरी पॉवर की ज्यादा खपत करता है और आपका डाटा उपयोग बढ़ाता है। अनुमति प्राप्त टेथर किए गए डिवाइसों की अधिकतम संख्या %d है।"
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "टेथरिंग सक्षम किया गया"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Wi-Fi नेटवर्क डिस्कनेक्ट किया जाएगा। टेथरिंग बैटरी पॉवर की ज्यादा खपत करता है और आपका डाटा उपयोग बढ़ाता है। अनुमति प्राप्त टेथर किए गए डिवाइसों की अधिकतम संख्या %d है।"
@@ -267,4 +213,10 @@ msgstr "SIM कार्ड त्रुटि उत्पन्न हुई"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "पैकेट डाटा सेवा का उपयोग करने में असमर्थ। कवरेज से बाहर।"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "फोन के बारे में"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "USB केबल के माध्यम से अपने मोबाइल डिवाइस को PC से कनेक्ट करें।"
 

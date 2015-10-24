@@ -167,26 +167,6 @@ static void __unset_callbacks(tethering_h handle)
 	DBG("-\n");
 }
 
-Ea_Theme_Color_Table *_color_table_set(void)
-{
-	Ea_Theme_Color_Table *table;
-
-	table = ea_theme_color_table_new(COLOR_TABLE);
-	DBG("Tethering color table : %p \n");
-	ea_theme_colors_set(table, EA_THEME_STYLE_DEFAULT);
-	return table;
-}
-
-Ea_Theme_Font_Table *_font_table_set(void)
-{
-	Ea_Theme_Font_Table *table;
-
-	table = ea_theme_color_table_new(FONT_TABLE);
-	DBG("Tethering font table : %p \n");
-	ea_theme_fonts_set(table);
-	return table;
-}
-
 static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 		app_control_h app_control, void *priv)
 {
@@ -207,7 +187,6 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 	mh_ugdata_t *ugd;
 	mh_appdata_t *ad;
 	int ret;
-	int rots[4] = { 0, 90, 180, 270 };
 
 	bindtextdomain(MH_TEXT_DOMAIN, MH_LOCALEDIR);
 	dgettext(PACKAGE, LOCALEDIR);
@@ -244,14 +223,12 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 		return NULL;
 	}
 
-	if (!elm_win_wm_rotation_supported_get(ad->win)) {
-		return NULL;
+	/* set rotation */
+	if (elm_win_wm_rotation_supported_get(ad->win)) {
+		int rots[4] = {0, 90, 180, 270};
+		elm_win_wm_rotation_available_rotations_set(ad->win, (const int *)(&rots), 4);
 	}
 
-	elm_win_wm_rotation_available_rotations_set(ad->win, rots, 1);
-	ea_theme_changeable_ui_enabled_set(EINA_TRUE);
-	ad->color_table = _color_table_set();
-	ad->font_table = _font_table_set();
 	layout = _create_win_layout(ad);
 	if (layout == NULL) {
 		ERR("_create_win_layout is failed\n");
@@ -354,7 +331,7 @@ static void on_resume(ui_gadget_h ug, app_control_h app_control, void *priv)
 	if (item && elm_genlist_item_expanded_get(item)) {
 		for (l = ad->client_list; l != NULL; l = g_slist_next(l) ) {
 			item = elm_genlist_item_next_get(item);
-			elm_genlist_item_fields_update(item, "elm.text.2", ELM_GENLIST_ITEM_FIELD_TEXT);
+			elm_genlist_item_fields_update(item, "elm.text", ELM_GENLIST_ITEM_FIELD_TEXT);
 		}
 	}
 
@@ -472,12 +449,16 @@ static void on_event(ui_gadget_h ug, enum ug_event event,
 	case UG_EVENT_ROTATE_PORTRAIT:
 	case UG_EVENT_ROTATE_PORTRAIT_UPSIDEDOWN:
 		DBG("UG_EVENT_ROTATE_PORTRAIT[_UPSIDEDOWN]\n");
+#if 0 /* device rename not supported */
 		_rotate_adjust_rename_popup();
+#endif
 		break;
 	case UG_EVENT_ROTATE_LANDSCAPE:
 	case UG_EVENT_ROTATE_LANDSCAPE_UPSIDEDOWN:
 		DBG("UG_EVENT_ROTATE_LANDSCAPE[_UPSIDEDOWN]\n");
+#if 0 /* device rename not supported */
 		_rotate_adjust_rename_popup();
+#endif
 		break;
 	default:
 		break;

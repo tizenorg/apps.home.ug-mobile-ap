@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "Annuleren"
-
 msgid "IDS_COM_SK_OK"
 msgstr "OK"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Als u Wi-Fi inschakelt, wordt Mobiele hotspot uitgeschakeld. Doorgaan?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Gegevensgebruik"
@@ -13,17 +7,8 @@ msgstr "Gegevensgebruik"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Tethering"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "Niet meer tonen"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Als u Wi-Fi inschakelt, wordt Wi-Fi-tethering uitgeschakeld."
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "Maximumaantal tekens %d bereikt."
-
-msgid "IDS_COM_SK_NO"
-msgstr "Nee"
 
 msgid "IDS_BR_SK_YES"
 msgstr "Ja"
@@ -31,14 +16,11 @@ msgstr "Ja"
 msgid "IDS_BR_SK_NO"
 msgstr "Nee"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "Gereed"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "Annuleren"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Kan Bluetooth-tethering niet gebruiken bij verbinding met Wi-Fi-netwerk."
+msgid "IDS_COM_BODY_HELP"
+msgstr "Help"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "Naam apparaat wijzigen"
@@ -55,14 +37,8 @@ msgstr "GEREED"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "ANNULEREN"
 
-msgid "IDS_COM_SK_YES"
-msgstr "Ja"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "Opslaan"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "Instellingen"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Bluetooth-tethering"
@@ -78,12 +54,6 @@ msgstr "Naam apparaat"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Apparaatnaam kan worden gewijzigd in %s."
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Apparaatnaam: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "Voer ten minste %d tekens in."
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Mijn apparaat verbergen"
@@ -148,9 +118,6 @@ msgstr "Instell. Wi-Fi-tethering"
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "Aangesloten apparaten: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Aangesloten apparaat wordt losgekoppeld."
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "USB-kabel aansluiten"
 
@@ -178,12 +145,6 @@ msgstr "Kan tethering niet gebruiken."
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Kan tethering niet gebruiken in vliegtuigstand. Schakel vliegtuigstand uit om tethering te gebruiken."
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Time-out tetheringverbinding"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Time-out tetheringverbinding."
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "Mobiele gegevens is uitgeschakeld. Schakel mobiele gegevens in en probeer het opnieuw."
 
@@ -193,20 +154,11 @@ msgstr "Verbind met mob. netwerk"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "Niet meer tonen"
 
-msgid "IDS_BR_SK_OK"
-msgstr "OK"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "Ten minste %d tekens"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "Tethering uitschakelen"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "Geen naam"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "Tethering ingeschakeld."
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "Uitschakelen"
@@ -220,9 +172,6 @@ msgstr "Time-out voor Bluetooth-zichtbaarheid. Uw apparaat wordt mogelijk niet g
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Verbindingstime-out."
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Do not show again"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "Typ wachtwoord van ten minste 8 tekens."
 
@@ -234,9 +183,6 @@ msgstr "Instellingen"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Tethering verbruikt meer voeding en verhoogt uw gegevensgebruik. Het maximumaantal toegestane apparaten met tethering is %d."
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "Tethering ingeschakeld."
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Verbinding met Wi-Fi-netwerk wordt verbroken. Tethering verbruikt meer voeding en verhoogt uw gegevensgebruik. Het maximumaantal toegestane apparaten met tethering is %d."
@@ -267,4 +213,10 @@ msgstr "Fout met simkaart opgetreden"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Kan pakketservice niet gebruiken. Geen dekking."
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Over het toestel"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "Sluit uw mobiele apparaat via de USB-kabel aan op de pc."
 

@@ -1,11 +1,5 @@
-msgid "IDS_COM_SK_CANCEL"
-msgstr "Abbrechen"
-
 msgid "IDS_COM_SK_OK"
 msgstr "OK"
-
-msgid "IDS_MOBILEAP_POP_TURNING_ON_WI_FI_WILL_DISABLE_MOBILE_HOTSPOT_CONTINUE_Q_VZW"
-msgstr "Durch das Einschalten von WLAN wird Mobile Hotspot deaktiviert. Fortfahren?"
 
 msgid "IDS_MOBILEAP_MBODY_DATA_USAGE"
 msgstr "Datennutzung"
@@ -13,17 +7,8 @@ msgstr "Datennutzung"
 msgid "IDS_MOBILEAP_BODY_TETHERING"
 msgstr "Tethering"
 
-msgid "IDS_MOBILEAP_POP_DO_NOT_SHOW_AGAIN"
-msgstr "Nicht mehr anzeigen"
-
-msgid "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING"
-msgstr "Durch das Einschalten von WLAN wird WLAN-Tethering deaktiviert."
-
 msgid "IDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_PD_REACHED"
 msgstr "Maximale Anzahl %d von Zeichen erreicht."
-
-msgid "IDS_COM_SK_NO"
-msgstr "Nein"
 
 msgid "IDS_BR_SK_YES"
 msgstr "Ja"
@@ -31,14 +16,11 @@ msgstr "Ja"
 msgid "IDS_BR_SK_NO"
 msgstr "Nein"
 
-msgid "IDS_BR_SK_DONE"
-msgstr "Fertig"
-
 msgid "IDS_BR_SK_CANCEL"
 msgstr "Abbrechen"
 
-msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_BLUETOOTH_TETHERING_WHILE_CONNECTED_TO_WI_FI_NETWORK"
-msgstr "Verwendung von Bluetooth-Tethering bei Verbindung über WLAN-Netzwerk nicht möglich"
+msgid "IDS_COM_BODY_HELP"
+msgstr "Hilfe"
 
 msgid "IDS_ST_HEADER_RENAME_DEVICE"
 msgstr "Gerätenamen ändern"
@@ -55,14 +37,8 @@ msgstr "FERTIG"
 msgid "IDS_TPLATFORM_ACBUTTON_CANCEL_ABB"
 msgstr "ABBRECHEN"
 
-msgid "IDS_COM_SK_YES"
-msgstr "Ja"
-
 msgid "IDS_COM_SK_SAVE"
 msgstr "Speichern"
-
-msgid "IDS_COM_BODY_SETTINGS"
-msgstr "Einstellungen"
 
 msgid "IDS_MOBILEAP_BODY_BLUETOOTH_TETHERING"
 msgstr "Bluetooth-Tethering"
@@ -78,12 +54,6 @@ msgstr "Gerätename"
 
 msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_CAN_BE_CHANGED_IN_PS"
 msgstr "Gerätename kann in %s geändert werden."
-
-msgid "IDS_MOBILEAP_BODY_DEVICE_NAME_C_PS"
-msgstr "Gerätename: %s"
-
-msgid "IDS_MOBILEAP_BODY_ENTER_AT_LEAST_PD_CHARACTERS"
-msgstr "Geben Sie mindestens %d Zeichen ein."
 
 msgid "IDS_MOBILEAP_BODY_HIDE_MY_DEVICE"
 msgstr "Mein Gerät ausblenden"
@@ -148,9 +118,6 @@ msgstr "WLAN-Tethering-Einstell."
 msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICES_C_PD"
 msgstr "Verbundene Geräte: %d"
 
-msgid "IDS_MOBILEAP_POP_CONNECTED_DEVICE_WILL_BE_DISCONNECTED"
-msgstr "Das angeschlossene Gerät wird getrennt."
-
 msgid "IDS_MOBILEAP_POP_CONNECT_USB_CABLE"
 msgstr "USB-Kabel anschließen"
 
@@ -178,12 +145,6 @@ msgstr "Tethering kann nicht verwendet werden"
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_TETHERING_IN_FLIGHT_MODE_TO_USE_TETHERING_DISABLE_FLIGHT_MODE"
 msgstr "Tethering kann im Offline-Modus nicht verwendet werden. Um Tethering zu verwenden, deaktivieren Sie den Offline-Modus."
 
-msgid "IDS_MOBILEAP_TMBODY_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Tethering-Verbindungs-Timeout"
-
-msgid "IDS_MOBILEAP_TPOP_TETHERING_CONNECTION_TIMED_OUT"
-msgstr "Timeout bei der Tethering-Verbindung."
-
 msgid "IDS_MSGC_POP_MOBILE_DATA_IS_DISABLED_ENABLE_MOBILE_DATA_AND_TRY_AGAIN"
 msgstr "Mobile Daten sind deaktiviert. Aktivieren Sie mobile Daten und versuchen Sie es dann erneut."
 
@@ -193,20 +154,11 @@ msgstr "Mit Mobilnetz verbinden"
 msgid "IDS_BR_OPT_DO_NOT_SHOW_AGAIN"
 msgstr "Nicht erneut anzeigen"
 
-msgid "IDS_BR_SK_OK"
-msgstr "OK"
-
 msgid "IDS_CHATON_BODY_AT_LEAST_PD_CHARACTERS_ABB"
 msgstr "Mindestens %d Zeichen"
 
-msgid "IDS_CMV_HEADER_DISABLE_TETHERING_ABB"
-msgstr "Deaktivieren von Tethering"
-
 msgid "IDS_COM_BODY_NO_NAME"
 msgstr "Kein Name"
-
-msgid "IDS_COM_BODY_TETHERING_ENABLED"
-msgstr "Tethering aktiviert"
 
 msgid "IDS_COM_BODY_TURN_OFF"
 msgstr "Ausschalten"
@@ -220,9 +172,6 @@ msgstr "Die Bluetooth-Sichtbarkeit ist abgelaufen. Ihr Gerät wird möglicherwei
 msgid "IDS_ST_BODY_CONNECTION_TIMEOUT"
 msgstr "Verbindung getrennt"
 
-msgid "IDS_ST_BODY_DO_NOT_SHOW_AGAIN_VZW"
-msgstr "Nicht erneut anzeigen"
-
 msgid "IDS_ST_BODY_ENTER_PASSWORD_OF_AT_LEAST_8_CHARACTERS"
 msgstr "Geben Sie ein Passwort mit mindestens 8 Zeichen ein"
 
@@ -234,9 +183,6 @@ msgstr "Einstellungen"
 
 msgid "IDS_ST_BODY_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Tethering verbraucht mehr Akkuleistung und erhöht Ihr Datenvolumen. Für Tethering sind maximal %d Geräte erlaubt."
-
-msgid "IDS_ST_BODY_TETHERING_ENABLED"
-msgstr "Tethering aktiviert"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_WILL_BE_DISCONNECTED_TETHERING_CONSUMES_MORE_BATTERY_POWER_AND_INCREASES_YOUR_DATA_USAGE_THE_MAXIMUM_NUMBER_OF_TETHERED_DEVICES_ALLOWED_IS_PD"
 msgstr "Die WLAN-Verbindung wird getrennt. Tethering verbraucht mehr Akkuleistung und erhöht Ihr Datenvolumen. Für Tethering sind maximal %d Geräte erlaubt."
@@ -267,4 +213,10 @@ msgstr "SIM-Karten-Fehler aufgetreten"
 
 msgid "IDS_MOBILEAP_POP_UNABLE_TO_USE_PACKET_DATA_SERVICE_OUT_OF_COVERAGE"
 msgstr "Paketdienst kann nicht verwendet werden. Außerhalb des Abdeckungsbereichs"
+
+msgid "IDS_ST_BODY_ABOUT_PHONE"
+msgstr "Telefoninfo"
+
+msgid "IDS_POPSYNC_BODY_CONNECT_YOUR_MOBILE_DEVICE_TO_THE_PC_VIA_USB_CABLE_T_HELP"
+msgstr "Schließen Sie Ihr Mobilgerät mit einem USB-Kabel an den PC an."
 

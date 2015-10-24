@@ -18,7 +18,8 @@
 */
 
 #include <utilX.h>
-#include <efl_assist.h>
+#include <efl_extension.h>
+#include <app_control_internal.h>
 
 #include "mh_common_utility.h"
 #include "mobile_hotspot.h"
@@ -266,6 +267,26 @@ static void __popup_no_btn_mouse_event_cb(void *data, Evas *evas, Evas_Object *o
 	}
 }
 
+static void __popup_block_clicked_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	if (obj == NULL) {
+		ERR("The param is NULL\n");
+		return;
+	}
+
+	elm_popup_dismiss(obj);
+}
+
+static void __popup_hide_finished_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	if (data == NULL) {
+		ERR("The param is NULL\n");
+		return;
+	}
+
+	__handle_popup_resp(data, false);
+}
+
 void _prepare_popup_with_content(int type, Evas_Object *obj)
 {
 	__MOBILE_AP_FUNC_ENTER__;
@@ -378,6 +399,8 @@ static void __popup_with_checkbox(mh_appdata_t *ad)
 	Evas_Object *check = NULL;
 
 	popup = elm_popup_add(ad->win);
+	elm_popup_align_set(popup, ELM_NOTIFY_ALIGN_FILL, 1.0);
+	evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	ad->popup = popup;
 	switch (ad->type) {
 	case TETHERING_TYPE_WIFI:
@@ -400,6 +423,7 @@ static void __popup_with_checkbox(mh_appdata_t *ad)
 	layout = elm_layout_add(popup);
 	elm_layout_file_set(layout, FILE_PATH_OF_EDC, "popup_checkview_layout");
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+	evas_object_size_hint_align_set(layout, EVAS_HINT_FILL, 1.0);
 	ad->main.check_popup_ly = layout;
 
 	/* check */
@@ -428,11 +452,16 @@ static void __popup_with_checkbox(mh_appdata_t *ad)
 
 	evas_object_smart_callback_add(popup, "language,changed", __language_changed_cb, ad);
 
-	ea_object_event_callback_add(popup, EA_CALLBACK_BACK,
+	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
 			__popup_no_btn_clicked_cb, (void *)ad);
 
 	evas_object_event_callback_add(popup, EVAS_CALLBACK_MOUSE_UP,
 			__popup_no_btn_mouse_event_cb, (void *)ad);
+	evas_object_smart_callback_add(popup, "block,clicked",
+			__popup_block_clicked_cb, NULL);
+	evas_object_smart_callback_add(popup, "dismissed",
+			__popup_hide_finished_cb, ad);
+
 
 	if (check && yes_button) {
 		elm_object_focus_next_object_set(check, yes_button, ELM_FOCUS_PREVIOUS);
@@ -504,10 +533,14 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		yes_button = _create_button(popup, STR_TURN_OFF,
 				"button2", __popup_yes_btn_clicked_cb, ad);
 
-		ea_object_event_callback_add(popup, EA_CALLBACK_BACK,
+		eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
 				__popup_no_btn_clicked_cb, (void *)ad);
 		evas_object_event_callback_add(popup, EVAS_CALLBACK_MOUSE_UP,
 				__popup_no_btn_mouse_event_cb, (void *)ad);
+		evas_object_smart_callback_add(popup, "block,clicked",
+				__popup_block_clicked_cb, NULL);
+		evas_object_smart_callback_add(popup, "dismissed",
+				__popup_hide_finished_cb, ad);
 
 		evas_object_show(popup);
 		break;
@@ -520,56 +553,25 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		ad->popup = popup;
 		evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND,
 				EVAS_HINT_EXPAND);
-		switch (popup_type) {
-		case MH_POPUP_NO_SIM:
-			if (ad->type == TETHERING_TYPE_WIFI) {
-				elm_object_domain_translatable_part_text_set(popup, "title,text", PACKAGE,
-						STR_SIM_CARD_ERROR);
-			} else if (ad->type == TETHERING_TYPE_RESERVED) {
-				elm_object_domain_translatable_part_text_set(popup, "title,text", PACKAGE,
-						STR_UNABLE_TO_USE_TETH_HEADER);
-			} else {
-				elm_object_domain_translatable_part_text_set(popup, "title,text", PACKAGE,
-						STR_CONN_TO_MOB_NET);
-			}
-			break;
 
-		case MH_POPUP_FLIGHT_MODE:
-			if (ad->type == TETHERING_TYPE_RESERVED) {
-				elm_object_domain_translatable_part_text_set(popup, "title,text", PACKAGE,
-						STR_UNABLE_TO_USE_TETH_HEADER);
-			} else {
-				elm_object_domain_translatable_part_text_set(popup, "title,text", PACKAGE,
-						STR_FLIGHT_MODE_HEADER);
-			}
-			break;
+		if (popup_content == NULL)
+			elm_object_domain_translatable_text_set(popup, PACKAGE, popup_string);
+		else
+			elm_object_content_set(popup, popup_content);
+		elm_object_domain_translatable_part_text_set(popup, "title,text", PACKAGE,
+				STR_NO_NET_CONN);
+		cancel_button = _create_button(popup,  STR_CANCEL,
+				"button1", __popup_no_btn_clicked_cb, ad);
 
-		case MH_POPUP_NETWORK_OUT_OF_RANGE:
-			elm_object_domain_translatable_part_text_set(popup, "title,text", PACKAGE,
-					STR_DATA_USAGE_LIMIT_REACHED);
-			break;
-
-		case MH_POPUP_TETH_ENABLING_FAILED:
-
-		default:
-			DBG("Invalid option \n");
-			break;
-		}
-		label = elm_label_add(popup);
-		elm_object_style_set(label, "popup/default");
-		elm_label_line_wrap_set(label, ELM_WRAP_MIXED);
-		elm_object_domain_translatable_text_set(label, PACKAGE, popup_string);
-		evas_object_size_hint_weight_set(label, EVAS_HINT_EXPAND, 0.0);
-		evas_object_size_hint_align_set(label, EVAS_HINT_FILL,
-								EVAS_HINT_FILL);
-		elm_object_content_set(popup, label);
-		yes_button = _create_button(popup,  STR_OK,
-				"button1", __popup_one_btn_clicked_cb, ad);
-
-		ea_object_event_callback_add(popup, EA_CALLBACK_BACK,
-				__popup_one_btn_clicked_cb, (void *)ad);
+		eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
+				__popup_no_btn_clicked_cb, (void *)ad);
 		evas_object_event_callback_add(popup, EVAS_CALLBACK_MOUSE_UP,
-				__popup_one_btn_mouse_event_cb, (void *)ad);
+				__popup_no_btn_mouse_event_cb, (void *)ad);
+		evas_object_smart_callback_add(popup, "block,clicked",
+				__popup_block_clicked_cb, NULL);
+		evas_object_smart_callback_add(popup, "dismissed",
+				__popup_hide_finished_cb, ad);
+
 		evas_object_show(popup);
 		break;
 
@@ -590,10 +592,14 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		yes_button = _create_button(popup, STR_SETTING,
 				"button2", __popup_yes_btn_clicked_cb, ad);
 
-		ea_object_event_callback_add(popup, EA_CALLBACK_BACK,
+		eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
 				__popup_no_btn_clicked_cb, (void *)ad);
 		evas_object_event_callback_add(popup, EVAS_CALLBACK_MOUSE_UP,
 				__popup_no_btn_mouse_event_cb, (void *)ad);
+		evas_object_smart_callback_add(popup, "block,clicked",
+				__popup_block_clicked_cb, NULL);
+		evas_object_smart_callback_add(popup, "dismissed",
+				__popup_hide_finished_cb, ad);
 
 		evas_object_show(popup);
 		break;
@@ -616,7 +622,7 @@ Eina_Bool _create_popup(mh_appdata_t *ad)
 		yes_button = _create_button(popup, STR_ENABLE,
 				"button2", __popup_yes_btn_clicked_cb, ad);
 
-		ea_object_event_callback_add(popup, EA_CALLBACK_BACK,
+		eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
 				__popup_no_btn_clicked_cb, (void *)ad);
 		evas_object_event_callback_add(popup, EVAS_CALLBACK_MOUSE_UP,
 				__popup_no_btn_mouse_event_cb, (void *)ad);

@@ -141,76 +141,90 @@ static char *__gl_get_dev_label(void *data, Evas_Object *obj, const char *part)
 		return NULL;
 	}
 
-	if (!strcmp(part, "elm.text.sub.left.bottom")) {
-		tethering_client_get_time(client, &tm);
-		return __get_diff_time(tm);
-	}
-
-	if (!strcmp(part, "elm.text.main.left.top")) {
+	if (!strcmp("elm.text", part)) {
 		tethering_client_get_name(client, &name);
 		if (NULL == name) {
 			return NULL;
 		}
+
 		if (!strcmp(name, "UNKNOWN")) {
 			free(name);
 			return strdup(STR_NO_NAME);
 		}
+
 		dev_name = elm_entry_utf8_to_markup(name);
 		free(name);
 		return dev_name;
+	} else if (!strcmp("elm.text.sub", part)) {
+		tethering_client_get_time(client, &tm);
+		return __get_diff_time(tm);
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
 	return NULL;
-
 }
 
 static Evas_Object *__gl_get_dev_wifi_icon(void *data, Evas_Object *obj,
 							const char *part)
 {
-	Evas_Object *icon;
+	Evas_Object *ly = NULL;
+	Evas_Object *icon = NULL;
 
-	if (!strcmp(part, "elm.icon.left")) {
+	if (!strcmp("elm.swallow.icon", part)) {
+		ly = elm_layout_add(obj);
+		elm_layout_theme_set(ly, "layout", "list/C/type.1", "default");
+
 		icon = elm_icon_add(obj);
 		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, WIFI_ICON);
-		ea_theme_object_color_set(icon, "AO002");
-		evas_object_size_hint_aspect_set(icon,
-				EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
-		return icon;
+		evas_object_color_set(icon, 2, 61, 132, 255);
+		evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+		elm_layout_content_set(ly, "elm.swallow.content", icon);
 	}
-	return NULL;
+
+	return ly;
 }
 
 static Evas_Object *__gl_get_dev_usb_icon(void *data, Evas_Object *obj,
 							const char *part)
 {
-	Evas_Object *icon;
+	Evas_Object *ly = NULL;
+	Evas_Object *icon = NULL;
 
-	if (!strcmp(part, "elm.icon.left")) {
+	if (!strcmp("elm.swallow.icon", part)) {
+		ly = elm_layout_add(obj);
+		elm_layout_theme_set(ly, "layout", "list/C/type.1", "default");
+
 		icon = elm_icon_add(obj);
 		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, USB_ICON);
-		ea_theme_object_color_set(icon, "AO002");
-		evas_object_size_hint_aspect_set(icon,
-				EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
-		return icon;
+		evas_object_color_set(icon, 2, 61, 132, 255);
+		evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+		elm_layout_content_set(ly, "elm.swallow.content", icon);
 	}
-	return NULL;
+
+	return ly;
 }
 
 static Evas_Object *__gl_get_dev_bt_icon(void *data, Evas_Object *obj,
 							const char *part)
 {
-	Evas_Object *icon;
+	Evas_Object *ly = NULL;
+	Evas_Object *icon = NULL;
 
-	if (!strcmp(part, "elm.icon.left")) {
-		icon = elm_icon_add(obj);
+	if (!strcmp("elm.swallow.icon", part)) {
+		ly = elm_layout_add(obj);
+		elm_layout_theme_set(ly, "layout", "list/C/type.1", "default");
+
+		icon = elm_image_add(obj);
 		elm_image_file_set(icon, EDJDIR"/"TETHERING_IMAGES_EDJ, BT_ICON);
-		ea_theme_object_color_set(icon, "AO002");
-		evas_object_size_hint_aspect_set(icon,
-					EVAS_ASPECT_CONTROL_VERTICAL, 1, 1);
-		return icon;
+		evas_object_color_set(icon, 2, 61, 132, 255);
+		evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+		elm_layout_content_set(ly, "elm.swallow.content", icon);
 	}
-	return NULL;
+
+	return ly;
 }
 
 static void __set_genlist_itc(mh_appdata_t *ad)
@@ -218,21 +232,21 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	__MOBILE_AP_FUNC_ENTER__;
 
 	ad->connected_device.dev_itc[TETHERING_TYPE_WIFI] = elm_genlist_item_class_new();
-	ad->connected_device.dev_itc[TETHERING_TYPE_WIFI]->item_style = "2line.top";
+	ad->connected_device.dev_itc[TETHERING_TYPE_WIFI]->item_style = MH_GENLIST_2LINE_TOP_TEXT_ICON_STYLE;
 	ad->connected_device.dev_itc[TETHERING_TYPE_WIFI]->func.text_get = __gl_get_dev_label;
 	ad->connected_device.dev_itc[TETHERING_TYPE_WIFI]->func.content_get = __gl_get_dev_wifi_icon;
 	ad->connected_device.dev_itc[TETHERING_TYPE_WIFI]->func.state_get = NULL;
 	ad->connected_device.dev_itc[TETHERING_TYPE_WIFI]->func.del = NULL;
 
 	ad->connected_device.dev_itc[TETHERING_TYPE_USB] = elm_genlist_item_class_new();
-	ad->connected_device.dev_itc[TETHERING_TYPE_USB]->item_style = "2line.top";
+	ad->connected_device.dev_itc[TETHERING_TYPE_USB]->item_style = MH_GENLIST_2LINE_TOP_TEXT_ICON_STYLE;
 	ad->connected_device.dev_itc[TETHERING_TYPE_USB]->func.text_get = __gl_get_dev_label;
 	ad->connected_device.dev_itc[TETHERING_TYPE_USB]->func.content_get = __gl_get_dev_usb_icon;
 	ad->connected_device.dev_itc[TETHERING_TYPE_USB]->func.state_get = NULL;
 	ad->connected_device.dev_itc[TETHERING_TYPE_USB]->func.del = NULL;
 
 	ad->connected_device.dev_itc[TETHERING_TYPE_BT] = elm_genlist_item_class_new();
-	ad->connected_device.dev_itc[TETHERING_TYPE_BT]->item_style = "2line.top";
+	ad->connected_device.dev_itc[TETHERING_TYPE_BT]->item_style = MH_GENLIST_2LINE_TOP_TEXT_ICON_STYLE;
 	ad->connected_device.dev_itc[TETHERING_TYPE_BT]->func.text_get = __gl_get_dev_label;
 	ad->connected_device.dev_itc[TETHERING_TYPE_BT]->func.content_get = __gl_get_dev_bt_icon;
 	ad->connected_device.dev_itc[TETHERING_TYPE_BT]->func.state_get = NULL;

@@ -17,6 +17,7 @@
 *
 */
 #include <utilX.h>
+#include <efl_extension.h>
 
 #include "mh_popup.h"
 #include "mh_view_wifi_setup.h"
@@ -87,7 +88,8 @@ static void __security_btn_changed_cb(void *data, Evas_Object *obj, void *event_
 		elm_object_disabled_set(st->save_button, EINA_FALSE);
 	} else {
 		elm_object_item_disabled_set(st->pw_item, EINA_FALSE);
-		if (st->pw_entry == NULL || strlen(elm_entry_entry_get(st->pw_entry)) == 0)
+		if (st->pw_entry == NULL || elm_entry_entry_get(st->pw_entry) == NULL ||
+		    strlen(elm_entry_entry_get(st->pw_entry)) == 0)
 			elm_object_disabled_set(st->save_button, EINA_TRUE);
 	}
 
@@ -124,30 +126,35 @@ static char *__gl_device_name_title_label_get(void *data, Evas_Object *obj, cons
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	char *device_name_utf = NULL;
 	char *ptr = NULL;
+	char buf[MH_LABEL_LENGTH_MAX] = {0, };
+
 	if (data == NULL || obj == NULL || part == NULL) {
 		ERR("Invalid param\n");
 		return NULL;
 	}
 
-	if (!strcmp(part, "elm.text.multiline")) {
+	if (!strcmp("elm.text.multiline", part)) {
 		device_name_utf = vconf_get_str(VCONFKEY_SETAPPL_DEVICE_NAME_STR);
 		if (device_name_utf == NULL) {
 			ERR("vconf_get_str failed \n");
 		}
+
 		ptr = elm_entry_utf8_to_markup(device_name_utf);
 		if (ptr == NULL) {
 			ERR("elm_entry_utf8_to_markup is failed\n");
 			free(device_name_utf);
 			return NULL;
 		}
+
 		g_strlcpy(ad->setup.device_name, ptr,
 				sizeof(ad->setup.device_name));
-		free(device_name_utf);
-		return ptr;
-	}
 
-	if (!strcmp(part, "elm.text.sub")) {
-		return strdup(STR_MY_DEVICE_NAME);
+		snprintf(buf, MH_LABEL_LENGTH_MAX, "<font_size=30>%s</font_size><br>%s", STR_MY_DEVICE_NAME, ptr);
+
+		free(device_name_utf);
+		free(ptr);
+
+		return strdup(buf);
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
@@ -163,12 +170,12 @@ static char *__gl_hide_label_get(void *data, Evas_Object *obj, const char *part)
 		return NULL;
 	}
 
-	if (strcmp(part, "elm.text.main.left") != 0) {
-		return NULL;
+	if (!strcmp("elm.text", part)) {
+		return strdup(STR_HIDE_MY_DEV);
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
-	return strdup(STR_HIDE_MY_DEV);
+	return NULL;
 }
 
 static char *__gl_security_label_get(void *data, Evas_Object *obj, const char *part)
@@ -180,12 +187,12 @@ static char *__gl_security_label_get(void *data, Evas_Object *obj, const char *p
 		return NULL;
 	}
 
-	if (strcmp(part, "elm.text.main.left") != 0) {
-		return NULL;
+	if (!strcmp("elm.text", part)) {
+		return strdup(STR_SECURITY_TYPE);
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
-	return strdup(STR_SECURITY_TYPE);
+	return NULL;
 }
 
 static Evas_Object *__gl_hide_icon_get(void *data, Evas_Object *obj,
@@ -193,38 +200,37 @@ static Evas_Object *__gl_hide_icon_get(void *data, Evas_Object *obj,
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+	Evas_Object *btn = NULL;
+	Evas_Object *icon_layout = NULL;
+
 	if (data == NULL || obj == NULL || part == NULL) {
 		ERR("Invalid param\n");
 		return NULL;
 	}
 
-	if (strcmp(part, "elm.icon.2") != 0) {
-		return NULL;
+	if (!strcmp("elm.swallow.end", part)) {
+		icon_layout = elm_layout_add(obj);
+		elm_layout_theme_set(icon_layout, "layout", "list/C/type.3", "default");
+		btn = elm_check_add(obj);
+		if (btn == NULL) {
+			ERR("btn is NULL\n");
+			return NULL;
+		}
+
+		elm_object_style_set(btn, "on&off");
+		evas_object_show(btn);
+		evas_object_pass_events_set(btn, EINA_TRUE);
+		evas_object_propagate_events_set(btn, EINA_FALSE);
+		elm_object_focus_allow_set(btn, EINA_FALSE);
+		elm_check_state_set(btn, ad->setup.visibility_new ? EINA_FALSE : EINA_TRUE);
+		evas_object_smart_callback_add(btn, "changed",
+				__hide_btn_changed_cb, (void *)ad);
+		ad->setup.hide_btn = btn;
+
+		elm_layout_content_set(icon_layout, "elm.swallow.content", btn);
 	}
 
-	mh_appdata_t *ad = (mh_appdata_t *)data;
-	Evas_Object *btn = NULL;
-	Evas_Object *icon_layout = NULL;
-
-	icon_layout = elm_layout_add(obj);
-	elm_layout_theme_set(icon_layout, "layout", "list/C/type.3", "default");
-	btn = elm_check_add(obj);
-	if (btn == NULL) {
-		ERR("btn is NULL\n");
-		return NULL;
-	}
-	elm_object_style_set(btn, "on&off");
-	evas_object_show(btn);
-	evas_object_pass_events_set(btn, EINA_TRUE);
-	evas_object_propagate_events_set(btn, EINA_FALSE);
-	elm_object_focus_allow_set(btn, EINA_FALSE);
-	elm_check_state_set(btn, ad->setup.visibility_new ? EINA_FALSE : EINA_TRUE);
-	evas_object_smart_callback_add(btn, "changed",
-			__hide_btn_changed_cb, (void *)ad);
-
-	ad->setup.hide_btn = btn;
-
-	elm_layout_content_set(icon_layout, "elm.swallow.content", btn);
 	__MOBILE_AP_FUNC_EXIT__;
 	return icon_layout;
 }
@@ -234,35 +240,34 @@ static Evas_Object *__gl_security_icon_get(void *data, Evas_Object *obj,
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+	Evas_Object *btn = NULL;
+	Evas_Object *icon_layout = NULL;
+
 	if (data == NULL || obj == NULL || part == NULL) {
 		ERR("Invalid param\n");
 		return NULL;
 	}
 
-	if (strcmp(part, "elm.icon.2") != 0) {
-		return NULL;
+	if (!strcmp("elm.swallow.end", part)) {
+		icon_layout = elm_layout_add(obj);
+		elm_layout_theme_set(icon_layout, "layout", "list/C/type.3", "default");
+
+		btn = elm_check_add(obj);
+		elm_object_style_set(btn, "on&off");
+		evas_object_show(btn);
+		evas_object_pass_events_set(btn, EINA_TRUE);
+		evas_object_propagate_events_set(btn, EINA_FALSE);
+		elm_check_state_set(btn, ad->setup.security_type_new ==
+				TETHERING_WIFI_SECURITY_TYPE_NONE ?
+				EINA_FALSE : EINA_TRUE);
+		evas_object_smart_callback_add(btn, "changed",
+				__security_btn_changed_cb, (void *)ad);
+		ad->setup.security_btn = btn;
+
+		elm_layout_content_set(icon_layout, "elm.swallow.content", btn);
 	}
 
-	mh_appdata_t *ad = (mh_appdata_t *)data;
-	Evas_Object *btn = NULL;
-	Evas_Object *icon_layout = NULL;
-
-	icon_layout = elm_layout_add(obj);
-	elm_layout_theme_set(icon_layout, "layout", "list/C/type.3", "default");
-
-	btn = elm_check_add(obj);
-	elm_object_style_set(btn, "on&off");
-	evas_object_show(btn);
-	evas_object_pass_events_set(btn, EINA_TRUE);
-	evas_object_propagate_events_set(btn, EINA_FALSE);
-	elm_check_state_set(btn, ad->setup.security_type_new ==
-			TETHERING_WIFI_SECURITY_TYPE_NONE ?
-			EINA_FALSE : EINA_TRUE);
-	evas_object_smart_callback_add(btn, "changed",
-			__security_btn_changed_cb, (void *)ad);
-	ad->setup.security_btn = btn;
-
-	elm_layout_content_set(icon_layout, "elm.swallow.content", btn);
 	__MOBILE_AP_FUNC_EXIT__;
 	return icon_layout;
 }
@@ -445,21 +450,26 @@ static Evas_Object *__get_pw_entry(void *data, Evas_Object *parent)
 	mh_appdata_t *ad = (mh_appdata_t *)data;
 	mh_wifi_setting_view_t *st = &ad->setup;
 
-	entry = ea_editfield_add(parent, EA_EDITFIELD_SCROLL_SINGLELINE);
+	entry = elm_entry_add(parent);
+
 	if (entry == NULL) {
 		ERR("elm_entry_add returns NULL\n");
 		st->pw_entry = NULL;
 		return NULL;
 	}
+
+	elm_entry_single_line_set(entry, EINA_TRUE);
+	elm_entry_scrollable_set(entry, EINA_TRUE);
+	elm_entry_password_set(entry, EINA_FALSE);
+
 	st->pw_entry = entry;
 	evas_object_smart_callback_add(entry, "language,changed",
 			__pw_entry_language_changed_cb, ad);
 
-	ea_entry_selection_back_event_allow_set(entry, EINA_TRUE);
+	eext_entry_selection_back_event_allow_set(entry, EINA_TRUE);
 	elm_entry_prediction_allow_set(entry, EINA_FALSE);
 	elm_object_signal_emit(entry, "elm,action,hide,search_icon", "");
 	elm_entry_input_panel_layout_set(entry, ELM_INPUT_PANEL_LAYOUT_PASSWORD);
-	//elm_entry_select_allow_set(entry, EINA_TRUE);
 	elm_entry_cursor_end_set(entry);
 	snprintf(buf, sizeof(buf), STR_PW_GUIDE_TEXT, WIFI_PASSPHRASE_LENGTH_MIN);
 	elm_object_part_text_set(entry, "elm.guide", buf);
@@ -472,7 +482,6 @@ static Evas_Object *__get_pw_entry(void *data, Evas_Object *parent)
 	if (st->security_type_new == TETHERING_WIFI_SECURITY_TYPE_NONE) {
 		elm_object_part_text_set(entry, "default", buf);
 		elm_entry_input_panel_enabled_set(entry, EINA_FALSE);
-		//elm_entry_select_allow_set(entry, EINA_FALSE);
 		elm_object_disabled_set(entry, EINA_TRUE);
 		if (st->pw_item)
 			elm_object_item_signal_emit(st->pw_item, "elm,state,rename,hide", "");
@@ -508,6 +517,8 @@ static Evas_Object *__get_pw_entry(void *data, Evas_Object *parent)
 	evas_object_smart_callback_add(entry, "unfocused",
 			__pw_entry_unfocused_cb, NULL);
 
+	elm_object_part_content_set(parent, "elm.swallow.content", entry);
+
 	__MOBILE_AP_FUNC_EXIT__;
 	return st->pw_entry;
 }
@@ -515,45 +526,44 @@ static Evas_Object *__get_pw_entry(void *data, Evas_Object *parent)
 static char *__gl_pw_text_get(void *data, Evas_Object *obj, const char *part)
 {
 	__MOBILE_AP_FUNC_ENTER__;
+	char buf[MH_LABEL_LENGTH_MAX] = {0, };
 
 	if (data == NULL || obj == NULL || part == NULL) {
 		ERR("Invalid param\n");
 		return NULL;
 	}
 
-	if (strcmp(part, "elm.text.main") != 0) {
-		return NULL;
+	if (!strcmp("elm.text.main", part)) {
+		snprintf(buf, MH_LABEL_LENGTH_MAX, "<font_size=30>%s</font_size>", STR_PASSWORD);
+		return strdup(buf);
 	}
 
 	__MOBILE_AP_FUNC_EXIT__;
-	return strdup(STR_PASSWORD);
+	return NULL;
 }
 
 static Evas_Object *__gl_pw_content_get(void *data, Evas_Object *obj, const char *part)
 {
-
 	__MOBILE_AP_FUNC_ENTER__;
+
+	mh_appdata_t *ad = (mh_appdata_t *)data;
+	Evas_Object * layout = NULL;
+	Evas_Object * entry = NULL;
 
 	if (data == NULL) {
 		ERR("data is null \n");
 		return NULL;
 	}
 
-	mh_appdata_t *ad = (mh_appdata_t *)data;
+	if (!strcmp(part, "elm.icon.entry")) {
+		layout = elm_layout_add(obj);
+		elm_layout_theme_set(layout, "layout", "editfield", "singleline");
+		evas_object_size_hint_align_set(layout, EVAS_HINT_FILL, 0.0);
+		evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, 0.0);
 
-	Evas_Object * layout = NULL;
-	Evas_Object * entry = NULL;
+		entry = __get_pw_entry(ad, layout);
+	}
 
-	if (g_strcmp0(part, "elm.icon.entry") != 0)
-		return NULL;
-
-	layout = elm_layout_add(obj);
-	elm_layout_file_set(layout, FILE_PATH_OF_EDC, "entry_style");
-	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-
-	entry = __get_pw_entry(ad, layout);
-
-	elm_object_part_content_set(layout, "entry_part", entry);
 	__MOBILE_AP_FUNC_EXIT__;
 	return layout;
 }
@@ -601,6 +611,7 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 {
 	__MOBILE_AP_FUNC_ENTER__;
 
+#if 0 /* not used */
 	ad->setup.sp_itc = elm_genlist_item_class_new();
 	if (ad->setup.sp_itc == NULL) {
 		ERR("elm_genlist_item_class_new failed\n");
@@ -612,14 +623,14 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	ad->setup.sp_itc->func.content_get = NULL;
 	ad->setup.sp_itc->func.state_get = NULL;
 	ad->setup.sp_itc->func.del = NULL;
-
+#endif
 	ad->setup.name_itc = elm_genlist_item_class_new();
 	if (ad->setup.name_itc == NULL) {
 		ERR("elm_genlist_item_class_new failed\n");
 		__MOBILE_AP_FUNC_EXIT__;
 		return;
 	}
-	ad->setup.name_itc->item_style = "multiline_main.sub";
+	ad->setup.name_itc->item_style = MH_GENLIST_MULTILINE_TEXT_STYLE;
 	ad->setup.name_itc->func.text_get = __gl_device_name_title_label_get;
 	ad->setup.name_itc->func.content_get = NULL;
 	ad->setup.name_itc->func.state_get = NULL;
@@ -631,7 +642,7 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 		__MOBILE_AP_FUNC_EXIT__;
 		return;
 	}
-	ad->setup.hide_itc->item_style = "1line"; 
+	ad->setup.hide_itc->item_style = MH_GENLIST_1LINE_TEXT_ICON_STYLE;
 	ad->setup.hide_itc->func.text_get = __gl_hide_label_get;
 	ad->setup.hide_itc->func.content_get = __gl_hide_icon_get;
 	ad->setup.hide_itc->func.state_get = NULL;
@@ -643,7 +654,7 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 		__MOBILE_AP_FUNC_EXIT__;
 		return;
 	}
-	ad->setup.security_itc->item_style = "1line";
+	ad->setup.security_itc->item_style = MH_GENLIST_1LINE_TEXT_ICON_STYLE;
 	ad->setup.security_itc->func.text_get = __gl_security_label_get;
 	ad->setup.security_itc->func.content_get = __gl_security_icon_get;
 	ad->setup.security_itc->func.state_get = NULL;
@@ -661,6 +672,7 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	ad->setup.pw_itc->func.state_get = NULL;
 	ad->setup.pw_itc->func.del = NULL;
 
+#if 0 /* not used */
 	ad->setup.sp2_itc = elm_genlist_item_class_new();
 	if (ad->setup.sp2_itc == NULL) {
 		ERR("elm_genlist_item_class_new failed\n");
@@ -672,7 +684,7 @@ static void __set_genlist_itc(mh_appdata_t *ad)
 	ad->setup.sp2_itc->func.content_get = NULL;
 	ad->setup.sp2_itc->func.state_get = NULL;
 	ad->setup.sp2_itc->func.del = NULL;
-
+#endif
 	__MOBILE_AP_FUNC_EXIT__;
 	return;
 }
@@ -940,6 +952,7 @@ Evas_Object *__create_genlist(mh_appdata_t *ad)
 	elm_object_style_set(genlist, "dialogue");
 	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
 	evas_object_smart_callback_add(genlist, "realized", __gl_realized, ad);
+	elm_genlist_realization_mode_set(genlist, EINA_TRUE);
 
 	__set_genlist_itc(ad);
 
